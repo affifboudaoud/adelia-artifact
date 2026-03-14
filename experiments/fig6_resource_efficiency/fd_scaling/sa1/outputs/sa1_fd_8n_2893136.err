@@ -1,0 +1,352 @@
+W0314 22:34:46.913598  140940 cuda_executor.cc:1802] GPU interconnect information not available: INTERNAL: NVML doesn't support extracting fabric info or NVLink is not used by the device.
+W0314 22:34:46.915405  140937 cuda_executor.cc:1802] GPU interconnect information not available: INTERNAL: NVML doesn't support extracting fabric info or NVLink is not used by the device.
+W0314 22:34:46.926373  140939 cuda_executor.cc:1802] GPU interconnect information not available: INTERNAL: NVML doesn't support extracting fabric info or NVLink is not used by the device.
+W0314 22:34:46.928147  140938 cuda_executor.cc:1802] GPU interconnect information not available: INTERNAL: NVML doesn't support extracting fabric info or NVLink is not used by the device.
+W0314 22:34:47.286676  140228 cuda_executor.cc:1802] GPU interconnect information not available: INTERNAL: NVML doesn't support extracting fabric info or NVLink is not used by the device.
+W0314 22:34:47.309483   43433 cuda_executor.cc:1802] GPU interconnect information not available: INTERNAL: NVML doesn't support extracting fabric info or NVLink is not used by the device.
+W0314 22:34:47.314233   43430 cuda_executor.cc:1802] GPU interconnect information not available: INTERNAL: NVML doesn't support extracting fabric info or NVLink is not used by the device.
+W0314 22:34:47.315348   43431 cuda_executor.cc:1802] GPU interconnect information not available: INTERNAL: NVML doesn't support extracting fabric info or NVLink is not used by the device.
+W0314 22:34:47.316257   43432 cuda_executor.cc:1802] GPU interconnect information not available: INTERNAL: NVML doesn't support extracting fabric info or NVLink is not used by the device.
+W0314 22:34:47.318310  140228 cuda_executor.cc:1802] GPU interconnect information not available: INTERNAL: NVML doesn't support extracting fabric info or NVLink is not used by the device.
+W0314 22:34:47.349655  140228 cuda_executor.cc:1802] GPU interconnect information not available: INTERNAL: NVML doesn't support extracting fabric info or NVLink is not used by the device.
+W0314 22:34:47.381976  140228 cuda_executor.cc:1802] GPU interconnect information not available: INTERNAL: NVML doesn't support extracting fabric info or NVLink is not used by the device.
+W0314 22:34:47.431250   37976 cuda_executor.cc:1802] GPU interconnect information not available: INTERNAL: NVML doesn't support extracting fabric info or NVLink is not used by the device.
+W0314 22:34:47.432153   37975 cuda_executor.cc:1802] GPU interconnect information not available: INTERNAL: NVML doesn't support extracting fabric info or NVLink is not used by the device.
+W0314 22:34:47.437704   37977 cuda_executor.cc:1802] GPU interconnect information not available: INTERNAL: NVML doesn't support extracting fabric info or NVLink is not used by the device.
+W0314 22:34:47.441171   37978 cuda_executor.cc:1802] GPU interconnect information not available: INTERNAL: NVML doesn't support extracting fabric info or NVLink is not used by the device.
+W0314 22:34:47.462499  273777 cuda_executor.cc:1802] GPU interconnect information not available: INTERNAL: NVML doesn't support extracting fabric info or NVLink is not used by the device.
+W0314 22:34:47.468124  273776 cuda_executor.cc:1802] GPU interconnect information not available: INTERNAL: NVML doesn't support extracting fabric info or NVLink is not used by the device.
+W0314 22:34:47.475383  273779 cuda_executor.cc:1802] GPU interconnect information not available: INTERNAL: NVML doesn't support extracting fabric info or NVLink is not used by the device.
+W0314 22:34:47.480437  273778 cuda_executor.cc:1802] GPU interconnect information not available: INTERNAL: NVML doesn't support extracting fabric info or NVLink is not used by the device.
+W0314 22:34:47.502561  187582 cuda_executor.cc:1802] GPU interconnect information not available: INTERNAL: NVML doesn't support extracting fabric info or NVLink is not used by the device.
+W0314 22:34:47.503781  187585 cuda_executor.cc:1802] GPU interconnect information not available: INTERNAL: NVML doesn't support extracting fabric info or NVLink is not used by the device.
+W0314 22:34:47.510199  187583 cuda_executor.cc:1802] GPU interconnect information not available: INTERNAL: NVML doesn't support extracting fabric info or NVLink is not used by the device.
+W0314 22:34:47.512768  187584 cuda_executor.cc:1802] GPU interconnect information not available: INTERNAL: NVML doesn't support extracting fabric info or NVLink is not used by the device.
+W0314 22:34:47.637035   18112 cuda_executor.cc:1802] GPU interconnect information not available: INTERNAL: NVML doesn't support extracting fabric info or NVLink is not used by the device.
+W0314 22:34:47.637036   18109 cuda_executor.cc:1802] GPU interconnect information not available: INTERNAL: NVML doesn't support extracting fabric info or NVLink is not used by the device.
+W0314 22:34:47.650257   18110 cuda_executor.cc:1802] GPU interconnect information not available: INTERNAL: NVML doesn't support extracting fabric info or NVLink is not used by the device.
+W0314 22:34:47.651163   18111 cuda_executor.cc:1802] GPU interconnect information not available: INTERNAL: NVML doesn't support extracting fabric info or NVLink is not used by the device.
+W0314 22:34:47.679012   42693 cuda_executor.cc:1802] GPU interconnect information not available: INTERNAL: NVML doesn't support extracting fabric info or NVLink is not used by the device.
+W0314 22:34:47.710253   42693 cuda_executor.cc:1802] GPU interconnect information not available: INTERNAL: NVML doesn't support extracting fabric info or NVLink is not used by the device.
+W0314 22:34:47.713669  125883 cuda_executor.cc:1802] GPU interconnect information not available: INTERNAL: NVML doesn't support extracting fabric info or NVLink is not used by the device.
+W0314 22:34:47.715474  125886 cuda_executor.cc:1802] GPU interconnect information not available: INTERNAL: NVML doesn't support extracting fabric info or NVLink is not used by the device.
+W0314 22:34:47.725251  125885 cuda_executor.cc:1802] GPU interconnect information not available: INTERNAL: NVML doesn't support extracting fabric info or NVLink is not used by the device.
+W0314 22:34:47.728678  125884 cuda_executor.cc:1802] GPU interconnect information not available: INTERNAL: NVML doesn't support extracting fabric info or NVLink is not used by the device.
+W0314 22:34:47.742348   42693 cuda_executor.cc:1802] GPU interconnect information not available: INTERNAL: NVML doesn't support extracting fabric info or NVLink is not used by the device.
+W0314 22:34:47.754078   22153 cuda_executor.cc:1802] GPU interconnect information not available: INTERNAL: NVML doesn't support extracting fabric info or NVLink is not used by the device.
+W0314 22:34:47.755012   22156 cuda_executor.cc:1802] GPU interconnect information not available: INTERNAL: NVML doesn't support extracting fabric info or NVLink is not used by the device.
+W0314 22:34:47.768410   22154 cuda_executor.cc:1802] GPU interconnect information not available: INTERNAL: NVML doesn't support extracting fabric info or NVLink is not used by the device.
+W0314 22:34:47.770991   22155 cuda_executor.cc:1802] GPU interconnect information not available: INTERNAL: NVML doesn't support extracting fabric info or NVLink is not used by the device.
+W0314 22:34:47.773516   42693 cuda_executor.cc:1802] GPU interconnect information not available: INTERNAL: NVML doesn't support extracting fabric info or NVLink is not used by the device.
+W0314 22:34:47.798797   37240 cuda_executor.cc:1802] GPU interconnect information not available: INTERNAL: NVML doesn't support extracting fabric info or NVLink is not used by the device.
+W0314 22:34:47.830080   37240 cuda_executor.cc:1802] GPU interconnect information not available: INTERNAL: NVML doesn't support extracting fabric info or NVLink is not used by the device.
+W0314 22:34:47.841236  273036 cuda_executor.cc:1802] GPU interconnect information not available: INTERNAL: NVML doesn't support extracting fabric info or NVLink is not used by the device.
+W0314 22:34:47.861692   37240 cuda_executor.cc:1802] GPU interconnect information not available: INTERNAL: NVML doesn't support extracting fabric info or NVLink is not used by the device.
+W0314 22:34:47.873371  273036 cuda_executor.cc:1802] GPU interconnect information not available: INTERNAL: NVML doesn't support extracting fabric info or NVLink is not used by the device.
+W0314 22:34:47.876810  186868 cuda_executor.cc:1802] GPU interconnect information not available: INTERNAL: NVML doesn't support extracting fabric info or NVLink is not used by the device.
+W0314 22:34:47.893477   37240 cuda_executor.cc:1802] GPU interconnect information not available: INTERNAL: NVML doesn't support extracting fabric info or NVLink is not used by the device.
+W0314 22:34:47.905045  273036 cuda_executor.cc:1802] GPU interconnect information not available: INTERNAL: NVML doesn't support extracting fabric info or NVLink is not used by the device.
+W0314 22:34:47.908944  186868 cuda_executor.cc:1802] GPU interconnect information not available: INTERNAL: NVML doesn't support extracting fabric info or NVLink is not used by the device.
+W0314 22:34:47.936699  273036 cuda_executor.cc:1802] GPU interconnect information not available: INTERNAL: NVML doesn't support extracting fabric info or NVLink is not used by the device.
+W0314 22:34:47.940922  186868 cuda_executor.cc:1802] GPU interconnect information not available: INTERNAL: NVML doesn't support extracting fabric info or NVLink is not used by the device.
+W0314 22:34:47.972697  186868 cuda_executor.cc:1802] GPU interconnect information not available: INTERNAL: NVML doesn't support extracting fabric info or NVLink is not used by the device.
+W0314 22:34:48.008781   17371 cuda_executor.cc:1802] GPU interconnect information not available: INTERNAL: NVML doesn't support extracting fabric info or NVLink is not used by the device.
+W0314 22:34:48.040953   17371 cuda_executor.cc:1802] GPU interconnect information not available: INTERNAL: NVML doesn't support extracting fabric info or NVLink is not used by the device.
+W0314 22:34:48.071795   17371 cuda_executor.cc:1802] GPU interconnect information not available: INTERNAL: NVML doesn't support extracting fabric info or NVLink is not used by the device.
+W0314 22:34:48.087634  125146 cuda_executor.cc:1802] GPU interconnect information not available: INTERNAL: NVML doesn't support extracting fabric info or NVLink is not used by the device.
+W0314 22:34:48.103141   17371 cuda_executor.cc:1802] GPU interconnect information not available: INTERNAL: NVML doesn't support extracting fabric info or NVLink is not used by the device.
+W0314 22:34:48.119850  125146 cuda_executor.cc:1802] GPU interconnect information not available: INTERNAL: NVML doesn't support extracting fabric info or NVLink is not used by the device.
+W0314 22:34:48.136601   21378 cuda_executor.cc:1802] GPU interconnect information not available: INTERNAL: NVML doesn't support extracting fabric info or NVLink is not used by the device.
+W0314 22:34:48.151482  125146 cuda_executor.cc:1802] GPU interconnect information not available: INTERNAL: NVML doesn't support extracting fabric info or NVLink is not used by the device.
+W0314 22:34:48.168126   21378 cuda_executor.cc:1802] GPU interconnect information not available: INTERNAL: NVML doesn't support extracting fabric info or NVLink is not used by the device.
+W0314 22:34:48.182914  125146 cuda_executor.cc:1802] GPU interconnect information not available: INTERNAL: NVML doesn't support extracting fabric info or NVLink is not used by the device.
+W0314 22:34:48.199850   21378 cuda_executor.cc:1802] GPU interconnect information not available: INTERNAL: NVML doesn't support extracting fabric info or NVLink is not used by the device.
+W0314 22:34:48.231110   21378 cuda_executor.cc:1802] GPU interconnect information not available: INTERNAL: NVML doesn't support extracting fabric info or NVLink is not used by the device.
+/capstor/scratch/cscs/aboudaou/workspace/dalia/DALIA/src/dalia/core/dalia.py:1016: PerformanceWarning: The device where the array resides (0) is different from the current device (3). Peer access has been activated automatically.
+  self.model.theta[:] = xp.asarray(theta_i)
+/capstor/scratch/cscs/aboudaou/workspace/dalia/DALIA/src/dalia/core/dalia.py:1016: PerformanceWarning: The device where the array resides (0) is different from the current device (1). Peer access has been activated automatically.
+  self.model.theta[:] = xp.asarray(theta_i)
+/capstor/scratch/cscs/aboudaou/workspace/dalia/DALIA/src/dalia/core/dalia.py:1016: PerformanceWarning: The device where the array resides (0) is different from the current device (3). Peer access has been activated automatically.
+  self.model.theta[:] = xp.asarray(theta_i)
+/capstor/scratch/cscs/aboudaou/workspace/dalia/DALIA/src/dalia/core/dalia.py:1016: PerformanceWarning: The device where the array resides (0) is different from the current device (2). Peer access has been activated automatically.
+  self.model.theta[:] = xp.asarray(theta_i)
+/users/aboudaou/miniconda3/envs/serinv-env/lib/python3.11/site-packages/cupyx/scipy/sparse/_csc.py:132: PerformanceWarning: The device where the array resides (0) is different from the current device (1). Peer access has been activated automatically.
+  return self._with_data(self.data * other)
+/users/aboudaou/miniconda3/envs/serinv-env/lib/python3.11/site-packages/cupyx/scipy/sparse/_csc.py:132: PerformanceWarning: The device where the array resides (0) is different from the current device (3). Peer access has been activated automatically.
+  return self._with_data(self.data * other)
+/users/aboudaou/miniconda3/envs/serinv-env/lib/python3.11/site-packages/cupyx/scipy/sparse/_csc.py:132: PerformanceWarning: The device where the array resides (0) is different from the current device (3). Peer access has been activated automatically.
+  return self._with_data(self.data * other)
+/users/aboudaou/miniconda3/envs/serinv-env/lib/python3.11/site-packages/cupyx/scipy/sparse/_csc.py:132: PerformanceWarning: The device where the array resides (0) is different from the current device (2). Peer access has been activated automatically.
+  return self._with_data(self.data * other)
+/users/aboudaou/miniconda3/envs/serinv-env/lib/python3.11/site-packages/cupyx/scipy/sparse/_construct.py:529: PerformanceWarning: The device where the array resides (0) is different from the current device (3). Peer access has been activated automatically.
+  row = A.row.astype(dtype, copy=True) * B.shape[0]
+/users/aboudaou/miniconda3/envs/serinv-env/lib/python3.11/site-packages/cupyx/scipy/sparse/_construct.py:529: PerformanceWarning: The device where the array resides (0) is different from the current device (1). Peer access has been activated automatically.
+  row = A.row.astype(dtype, copy=True) * B.shape[0]
+/users/aboudaou/miniconda3/envs/serinv-env/lib/python3.11/site-packages/cupyx/scipy/sparse/_construct.py:529: PerformanceWarning: The device where the array resides (0) is different from the current device (3). Peer access has been activated automatically.
+  row = A.row.astype(dtype, copy=True) * B.shape[0]
+/users/aboudaou/miniconda3/envs/serinv-env/lib/python3.11/site-packages/cupyx/scipy/sparse/_construct.py:529: PerformanceWarning: The device where the array resides (0) is different from the current device (2). Peer access has been activated automatically.
+  row = A.row.astype(dtype, copy=True) * B.shape[0]
+/capstor/scratch/cscs/aboudaou/workspace/dalia/DALIA/src/dalia/core/dalia.py:1016: PerformanceWarning: The device where the array resides (0) is different from the current device (2). Peer access has been activated automatically.
+  self.model.theta[:] = xp.asarray(theta_i)
+/capstor/scratch/cscs/aboudaou/workspace/dalia/DALIA/src/dalia/core/dalia.py:1016: PerformanceWarning: The device where the array resides (0) is different from the current device (1). Peer access has been activated automatically.
+  self.model.theta[:] = xp.asarray(theta_i)
+/users/aboudaou/miniconda3/envs/serinv-env/lib/python3.11/site-packages/cupyx/scipy/sparse/_csc.py:132: PerformanceWarning: The device where the array resides (0) is different from the current device (2). Peer access has been activated automatically.
+  return self._with_data(self.data * other)
+/users/aboudaou/miniconda3/envs/serinv-env/lib/python3.11/site-packages/cupyx/scipy/sparse/_csc.py:132: PerformanceWarning: The device where the array resides (0) is different from the current device (1). Peer access has been activated automatically.
+  return self._with_data(self.data * other)
+/users/aboudaou/miniconda3/envs/serinv-env/lib/python3.11/site-packages/cupyx/scipy/sparse/_construct.py:529: PerformanceWarning: The device where the array resides (0) is different from the current device (2). Peer access has been activated automatically.
+  row = A.row.astype(dtype, copy=True) * B.shape[0]
+/users/aboudaou/miniconda3/envs/serinv-env/lib/python3.11/site-packages/cupyx/scipy/sparse/_construct.py:529: PerformanceWarning: The device where the array resides (0) is different from the current device (1). Peer access has been activated automatically.
+  row = A.row.astype(dtype, copy=True) * B.shape[0]
+/users/aboudaou/miniconda3/envs/serinv-env/lib/python3.11/site-packages/cupyx/scipy/sparse/_construct.py:533: PerformanceWarning: The device where the array resides (0) is different from the current device (3). Peer access has been activated automatically.
+  data = A.data.repeat(B.nnz)  # data's dtype follows that of A in SciPy
+/users/aboudaou/miniconda3/envs/serinv-env/lib/python3.11/site-packages/cupyx/scipy/sparse/_construct.py:533: PerformanceWarning: The device where the array resides (0) is different from the current device (1). Peer access has been activated automatically.
+  data = A.data.repeat(B.nnz)  # data's dtype follows that of A in SciPy
+/users/aboudaou/miniconda3/envs/serinv-env/lib/python3.11/site-packages/cupyx/scipy/sparse/_construct.py:533: PerformanceWarning: The device where the array resides (0) is different from the current device (3). Peer access has been activated automatically.
+  data = A.data.repeat(B.nnz)  # data's dtype follows that of A in SciPy
+/users/aboudaou/miniconda3/envs/serinv-env/lib/python3.11/site-packages/cupyx/scipy/sparse/_construct.py:533: PerformanceWarning: The device where the array resides (0) is different from the current device (2). Peer access has been activated automatically.
+  data = A.data.repeat(B.nnz)  # data's dtype follows that of A in SciPy
+/users/aboudaou/miniconda3/envs/serinv-env/lib/python3.11/site-packages/cupyx/scipy/sparse/_construct.py:533: PerformanceWarning: The device where the array resides (0) is different from the current device (2). Peer access has been activated automatically.
+  data = A.data.repeat(B.nnz)  # data's dtype follows that of A in SciPy
+/users/aboudaou/miniconda3/envs/serinv-env/lib/python3.11/site-packages/cupyx/scipy/sparse/_construct.py:533: PerformanceWarning: The device where the array resides (0) is different from the current device (1). Peer access has been activated automatically.
+  data = A.data.repeat(B.nnz)  # data's dtype follows that of A in SciPy
+/capstor/scratch/cscs/aboudaou/workspace/dalia/DALIA/src/dalia/models/coregional_model.py:304: PerformanceWarning: The device where the array resides (0) is different from the current device (3). Peer access has been activated automatically.
+  sigma_0 = xp.exp(self.theta[self.theta_keys.index("sigma_0")])
+/capstor/scratch/cscs/aboudaou/workspace/dalia/DALIA/src/dalia/models/coregional_model.py:305: PerformanceWarning: The device where the array resides (0) is different from the current device (3). Peer access has been activated automatically.
+  sigma_1 = xp.exp(self.theta[self.theta_keys.index("sigma_1")])
+/capstor/scratch/cscs/aboudaou/workspace/dalia/DALIA/src/dalia/models/coregional_model.py:360: PerformanceWarning: The device where the array resides (0) is different from the current device (3). Peer access has been activated automatically.
+  sigma_2 = xp.exp(self.theta[self.theta_keys.index("sigma_2")])
+/capstor/scratch/cscs/aboudaou/workspace/dalia/DALIA/src/dalia/models/coregional_model.py:367: PerformanceWarning: The device where the array resides (0) is different from the current device (3). Peer access has been activated automatically.
+  + (lambda_0_1**2 / sigma_1**2) * Qu_list[1]
+/capstor/scratch/cscs/aboudaou/workspace/dalia/DALIA/src/dalia/models/coregional_model.py:368: PerformanceWarning: The device where the array resides (0) is different from the current device (3). Peer access has been activated automatically.
+  + (lambda_1_2**2 / sigma_2**2) * Qu_list[2]
+/capstor/scratch/cscs/aboudaou/workspace/dalia/DALIA/src/dalia/models/coregional_model.py:304: PerformanceWarning: The device where the array resides (0) is different from the current device (1). Peer access has been activated automatically.
+  sigma_0 = xp.exp(self.theta[self.theta_keys.index("sigma_0")])
+/capstor/scratch/cscs/aboudaou/workspace/dalia/DALIA/src/dalia/models/coregional_model.py:305: PerformanceWarning: The device where the array resides (0) is different from the current device (1). Peer access has been activated automatically.
+  sigma_1 = xp.exp(self.theta[self.theta_keys.index("sigma_1")])
+/capstor/scratch/cscs/aboudaou/workspace/dalia/DALIA/src/dalia/models/coregional_model.py:360: PerformanceWarning: The device where the array resides (0) is different from the current device (1). Peer access has been activated automatically.
+  sigma_2 = xp.exp(self.theta[self.theta_keys.index("sigma_2")])
+/capstor/scratch/cscs/aboudaou/workspace/dalia/DALIA/src/dalia/models/coregional_model.py:367: PerformanceWarning: The device where the array resides (0) is different from the current device (1). Peer access has been activated automatically.
+  + (lambda_0_1**2 / sigma_1**2) * Qu_list[1]
+/capstor/scratch/cscs/aboudaou/workspace/dalia/DALIA/src/dalia/models/coregional_model.py:368: PerformanceWarning: The device where the array resides (0) is different from the current device (1). Peer access has been activated automatically.
+  + (lambda_1_2**2 / sigma_2**2) * Qu_list[2]
+/capstor/scratch/cscs/aboudaou/workspace/dalia/DALIA/src/dalia/models/coregional_model.py:375: PerformanceWarning: The device where the array resides (0) is different from the current device (3). Peer access has been activated automatically.
+  (-lambda_0_1 / sigma_1**2) * Qu_list[1]
+/capstor/scratch/cscs/aboudaou/workspace/dalia/DALIA/src/dalia/models/coregional_model.py:376: PerformanceWarning: The device where the array resides (0) is different from the current device (3). Peer access has been activated automatically.
+  + (lambda_0_2 * lambda_1_2 / sigma_2**2) * Qu_list[2]
+/capstor/scratch/cscs/aboudaou/workspace/dalia/DALIA/src/dalia/models/coregional_model.py:375: PerformanceWarning: The device where the array resides (0) is different from the current device (1). Peer access has been activated automatically.
+  (-lambda_0_1 / sigma_1**2) * Qu_list[1]
+/capstor/scratch/cscs/aboudaou/workspace/dalia/DALIA/src/dalia/models/coregional_model.py:376: PerformanceWarning: The device where the array resides (0) is different from the current device (1). Peer access has been activated automatically.
+  + (lambda_0_2 * lambda_1_2 / sigma_2**2) * Qu_list[2]
+/capstor/scratch/cscs/aboudaou/workspace/dalia/DALIA/src/dalia/models/coregional_model.py:381: PerformanceWarning: The device where the array resides (0) is different from the current device (3). Peer access has been activated automatically.
+  q31 = sp.sparse.coo_matrix(-lambda_1_2 / sigma_2**2 * Qu_list[2])
+/capstor/scratch/cscs/aboudaou/workspace/dalia/DALIA/src/dalia/models/coregional_model.py:304: PerformanceWarning: The device where the array resides (0) is different from the current device (2). Peer access has been activated automatically.
+  sigma_0 = xp.exp(self.theta[self.theta_keys.index("sigma_0")])
+/capstor/scratch/cscs/aboudaou/workspace/dalia/DALIA/src/dalia/models/coregional_model.py:305: PerformanceWarning: The device where the array resides (0) is different from the current device (2). Peer access has been activated automatically.
+  sigma_1 = xp.exp(self.theta[self.theta_keys.index("sigma_1")])
+/capstor/scratch/cscs/aboudaou/workspace/dalia/DALIA/src/dalia/models/coregional_model.py:360: PerformanceWarning: The device where the array resides (0) is different from the current device (2). Peer access has been activated automatically.
+  sigma_2 = xp.exp(self.theta[self.theta_keys.index("sigma_2")])
+/capstor/scratch/cscs/aboudaou/workspace/dalia/DALIA/src/dalia/models/coregional_model.py:367: PerformanceWarning: The device where the array resides (0) is different from the current device (2). Peer access has been activated automatically.
+  + (lambda_0_1**2 / sigma_1**2) * Qu_list[1]
+/capstor/scratch/cscs/aboudaou/workspace/dalia/DALIA/src/dalia/models/coregional_model.py:368: PerformanceWarning: The device where the array resides (0) is different from the current device (2). Peer access has been activated automatically.
+  + (lambda_1_2**2 / sigma_2**2) * Qu_list[2]
+/capstor/scratch/cscs/aboudaou/workspace/dalia/DALIA/src/dalia/models/coregional_model.py:381: PerformanceWarning: The device where the array resides (0) is different from the current device (1). Peer access has been activated automatically.
+  q31 = sp.sparse.coo_matrix(-lambda_1_2 / sigma_2**2 * Qu_list[2])
+/capstor/scratch/cscs/aboudaou/workspace/dalia/DALIA/src/dalia/models/coregional_model.py:304: PerformanceWarning: The device where the array resides (0) is different from the current device (3). Peer access has been activated automatically.
+  sigma_0 = xp.exp(self.theta[self.theta_keys.index("sigma_0")])
+/capstor/scratch/cscs/aboudaou/workspace/dalia/DALIA/src/dalia/models/coregional_model.py:305: PerformanceWarning: The device where the array resides (0) is different from the current device (3). Peer access has been activated automatically.
+  sigma_1 = xp.exp(self.theta[self.theta_keys.index("sigma_1")])
+/capstor/scratch/cscs/aboudaou/workspace/dalia/DALIA/src/dalia/models/coregional_model.py:360: PerformanceWarning: The device where the array resides (0) is different from the current device (3). Peer access has been activated automatically.
+  sigma_2 = xp.exp(self.theta[self.theta_keys.index("sigma_2")])
+/capstor/scratch/cscs/aboudaou/workspace/dalia/DALIA/src/dalia/models/coregional_model.py:367: PerformanceWarning: The device where the array resides (0) is different from the current device (3). Peer access has been activated automatically.
+  + (lambda_0_1**2 / sigma_1**2) * Qu_list[1]
+/capstor/scratch/cscs/aboudaou/workspace/dalia/DALIA/src/dalia/models/coregional_model.py:368: PerformanceWarning: The device where the array resides (0) is different from the current device (3). Peer access has been activated automatically.
+  + (lambda_1_2**2 / sigma_2**2) * Qu_list[2]
+/capstor/scratch/cscs/aboudaou/workspace/dalia/DALIA/src/dalia/models/coregional_model.py:375: PerformanceWarning: The device where the array resides (0) is different from the current device (2). Peer access has been activated automatically.
+  (-lambda_0_1 / sigma_1**2) * Qu_list[1]
+/capstor/scratch/cscs/aboudaou/workspace/dalia/DALIA/src/dalia/models/coregional_model.py:376: PerformanceWarning: The device where the array resides (0) is different from the current device (2). Peer access has been activated automatically.
+  + (lambda_0_2 * lambda_1_2 / sigma_2**2) * Qu_list[2]
+/capstor/scratch/cscs/aboudaou/workspace/dalia/DALIA/src/dalia/models/coregional_model.py:375: PerformanceWarning: The device where the array resides (0) is different from the current device (3). Peer access has been activated automatically.
+  (-lambda_0_1 / sigma_1**2) * Qu_list[1]
+/capstor/scratch/cscs/aboudaou/workspace/dalia/DALIA/src/dalia/models/coregional_model.py:376: PerformanceWarning: The device where the array resides (0) is different from the current device (3). Peer access has been activated automatically.
+  + (lambda_0_2 * lambda_1_2 / sigma_2**2) * Qu_list[2]
+/capstor/scratch/cscs/aboudaou/workspace/dalia/DALIA/src/dalia/models/coregional_model.py:381: PerformanceWarning: The device where the array resides (0) is different from the current device (2). Peer access has been activated automatically.
+  q31 = sp.sparse.coo_matrix(-lambda_1_2 / sigma_2**2 * Qu_list[2])
+/capstor/scratch/cscs/aboudaou/workspace/dalia/DALIA/src/dalia/models/coregional_model.py:381: PerformanceWarning: The device where the array resides (0) is different from the current device (3). Peer access has been activated automatically.
+  q31 = sp.sparse.coo_matrix(-lambda_1_2 / sigma_2**2 * Qu_list[2])
+/capstor/scratch/cscs/aboudaou/workspace/dalia/DALIA/src/dalia/models/coregional_model.py:304: PerformanceWarning: The device where the array resides (0) is different from the current device (2). Peer access has been activated automatically.
+  sigma_0 = xp.exp(self.theta[self.theta_keys.index("sigma_0")])
+/capstor/scratch/cscs/aboudaou/workspace/dalia/DALIA/src/dalia/models/coregional_model.py:305: PerformanceWarning: The device where the array resides (0) is different from the current device (2). Peer access has been activated automatically.
+  sigma_1 = xp.exp(self.theta[self.theta_keys.index("sigma_1")])
+/capstor/scratch/cscs/aboudaou/workspace/dalia/DALIA/src/dalia/models/coregional_model.py:360: PerformanceWarning: The device where the array resides (0) is different from the current device (2). Peer access has been activated automatically.
+  sigma_2 = xp.exp(self.theta[self.theta_keys.index("sigma_2")])
+/capstor/scratch/cscs/aboudaou/workspace/dalia/DALIA/src/dalia/models/coregional_model.py:367: PerformanceWarning: The device where the array resides (0) is different from the current device (2). Peer access has been activated automatically.
+  + (lambda_0_1**2 / sigma_1**2) * Qu_list[1]
+/capstor/scratch/cscs/aboudaou/workspace/dalia/DALIA/src/dalia/models/coregional_model.py:368: PerformanceWarning: The device where the array resides (0) is different from the current device (2). Peer access has been activated automatically.
+  + (lambda_1_2**2 / sigma_2**2) * Qu_list[2]
+/capstor/scratch/cscs/aboudaou/workspace/dalia/DALIA/src/dalia/models/coregional_model.py:375: PerformanceWarning: The device where the array resides (0) is different from the current device (2). Peer access has been activated automatically.
+  (-lambda_0_1 / sigma_1**2) * Qu_list[1]
+/capstor/scratch/cscs/aboudaou/workspace/dalia/DALIA/src/dalia/models/coregional_model.py:376: PerformanceWarning: The device where the array resides (0) is different from the current device (2). Peer access has been activated automatically.
+  + (lambda_0_2 * lambda_1_2 / sigma_2**2) * Qu_list[2]
+/capstor/scratch/cscs/aboudaou/workspace/dalia/DALIA/src/dalia/models/coregional_model.py:381: PerformanceWarning: The device where the array resides (0) is different from the current device (2). Peer access has been activated automatically.
+  q31 = sp.sparse.coo_matrix(-lambda_1_2 / sigma_2**2 * Qu_list[2])
+/capstor/scratch/cscs/aboudaou/workspace/dalia/DALIA/src/dalia/models/coregional_model.py:304: PerformanceWarning: The device where the array resides (0) is different from the current device (1). Peer access has been activated automatically.
+  sigma_0 = xp.exp(self.theta[self.theta_keys.index("sigma_0")])
+/capstor/scratch/cscs/aboudaou/workspace/dalia/DALIA/src/dalia/models/coregional_model.py:305: PerformanceWarning: The device where the array resides (0) is different from the current device (1). Peer access has been activated automatically.
+  sigma_1 = xp.exp(self.theta[self.theta_keys.index("sigma_1")])
+/capstor/scratch/cscs/aboudaou/workspace/dalia/DALIA/src/dalia/models/coregional_model.py:360: PerformanceWarning: The device where the array resides (0) is different from the current device (1). Peer access has been activated automatically.
+  sigma_2 = xp.exp(self.theta[self.theta_keys.index("sigma_2")])
+/capstor/scratch/cscs/aboudaou/workspace/dalia/DALIA/src/dalia/models/coregional_model.py:367: PerformanceWarning: The device where the array resides (0) is different from the current device (1). Peer access has been activated automatically.
+  + (lambda_0_1**2 / sigma_1**2) * Qu_list[1]
+/capstor/scratch/cscs/aboudaou/workspace/dalia/DALIA/src/dalia/models/coregional_model.py:368: PerformanceWarning: The device where the array resides (0) is different from the current device (1). Peer access has been activated automatically.
+  + (lambda_1_2**2 / sigma_2**2) * Qu_list[2]
+/capstor/scratch/cscs/aboudaou/workspace/dalia/DALIA/src/dalia/models/coregional_model.py:375: PerformanceWarning: The device where the array resides (0) is different from the current device (1). Peer access has been activated automatically.
+  (-lambda_0_1 / sigma_1**2) * Qu_list[1]
+/capstor/scratch/cscs/aboudaou/workspace/dalia/DALIA/src/dalia/models/coregional_model.py:376: PerformanceWarning: The device where the array resides (0) is different from the current device (1). Peer access has been activated automatically.
+  + (lambda_0_2 * lambda_1_2 / sigma_2**2) * Qu_list[2]
+/capstor/scratch/cscs/aboudaou/workspace/dalia/DALIA/src/dalia/models/coregional_model.py:387: PerformanceWarning: The device where the array resides (0) is different from the current device (3). Peer access has been activated automatically.
+  + (lambda_0_2**2 / sigma_2**2) * Qu_list[2]
+/capstor/scratch/cscs/aboudaou/workspace/dalia/DALIA/src/dalia/models/coregional_model.py:381: PerformanceWarning: The device where the array resides (0) is different from the current device (1). Peer access has been activated automatically.
+  q31 = sp.sparse.coo_matrix(-lambda_1_2 / sigma_2**2 * Qu_list[2])
+/capstor/scratch/cscs/aboudaou/workspace/dalia/DALIA/src/dalia/models/coregional_model.py:387: PerformanceWarning: The device where the array resides (0) is different from the current device (1). Peer access has been activated automatically.
+  + (lambda_0_2**2 / sigma_2**2) * Qu_list[2]
+/capstor/scratch/cscs/aboudaou/workspace/dalia/DALIA/src/dalia/models/coregional_model.py:387: PerformanceWarning: The device where the array resides (0) is different from the current device (2). Peer access has been activated automatically.
+  + (lambda_0_2**2 / sigma_2**2) * Qu_list[2]
+/capstor/scratch/cscs/aboudaou/workspace/dalia/DALIA/src/dalia/models/coregional_model.py:387: PerformanceWarning: The device where the array resides (0) is different from the current device (3). Peer access has been activated automatically.
+  + (lambda_0_2**2 / sigma_2**2) * Qu_list[2]
+/capstor/scratch/cscs/aboudaou/workspace/dalia/DALIA/src/dalia/models/coregional_model.py:387: PerformanceWarning: The device where the array resides (0) is different from the current device (2). Peer access has been activated automatically.
+  + (lambda_0_2**2 / sigma_2**2) * Qu_list[2]
+/capstor/scratch/cscs/aboudaou/workspace/dalia/DALIA/src/dalia/models/coregional_model.py:393: PerformanceWarning: The device where the array resides (0) is different from the current device (3). Peer access has been activated automatically.
+  q32 = sp.sparse.coo_matrix(-lambda_0_2 / sigma_2**2 * Qu_list[2])
+/capstor/scratch/cscs/aboudaou/workspace/dalia/DALIA/src/dalia/models/coregional_model.py:387: PerformanceWarning: The device where the array resides (0) is different from the current device (1). Peer access has been activated automatically.
+  + (lambda_0_2**2 / sigma_2**2) * Qu_list[2]
+/capstor/scratch/cscs/aboudaou/workspace/dalia/DALIA/src/dalia/models/coregional_model.py:393: PerformanceWarning: The device where the array resides (0) is different from the current device (1). Peer access has been activated automatically.
+  q32 = sp.sparse.coo_matrix(-lambda_0_2 / sigma_2**2 * Qu_list[2])
+/capstor/scratch/cscs/aboudaou/workspace/dalia/DALIA/src/dalia/models/coregional_model.py:393: PerformanceWarning: The device where the array resides (0) is different from the current device (2). Peer access has been activated automatically.
+  q32 = sp.sparse.coo_matrix(-lambda_0_2 / sigma_2**2 * Qu_list[2])
+/capstor/scratch/cscs/aboudaou/workspace/dalia/DALIA/src/dalia/models/coregional_model.py:393: PerformanceWarning: The device where the array resides (0) is different from the current device (3). Peer access has been activated automatically.
+  q32 = sp.sparse.coo_matrix(-lambda_0_2 / sigma_2**2 * Qu_list[2])
+/capstor/scratch/cscs/aboudaou/workspace/dalia/DALIA/src/dalia/models/coregional_model.py:393: PerformanceWarning: The device where the array resides (0) is different from the current device (2). Peer access has been activated automatically.
+  q32 = sp.sparse.coo_matrix(-lambda_0_2 / sigma_2**2 * Qu_list[2])
+/capstor/scratch/cscs/aboudaou/workspace/dalia/DALIA/src/dalia/models/coregional_model.py:393: PerformanceWarning: The device where the array resides (0) is different from the current device (1). Peer access has been activated automatically.
+  q32 = sp.sparse.coo_matrix(-lambda_0_2 / sigma_2**2 * Qu_list[2])
+/capstor/scratch/cscs/aboudaou/workspace/dalia/DALIA/src/dalia/models/coregional_model.py:526: PerformanceWarning: The device where the array resides (0) is different from the current device (3). Peer access has been activated automatically.
+  self.data_Qprior_re = self.data_Qprior_re[self.permutation_vector_Q_prior]
+/capstor/scratch/cscs/aboudaou/workspace/dalia/DALIA/src/dalia/models/coregional_model.py:526: PerformanceWarning: The device where the array resides (0) is different from the current device (1). Peer access has been activated automatically.
+  self.data_Qprior_re = self.data_Qprior_re[self.permutation_vector_Q_prior]
+/capstor/scratch/cscs/aboudaou/workspace/dalia/DALIA/src/dalia/models/coregional_model.py:526: PerformanceWarning: The device where the array resides (0) is different from the current device (2). Peer access has been activated automatically.
+  self.data_Qprior_re = self.data_Qprior_re[self.permutation_vector_Q_prior]
+/capstor/scratch/cscs/aboudaou/workspace/dalia/DALIA/src/dalia/models/coregional_model.py:526: PerformanceWarning: The device where the array resides (0) is different from the current device (3). Peer access has been activated automatically.
+  self.data_Qprior_re = self.data_Qprior_re[self.permutation_vector_Q_prior]
+/capstor/scratch/cscs/aboudaou/workspace/dalia/DALIA/src/dalia/models/coregional_model.py:526: PerformanceWarning: The device where the array resides (0) is different from the current device (2). Peer access has been activated automatically.
+  self.data_Qprior_re = self.data_Qprior_re[self.permutation_vector_Q_prior]
+/users/aboudaou/miniconda3/envs/serinv-env/lib/python3.11/site-packages/cupyx/scipy/sparse/_compressed.py:674: PerformanceWarning: The device where the array resides (0) is different from the current device (3). Peer access has been activated automatically.
+  is_canonical = self._has_canonical_format_kern(
+/users/aboudaou/miniconda3/envs/serinv-env/lib/python3.11/site-packages/cupyx/scipy/sparse/_compressed.py:674: PerformanceWarning: The device where the array resides (0) is different from the current device (1). Peer access has been activated automatically.
+  is_canonical = self._has_canonical_format_kern(
+/capstor/scratch/cscs/aboudaou/workspace/dalia/DALIA/src/dalia/models/coregional_model.py:526: PerformanceWarning: The device where the array resides (0) is different from the current device (1). Peer access has been activated automatically.
+  self.data_Qprior_re = self.data_Qprior_re[self.permutation_vector_Q_prior]
+/users/aboudaou/miniconda3/envs/serinv-env/lib/python3.11/site-packages/cupyx/scipy/sparse/_compressed.py:674: PerformanceWarning: The device where the array resides (0) is different from the current device (2). Peer access has been activated automatically.
+  is_canonical = self._has_canonical_format_kern(
+/users/aboudaou/miniconda3/envs/serinv-env/lib/python3.11/site-packages/cupyx/scipy/sparse/_compressed.py:674: PerformanceWarning: The device where the array resides (0) is different from the current device (3). Peer access has been activated automatically.
+  is_canonical = self._has_canonical_format_kern(
+/users/aboudaou/miniconda3/envs/serinv-env/lib/python3.11/site-packages/cupyx/scipy/sparse/_compressed.py:674: PerformanceWarning: The device where the array resides (0) is different from the current device (2). Peer access has been activated automatically.
+  is_canonical = self._has_canonical_format_kern(
+/users/aboudaou/miniconda3/envs/serinv-env/lib/python3.11/site-packages/cupyx/scipy/sparse/_compressed.py:674: PerformanceWarning: The device where the array resides (0) is different from the current device (1). Peer access has been activated automatically.
+  is_canonical = self._has_canonical_format_kern(
+/capstor/scratch/cscs/aboudaou/workspace/dalia/DALIA/src/dalia/likelihoods/gaussian.py:94: PerformanceWarning: The device where the array resides (0) is different from the current device (2). Peer access has been activated automatically.
+  gradient_likelihood: NDArray = -xp.exp(theta) * (eta - y)
+/users/aboudaou/miniconda3/envs/serinv-env/lib/python3.11/site-packages/cupyx/scipy/sparse/_csc.py:87: PerformanceWarning: The device where the array resides (0) is different from the current device (2). Peer access has been activated automatically.
+  return self._with_data(self.data * other)
+/capstor/scratch/cscs/aboudaou/workspace/dalia/DALIA/src/dalia/likelihoods/gaussian.py:94: PerformanceWarning: The device where the array resides (0) is different from the current device (1). Peer access has been activated automatically.
+  gradient_likelihood: NDArray = -xp.exp(theta) * (eta - y)
+/capstor/scratch/cscs/aboudaou/workspace/dalia/DALIA/src/dalia/likelihoods/gaussian.py:94: PerformanceWarning: The device where the array resides (0) is different from the current device (2). Peer access has been activated automatically.
+  gradient_likelihood: NDArray = -xp.exp(theta) * (eta - y)
+/users/aboudaou/miniconda3/envs/serinv-env/lib/python3.11/site-packages/cupyx/scipy/sparse/_csc.py:87: PerformanceWarning: The device where the array resides (0) is different from the current device (1). Peer access has been activated automatically.
+  return self._with_data(self.data * other)
+/users/aboudaou/miniconda3/envs/serinv-env/lib/python3.11/site-packages/cupyx/scipy/sparse/_csc.py:87: PerformanceWarning: The device where the array resides (0) is different from the current device (2). Peer access has been activated automatically.
+  return self._with_data(self.data * other)
+/capstor/scratch/cscs/aboudaou/workspace/dalia/DALIA/src/dalia/likelihoods/gaussian.py:94: PerformanceWarning: The device where the array resides (0) is different from the current device (3). Peer access has been activated automatically.
+  gradient_likelihood: NDArray = -xp.exp(theta) * (eta - y)
+/users/aboudaou/miniconda3/envs/serinv-env/lib/python3.11/site-packages/cupyx/scipy/sparse/_csc.py:87: PerformanceWarning: The device where the array resides (0) is different from the current device (3). Peer access has been activated automatically.
+  return self._with_data(self.data * other)
+/capstor/scratch/cscs/aboudaou/workspace/dalia/DALIA/src/dalia/likelihoods/gaussian.py:94: PerformanceWarning: The device where the array resides (0) is different from the current device (3). Peer access has been activated automatically.
+  gradient_likelihood: NDArray = -xp.exp(theta) * (eta - y)
+/users/aboudaou/miniconda3/envs/serinv-env/lib/python3.11/site-packages/cupyx/scipy/sparse/_csc.py:87: PerformanceWarning: The device where the array resides (0) is different from the current device (3). Peer access has been activated automatically.
+  return self._with_data(self.data * other)
+/capstor/scratch/cscs/aboudaou/workspace/dalia/DALIA/src/dalia/likelihoods/gaussian.py:94: PerformanceWarning: The device where the array resides (0) is different from the current device (1). Peer access has been activated automatically.
+  gradient_likelihood: NDArray = -xp.exp(theta) * (eta - y)
+/users/aboudaou/miniconda3/envs/serinv-env/lib/python3.11/site-packages/cupyx/scipy/sparse/_csc.py:87: PerformanceWarning: The device where the array resides (0) is different from the current device (1). Peer access has been activated automatically.
+  return self._with_data(self.data * other)
+/capstor/scratch/cscs/aboudaou/workspace/dalia/DALIA/src/dalia/core/dalia.py:1611: PerformanceWarning: The device where the array resides (0) is different from the current device (2). Peer access has been activated automatically.
+  quadratic_form = x_mean.T @ Q_conditional @ x_mean
+/capstor/scratch/cscs/aboudaou/workspace/dalia/DALIA/src/dalia/core/dalia.py:1611: PerformanceWarning: The device where the array resides (0) is different from the current device (2). Peer access has been activated automatically.
+  quadratic_form = x_mean.T @ Q_conditional @ x_mean
+/capstor/scratch/cscs/aboudaou/workspace/dalia/DALIA/src/dalia/prior_hyperparameters/gaussian.py:29: PerformanceWarning: The device where the array resides (0) is different from the current device (2). Peer access has been activated automatically.
+  return -0.5 * self.precision * (theta - self.mean) ** 2
+/capstor/scratch/cscs/aboudaou/workspace/dalia/DALIA/src/dalia/likelihoods/gaussian.py:55: PerformanceWarning: The device where the array resides (0) is different from the current device (2). Peer access has been activated automatically.
+  yEta = eta - y
+/capstor/scratch/cscs/aboudaou/workspace/dalia/DALIA/src/dalia/prior_hyperparameters/gaussian.py:29: PerformanceWarning: The device where the array resides (0) is different from the current device (2). Peer access has been activated automatically.
+  return -0.5 * self.precision * (theta - self.mean) ** 2
+/capstor/scratch/cscs/aboudaou/workspace/dalia/DALIA/src/dalia/likelihoods/gaussian.py:55: PerformanceWarning: The device where the array resides (0) is different from the current device (2). Peer access has been activated automatically.
+  yEta = eta - y
+/capstor/scratch/cscs/aboudaou/workspace/dalia/DALIA/src/dalia/core/dalia.py:1611: PerformanceWarning: The device where the array resides (0) is different from the current device (1). Peer access has been activated automatically.
+  quadratic_form = x_mean.T @ Q_conditional @ x_mean
+/capstor/scratch/cscs/aboudaou/workspace/dalia/DALIA/src/dalia/prior_hyperparameters/gaussian.py:29: PerformanceWarning: The device where the array resides (0) is different from the current device (1). Peer access has been activated automatically.
+  return -0.5 * self.precision * (theta - self.mean) ** 2
+/capstor/scratch/cscs/aboudaou/workspace/dalia/DALIA/src/dalia/likelihoods/gaussian.py:55: PerformanceWarning: The device where the array resides (0) is different from the current device (1). Peer access has been activated automatically.
+  yEta = eta - y
+/capstor/scratch/cscs/aboudaou/workspace/dalia/DALIA/src/dalia/kernels/blockmapping.py:72: PerformanceWarning: The device where the array resides (0) is different from the current device (2). Peer access has been activated automatically.
+  coo_rows = coo_rows.astype(cp.int32)
+/capstor/scratch/cscs/aboudaou/workspace/dalia/DALIA/src/dalia/core/dalia.py:1611: PerformanceWarning: The device where the array resides (0) is different from the current device (3). Peer access has been activated automatically.
+  quadratic_form = x_mean.T @ Q_conditional @ x_mean
+/capstor/scratch/cscs/aboudaou/workspace/dalia/DALIA/src/dalia/kernels/blockmapping.py:72: PerformanceWarning: The device where the array resides (0) is different from the current device (2). Peer access has been activated automatically.
+  coo_rows = coo_rows.astype(cp.int32)
+/capstor/scratch/cscs/aboudaou/workspace/dalia/DALIA/src/dalia/prior_hyperparameters/gaussian.py:29: PerformanceWarning: The device where the array resides (0) is different from the current device (3). Peer access has been activated automatically.
+  return -0.5 * self.precision * (theta - self.mean) ** 2
+/capstor/scratch/cscs/aboudaou/workspace/dalia/DALIA/src/dalia/likelihoods/gaussian.py:55: PerformanceWarning: The device where the array resides (0) is different from the current device (3). Peer access has been activated automatically.
+  yEta = eta - y
+/capstor/scratch/cscs/aboudaou/workspace/dalia/DALIA/src/dalia/kernels/blockmapping.py:72: PerformanceWarning: The device where the array resides (0) is different from the current device (1). Peer access has been activated automatically.
+  coo_rows = coo_rows.astype(cp.int32)
+/capstor/scratch/cscs/aboudaou/workspace/dalia/DALIA/src/dalia/kernels/blockmapping.py:72: PerformanceWarning: The device where the array resides (0) is different from the current device (3). Peer access has been activated automatically.
+  coo_rows = coo_rows.astype(cp.int32)
+/capstor/scratch/cscs/aboudaou/workspace/dalia/DALIA/src/dalia/core/dalia.py:1611: PerformanceWarning: The device where the array resides (0) is different from the current device (3). Peer access has been activated automatically.
+  quadratic_form = x_mean.T @ Q_conditional @ x_mean
+/capstor/scratch/cscs/aboudaou/workspace/dalia/DALIA/src/dalia/prior_hyperparameters/gaussian.py:29: PerformanceWarning: The device where the array resides (0) is different from the current device (3). Peer access has been activated automatically.
+  return -0.5 * self.precision * (theta - self.mean) ** 2
+/capstor/scratch/cscs/aboudaou/workspace/dalia/DALIA/src/dalia/likelihoods/gaussian.py:55: PerformanceWarning: The device where the array resides (0) is different from the current device (3). Peer access has been activated automatically.
+  yEta = eta - y
+/capstor/scratch/cscs/aboudaou/workspace/dalia/DALIA/src/dalia/kernels/blockmapping.py:72: PerformanceWarning: The device where the array resides (0) is different from the current device (3). Peer access has been activated automatically.
+  coo_rows = coo_rows.astype(cp.int32)
+/capstor/scratch/cscs/aboudaou/workspace/dalia/DALIA/src/dalia/core/dalia.py:1611: PerformanceWarning: The device where the array resides (0) is different from the current device (1). Peer access has been activated automatically.
+  quadratic_form = x_mean.T @ Q_conditional @ x_mean
+/capstor/scratch/cscs/aboudaou/workspace/dalia/DALIA/src/dalia/prior_hyperparameters/gaussian.py:29: PerformanceWarning: The device where the array resides (0) is different from the current device (1). Peer access has been activated automatically.
+  return -0.5 * self.precision * (theta - self.mean) ** 2
+/capstor/scratch/cscs/aboudaou/workspace/dalia/DALIA/src/dalia/likelihoods/gaussian.py:55: PerformanceWarning: The device where the array resides (0) is different from the current device (1). Peer access has been activated automatically.
+  yEta = eta - y
+/capstor/scratch/cscs/aboudaou/workspace/dalia/DALIA/src/dalia/kernels/blockmapping.py:72: PerformanceWarning: The device where the array resides (0) is different from the current device (1). Peer access has been activated automatically.
+  coo_rows = coo_rows.astype(cp.int32)
+/capstor/scratch/cscs/aboudaou/workspace/dalia/DALIA/src/dalia/solvers/structured_solver.py:410: PerformanceWarning: The device where the array resides (0) is different from the current device (2). Peer access has been activated automatically.
+  rows = coo.row[self.bt_cache_block_sort_index]
+/capstor/scratch/cscs/aboudaou/workspace/dalia/DALIA/src/dalia/solvers/structured_solver.py:410: PerformanceWarning: The device where the array resides (0) is different from the current device (3). Peer access has been activated automatically.
+  rows = coo.row[self.bt_cache_block_sort_index]
+/capstor/scratch/cscs/aboudaou/workspace/dalia/DALIA/src/dalia/solvers/structured_solver.py:410: PerformanceWarning: The device where the array resides (0) is different from the current device (2). Peer access has been activated automatically.
+  rows = coo.row[self.bt_cache_block_sort_index]
+/capstor/scratch/cscs/aboudaou/workspace/dalia/DALIA/src/dalia/solvers/structured_solver.py:410: PerformanceWarning: The device where the array resides (0) is different from the current device (1). Peer access has been activated automatically.
+  rows = coo.row[self.bt_cache_block_sort_index]
+/capstor/scratch/cscs/aboudaou/workspace/dalia/DALIA/src/dalia/solvers/structured_solver.py:410: PerformanceWarning: The device where the array resides (0) is different from the current device (1). Peer access has been activated automatically.
+  rows = coo.row[self.bt_cache_block_sort_index]
+/capstor/scratch/cscs/aboudaou/workspace/dalia/DALIA/src/dalia/solvers/structured_solver.py:410: PerformanceWarning: The device where the array resides (0) is different from the current device (3). Peer access has been activated automatically.
+  rows = coo.row[self.bt_cache_block_sort_index]
+/capstor/scratch/cscs/aboudaou/workspace/dalia/DALIA/src/dalia/solvers/structured_solver.py:457: PerformanceWarning: The device where the array resides (0) is different from the current device (2). Peer access has been activated automatically.
+  data = coo.data[self.bt_cache_block_sort_index]
+/capstor/scratch/cscs/aboudaou/workspace/dalia/DALIA/src/dalia/solvers/structured_solver.py:457: PerformanceWarning: The device where the array resides (0) is different from the current device (3). Peer access has been activated automatically.
+  data = coo.data[self.bt_cache_block_sort_index]
+/capstor/scratch/cscs/aboudaou/workspace/dalia/DALIA/src/dalia/solvers/structured_solver.py:457: PerformanceWarning: The device where the array resides (0) is different from the current device (2). Peer access has been activated automatically.
+  data = coo.data[self.bt_cache_block_sort_index]
+/capstor/scratch/cscs/aboudaou/workspace/dalia/DALIA/src/dalia/solvers/structured_solver.py:457: PerformanceWarning: The device where the array resides (0) is different from the current device (1). Peer access has been activated automatically.
+  data = coo.data[self.bt_cache_block_sort_index]
+/capstor/scratch/cscs/aboudaou/workspace/dalia/DALIA/src/dalia/solvers/structured_solver.py:457: PerformanceWarning: The device where the array resides (0) is different from the current device (1). Peer access has been activated automatically.
+  data = coo.data[self.bt_cache_block_sort_index]
+/capstor/scratch/cscs/aboudaou/workspace/dalia/DALIA/src/dalia/solvers/structured_solver.py:457: PerformanceWarning: The device where the array resides (0) is different from the current device (3). Peer access has been activated automatically.
+  data = coo.data[self.bt_cache_block_sort_index]

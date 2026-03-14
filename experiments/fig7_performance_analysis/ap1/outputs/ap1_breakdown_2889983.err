@@ -1,0 +1,100 @@
+W0314 16:17:41.767214   61450 cuda_executor.cc:1802] GPU interconnect information not available: INTERNAL: NVML doesn't support extracting fabric info or NVLink is not used by the device.
+W0314 16:17:41.770783   61449 cuda_executor.cc:1802] GPU interconnect information not available: INTERNAL: NVML doesn't support extracting fabric info or NVLink is not used by the device.
+W0314 16:17:41.786584   61451 cuda_executor.cc:1802] GPU interconnect information not available: INTERNAL: NVML doesn't support extracting fabric info or NVLink is not used by the device.
+W0314 16:17:41.790198   61448 cuda_executor.cc:1802] GPU interconnect information not available: INTERNAL: NVML doesn't support extracting fabric info or NVLink is not used by the device.
+W0314 16:17:41.819002  116421 cuda_executor.cc:1802] GPU interconnect information not available: INTERNAL: NVML doesn't support extracting fabric info or NVLink is not used by the device.
+W0314 16:17:41.822019  192459 cuda_executor.cc:1802] GPU interconnect information not available: INTERNAL: NVML doesn't support extracting fabric info or NVLink is not used by the device.
+W0314 16:17:41.827771  116423 cuda_executor.cc:1802] GPU interconnect information not available: INTERNAL: NVML doesn't support extracting fabric info or NVLink is not used by the device.
+W0314 16:17:41.833113  192460 cuda_executor.cc:1802] GPU interconnect information not available: INTERNAL: NVML doesn't support extracting fabric info or NVLink is not used by the device.
+W0314 16:17:41.835100  192461 cuda_executor.cc:1802] GPU interconnect information not available: INTERNAL: NVML doesn't support extracting fabric info or NVLink is not used by the device.
+W0314 16:17:41.840194  192462 cuda_executor.cc:1802] GPU interconnect information not available: INTERNAL: NVML doesn't support extracting fabric info or NVLink is not used by the device.
+W0314 16:17:41.845153  116422 cuda_executor.cc:1802] GPU interconnect information not available: INTERNAL: NVML doesn't support extracting fabric info or NVLink is not used by the device.
+W0314 16:17:41.846860  116420 cuda_executor.cc:1802] GPU interconnect information not available: INTERNAL: NVML doesn't support extracting fabric info or NVLink is not used by the device.
+W0314 16:17:42.067916  262274 cuda_executor.cc:1802] GPU interconnect information not available: INTERNAL: NVML doesn't support extracting fabric info or NVLink is not used by the device.
+W0314 16:17:42.070122  262275 cuda_executor.cc:1802] GPU interconnect information not available: INTERNAL: NVML doesn't support extracting fabric info or NVLink is not used by the device.
+W0314 16:17:42.071925  262277 cuda_executor.cc:1802] GPU interconnect information not available: INTERNAL: NVML doesn't support extracting fabric info or NVLink is not used by the device.
+W0314 16:17:42.073732  262276 cuda_executor.cc:1802] GPU interconnect information not available: INTERNAL: NVML doesn't support extracting fabric info or NVLink is not used by the device.
+W0314 16:17:42.166311   60703 cuda_executor.cc:1802] GPU interconnect information not available: INTERNAL: NVML doesn't support extracting fabric info or NVLink is not used by the device.
+W0314 16:17:42.196241  191742 cuda_executor.cc:1802] GPU interconnect information not available: INTERNAL: NVML doesn't support extracting fabric info or NVLink is not used by the device.
+W0314 16:17:42.198690   60703 cuda_executor.cc:1802] GPU interconnect information not available: INTERNAL: NVML doesn't support extracting fabric info or NVLink is not used by the device.
+W0314 16:17:42.210030  115705 cuda_executor.cc:1802] GPU interconnect information not available: INTERNAL: NVML doesn't support extracting fabric info or NVLink is not used by the device.
+W0314 16:17:42.227622  191742 cuda_executor.cc:1802] GPU interconnect information not available: INTERNAL: NVML doesn't support extracting fabric info or NVLink is not used by the device.
+W0314 16:17:42.230391   60703 cuda_executor.cc:1802] GPU interconnect information not available: INTERNAL: NVML doesn't support extracting fabric info or NVLink is not used by the device.
+W0314 16:17:42.241841  115705 cuda_executor.cc:1802] GPU interconnect information not available: INTERNAL: NVML doesn't support extracting fabric info or NVLink is not used by the device.
+W0314 16:17:42.259294  191742 cuda_executor.cc:1802] GPU interconnect information not available: INTERNAL: NVML doesn't support extracting fabric info or NVLink is not used by the device.
+W0314 16:17:42.261931   60703 cuda_executor.cc:1802] GPU interconnect information not available: INTERNAL: NVML doesn't support extracting fabric info or NVLink is not used by the device.
+W0314 16:17:42.274315  115705 cuda_executor.cc:1802] GPU interconnect information not available: INTERNAL: NVML doesn't support extracting fabric info or NVLink is not used by the device.
+W0314 16:17:42.290654  191742 cuda_executor.cc:1802] GPU interconnect information not available: INTERNAL: NVML doesn't support extracting fabric info or NVLink is not used by the device.
+W0314 16:17:42.306422  115705 cuda_executor.cc:1802] GPU interconnect information not available: INTERNAL: NVML doesn't support extracting fabric info or NVLink is not used by the device.
+W0314 16:17:42.433117  261533 cuda_executor.cc:1802] GPU interconnect information not available: INTERNAL: NVML doesn't support extracting fabric info or NVLink is not used by the device.
+W0314 16:17:42.464844  261533 cuda_executor.cc:1802] GPU interconnect information not available: INTERNAL: NVML doesn't support extracting fabric info or NVLink is not used by the device.
+W0314 16:17:42.495771  261533 cuda_executor.cc:1802] GPU interconnect information not available: INTERNAL: NVML doesn't support extracting fabric info or NVLink is not used by the device.
+W0314 16:17:42.527480  261533 cuda_executor.cc:1802] GPU interconnect information not available: INTERNAL: NVML doesn't support extracting fabric info or NVLink is not used by the device.
+/users/aboudaou/miniconda3/envs/serinv-env/lib/python3.11/site-packages/mpi4jax/_src/decorators.py:60: UserWarning: Not using CUDA-enabled MPI. If you are sure that your MPI library is built with CUDA support, set MPI4JAX_USE_CUDA_MPI=1. To silence this warning, set MPI4JAX_USE_CUDA_MPI=0.
+  warnings.warn(warn_msg)
+/users/aboudaou/miniconda3/envs/serinv-env/lib/python3.11/site-packages/mpi4jax/_src/decorators.py:60: UserWarning: Not using CUDA-enabled MPI. If you are sure that your MPI library is built with CUDA support, set MPI4JAX_USE_CUDA_MPI=1. To silence this warning, set MPI4JAX_USE_CUDA_MPI=0.
+  warnings.warn(warn_msg)
+/users/aboudaou/miniconda3/envs/serinv-env/lib/python3.11/site-packages/mpi4jax/_src/decorators.py:60: UserWarning: Not using CUDA-enabled MPI. If you are sure that your MPI library is built with CUDA support, set MPI4JAX_USE_CUDA_MPI=1. To silence this warning, set MPI4JAX_USE_CUDA_MPI=0.
+  warnings.warn(warn_msg)
+/users/aboudaou/miniconda3/envs/serinv-env/lib/python3.11/site-packages/mpi4jax/_src/decorators.py:60: UserWarning: Not using CUDA-enabled MPI. If you are sure that your MPI library is built with CUDA support, set MPI4JAX_USE_CUDA_MPI=1. To silence this warning, set MPI4JAX_USE_CUDA_MPI=0.
+  warnings.warn(warn_msg)
+E0314 16:22:12.489622   61770 slow_operation_alarm.cc:73] Constant folding an instruction is taking > 1s:
+
+  %scatter-add.51 = f64[606246]{0} scatter(%broadcast.17, %constant.2484, %constant.2988), update_window_dims={1}, inserted_window_dims={}, scatter_dims_to_operand_dims={0}, index_vector_dim=1, to_apply=%region_42.51, metadata={op_name="jit(_grad_quad_fn_jit)/scatter-add" source_file="/capstor/scratch/cscs/aboudaou/workspace/dalia/DALIA/src/dalia/core/autodiff/distributed.py" source_line=486 source_end_line=486 source_column=16 source_end_column=26}
+
+This isn't necessarily a bug; constant-folding is inherently a trade-off between compilation time and speed at runtime. XLA has some guards that attempt to keep constant folding from taking too long, but fundamentally you'll always be able to come up with an input program that takes a long time.
+
+If you'd like to file a bug, run with envvar XLA_FLAGS=--xla_dump_to=/tmp/foo and attach the results.
+E0314 16:22:12.490702  262591 slow_operation_alarm.cc:73] Constant folding an instruction is taking > 1s:
+
+  %scatter-add.51 = f64[606246]{0} scatter(%broadcast.17, %constant.2484, %constant.2991), update_window_dims={1}, inserted_window_dims={}, scatter_dims_to_operand_dims={0}, index_vector_dim=1, to_apply=%region_42.51, metadata={op_name="jit(_grad_quad_fn_jit)/scatter-add" source_file="/capstor/scratch/cscs/aboudaou/workspace/dalia/DALIA/src/dalia/core/autodiff/distributed.py" source_line=486 source_end_line=486 source_column=16 source_end_column=26}
+
+This isn't necessarily a bug; constant-folding is inherently a trade-off between compilation time and speed at runtime. XLA has some guards that attempt to keep constant folding from taking too long, but fundamentally you'll always be able to come up with an input program that takes a long time.
+
+If you'd like to file a bug, run with envvar XLA_FLAGS=--xla_dump_to=/tmp/foo and attach the results.
+E0314 16:22:12.551875  192795 slow_operation_alarm.cc:73] Constant folding an instruction is taking > 1s:
+
+  %scatter-add.51 = f64[606246]{0} scatter(%broadcast.17, %constant.2484, %constant.2991), update_window_dims={1}, inserted_window_dims={}, scatter_dims_to_operand_dims={0}, index_vector_dim=1, to_apply=%region_42.51, metadata={op_name="jit(_grad_quad_fn_jit)/scatter-add" source_file="/capstor/scratch/cscs/aboudaou/workspace/dalia/DALIA/src/dalia/core/autodiff/distributed.py" source_line=486 source_end_line=486 source_column=16 source_end_column=26}
+
+This isn't necessarily a bug; constant-folding is inherently a trade-off between compilation time and speed at runtime. XLA has some guards that attempt to keep constant folding from taking too long, but fundamentally you'll always be able to come up with an input program that takes a long time.
+
+If you'd like to file a bug, run with envvar XLA_FLAGS=--xla_dump_to=/tmp/foo and attach the results.
+E0314 16:22:13.114070  261533 slow_operation_alarm.cc:140] The operation took 1.623472146s
+Constant folding an instruction is taking > 1s:
+
+  %scatter-add.51 = f64[606246]{0} scatter(%broadcast.17, %constant.2484, %constant.2991), update_window_dims={1}, inserted_window_dims={}, scatter_dims_to_operand_dims={0}, index_vector_dim=1, to_apply=%region_42.51, metadata={op_name="jit(_grad_quad_fn_jit)/scatter-add" source_file="/capstor/scratch/cscs/aboudaou/workspace/dalia/DALIA/src/dalia/core/autodiff/distributed.py" source_line=486 source_end_line=486 source_column=16 source_end_column=26}
+
+This isn't necessarily a bug; constant-folding is inherently a trade-off between compilation time and speed at runtime. XLA has some guards that attempt to keep constant folding from taking too long, but fundamentally you'll always be able to come up with an input program that takes a long time.
+
+If you'd like to file a bug, run with envvar XLA_FLAGS=--xla_dump_to=/tmp/foo and attach the results.
+E0314 16:22:13.229109   60703 slow_operation_alarm.cc:140] The operation took 1.739563494s
+Constant folding an instruction is taking > 1s:
+
+  %scatter-add.51 = f64[606246]{0} scatter(%broadcast.17, %constant.2484, %constant.2988), update_window_dims={1}, inserted_window_dims={}, scatter_dims_to_operand_dims={0}, index_vector_dim=1, to_apply=%region_42.51, metadata={op_name="jit(_grad_quad_fn_jit)/scatter-add" source_file="/capstor/scratch/cscs/aboudaou/workspace/dalia/DALIA/src/dalia/core/autodiff/distributed.py" source_line=486 source_end_line=486 source_column=16 source_end_column=26}
+
+This isn't necessarily a bug; constant-folding is inherently a trade-off between compilation time and speed at runtime. XLA has some guards that attempt to keep constant folding from taking too long, but fundamentally you'll always be able to come up with an input program that takes a long time.
+
+If you'd like to file a bug, run with envvar XLA_FLAGS=--xla_dump_to=/tmp/foo and attach the results.
+E0314 16:22:13.272405  191742 slow_operation_alarm.cc:140] The operation took 1.720634481s
+Constant folding an instruction is taking > 1s:
+
+  %scatter-add.51 = f64[606246]{0} scatter(%broadcast.17, %constant.2484, %constant.2991), update_window_dims={1}, inserted_window_dims={}, scatter_dims_to_operand_dims={0}, index_vector_dim=1, to_apply=%region_42.51, metadata={op_name="jit(_grad_quad_fn_jit)/scatter-add" source_file="/capstor/scratch/cscs/aboudaou/workspace/dalia/DALIA/src/dalia/core/autodiff/distributed.py" source_line=486 source_end_line=486 source_column=16 source_end_column=26}
+
+This isn't necessarily a bug; constant-folding is inherently a trade-off between compilation time and speed at runtime. XLA has some guards that attempt to keep constant folding from taking too long, but fundamentally you'll always be able to come up with an input program that takes a long time.
+
+If you'd like to file a bug, run with envvar XLA_FLAGS=--xla_dump_to=/tmp/foo and attach the results.
+E0314 16:22:13.443572  116758 slow_operation_alarm.cc:73] Constant folding an instruction is taking > 1s:
+
+  %scatter-add.51 = f64[606246]{0} scatter(%broadcast.18, %constant.3938, %constant.4698), update_window_dims={1}, inserted_window_dims={}, scatter_dims_to_operand_dims={0}, index_vector_dim=1, to_apply=%region_66.75, metadata={op_name="jit(_grad_quad_fn_jit)/scatter-add" source_file="/capstor/scratch/cscs/aboudaou/workspace/dalia/DALIA/src/dalia/core/autodiff/distributed.py" source_line=486 source_end_line=486 source_column=16 source_end_column=26}
+
+This isn't necessarily a bug; constant-folding is inherently a trade-off between compilation time and speed at runtime. XLA has some guards that attempt to keep constant folding from taking too long, but fundamentally you'll always be able to come up with an input program that takes a long time.
+
+If you'd like to file a bug, run with envvar XLA_FLAGS=--xla_dump_to=/tmp/foo and attach the results.
+E0314 16:22:14.265526  115705 slow_operation_alarm.cc:140] The operation took 1.822020039s
+Constant folding an instruction is taking > 1s:
+
+  %scatter-add.51 = f64[606246]{0} scatter(%broadcast.18, %constant.3938, %constant.4698), update_window_dims={1}, inserted_window_dims={}, scatter_dims_to_operand_dims={0}, index_vector_dim=1, to_apply=%region_66.75, metadata={op_name="jit(_grad_quad_fn_jit)/scatter-add" source_file="/capstor/scratch/cscs/aboudaou/workspace/dalia/DALIA/src/dalia/core/autodiff/distributed.py" source_line=486 source_end_line=486 source_column=16 source_end_column=26}
+
+This isn't necessarily a bug; constant-folding is inherently a trade-off between compilation time and speed at runtime. XLA has some guards that attempt to keep constant folding from taking too long, but fundamentally you'll always be able to come up with an input program that takes a long time.
+
+If you'd like to file a bug, run with envvar XLA_FLAGS=--xla_dump_to=/tmp/foo and attach the results.

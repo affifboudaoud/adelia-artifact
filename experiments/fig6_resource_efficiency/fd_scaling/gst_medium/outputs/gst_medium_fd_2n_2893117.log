@@ -1,0 +1,106 @@
+Parsed parameters:
+  max_iter: 250
+  solver_min_p: 1
+  profile: False
+  precision: float64
+  benchmark_mode: True
+  n_benchmark_runs: 10
+  benchmark_method: finite_diff
+  output_csv: /capstor/scratch/cscs/aboudaou/workspace/dalia/artifact/plotting/data/fig6_raw_results.csv
+--- gst_medium: Gaussian Spatio-Temporal Model ---
+
+___________________________________ 
+___  __ \__    |__  /____  _/__    |
+__  / / /_  /| |_  /  __  / __  /| |
+_  /_/ /_  ___ |  /____/ /  _  ___ |
+/_____/ /_/  |_/_____/___/  /_/  |_|
+
+╔═══════════════════════════════════════════════════════╗
+║               Parallelization strategies              ║
+║ ╒═══════════════════════════════════════════╤═══════╕ ║
+║ │ Participating Processes / Total Processes │ 2 / 2 │ ║
+║ ├───────────────────────────────────────────┼───────┤ ║
+║ │ Parallelization through F()               │   2   │ ║
+║ ├───────────────────────────────────────────┼───────┤ ║
+║ │ Parallelization through Q()               │   1   │ ║
+║ ├───────────────────────────────────────────┼───────┤ ║
+║ │ Parallelization through S()               │   1   │ ║
+║ ╘═══════════════════════════════════════════╧═══════╛ ║
+╚═══════════════════════════════════════════════════════╝
+╔═══════════════════════════════╗
+║  Enabled Performance modules  ║
+║ ╒═══════════════════╤═══════╕ ║
+║ │ Array module      │ cupy  │ ║
+║ ├───────────────────┼───────┤ ║
+║ │ MPI available     │ True  │ ║
+║ ├───────────────────┼───────┤ ║
+║ │ Is MPI CUDA aware │ False │ ║
+║ ├───────────────────┼───────┤ ║
+║ │ Is NCCL available │ False │ ║
+║ ╘═══════════════════╧═══════╛ ║
+╚═══════════════════════════════╝
+╔═════════════════════════════════════════╗
+║              Memory Report              ║
+║ ╒════════════════════════╤════════════╕ ║
+║ │ Solver memory          │ 1004.77 MB │ ║
+║ ├────────────────────────┼────────────┤ ║
+║ │ Total memory used      │  1.09 GB   │ ║
+║ ├────────────────────────┼────────────┤ ║
+║ │ Total memory available │  1.10 GB   │ ║
+║ ╘════════════════════════╧════════════╛ ║
+╚═════════════════════════════════════════╝
+DALIA initialized.
+
+======================================================================
+GRADIENT BENCHMARK: gst_medium
+======================================================================
+Nodes: 2, Tasks: 2
+Hyperparameters: 4
+Benchmark runs: 10
+Energy monitor: enabled (Cray PM counters)
+
+Timing finite difference gradient...
+Allocated an extra 0.03 GB for BTA_mapping caching (total: 1.01)
+Allocated an extra 0.03 GB for BT_mapping caching (total: 1.04)
+rank 0 | iter 1 | objfunc_time: 1.553631 | solver_time: 1.155865 | construction_time: 0.239518
+Parsed parameters:
+  max_iter: 250
+  solver_min_p: 1
+  profile: False
+  precision: float64
+  benchmark_mode: True
+  n_benchmark_runs: 10
+  benchmark_method: finite_diff
+  output_csv: /capstor/scratch/cscs/aboudaou/workspace/dalia/artifact/plotting/data/fig6_raw_results.csv
+rank 1 | iter 1 | objfunc_time: 1.553630 | solver_time: 0.905164 | construction_time: 0.186381
+rank 0 | iter 2 | objfunc_time: 1.553563 | solver_time: 1.155988 | construction_time: 0.239243
+rank 1 | iter 2 | objfunc_time: 1.553564 | solver_time: 0.905452 | construction_time: 0.185649
+rank 0 | iter 3 | objfunc_time: 1.553342 | solver_time: 1.156632 | construction_time: 0.238803
+rank 1 | iter 3 | objfunc_time: 1.553345 | solver_time: 0.904367 | construction_time: 0.186022
+rank 0 | iter 4 | objfunc_time: 1.550898 | solver_time: 1.155108 | construction_time: 0.237747
+rank 1 | iter 4 | objfunc_time: 1.550900 | solver_time: 0.902763 | construction_time: 0.185497
+rank 0 | iter 5 | objfunc_time: 1.548739 | solver_time: 1.154402 | construction_time: 0.237409
+rank 1 | iter 5 | objfunc_time: 1.548741 | solver_time: 0.904499 | construction_time: 0.185517
+rank 0 | iter 6 | objfunc_time: 1.550240 | solver_time: 1.155784 | construction_time: 0.237854
+rank 1 | iter 6 | objfunc_time: 1.550240 | solver_time: 0.902645 | construction_time: 0.185981
+rank 0 | iter 7 | objfunc_time: 1.550426 | solver_time: 1.154862 | construction_time: 0.237354
+rank 1 | iter 7 | objfunc_time: 1.550427 | solver_time: 0.900726 | construction_time: 0.185553
+rank 0 | iter 8 | objfunc_time: 1.547826 | solver_time: 1.154189 | construction_time: 0.236813
+rank 1 | iter 8 | objfunc_time: 1.547829 | solver_time: 0.901427 | construction_time: 0.185310
+rank 0 | iter 9 | objfunc_time: 1.546159 | solver_time: 1.151989 | construction_time: 0.237192
+rank 1 | iter 9 | objfunc_time: 1.546161 | solver_time: 0.902467 | construction_time: 0.185280
+rank 0 | iter 10 | objfunc_time: 1.545808 | solver_time: 1.152940 | construction_time: 0.236547
+rank 1 | iter 10 | objfunc_time: 1.545811 | solver_time: 0.901150 | construction_time: 0.185293
+rank 0 | iter 11 | objfunc_time: 1.544111 | solver_time: 1.150757 | construction_time: 0.236535
+rank 1 | iter 11 | objfunc_time: 1.544112 | solver_time: 0.901086 | construction_time: 0.185157
+  Mean: 1.5492s
+  Std:  0.0030s
+  Node energy/grad: 1326.5 J
+  GPU energy/grad:  890.1 J
+  Other energy/grad: 169.8 J
+
+======================================================================
+Benchmark completed
+Results written to: /capstor/scratch/cscs/aboudaou/workspace/dalia/artifact/plotting/data/fig6_raw_results.csv
+======================================================================
+Job finished at Sat 14 Mar 2026 10:28:45 PM CET

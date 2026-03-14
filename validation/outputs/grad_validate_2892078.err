@@ -1,0 +1,57 @@
+E0314 20:31:25.189246  122123 algebraic_simplifier.cc:10056] Algebraic simplifier is likely stuck in a circular simplification loop and ran for 50 runs on computation region_309.748
+E0314 20:31:25.392875  122123 algebraic_simplifier.cc:10056] Algebraic simplifier is likely stuck in a circular simplification loop and ran for 50 runs on computation region_1152.1568
+E0314 20:31:26.270794  122123 algebraic_simplifier.cc:10056] Algebraic simplifier is likely stuck in a circular simplification loop and ran for 50 runs on computation wide.region_309.748.clone
+E0314 20:31:26.453220  122123 algebraic_simplifier.cc:10056] Algebraic simplifier is likely stuck in a circular simplification loop and ran for 50 runs on computation wide.region_1152.1568.clone
+E0314 20:31:28.409751  122123 algebraic_simplifier.cc:10056] Algebraic simplifier is likely stuck in a circular simplification loop and ran for 50 runs on computation wide.region_1152.1568.clone.clone.clone
+E0314 20:31:28.569306  122123 algebraic_simplifier.cc:10056] Algebraic simplifier is likely stuck in a circular simplification loop and ran for 50 runs on computation wide.wide.region_309.748.clone.sunk.clone
+E0314 20:31:53.449773  122123 algebraic_simplifier.cc:10056] Algebraic simplifier is likely stuck in a circular simplification loop and ran for 50 runs on computation region_309.748
+E0314 20:31:53.658679  122123 algebraic_simplifier.cc:10056] Algebraic simplifier is likely stuck in a circular simplification loop and ran for 50 runs on computation region_1152.1568
+E0314 20:31:54.581344  122123 algebraic_simplifier.cc:10056] Algebraic simplifier is likely stuck in a circular simplification loop and ran for 50 runs on computation wide.region_309.748.clone
+E0314 20:31:54.766312  122123 algebraic_simplifier.cc:10056] Algebraic simplifier is likely stuck in a circular simplification loop and ran for 50 runs on computation wide.region_1152.1568.clone
+E0314 20:31:56.783956  122123 algebraic_simplifier.cc:10056] Algebraic simplifier is likely stuck in a circular simplification loop and ran for 50 runs on computation wide.region_1152.1568.clone.clone.clone
+E0314 20:31:56.949242  122123 algebraic_simplifier.cc:10056] Algebraic simplifier is likely stuck in a circular simplification loop and ran for 50 runs on computation wide.wide.region_309.748.clone.sunk.clone
+E0314 20:32:28.413906  123015 slow_operation_alarm.cc:73] Constant folding an instruction is taking > 1s:
+
+  %scatter-add.84 = f64[81206]{0} scatter(%broadcast.102, %constant.917, %constant.1337), update_window_dims={}, inserted_window_dims={0}, scatter_dims_to_operand_dims={0}, index_vector_dim=1, to_apply=%region_1.6, metadata={op_name="jit(objective_pure_jax)/jvp()/scatter-add" source_file="/capstor/scratch/cscs/aboudaou/workspace/dalia/DALIA/src/dalia/core/autodiff/objectives_univariate.py" source_line=639 source_end_line=639 source_column=26 source_end_column=36}
+
+This isn't necessarily a bug; constant-folding is inherently a trade-off between compilation time and speed at runtime. XLA has some guards that attempt to keep constant folding from taking too long, but fundamentally you'll always be able to come up with an input program that takes a long time.
+
+If you'd like to file a bug, run with envvar XLA_FLAGS=--xla_dump_to=/tmp/foo and attach the results.
+E0314 20:32:31.900576  122123 slow_operation_alarm.cc:140] The operation took 4.486782854s
+Constant folding an instruction is taking > 1s:
+
+  %scatter-add.84 = f64[81206]{0} scatter(%broadcast.102, %constant.917, %constant.1337), update_window_dims={}, inserted_window_dims={0}, scatter_dims_to_operand_dims={0}, index_vector_dim=1, to_apply=%region_1.6, metadata={op_name="jit(objective_pure_jax)/jvp()/scatter-add" source_file="/capstor/scratch/cscs/aboudaou/workspace/dalia/DALIA/src/dalia/core/autodiff/objectives_univariate.py" source_line=639 source_end_line=639 source_column=26 source_end_column=36}
+
+This isn't necessarily a bug; constant-folding is inherently a trade-off between compilation time and speed at runtime. XLA has some guards that attempt to keep constant folding from taking too long, but fundamentally you'll always be able to come up with an input program that takes a long time.
+
+If you'd like to file a bug, run with envvar XLA_FLAGS=--xla_dump_to=/tmp/foo and attach the results.
+E0314 20:32:33.904877  123015 slow_operation_alarm.cc:73] Constant folding an instruction is taking > 2s:
+
+  %scatter-add.89 = f64[81206]{0} scatter(%broadcast.102, %constant.1069, %constant.1342), update_window_dims={}, inserted_window_dims={0}, scatter_dims_to_operand_dims={0}, index_vector_dim=1, to_apply=%region_40.74, metadata={op_name="jit(objective_pure_jax)/transpose(jvp())/scatter-add" source_file="/capstor/scratch/cscs/aboudaou/workspace/dalia/DALIA/src/dalia/core/autodiff/objectives_univariate.py" source_line=731 source_end_line=731 source_column=55 source_end_column=93}
+
+This isn't necessarily a bug; constant-folding is inherently a trade-off between compilation time and speed at runtime. XLA has some guards that attempt to keep constant folding from taking too long, but fundamentally you'll always be able to come up with an input program that takes a long time.
+
+If you'd like to file a bug, run with envvar XLA_FLAGS=--xla_dump_to=/tmp/foo and attach the results.
+E0314 20:32:36.242062  122123 slow_operation_alarm.cc:140] The operation took 4.337270583s
+Constant folding an instruction is taking > 2s:
+
+  %scatter-add.89 = f64[81206]{0} scatter(%broadcast.102, %constant.1069, %constant.1342), update_window_dims={}, inserted_window_dims={0}, scatter_dims_to_operand_dims={0}, index_vector_dim=1, to_apply=%region_40.74, metadata={op_name="jit(objective_pure_jax)/transpose(jvp())/scatter-add" source_file="/capstor/scratch/cscs/aboudaou/workspace/dalia/DALIA/src/dalia/core/autodiff/objectives_univariate.py" source_line=731 source_end_line=731 source_column=55 source_end_column=93}
+
+This isn't necessarily a bug; constant-folding is inherently a trade-off between compilation time and speed at runtime. XLA has some guards that attempt to keep constant folding from taking too long, but fundamentally you'll always be able to come up with an input program that takes a long time.
+
+If you'd like to file a bug, run with envvar XLA_FLAGS=--xla_dump_to=/tmp/foo and attach the results.
+E0314 20:32:53.262735  123015 slow_operation_alarm.cc:73] Constant folding an instruction is taking > 4s:
+
+  %scatter-add.84 = f64[81206]{0} scatter(%broadcast.102, %constant.917, %constant.1337), update_window_dims={}, inserted_window_dims={0}, scatter_dims_to_operand_dims={0}, index_vector_dim=1, to_apply=%region_1.6, metadata={op_name="jit(objective_pure_jax)/jvp()/scatter-add" source_file="/capstor/scratch/cscs/aboudaou/workspace/dalia/DALIA/src/dalia/core/autodiff/objectives_univariate.py" source_line=639 source_end_line=639 source_column=26 source_end_column=36}
+
+This isn't necessarily a bug; constant-folding is inherently a trade-off between compilation time and speed at runtime. XLA has some guards that attempt to keep constant folding from taking too long, but fundamentally you'll always be able to come up with an input program that takes a long time.
+
+If you'd like to file a bug, run with envvar XLA_FLAGS=--xla_dump_to=/tmp/foo and attach the results.
+E0314 20:32:53.716857  122123 slow_operation_alarm.cc:140] The operation took 4.454187493s
+Constant folding an instruction is taking > 4s:
+
+  %scatter-add.84 = f64[81206]{0} scatter(%broadcast.102, %constant.917, %constant.1337), update_window_dims={}, inserted_window_dims={0}, scatter_dims_to_operand_dims={0}, index_vector_dim=1, to_apply=%region_1.6, metadata={op_name="jit(objective_pure_jax)/jvp()/scatter-add" source_file="/capstor/scratch/cscs/aboudaou/workspace/dalia/DALIA/src/dalia/core/autodiff/objectives_univariate.py" source_line=639 source_end_line=639 source_column=26 source_end_column=36}
+
+This isn't necessarily a bug; constant-folding is inherently a trade-off between compilation time and speed at runtime. XLA has some guards that attempt to keep constant folding from taking too long, but fundamentally you'll always be able to come up with an input program that takes a long time.
+
+If you'd like to file a bug, run with envvar XLA_FLAGS=--xla_dump_to=/tmp/foo and attach the results.

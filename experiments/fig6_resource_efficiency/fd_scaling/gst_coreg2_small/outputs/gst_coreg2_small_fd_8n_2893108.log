@@ -1,0 +1,226 @@
+Parsed parameters:
+  max_iter: 250
+  solver_min_p: 1
+  profile: False
+  precision: float64
+  benchmark_mode: True
+  n_benchmark_runs: 10
+  benchmark_method: finite_diff
+  output_csv: /capstor/scratch/cscs/aboudaou/workspace/dalia/artifact/plotting/data/fig6_raw_results.csv
+--- gst_coreg2_small: Coregional (2-variate) Spatio-Temporal Model ---
+
+___________________________________ 
+___  __ \__    |__  /____  _/__    |
+__  / / /_  /| |_  /  __  / __  /| |
+_  /_/ /_  ___ |  /____/ /  _  ___ |
+/_____/ /_/  |_/_____/___/  /_/  |_|
+
+╔═══════════════════════════════════════════════════════╗
+║               Parallelization strategies              ║
+║ ╒═══════════════════════════════════════════╤═══════╕ ║
+║ │ Participating Processes / Total Processes │ 8 / 8 │ ║
+║ ├───────────────────────────────────────────┼───────┤ ║
+║ │ Parallelization through F()               │   8   │ ║
+║ ├───────────────────────────────────────────┼───────┤ ║
+║ │ Parallelization through Q()               │   1   │ ║
+║ ├───────────────────────────────────────────┼───────┤ ║
+║ │ Parallelization through S()               │   1   │ ║
+║ ╘═══════════════════════════════════════════╧═══════╛ ║
+╚═══════════════════════════════════════════════════════╝
+╔═══════════════════════════════╗
+║  Enabled Performance modules  ║
+║ ╒═══════════════════╤═══════╕ ║
+║ │ Array module      │ cupy  │ ║
+║ ├───────────────────┼───────┤ ║
+║ │ MPI available     │ True  │ ║
+║ ├───────────────────┼───────┤ ║
+║ │ Is MPI CUDA aware │ False │ ║
+║ ├───────────────────┼───────┤ ║
+║ │ Is NCCL available │ False │ ║
+║ ╘═══════════════════╧═══════╛ ║
+╚═══════════════════════════════╝
+╔════════════════════════════════════════╗
+║             Memory Report              ║
+║ ╒════════════════════════╤═══════════╕ ║
+║ │ Solver memory          │ 88.09 MB  │ ║
+║ ├────────────────────────┼───────────┤ ║
+║ │ Total memory used      │ 132.82 MB │ ║
+║ ├────────────────────────┼───────────┤ ║
+║ │ Total memory available │ 136.01 MB │ ║
+║ ╘════════════════════════╧═══════════╛ ║
+╚════════════════════════════════════════╝
+DALIA initialized.
+Parsed parameters:
+  max_iter: 250
+  solver_min_p: 1
+  profile: False
+  precision: float64
+  benchmark_mode: True
+  n_benchmark_runs: 10
+  benchmark_method: finite_diff
+  output_csv: /capstor/scratch/cscs/aboudaou/workspace/dalia/artifact/plotting/data/fig6_raw_results.csv
+rank 3 | iter 1 | objfunc_time: 1.525272 | solver_time: 0.183532 | construction_time: 0.713087
+Parsed parameters:
+  max_iter: 250
+  solver_min_p: 1
+  profile: False
+  precision: float64
+  benchmark_mode: True
+  n_benchmark_runs: 10
+  benchmark_method: finite_diff
+  output_csv: /capstor/scratch/cscs/aboudaou/workspace/dalia/artifact/plotting/data/fig6_raw_results.csv
+rank 7 | iter 1 | objfunc_time: 1.525271 | solver_time: 0.172611 | construction_time: 0.723842
+
+======================================================================
+GRADIENT BENCHMARK: gst_coreg2_small
+======================================================================
+Nodes: 8, Tasks: 8
+Hyperparameters: 9
+Benchmark runs: 10
+Energy monitor: enabled (Cray PM counters)
+
+Timing finite difference gradient...
+Allocated an extra 0.01 GB for BTA_mapping caching (total: 0.09)
+Allocated an extra 0.01 GB for BT_mapping caching (total: 0.10)
+rank 0 | iter 1 | objfunc_time: 1.525269 | solver_time: 0.232740 | construction_time: 0.836262
+Parsed parameters:
+  max_iter: 250
+  solver_min_p: 1
+  profile: False
+  precision: float64
+  benchmark_mode: True
+  n_benchmark_runs: 10
+  benchmark_method: finite_diff
+  output_csv: /capstor/scratch/cscs/aboudaou/workspace/dalia/artifact/plotting/data/fig6_raw_results.csv
+rank 1 | iter 1 | objfunc_time: 1.525274 | solver_time: 0.231573 | construction_time: 0.940199
+Parsed parameters:
+  max_iter: 250
+  solver_min_p: 1
+  profile: False
+  precision: float64
+  benchmark_mode: True
+  n_benchmark_runs: 10
+  benchmark_method: finite_diff
+  output_csv: /capstor/scratch/cscs/aboudaou/workspace/dalia/artifact/plotting/data/fig6_raw_results.csv
+rank 6 | iter 1 | objfunc_time: 1.525269 | solver_time: 0.156595 | construction_time: 0.651188
+Parsed parameters:
+  max_iter: 250
+  solver_min_p: 1
+  profile: False
+  precision: float64
+  benchmark_mode: True
+  n_benchmark_runs: 10
+  benchmark_method: finite_diff
+  output_csv: /capstor/scratch/cscs/aboudaou/workspace/dalia/artifact/plotting/data/fig6_raw_results.csv
+rank 2 | iter 1 | objfunc_time: 1.525271 | solver_time: 0.231828 | construction_time: 0.935957
+Parsed parameters:
+  max_iter: 250
+  solver_min_p: 1
+  profile: False
+  precision: float64
+  benchmark_mode: True
+  n_benchmark_runs: 10
+  benchmark_method: finite_diff
+  output_csv: /capstor/scratch/cscs/aboudaou/workspace/dalia/artifact/plotting/data/fig6_raw_results.csv
+rank 5 | iter 1 | objfunc_time: 1.525275 | solver_time: 0.156030 | construction_time: 0.626531
+Parsed parameters:
+  max_iter: 250
+  solver_min_p: 1
+  profile: False
+  precision: float64
+  benchmark_mode: True
+  n_benchmark_runs: 10
+  benchmark_method: finite_diff
+  output_csv: /capstor/scratch/cscs/aboudaou/workspace/dalia/artifact/plotting/data/fig6_raw_results.csv
+rank 4 | iter 1 | objfunc_time: 1.525269 | solver_time: 0.154045 | construction_time: 0.574050
+rank 0 | iter 2 | objfunc_time: 1.518575 | solver_time: 0.234816 | construction_time: 0.895137
+rank 3 | iter 2 | objfunc_time: 1.518580 | solver_time: 0.171250 | construction_time: 0.765363
+rank 6 | iter 2 | objfunc_time: 1.518576 | solver_time: 0.164284 | construction_time: 0.652001
+rank 2 | iter 2 | objfunc_time: 1.518578 | solver_time: 0.233551 | construction_time: 0.934580
+rank 5 | iter 2 | objfunc_time: 1.518575 | solver_time: 0.155554 | construction_time: 0.626157
+rank 1 | iter 2 | objfunc_time: 1.518570 | solver_time: 0.231841 | construction_time: 0.940812
+rank 4 | iter 2 | objfunc_time: 1.518578 | solver_time: 0.153935 | construction_time: 0.573052
+rank 7 | iter 2 | objfunc_time: 1.518577 | solver_time: 0.173134 | construction_time: 0.768997
+rank 0 | iter 3 | objfunc_time: 1.519584 | solver_time: 0.231071 | construction_time: 0.829903
+rank 3 | iter 3 | objfunc_time: 1.519586 | solver_time: 0.211433 | construction_time: 0.747633
+rank 4 | iter 3 | objfunc_time: 1.519585 | solver_time: 0.156301 | construction_time: 0.565002
+rank 1 | iter 3 | objfunc_time: 1.519586 | solver_time: 0.232422 | construction_time: 0.935320
+rank 2 | iter 3 | objfunc_time: 1.519585 | solver_time: 0.233537 | construction_time: 0.938153
+rank 7 | iter 3 | objfunc_time: 1.519585 | solver_time: 0.176001 | construction_time: 0.720653
+rank 6 | iter 3 | objfunc_time: 1.519585 | solver_time: 0.158508 | construction_time: 0.644063
+rank 5 | iter 3 | objfunc_time: 1.519587 | solver_time: 0.154637 | construction_time: 0.623531
+rank 0 | iter 4 | objfunc_time: 1.522292 | solver_time: 0.231130 | construction_time: 0.884555
+rank 3 | iter 4 | objfunc_time: 1.522292 | solver_time: 0.181093 | construction_time: 0.734743
+rank 7 | iter 4 | objfunc_time: 1.522292 | solver_time: 0.182776 | construction_time: 0.715312
+rank 4 | iter 4 | objfunc_time: 1.522293 | solver_time: 0.155509 | construction_time: 0.571871
+rank 6 | iter 4 | objfunc_time: 1.522292 | solver_time: 0.155253 | construction_time: 0.643175
+rank 2 | iter 4 | objfunc_time: 1.522293 | solver_time: 0.230093 | construction_time: 0.946485
+rank 5 | iter 4 | objfunc_time: 1.522293 | solver_time: 0.153448 | construction_time: 0.632197
+rank 1 | iter 4 | objfunc_time: 1.522292 | solver_time: 0.234004 | construction_time: 0.939144
+rank 0 | iter 5 | objfunc_time: 1.533293 | solver_time: 0.231622 | construction_time: 0.841355
+rank 2 | iter 5 | objfunc_time: 1.533298 | solver_time: 0.229949 | construction_time: 0.938956
+rank 7 | iter 5 | objfunc_time: 1.533295 | solver_time: 0.171445 | construction_time: 0.746084
+rank 4 | iter 5 | objfunc_time: 1.533297 | solver_time: 0.153379 | construction_time: 0.569838
+rank 6 | iter 5 | objfunc_time: 1.533294 | solver_time: 0.155085 | construction_time: 0.643572
+rank 1 | iter 5 | objfunc_time: 1.533296 | solver_time: 0.242875 | construction_time: 0.944890
+rank 3 | iter 5 | objfunc_time: 1.533298 | solver_time: 0.195067 | construction_time: 0.730261
+rank 5 | iter 5 | objfunc_time: 1.533297 | solver_time: 0.154217 | construction_time: 0.629777
+rank 0 | iter 6 | objfunc_time: 1.520866 | solver_time: 0.233062 | construction_time: 0.890322
+rank 7 | iter 6 | objfunc_time: 1.520868 | solver_time: 0.176544 | construction_time: 0.720213
+rank 4 | iter 6 | objfunc_time: 1.520866 | solver_time: 0.154996 | construction_time: 0.569773
+rank 6 | iter 6 | objfunc_time: 1.520867 | solver_time: 0.155134 | construction_time: 0.643849
+rank 1 | iter 6 | objfunc_time: 1.520871 | solver_time: 0.235506 | construction_time: 0.934483
+rank 3 | iter 6 | objfunc_time: 1.520868 | solver_time: 0.164724 | construction_time: 0.725198
+rank 2 | iter 6 | objfunc_time: 1.520867 | solver_time: 0.233570 | construction_time: 0.943263
+rank 5 | iter 6 | objfunc_time: 1.520875 | solver_time: 0.153981 | construction_time: 0.629819
+rank 0 | iter 7 | objfunc_time: 1.513470 | solver_time: 0.231764 | construction_time: 0.838634
+rank 7 | iter 7 | objfunc_time: 1.513468 | solver_time: 0.182531 | construction_time: 0.714002
+rank 3 | iter 7 | objfunc_time: 1.513472 | solver_time: 0.201776 | construction_time: 0.731415
+rank 4 | iter 7 | objfunc_time: 1.513473 | solver_time: 0.155603 | construction_time: 0.568678
+rank 1 | iter 7 | objfunc_time: 1.513473 | solver_time: 0.230358 | construction_time: 0.927150
+rank 6 | iter 7 | objfunc_time: 1.513469 | solver_time: 0.154929 | construction_time: 0.646592
+rank 2 | iter 7 | objfunc_time: 1.513474 | solver_time: 0.234116 | construction_time: 0.930666
+rank 5 | iter 7 | objfunc_time: 1.513473 | solver_time: 0.153020 | construction_time: 0.633242
+rank 0 | iter 8 | objfunc_time: 1.524513 | solver_time: 0.230290 | construction_time: 0.891638
+rank 3 | iter 8 | objfunc_time: 1.524515 | solver_time: 0.202942 | construction_time: 0.747230
+rank 7 | iter 8 | objfunc_time: 1.524513 | solver_time: 0.179117 | construction_time: 0.730304
+rank 6 | iter 8 | objfunc_time: 1.524513 | solver_time: 0.155273 | construction_time: 0.637398
+rank 1 | iter 8 | objfunc_time: 1.524516 | solver_time: 0.232187 | construction_time: 0.929993
+rank 4 | iter 8 | objfunc_time: 1.524515 | solver_time: 0.153197 | construction_time: 0.564790
+rank 2 | iter 8 | objfunc_time: 1.524513 | solver_time: 0.232168 | construction_time: 0.948267
+rank 5 | iter 8 | objfunc_time: 1.524518 | solver_time: 0.153189 | construction_time: 0.630756
+rank 0 | iter 9 | objfunc_time: 1.513952 | solver_time: 0.234283 | construction_time: 0.840065
+rank 1 | iter 9 | objfunc_time: 1.513953 | solver_time: 0.230384 | construction_time: 0.931564
+rank 3 | iter 9 | objfunc_time: 1.513953 | solver_time: 0.180199 | construction_time: 0.748338
+rank 4 | iter 9 | objfunc_time: 1.513951 | solver_time: 0.156303 | construction_time: 0.571366
+rank 7 | iter 9 | objfunc_time: 1.513951 | solver_time: 0.170404 | construction_time: 0.724484
+rank 6 | iter 9 | objfunc_time: 1.513954 | solver_time: 0.157144 | construction_time: 0.635497
+rank 2 | iter 9 | objfunc_time: 1.513955 | solver_time: 0.231585 | construction_time: 0.938280
+rank 5 | iter 9 | objfunc_time: 1.513956 | solver_time: 0.155548 | construction_time: 0.626565
+rank 0 | iter 10 | objfunc_time: 1.521411 | solver_time: 0.231195 | construction_time: 0.887827
+rank 6 | iter 10 | objfunc_time: 1.521412 | solver_time: 0.157354 | construction_time: 0.637332
+rank 1 | iter 10 | objfunc_time: 1.521415 | solver_time: 0.241841 | construction_time: 0.932299
+rank 3 | iter 10 | objfunc_time: 1.521416 | solver_time: 0.187968 | construction_time: 0.736417
+rank 4 | iter 10 | objfunc_time: 1.521412 | solver_time: 0.154417 | construction_time: 0.566577
+rank 7 | iter 10 | objfunc_time: 1.521415 | solver_time: 0.173393 | construction_time: 0.729403
+rank 2 | iter 10 | objfunc_time: 1.521413 | solver_time: 0.230935 | construction_time: 0.943553
+rank 5 | iter 10 | objfunc_time: 1.521420 | solver_time: 0.154871 | construction_time: 0.629020
+rank 0 | iter 11 | objfunc_time: 1.513828 | solver_time: 0.231346 | construction_time: 0.841815
+rank 4 | iter 11 | objfunc_time: 1.513829 | solver_time: 0.152329 | construction_time: 0.564207
+rank 1 | iter 11 | objfunc_time: 1.513831 | solver_time: 0.234154 | construction_time: 0.932866
+rank 3 | iter 11 | objfunc_time: 1.513829 | solver_time: 0.168645 | construction_time: 0.804085
+rank 6 | iter 11 | objfunc_time: 1.513830 | solver_time: 0.155434 | construction_time: 0.637020
+rank 7 | iter 11 | objfunc_time: 1.513829 | solver_time: 0.174707 | construction_time: 0.756984
+rank 2 | iter 11 | objfunc_time: 1.513830 | solver_time: 0.230912 | construction_time: 0.934914
+rank 5 | iter 11 | objfunc_time: 1.513835 | solver_time: 0.154468 | construction_time: 0.622812
+  Mean: 1.5353s
+  Std:  0.0450s
+  Node energy/grad: 1219.3 J
+  GPU energy/grad:  795.9 J
+  Other energy/grad: 170.1 J
+
+======================================================================
+Benchmark completed
+Results written to: /capstor/scratch/cscs/aboudaou/workspace/dalia/artifact/plotting/data/fig6_raw_results.csv
+======================================================================
+Job finished at Sat 14 Mar 2026 10:28:18 PM CET

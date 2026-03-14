@@ -1,0 +1,40 @@
+W0314 22:35:18.622108   43712 cuda_executor.cc:1802] GPU interconnect information not available: INTERNAL: NVML doesn't support extracting fabric info or NVLink is not used by the device.
+W0314 22:35:18.623912   43713 cuda_executor.cc:1802] GPU interconnect information not available: INTERNAL: NVML doesn't support extracting fabric info or NVLink is not used by the device.
+W0314 22:35:18.637630   43711 cuda_executor.cc:1802] GPU interconnect information not available: INTERNAL: NVML doesn't support extracting fabric info or NVLink is not used by the device.
+W0314 22:35:18.641461   43714 cuda_executor.cc:1802] GPU interconnect information not available: INTERNAL: NVML doesn't support extracting fabric info or NVLink is not used by the device.
+W0314 22:35:19.001223   42976 cuda_executor.cc:1802] GPU interconnect information not available: INTERNAL: NVML doesn't support extracting fabric info or NVLink is not used by the device.
+W0314 22:35:19.033267   42976 cuda_executor.cc:1802] GPU interconnect information not available: INTERNAL: NVML doesn't support extracting fabric info or NVLink is not used by the device.
+W0314 22:35:19.037586   88910 cuda_executor.cc:1802] GPU interconnect information not available: INTERNAL: NVML doesn't support extracting fabric info or NVLink is not used by the device.
+W0314 22:35:19.050751   88908 cuda_executor.cc:1802] GPU interconnect information not available: INTERNAL: NVML doesn't support extracting fabric info or NVLink is not used by the device.
+W0314 22:35:19.054942   88909 cuda_executor.cc:1802] GPU interconnect information not available: INTERNAL: NVML doesn't support extracting fabric info or NVLink is not used by the device.
+W0314 22:35:19.058445   88911 cuda_executor.cc:1802] GPU interconnect information not available: INTERNAL: NVML doesn't support extracting fabric info or NVLink is not used by the device.
+W0314 22:35:19.064860   42976 cuda_executor.cc:1802] GPU interconnect information not available: INTERNAL: NVML doesn't support extracting fabric info or NVLink is not used by the device.
+W0314 22:35:19.095969   42976 cuda_executor.cc:1802] GPU interconnect information not available: INTERNAL: NVML doesn't support extracting fabric info or NVLink is not used by the device.
+W0314 22:35:19.349669  215277 cuda_executor.cc:1802] GPU interconnect information not available: INTERNAL: NVML doesn't support extracting fabric info or NVLink is not used by the device.
+W0314 22:35:19.358226  215278 cuda_executor.cc:1802] GPU interconnect information not available: INTERNAL: NVML doesn't support extracting fabric info or NVLink is not used by the device.
+W0314 22:35:19.359135  215276 cuda_executor.cc:1802] GPU interconnect information not available: INTERNAL: NVML doesn't support extracting fabric info or NVLink is not used by the device.
+W0314 22:35:19.362482  215275 cuda_executor.cc:1802] GPU interconnect information not available: INTERNAL: NVML doesn't support extracting fabric info or NVLink is not used by the device.
+W0314 22:35:19.422652   88171 cuda_executor.cc:1802] GPU interconnect information not available: INTERNAL: NVML doesn't support extracting fabric info or NVLink is not used by the device.
+W0314 22:35:19.454003   88171 cuda_executor.cc:1802] GPU interconnect information not available: INTERNAL: NVML doesn't support extracting fabric info or NVLink is not used by the device.
+W0314 22:35:19.486136   88171 cuda_executor.cc:1802] GPU interconnect information not available: INTERNAL: NVML doesn't support extracting fabric info or NVLink is not used by the device.
+W0314 22:35:19.517914   88171 cuda_executor.cc:1802] GPU interconnect information not available: INTERNAL: NVML doesn't support extracting fabric info or NVLink is not used by the device.
+W0314 22:35:19.536751  174045 cuda_executor.cc:1802] GPU interconnect information not available: INTERNAL: NVML doesn't support extracting fabric info or NVLink is not used by the device.
+W0314 22:35:19.536753  174043 cuda_executor.cc:1802] GPU interconnect information not available: INTERNAL: NVML doesn't support extracting fabric info or NVLink is not used by the device.
+W0314 22:35:19.552311  174044 cuda_executor.cc:1802] GPU interconnect information not available: INTERNAL: NVML doesn't support extracting fabric info or NVLink is not used by the device.
+W0314 22:35:19.554139  174042 cuda_executor.cc:1802] GPU interconnect information not available: INTERNAL: NVML doesn't support extracting fabric info or NVLink is not used by the device.
+W0314 22:35:19.717492  214493 cuda_executor.cc:1802] GPU interconnect information not available: INTERNAL: NVML doesn't support extracting fabric info or NVLink is not used by the device.
+W0314 22:35:19.749295  214493 cuda_executor.cc:1802] GPU interconnect information not available: INTERNAL: NVML doesn't support extracting fabric info or NVLink is not used by the device.
+W0314 22:35:19.785645  214493 cuda_executor.cc:1802] GPU interconnect information not available: INTERNAL: NVML doesn't support extracting fabric info or NVLink is not used by the device.
+W0314 22:35:19.817390  214493 cuda_executor.cc:1802] GPU interconnect information not available: INTERNAL: NVML doesn't support extracting fabric info or NVLink is not used by the device.
+W0314 22:35:19.912507  173305 cuda_executor.cc:1802] GPU interconnect information not available: INTERNAL: NVML doesn't support extracting fabric info or NVLink is not used by the device.
+W0314 22:35:19.945194  173305 cuda_executor.cc:1802] GPU interconnect information not available: INTERNAL: NVML doesn't support extracting fabric info or NVLink is not used by the device.
+W0314 22:35:19.976321  173305 cuda_executor.cc:1802] GPU interconnect information not available: INTERNAL: NVML doesn't support extracting fabric info or NVLink is not used by the device.
+W0314 22:35:20.008125  173305 cuda_executor.cc:1802] GPU interconnect information not available: INTERNAL: NVML doesn't support extracting fabric info or NVLink is not used by the device.
+/users/aboudaou/miniconda3/envs/serinv-env/lib/python3.11/site-packages/mpi4jax/_src/decorators.py:60: UserWarning: Not using CUDA-enabled MPI. If you are sure that your MPI library is built with CUDA support, set MPI4JAX_USE_CUDA_MPI=1. To silence this warning, set MPI4JAX_USE_CUDA_MPI=0.
+  warnings.warn(warn_msg)
+/users/aboudaou/miniconda3/envs/serinv-env/lib/python3.11/site-packages/mpi4jax/_src/decorators.py:60: UserWarning: Not using CUDA-enabled MPI. If you are sure that your MPI library is built with CUDA support, set MPI4JAX_USE_CUDA_MPI=1. To silence this warning, set MPI4JAX_USE_CUDA_MPI=0.
+  warnings.warn(warn_msg)
+/users/aboudaou/miniconda3/envs/serinv-env/lib/python3.11/site-packages/mpi4jax/_src/decorators.py:60: UserWarning: Not using CUDA-enabled MPI. If you are sure that your MPI library is built with CUDA support, set MPI4JAX_USE_CUDA_MPI=1. To silence this warning, set MPI4JAX_USE_CUDA_MPI=0.
+  warnings.warn(warn_msg)
+/users/aboudaou/miniconda3/envs/serinv-env/lib/python3.11/site-packages/mpi4jax/_src/decorators.py:60: UserWarning: Not using CUDA-enabled MPI. If you are sure that your MPI library is built with CUDA support, set MPI4JAX_USE_CUDA_MPI=1. To silence this warning, set MPI4JAX_USE_CUDA_MPI=0.
+  warnings.warn(warn_msg)

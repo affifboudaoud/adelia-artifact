@@ -1,0 +1,321 @@
+======================================================================
+  AD-BTA vs AD-Loop: Numerical Gradient Validation
+  Both methods are exact (no truncation error).
+  Agreement proves correctness of the custom backward pass.
+======================================================================
+
+======================================================================
+  GST-S  (d=4, 5 x 92)
+======================================================================
+Using JAX automatic differentiation with JIT compilation (Gaussian likelihood)
+JIT compiling objective + gradient...
+JIT compilation done in 1.7s.
+
+___________________________________ 
+___  __ \__    |__  /____  _/__    |
+__  / / /_  /| |_  /  __  / __  /| |
+_  /_/ /_  ___ |  /____/ /  _  ___ |
+/_____/ /_/  |_/_____/___/  /_/  |_|
+
+╔═══════════════════════════════════════════════════════╗
+║               Parallelization strategies              ║
+║ ╒═══════════════════════════════════════════╤═══════╕ ║
+║ │ Participating Processes / Total Processes │ 1 / 1 │ ║
+║ ├───────────────────────────────────────────┼───────┤ ║
+║ │ Parallelization through F()               │   1   │ ║
+║ ├───────────────────────────────────────────┼───────┤ ║
+║ │ Parallelization through Q()               │   1   │ ║
+║ ├───────────────────────────────────────────┼───────┤ ║
+║ │ Parallelization through S()               │   1   │ ║
+║ ╘═══════════════════════════════════════════╧═══════╛ ║
+╚═══════════════════════════════════════════════════════╝
+╔═══════════════════════════════╗
+║  Enabled Performance modules  ║
+║ ╒═══════════════════╤═══════╕ ║
+║ │ Array module      │ numpy │ ║
+║ ├───────────────────┼───────┤ ║
+║ │ MPI available     │ True  │ ║
+║ ├───────────────────┼───────┤ ║
+║ │ Is MPI CUDA aware │ False │ ║
+║ ├───────────────────┼───────┤ ║
+║ │ Is NCCL available │ False │ ║
+║ ╘═══════════════════╧═══════╛ ║
+╚═══════════════════════════════╝
+╔══════════════════════════════════════╗
+║            Memory Report             ║
+║ ╒════════════════════════╤═════════╕ ║
+║ │ Solver memory          │ 0.00 B  │ ║
+║ ├────────────────────────┼─────────┤ ║
+║ │ Total memory used      │ -1.00 B │ ║
+║ ├────────────────────────┼─────────┤ ║
+║ │ Total memory available │ -1.00 B │ ║
+║ ╘════════════════════════╧═════════╛ ║
+╚══════════════════════════════════════╝
+DALIA initialized.
+JIT compiling objective + gradient...
+JIT compilation done in 1.3s.
+JIT compiling objective + gradient...
+JIT compilation done in 1.4s.
+
+Forward value:
+  AD-BTA:  3.447470402160101e+04
+  AD-Loop: 3.447470402160101e+04
+  Abs err: 0.00e+00   Rel err: 0.00e+00
+
+Gradient (component-wise):
+  [ 0] BTA=+3.186478461069e+04  Loop=+3.186478461069e+04  abs=4.00e-11  rel=1.26e-15
+  [ 1] BTA=-1.201193534879e+04  Loop=-1.201193534879e+04  abs=1.27e-11  rel=1.06e-15
+  [ 2] BTA=-2.569402677049e+04  Loop=-2.569402677049e+04  abs=2.55e-11  rel=9.91e-16
+  [ 3] BTA=+2.756696032092e+04  Loop=+2.756696032093e+04  abs=2.87e-09  rel=1.04e-13
+
+  Max abs err:  2.87e-09
+  Max rel err:  1.04e-13
+
+Latent x max abs err: 0.00e+00
+
+JIT time: AD-BTA=1.3s, AD-Loop=1.4s
+
+======================================================================
+  GST-C2  (d=9, 12 x 708)
+======================================================================
+Using JAX automatic differentiation with JIT compilation (CoregionalModel, 2 variates)
+JIT compiling coregional objective + gradient...
+JIT compilation done in 6.3s.
+
+___________________________________ 
+___  __ \__    |__  /____  _/__    |
+__  / / /_  /| |_  /  __  / __  /| |
+_  /_/ /_  ___ |  /____/ /  _  ___ |
+/_____/ /_/  |_/_____/___/  /_/  |_|
+
+╔═══════════════════════════════════════════════════════╗
+║               Parallelization strategies              ║
+║ ╒═══════════════════════════════════════════╤═══════╕ ║
+║ │ Participating Processes / Total Processes │ 1 / 1 │ ║
+║ ├───────────────────────────────────────────┼───────┤ ║
+║ │ Parallelization through F()               │   1   │ ║
+║ ├───────────────────────────────────────────┼───────┤ ║
+║ │ Parallelization through Q()               │   1   │ ║
+║ ├───────────────────────────────────────────┼───────┤ ║
+║ │ Parallelization through S()               │   1   │ ║
+║ ╘═══════════════════════════════════════════╧═══════╛ ║
+╚═══════════════════════════════════════════════════════╝
+╔═══════════════════════════════╗
+║  Enabled Performance modules  ║
+║ ╒═══════════════════╤═══════╕ ║
+║ │ Array module      │ numpy │ ║
+║ ├───────────────────┼───────┤ ║
+║ │ MPI available     │ True  │ ║
+║ ├───────────────────┼───────┤ ║
+║ │ Is MPI CUDA aware │ False │ ║
+║ ├───────────────────┼───────┤ ║
+║ │ Is NCCL available │ False │ ║
+║ ╘═══════════════════╧═══════╛ ║
+╚═══════════════════════════════╝
+╔══════════════════════════════════════╗
+║            Memory Report             ║
+║ ╒════════════════════════╤═════════╕ ║
+║ │ Solver memory          │ 0.00 B  │ ║
+║ ├────────────────────────┼─────────┤ ║
+║ │ Total memory used      │ -1.00 B │ ║
+║ ├────────────────────────┼─────────┤ ║
+║ │ Total memory available │ -1.00 B │ ║
+║ ╘════════════════════════╧═════════╛ ║
+╚══════════════════════════════════════╝
+DALIA initialized.
+JIT compiling coregional objective + gradient...
+JIT compilation done in 6.2s.
+JIT compiling coregional objective + gradient...
+JIT compilation done in 3.3s.
+
+Forward value:
+  AD-BTA:  -1.982719418583438e+04
+  AD-Loop: -1.982719418583252e+04
+  Abs err: 1.86e-09   Rel err: 9.39e-14
+
+Gradient (component-wise):
+  [ 0] BTA=+5.873277381924e+02  Loop=+5.873277381920e+02  abs=4.39e-10  rel=7.47e-13
+  [ 1] BTA=-1.801335896404e+02  Loop=-1.801335896404e+02  abs=8.33e-12  rel=4.62e-14
+  [ 2] BTA=-2.817604878939e+03  Loop=-2.817604878930e+03  abs=8.21e-09  rel=2.91e-12
+  [ 3] BTA=+7.297577252123e+02  Loop=+7.297577252123e+02  abs=3.98e-12  rel=5.45e-15
+  [ 4] BTA=-2.097064121139e+02  Loop=-2.097064121144e+02  abs=4.52e-10  rel=2.16e-12
+  [ 5] BTA=-2.547434168974e+03  Loop=-2.547434168894e+03  abs=7.94e-08  rel=3.12e-11
+  [ 6] BTA=-9.807249581126e+01  Loop=-9.807249581119e+01  abs=7.44e-11  rel=7.59e-13
+  [ 7] BTA=-4.888032767436e+02  Loop=-4.888032767437e+02  abs=4.09e-11  rel=8.37e-14
+  [ 8] BTA=+1.382832854440e+03  Loop=+1.382832854440e+03  abs=3.37e-10  rel=2.44e-13
+
+  Max abs err:  7.94e-08
+  Max rel err:  3.12e-11
+
+Latent x max abs err: 4.38e-12
+
+JIT time: AD-BTA=7.3s, AD-Loop=4.0s
+
+======================================================================
+  GST-C3  (d=15, 8 x 1062)
+======================================================================
+Using JAX automatic differentiation with JIT compilation (CoregionalModel, 3 variates)
+JIT compiling coregional objective + gradient...
+JIT compilation done in 27.0s.
+
+___________________________________ 
+___  __ \__    |__  /____  _/__    |
+__  / / /_  /| |_  /  __  / __  /| |
+_  /_/ /_  ___ |  /____/ /  _  ___ |
+/_____/ /_/  |_/_____/___/  /_/  |_|
+
+╔═══════════════════════════════════════════════════════╗
+║               Parallelization strategies              ║
+║ ╒═══════════════════════════════════════════╤═══════╕ ║
+║ │ Participating Processes / Total Processes │ 1 / 1 │ ║
+║ ├───────────────────────────────────────────┼───────┤ ║
+║ │ Parallelization through F()               │   1   │ ║
+║ ├───────────────────────────────────────────┼───────┤ ║
+║ │ Parallelization through Q()               │   1   │ ║
+║ ├───────────────────────────────────────────┼───────┤ ║
+║ │ Parallelization through S()               │   1   │ ║
+║ ╘═══════════════════════════════════════════╧═══════╛ ║
+╚═══════════════════════════════════════════════════════╝
+╔═══════════════════════════════╗
+║  Enabled Performance modules  ║
+║ ╒═══════════════════╤═══════╕ ║
+║ │ Array module      │ numpy │ ║
+║ ├───────────────────┼───────┤ ║
+║ │ MPI available     │ True  │ ║
+║ ├───────────────────┼───────┤ ║
+║ │ Is MPI CUDA aware │ False │ ║
+║ ├───────────────────┼───────┤ ║
+║ │ Is NCCL available │ False │ ║
+║ ╘═══════════════════╧═══════╛ ║
+╚═══════════════════════════════╝
+╔══════════════════════════════════════╗
+║            Memory Report             ║
+║ ╒════════════════════════╤═════════╕ ║
+║ │ Solver memory          │ 0.00 B  │ ║
+║ ├────────────────────────┼─────────┤ ║
+║ │ Total memory used      │ -1.00 B │ ║
+║ ├────────────────────────┼─────────┤ ║
+║ │ Total memory available │ -1.00 B │ ║
+║ ╘════════════════════════╧═════════╛ ║
+╚══════════════════════════════════════╝
+DALIA initialized.
+JIT compiling coregional objective + gradient...
+JIT compilation done in 26.2s.
+JIT compiling coregional objective + gradient...
+JIT compilation done in 6.1s.
+
+Forward value:
+  AD-BTA:  -6.890791500186920e+04
+  AD-Loop: -6.890791500139236e+04
+  Abs err: 4.77e-07   Rel err: 6.92e-12
+
+Gradient (component-wise):
+  [ 0] BTA=+2.129635899298e+03  Loop=+2.129635899336e+03  abs=3.85e-08  rel=1.81e-11
+  [ 1] BTA=-5.593437815366e+02  Loop=-5.593437814947e+02  abs=4.19e-08  rel=7.50e-11
+  [ 2] BTA=+9.533374798894e+02  Loop=+9.533374795003e+02  abs=3.89e-07  rel=4.08e-10
+  [ 3] BTA=+9.493180174596e+02  Loop=+9.493180174991e+02  abs=3.95e-08  rel=4.16e-11
+  [ 4] BTA=-1.982123778371e+02  Loop=-1.982123777787e+02  abs=5.84e-08  rel=2.95e-10
+  [ 5] BTA=-3.136587467194e+02  Loop=-3.136587424692e+02  abs=4.25e-06  rel=1.36e-08
+  [ 6] BTA=+2.269114098518e+03  Loop=+2.269114098503e+03  abs=1.50e-08  rel=6.60e-12
+  [ 7] BTA=-6.284350989495e+02  Loop=-6.284350989456e+02  abs=3.94e-09  rel=6.26e-12
+  [ 8] BTA=+7.347464909554e+02  Loop=+7.347465079142e+02  abs=1.70e-05  rel=2.31e-08
+  [ 9] BTA=-1.115978205882e+03  Loop=-1.115978205878e+03  abs=3.78e-09  rel=3.39e-12
+  [10] BTA=-1.338470280842e+03  Loop=-1.338470280845e+03  abs=2.50e-09  rel=1.87e-12
+  [11] BTA=-1.308339966382e+03  Loop=-1.308339966375e+03  abs=6.70e-09  rel=5.12e-12
+  [12] BTA=+1.665955898324e-01  Loop=+1.665956102294e-01  abs=2.04e-08  rel=1.22e-07
+  [13] BTA=-2.218317219541e+04  Loop=-2.218317219537e+04  abs=3.51e-08  rel=1.58e-12
+  [14] BTA=+1.141150445922e+02  Loop=+1.141150445928e+02  abs=5.69e-10  rel=4.99e-12
+
+  Max abs err:  1.70e-05
+  Max rel err:  1.22e-07
+
+Latent x max abs err: 6.03e-09
+
+JIT time: AD-BTA=27.6s, AD-Loop=7.0s
+
+======================================================================
+  GST-M  (d=4, 100 x 812)
+======================================================================
+Using JAX automatic differentiation with JIT compilation (Gaussian likelihood)
+JIT compiling objective + gradient...
+JIT compilation done in 11.7s.
+
+___________________________________ 
+___  __ \__    |__  /____  _/__    |
+__  / / /_  /| |_  /  __  / __  /| |
+_  /_/ /_  ___ |  /____/ /  _  ___ |
+/_____/ /_/  |_/_____/___/  /_/  |_|
+
+╔═══════════════════════════════════════════════════════╗
+║               Parallelization strategies              ║
+║ ╒═══════════════════════════════════════════╤═══════╕ ║
+║ │ Participating Processes / Total Processes │ 1 / 1 │ ║
+║ ├───────────────────────────────────────────┼───────┤ ║
+║ │ Parallelization through F()               │   1   │ ║
+║ ├───────────────────────────────────────────┼───────┤ ║
+║ │ Parallelization through Q()               │   1   │ ║
+║ ├───────────────────────────────────────────┼───────┤ ║
+║ │ Parallelization through S()               │   1   │ ║
+║ ╘═══════════════════════════════════════════╧═══════╛ ║
+╚═══════════════════════════════════════════════════════╝
+╔═══════════════════════════════╗
+║  Enabled Performance modules  ║
+║ ╒═══════════════════╤═══════╕ ║
+║ │ Array module      │ numpy │ ║
+║ ├───────────────────┼───────┤ ║
+║ │ MPI available     │ True  │ ║
+║ ├───────────────────┼───────┤ ║
+║ │ Is MPI CUDA aware │ False │ ║
+║ ├───────────────────┼───────┤ ║
+║ │ Is NCCL available │ False │ ║
+║ ╘═══════════════════╧═══════╛ ║
+╚═══════════════════════════════╝
+╔══════════════════════════════════════╗
+║            Memory Report             ║
+║ ╒════════════════════════╤═════════╕ ║
+║ │ Solver memory          │ 0.00 B  │ ║
+║ ├────────────────────────┼─────────┤ ║
+║ │ Total memory used      │ -1.00 B │ ║
+║ ├────────────────────────┼─────────┤ ║
+║ │ Total memory available │ -1.00 B │ ║
+║ ╘════════════════════════╧═════════╛ ║
+╚══════════════════════════════════════╝
+DALIA initialized.
+JIT compiling objective + gradient...
+JIT compilation done in 21.7s.
+JIT compiling objective + gradient...
+JIT compilation done in 6.5s.
+
+Forward value:
+  AD-BTA:  1.953918952370673e+06
+  AD-Loop: 1.953918952370673e+06
+  Abs err: 0.00e+00   Rel err: 0.00e+00
+
+Gradient (component-wise):
+  [ 0] BTA=+2.620494425814e+06  Loop=+2.620494425814e+06  abs=3.73e-09  rel=1.42e-15
+  [ 1] BTA=-7.739119215661e+05  Loop=-7.739119215661e+05  abs=3.49e-10  rel=4.51e-16
+  [ 2] BTA=-1.565491904272e+06  Loop=-1.565491904272e+06  abs=4.66e-10  rel=2.97e-16
+  [ 3] BTA=+1.386310069618e+06  Loop=+1.386310069618e+06  abs=8.30e-07  rel=5.99e-13
+
+  Max abs err:  8.30e-07
+  Max rel err:  5.99e-13
+
+Latent x max abs err: 0.00e+00
+
+JIT time: AD-BTA=21.8s, AD-Loop=6.7s
+
+======================================================================
+SUMMARY
+======================================================================
+Model        d    f rel err   grad max abs   grad max rel    x max abs
+--------------------------------------------------------------------
+GST-S        4     0.00e+00       2.87e-09       1.04e-13     0.00e+00
+GST-C2       9     9.39e-14       7.94e-08       3.12e-11     4.38e-12
+GST-C3      15     6.92e-12       1.70e-05       1.22e-07     6.03e-09
+GST-M        4     0.00e+00       8.30e-07       5.99e-13     0.00e+00
+
+Worst-case gradient max rel err: 1.22e-07
+
+Results written to: /capstor/scratch/cscs/aboudaou/workspace/dalia/artifact/validation/reference_outputs/gradient_correctness.csv
+PASS: All models below 5e-07 threshold.
+Job finished at Sat 14 Mar 2026 08:33:43 PM CET

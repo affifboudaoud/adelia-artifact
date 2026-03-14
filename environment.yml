@@ -1,0 +1,29 @@
+name: adelia-env
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - python=3.11
+  - numpy
+  - scipy
+  - matplotlib
+  - pandas
+  - tabulate
+  - pytest
+  - pytest-cov
+  - pytest-mpi
+  - coverage
+  - black
+  - isort
+  - ruff
+  - just
+  - pre-commit
+  - cuda-version=12
+  - cuda-cudart
+  - pip:
+    - pydantic
+    - cupy-cuda12x==13.2.0
+    - jax[cuda12]==0.4.38
+    - jaxlib==0.4.38
+    - mpi4py
+    - gdown

@@ -1,0 +1,70 @@
+=== Framework comparison: sa1 (FD only) ===
+Parsed parameters:
+  max_iter: 250
+  solver_min_p: 1
+  profile: False
+  precision: float64
+  output_dir: /capstor/scratch/cscs/aboudaou/workspace/dalia/artifact/experiments/fig4_framework_decomposition/sa1/../results
+--- sa1: Coregional (3-variate) Spatio-Temporal Model (distributed) ---
+
+___________________________________ 
+___  __ \__    |__  /____  _/__    |
+__  / / /_  /| |_  /  __  / __  /| |
+_  /_/ /_  ___ |  /____/ /  _  ___ |
+/_____/ /_/  |_/_____/___/  /_/  |_|
+
+╔═══════════════════════════════════════════════════════╗
+║               Parallelization strategies              ║
+║ ╒═══════════════════════════════════════════╤═══════╕ ║
+║ │ Participating Processes / Total Processes │ 1 / 1 │ ║
+║ ├───────────────────────────────────────────┼───────┤ ║
+║ │ Parallelization through F()               │   1   │ ║
+║ ├───────────────────────────────────────────┼───────┤ ║
+║ │ Parallelization through Q()               │   1   │ ║
+║ ├───────────────────────────────────────────┼───────┤ ║
+║ │ Parallelization through S()               │   1   │ ║
+║ ╘═══════════════════════════════════════════╧═══════╛ ║
+╚═══════════════════════════════════════════════════════╝
+╔═══════════════════════════════╗
+║  Enabled Performance modules  ║
+║ ╒═══════════════════╤═══════╕ ║
+║ │ Array module      │ cupy  │ ║
+║ ├───────────────────┼───────┤ ║
+║ │ MPI available     │ True  │ ║
+║ ├───────────────────┼───────┤ ║
+║ │ Is MPI CUDA aware │ False │ ║
+║ ├───────────────────┼───────┤ ║
+║ │ Is NCCL available │ False │ ║
+║ ╘═══════════════════╧═══════╛ ║
+╚═══════════════════════════════╝
+╔═══════════════════════════════════════╗
+║             Memory Report             ║
+║ ╒════════════════════════╤══════════╕ ║
+║ │ Solver memory          │ 71.90 GB │ ║
+║ ├────────────────────────┼──────────┤ ║
+║ │ Total memory used      │ 79.26 GB │ ║
+║ ├────────────────────────┼──────────┤ ║
+║ │ Total memory available │ 79.49 GB │ ║
+║ ╘════════════════════════╧══════════╛ ║
+╚═══════════════════════════════════════╝
+DALIA initialized.
+Allocated an extra 0.97 GB for BTA_mapping caching (total: 72.87)
+Allocated an extra 0.96 GB for BT_mapping caching (total: 73.83)
+
+Framework comparison: sa1
+  JAX forward:   skipped (no AD instance)
+  CuPy forward:  8.543703 +/- 0.008549s
+  Written to: /capstor/scratch/cscs/aboudaou/workspace/dalia/artifact/experiments/fig4_framework_decomposition/sa1/../results/single_eval_comparison.csv
+rank 0 | iter 1 | objfunc_time: 264.793640 | solver_time: 239.652479 | construction_time: 19.320008 | energy: node=323892J gpu=235681J cpu=42448J (1223W)
+rank 0 | iter 2 | objfunc_time: 264.732979 | solver_time: 239.654999 | construction_time: 19.323428 | energy: node=324195J gpu=235001J cpu=42511J (1225W)
+rank 0 | iter 3 | objfunc_time: 264.755580 | solver_time: 239.692384 | construction_time: 19.263767 | energy: node=324210J gpu=236089J cpu=42566J (1225W)
+rank 0 | iter 4 | objfunc_time: 265.005839 | solver_time: 239.787817 | construction_time: 19.421802 | energy: node=324418J gpu=234357J cpu=42581J (1224W)
+rank 0 | iter 5 | objfunc_time: 264.892758 | solver_time: 239.590350 | construction_time: 19.426322 | energy: node=324470J gpu=235469J cpu=42595J (1225W)
+rank 0 | iter 6 | objfunc_time: 264.829702 | solver_time: 239.617665 | construction_time: 19.450294 | energy: node=324351J gpu=235727J cpu=42558J (1225W)
+rank 0 | iter 7 | objfunc_time: 264.975177 | solver_time: 239.630848 | construction_time: 19.460136 | energy: node=323858J gpu=235602J cpu=42534J (1222W)
+rank 0 | iter 8 | objfunc_time: 264.770293 | solver_time: 239.666093 | construction_time: 19.344405 | energy: node=323398J gpu=235717J cpu=42516J (1221W)
+rank 0 | iter 9 | objfunc_time: 264.814168 | solver_time: 239.716200 | construction_time: 19.298926 | energy: node=323965J gpu=235577J cpu=42626J (1223W)
+rank 0 | iter 10 | objfunc_time: 264.971676 | solver_time: 239.775559 | construction_time: 19.430100 | energy: node=324433J gpu=235417J cpu=42671J (1224W)
+rank 0 | iter 11 | objfunc_time: 264.876812 | solver_time: 239.606753 | construction_time: 19.420320 | energy: node=324207J gpu=235506J cpu=42530J (1224W)
+  Written to: /capstor/scratch/cscs/aboudaou/workspace/dalia/artifact/experiments/fig4_framework_decomposition/sa1/../results/memory_breakdown.csv
+Job finished at Fri 13 Mar 2026 08:23:25 PM CET

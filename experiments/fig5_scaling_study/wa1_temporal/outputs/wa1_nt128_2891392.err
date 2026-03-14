@@ -1,0 +1,68 @@
+W0314 18:52:50.143716  214289 cuda_executor.cc:1802] GPU interconnect information not available: INTERNAL: NVML doesn't support extracting fabric info or NVLink is not used by the device.
+W0314 18:52:50.145516  214296 cuda_executor.cc:1802] GPU interconnect information not available: INTERNAL: NVML doesn't support extracting fabric info or NVLink is not used by the device.
+W0314 18:52:50.163425  214290 cuda_executor.cc:1802] GPU interconnect information not available: INTERNAL: NVML doesn't support extracting fabric info or NVLink is not used by the device.
+W0314 18:52:50.165244  214297 cuda_executor.cc:1802] GPU interconnect information not available: INTERNAL: NVML doesn't support extracting fabric info or NVLink is not used by the device.
+W0314 18:52:50.525762  213525 cuda_executor.cc:1802] GPU interconnect information not available: INTERNAL: NVML doesn't support extracting fabric info or NVLink is not used by the device.
+W0314 18:52:50.557046  213525 cuda_executor.cc:1802] GPU interconnect information not available: INTERNAL: NVML doesn't support extracting fabric info or NVLink is not used by the device.
+W0314 18:52:50.588977  213525 cuda_executor.cc:1802] GPU interconnect information not available: INTERNAL: NVML doesn't support extracting fabric info or NVLink is not used by the device.
+W0314 18:52:50.620094  213525 cuda_executor.cc:1802] GPU interconnect information not available: INTERNAL: NVML doesn't support extracting fabric info or NVLink is not used by the device.
+E0314 19:13:38.661200  214607 slow_operation_alarm.cc:73] Constant folding an instruction is taking > 1s:
+
+  %scatter-add.4200 = f64[478851]{0} scatter(%broadcast.249, %constant.29287, %constant.35076), update_window_dims={1}, inserted_window_dims={}, scatter_dims_to_operand_dims={0}, index_vector_dim=1, to_apply=%region_1265.1300, metadata={op_name="jit(objective_pure_jax)/transpose(jvp())/scatter-add" source_file="/capstor/scratch/cscs/aboudaou/workspace/dalia/DALIA/src/dalia/core/autodiff/objectives_coregional.py" source_line=1046 source_end_line=1046 source_column=46 source_end_column=74}
+
+This isn't necessarily a bug; constant-folding is inherently a trade-off between compilation time and speed at runtime. XLA has some guards that attempt to keep constant folding from taking too long, but fundamentally you'll always be able to come up with an input program that takes a long time.
+
+If you'd like to file a bug, run with envvar XLA_FLAGS=--xla_dump_to=/tmp/foo and attach the results.
+E0314 19:13:50.438376  213525 slow_operation_alarm.cc:140] The operation took 12.777258042s
+Constant folding an instruction is taking > 1s:
+
+  %scatter-add.4200 = f64[478851]{0} scatter(%broadcast.249, %constant.29287, %constant.35076), update_window_dims={1}, inserted_window_dims={}, scatter_dims_to_operand_dims={0}, index_vector_dim=1, to_apply=%region_1265.1300, metadata={op_name="jit(objective_pure_jax)/transpose(jvp())/scatter-add" source_file="/capstor/scratch/cscs/aboudaou/workspace/dalia/DALIA/src/dalia/core/autodiff/objectives_coregional.py" source_line=1046 source_end_line=1046 source_column=46 source_end_column=74}
+
+This isn't necessarily a bug; constant-folding is inherently a trade-off between compilation time and speed at runtime. XLA has some guards that attempt to keep constant folding from taking too long, but fundamentally you'll always be able to come up with an input program that takes a long time.
+
+If you'd like to file a bug, run with envvar XLA_FLAGS=--xla_dump_to=/tmp/foo and attach the results.
+E0314 19:13:52.450910  214607 slow_operation_alarm.cc:73] Constant folding an instruction is taking > 2s:
+
+  %scatter-add.4201 = f64[478851]{0} scatter(%broadcast.249, %constant.29287, %constant.35083), update_window_dims={1}, inserted_window_dims={}, scatter_dims_to_operand_dims={0}, index_vector_dim=1, to_apply=%region_1652.1687, metadata={op_name="jit(objective_pure_jax)/transpose(jvp())/scatter-add" source_file="/capstor/scratch/cscs/aboudaou/workspace/dalia/DALIA/src/dalia/core/autodiff/objectives_coregional.py" source_line=1046 source_end_line=1046 source_column=46 source_end_column=74}
+
+This isn't necessarily a bug; constant-folding is inherently a trade-off between compilation time and speed at runtime. XLA has some guards that attempt to keep constant folding from taking too long, but fundamentally you'll always be able to come up with an input program that takes a long time.
+
+If you'd like to file a bug, run with envvar XLA_FLAGS=--xla_dump_to=/tmp/foo and attach the results.
+E0314 19:14:03.062605  213525 slow_operation_alarm.cc:140] The operation took 12.611794214s
+Constant folding an instruction is taking > 2s:
+
+  %scatter-add.4201 = f64[478851]{0} scatter(%broadcast.249, %constant.29287, %constant.35083), update_window_dims={1}, inserted_window_dims={}, scatter_dims_to_operand_dims={0}, index_vector_dim=1, to_apply=%region_1652.1687, metadata={op_name="jit(objective_pure_jax)/transpose(jvp())/scatter-add" source_file="/capstor/scratch/cscs/aboudaou/workspace/dalia/DALIA/src/dalia/core/autodiff/objectives_coregional.py" source_line=1046 source_end_line=1046 source_column=46 source_end_column=74}
+
+This isn't necessarily a bug; constant-folding is inherently a trade-off between compilation time and speed at runtime. XLA has some guards that attempt to keep constant folding from taking too long, but fundamentally you'll always be able to come up with an input program that takes a long time.
+
+If you'd like to file a bug, run with envvar XLA_FLAGS=--xla_dump_to=/tmp/foo and attach the results.
+E0314 19:14:07.075118  214607 slow_operation_alarm.cc:73] Constant folding an instruction is taking > 4s:
+
+  %scatter-add.4202 = f64[478851]{0} scatter(%broadcast.249, %constant.29287, %constant.35088), update_window_dims={1}, inserted_window_dims={}, scatter_dims_to_operand_dims={0}, index_vector_dim=1, to_apply=%region_2039.2074, metadata={op_name="jit(objective_pure_jax)/transpose(jvp())/scatter-add" source_file="/capstor/scratch/cscs/aboudaou/workspace/dalia/DALIA/src/dalia/core/autodiff/objectives_coregional.py" source_line=1046 source_end_line=1046 source_column=46 source_end_column=74}
+
+This isn't necessarily a bug; constant-folding is inherently a trade-off between compilation time and speed at runtime. XLA has some guards that attempt to keep constant folding from taking too long, but fundamentally you'll always be able to come up with an input program that takes a long time.
+
+If you'd like to file a bug, run with envvar XLA_FLAGS=--xla_dump_to=/tmp/foo and attach the results.
+E0314 19:14:15.658709  213525 slow_operation_alarm.cc:140] The operation took 12.583695012s
+Constant folding an instruction is taking > 4s:
+
+  %scatter-add.4202 = f64[478851]{0} scatter(%broadcast.249, %constant.29287, %constant.35088), update_window_dims={1}, inserted_window_dims={}, scatter_dims_to_operand_dims={0}, index_vector_dim=1, to_apply=%region_2039.2074, metadata={op_name="jit(objective_pure_jax)/transpose(jvp())/scatter-add" source_file="/capstor/scratch/cscs/aboudaou/workspace/dalia/DALIA/src/dalia/core/autodiff/objectives_coregional.py" source_line=1046 source_end_line=1046 source_column=46 source_end_column=74}
+
+This isn't necessarily a bug; constant-folding is inherently a trade-off between compilation time and speed at runtime. XLA has some guards that attempt to keep constant folding from taking too long, but fundamentally you'll always be able to come up with an input program that takes a long time.
+
+If you'd like to file a bug, run with envvar XLA_FLAGS=--xla_dump_to=/tmp/foo and attach the results.
+E0314 19:15:48.463025  214607 slow_operation_alarm.cc:73] Constant folding an instruction is taking > 8s:
+
+  %scatter-add.4200 = f64[478851]{0} scatter(%broadcast.249, %constant.29287, %constant.35076), update_window_dims={1}, inserted_window_dims={}, scatter_dims_to_operand_dims={0}, index_vector_dim=1, to_apply=%region_1265.1300, metadata={op_name="jit(objective_pure_jax)/transpose(jvp())/scatter-add" source_file="/capstor/scratch/cscs/aboudaou/workspace/dalia/DALIA/src/dalia/core/autodiff/objectives_coregional.py" source_line=1046 source_end_line=1046 source_column=46 source_end_column=74}
+
+This isn't necessarily a bug; constant-folding is inherently a trade-off between compilation time and speed at runtime. XLA has some guards that attempt to keep constant folding from taking too long, but fundamentally you'll always be able to come up with an input program that takes a long time.
+
+If you'd like to file a bug, run with envvar XLA_FLAGS=--xla_dump_to=/tmp/foo and attach the results.
+E0314 19:15:54.556017  213525 slow_operation_alarm.cc:140] The operation took 14.093105034s
+Constant folding an instruction is taking > 8s:
+
+  %scatter-add.4200 = f64[478851]{0} scatter(%broadcast.249, %constant.29287, %constant.35076), update_window_dims={1}, inserted_window_dims={}, scatter_dims_to_operand_dims={0}, index_vector_dim=1, to_apply=%region_1265.1300, metadata={op_name="jit(objective_pure_jax)/transpose(jvp())/scatter-add" source_file="/capstor/scratch/cscs/aboudaou/workspace/dalia/DALIA/src/dalia/core/autodiff/objectives_coregional.py" source_line=1046 source_end_line=1046 source_column=46 source_end_column=74}
+
+This isn't necessarily a bug; constant-folding is inherently a trade-off between compilation time and speed at runtime. XLA has some guards that attempt to keep constant folding from taking too long, but fundamentally you'll always be able to come up with an input program that takes a long time.
+
+If you'd like to file a bug, run with envvar XLA_FLAGS=--xla_dump_to=/tmp/foo and attach the results.

@@ -1,0 +1,86 @@
+Parsed parameters:
+  max_iter: 250
+  solver_min_p: 1
+  profile: False
+  precision: float64
+  benchmark_mode: True
+  n_benchmark_runs: 10
+  benchmark_method: finite_diff
+  output_csv: /capstor/scratch/cscs/aboudaou/workspace/dalia/artifact/plotting/data/fig6_raw_results.csv
+--- gst_coreg3_small: Coregional (3-variate) Spatio-Temporal Model ---
+
+___________________________________ 
+___  __ \__    |__  /____  _/__    |
+__  / / /_  /| |_  /  __  / __  /| |
+_  /_/ /_  ___ |  /____/ /  _  ___ |
+/_____/ /_/  |_/_____/___/  /_/  |_|
+
+╔═══════════════════════════════════════════════════════╗
+║               Parallelization strategies              ║
+║ ╒═══════════════════════════════════════════╤═══════╕ ║
+║ │ Participating Processes / Total Processes │ 1 / 1 │ ║
+║ ├───────────────────────────────────────────┼───────┤ ║
+║ │ Parallelization through F()               │   1   │ ║
+║ ├───────────────────────────────────────────┼───────┤ ║
+║ │ Parallelization through Q()               │   1   │ ║
+║ ├───────────────────────────────────────────┼───────┤ ║
+║ │ Parallelization through S()               │   1   │ ║
+║ ╘═══════════════════════════════════════════╧═══════╛ ║
+╚═══════════════════════════════════════════════════════╝
+╔═══════════════════════════════╗
+║  Enabled Performance modules  ║
+║ ╒═══════════════════╤═══════╕ ║
+║ │ Array module      │ cupy  │ ║
+║ ├───────────────────┼───────┤ ║
+║ │ MPI available     │ True  │ ║
+║ ├───────────────────┼───────┤ ║
+║ │ Is MPI CUDA aware │ False │ ║
+║ ├───────────────────┼───────┤ ║
+║ │ Is NCCL available │ False │ ║
+║ ╘═══════════════════╧═══════╛ ║
+╚═══════════════════════════════╝
+╔════════════════════════════════════════╗
+║             Memory Report              ║
+║ ╒════════════════════════╤═══════════╕ ║
+║ │ Solver memory          │ 129.27 MB │ ║
+║ ├────────────────────────┼───────────┤ ║
+║ │ Total memory used      │ 195.36 MB │ ║
+║ ├────────────────────────┼───────────┤ ║
+║ │ Total memory available │ 200.13 MB │ ║
+║ ╘════════════════════════╧═══════════╛ ║
+╚════════════════════════════════════════╝
+DALIA initialized.
+
+======================================================================
+GRADIENT BENCHMARK: gst_coreg3_small
+======================================================================
+Nodes: 1, Tasks: 1
+Hyperparameters: 15
+Benchmark runs: 10
+Energy monitor: enabled (Cray PM counters)
+
+Timing finite difference gradient...
+Allocated an extra 0.01 GB for BTA_mapping caching (total: 0.13)
+Allocated an extra 0.01 GB for BT_mapping caching (total: 0.14)
+rank 0 | iter 1 | objfunc_time: 18.036591 | solver_time: 2.400302 | construction_time: 13.755598
+rank 0 | iter 2 | objfunc_time: 18.043715 | solver_time: 2.406496 | construction_time: 13.766845
+rank 0 | iter 3 | objfunc_time: 17.986071 | solver_time: 2.406104 | construction_time: 13.708569
+rank 0 | iter 4 | objfunc_time: 18.003014 | solver_time: 2.402426 | construction_time: 13.730921
+rank 0 | iter 5 | objfunc_time: 17.981945 | solver_time: 2.408168 | construction_time: 13.697236
+rank 0 | iter 6 | objfunc_time: 18.011693 | solver_time: 2.406199 | construction_time: 13.724896
+rank 0 | iter 7 | objfunc_time: 18.003885 | solver_time: 2.403348 | construction_time: 13.727518
+rank 0 | iter 8 | objfunc_time: 17.969992 | solver_time: 2.400894 | construction_time: 13.700602
+rank 0 | iter 9 | objfunc_time: 17.951699 | solver_time: 2.394139 | construction_time: 13.689889
+rank 0 | iter 10 | objfunc_time: 17.995074 | solver_time: 2.405584 | construction_time: 13.711714
+rank 0 | iter 11 | objfunc_time: 18.006312 | solver_time: 2.407457 | construction_time: 13.724069
+  Mean: 17.9954s
+  Std:  0.0238s
+  Node energy/grad: 14511.4 J
+  GPU energy/grad:  8811.7 J
+  Other energy/grad: 2468.2 J
+
+======================================================================
+Benchmark completed
+Results written to: /capstor/scratch/cscs/aboudaou/workspace/dalia/artifact/plotting/data/fig6_raw_results.csv
+======================================================================
+Job finished at Sat 14 Mar 2026 10:31:34 PM CET

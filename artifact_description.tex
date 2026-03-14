@@ -1,0 +1,310 @@
+\documentclass[conference]{IEEEtran}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{hyperref}
+\usepackage{booktabs}
+\usepackage{xcolor}
+\usepackage{listings}
+\usepackage{url}
+
+\lstset{
+  basicstyle=\footnotesize\ttfamily,
+  breaklines=true,
+  frame=single,
+  columns=fullflexible,
+}
+
+\title{Artifact Description:\\ADELIA: Automatic Differentiation for\\Efficient Latent Inference Approximation}
+
+\author{
+\IEEEauthorblockN{Affif Boudaoud\IEEEauthorrefmark{1},
+Lisa Gaedke-Merzhäuser\IEEEauthorrefmark{2},
+Vincent Maillou\IEEEauthorrefmark{3},
+Olaf Schenk\IEEEauthorrefmark{2},
+Torsten Hoefler\IEEEauthorrefmark{3}}
+\IEEEauthorblockA{\IEEEauthorrefmark{1}ETH Zurich, Switzerland}
+\IEEEauthorblockA{\IEEEauthorrefmark{2}Università della Svizzera italiana, Switzerland}
+\IEEEauthorblockA{\IEEEauthorrefmark{3}ETH Zurich, Switzerland}
+}
+
+\begin{document}
+\maketitle
+
+% ============================================================
+\section{Artifact Identification}
+% ============================================================
+
+This artifact supports three contributions presented in the paper:
+
+\begin{itemize}
+  \item \textbf{C1:} A structure-preserving backward pass for
+    block-tridiagonal-arrowhead (BTA) Cholesky factorization that avoids
+    materializing the full lower-triangular factor, reducing memory from
+    $\mathcal{O}(n_t \cdot n_s^2)$ to $\mathcal{O}(n_s^2)$.
+  \item \textbf{C2:} Extension of C1 to multivariate coregional models
+    with $n_v$ response variables, including a two-phase distributed
+    algorithm for the fused Cholesky--forward-substitution--backward-substitution--selected-inversion pipeline.
+  \item \textbf{C3:} Multi-GPU distributed automatic differentiation using
+    MPI-based allreduce operations fused into the JAX computation graph
+    via \texttt{mpi4jax}, enabling strong and weak scaling.
+\end{itemize}
+
+\noindent
+The contributions map to the following artifacts:
+
+\begin{table}[h]
+\centering
+\caption{Contribution--Artifact Mapping}
+\label{tab:artifacts}
+\begin{tabular}{@{}clp{4.8cm}@{}}
+\toprule
+\textbf{ID} & \textbf{Artifact} & \textbf{Description} \\
+\midrule
+A1 & ADELIA/DALIA & INLA framework with JAX-based automatic differentiation for Bayesian spatio-temporal inference \\
+A2 & Serinv & Structured sparse matrix solver library for BTA matrices \\
+A3 & Benchmark suite & 9 models, input data, experiment scripts, plotting infrastructure \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\noindent
+\textbf{A1} and \textbf{A2} are open-source software (BSD-3-Clause).
+Source code is included in \texttt{source/dalia/} and \texttt{source/serinv/}.
+Public repositories:
+\begin{itemize}
+  \item A1: \url{https://github.com/affifboudaoud/DALIA}
+  \item A2: \url{https://github.com/affifboudaoud/serinv}
+\end{itemize}
+
+\noindent
+\textbf{A3} is archived on Zenodo with DOI (to be assigned upon acceptance).
+
+% ============================================================
+\section{Hardware and Software Dependencies}
+% ============================================================
+
+\subsection{Hardware}
+
+All experiments were conducted on CSCS Alps (Switzerland), a Cray EX
+supercomputer with NVIDIA GH200 Grace Hopper Superchip nodes:
+
+\begin{itemize}
+  \item \textbf{GPU:} NVIDIA H100 SXM, 96\,GB HBM3, 3.9\,TB/s bandwidth
+  \item \textbf{CPU:} NVIDIA Grace (ARM Neoverse V2), 72 cores, 128\,GB LPDDR5X
+  \item \textbf{Interconnect:} HPE Slingshot-11, 200\,Gb/s bidirectional per NIC
+  \item \textbf{Nodes used:} 1--32 (depending on experiment)
+\end{itemize}
+
+\subsection{Software Stack}
+
+\begin{table}[h]
+\centering
+\caption{Software Dependencies}
+\label{tab:software}
+\begin{tabular}{@{}ll@{}}
+\toprule
+\textbf{Component} & \textbf{Version} \\
+\midrule
+Python & 3.11 \\
+NumPy & $\geq$ 1.23 \\
+SciPy & $\geq$ 1.10 \\
+JAX / JAXlib & 0.4.38 \\
+CuPy & 13.2.0 \\
+mpi4jax & 0.5.2+ (built from source) \\
+Cray MPICH & 8.1.x \\
+CUDA toolkit & 12.x \\
+Pydantic & $\geq$ 2.0 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\noindent
+A conda \texttt{environment.yml} is provided.
+\texttt{mpi4jax} must be compiled against the cluster's MPI library;
+see \texttt{INSTALL.md} for instructions.
+
+% ============================================================
+\section{Datasets}
+% ============================================================
+
+The artifact includes input data for 9~benchmark models spanning synthetic
+and real-world spatio-temporal datasets:
+
+\begin{table}[h]
+\centering
+\caption{Benchmark Models}
+\label{tab:datasets}
+\begin{tabular}{@{}lrrrrr@{}}
+\toprule
+\textbf{Model} & $n_v$ & $n_s$ & $n_t$ & $n_\theta$ & \textbf{Size} \\
+\midrule
+gst\_small   & 1 &     92 &   5 &  4 & $<$1\,MB \\
+gst\_medium  & 1 &    716 &  50 &  4 & 13\,MB \\
+gst\_large   & 1 &  4\,002 & 250 &  4 & 157\,MB \\
+gst\_coreg2  & 2 &    354 &  12 &  9 & 1\,MB \\
+gst\_coreg3  & 3 &    354 &   8 & 15 & 2\,MB \\
+SA1          & 3 &  1\,673 & 192 & 15 & 125\,MB \\
+AP1          & 3 &  4\,210 &  48 & 15 & 93\,MB \\
+WA1          & 3 &  1\,247 &  48 & 15 & 25\,MB \\
+WA2          & 3 &  4\,485 &  48 & 15 & 88\,MB \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\noindent
+Scaling studies use additional data variants:
+\begin{itemize}
+  \item \textbf{Temporal scaling} (WA1): $n_t \in \{2, 32, 64, 128, 256, 512\}$
+    with fixed $n_s = 1\,247$ ($\sim$500\,MB total)
+  \item \textbf{Spatial scaling} (WA2): $n_s \in \{72, 282, 1\,119, 4\,485\}$
+    with fixed $n_t = 48$ ($\sim$124\,MB total)
+\end{itemize}
+
+\noindent
+Synthetic data (gst\_*) were generated using stochastic partial differential
+equation (SPDE) discretizations on triangulated meshes.
+Real-world data (SA1, AP1, WA1, WA2) are derived from ERA5 reanalysis
+(Copernicus Climate Data Store) and swisstopo aerial photography.
+
+Total artifact size: $\sim$1.1\,GB.
+
+% ============================================================
+\section{Installation and Setup}
+% ============================================================
+
+\begin{lstlisting}[language=bash]
+# Create conda environment
+conda env create -f environment.yml
+conda activate adelia-env
+
+# Install DALIA and Serinv
+cd source/dalia && pip install -e .
+cd source/serinv && pip install -e .
+
+# Build mpi4jax against system MPI
+export MPI4JAX_BUILD_MPICC=$(which mpicc)
+pip install mpi4jax
+\end{lstlisting}
+
+\noindent
+See \texttt{INSTALL.md} for cluster-specific instructions (module loads,
+\texttt{LD\_LIBRARY\_PATH} for NVIDIA pip packages, JAX warmup requirements).
+
+% ============================================================
+\section{Experiment Workflow}
+% ============================================================
+
+Each experiment directory contains:
+\begin{itemize}
+  \item \texttt{run.py} --- Python experiment script
+  \item \texttt{run\_inner.sh} --- Shell wrapper (environment setup + \texttt{srun})
+  \item \texttt{run.sbatch} --- SLURM batch submission script
+\end{itemize}
+
+\subsection{Quick Validation ($\sim$2 minutes, 1 node)}
+
+\begin{lstlisting}[language=bash]
+cd validation && bash validate_quick.sh
+\end{lstlisting}
+
+\noindent
+Runs the gst\_small model with both automatic differentiation (AD) and
+finite differences (FD), verifying:
+\begin{itemize}
+  \item Forward objective values match ($< 10^{-6}$ relative error)
+  \item Gradient vectors agree ($< 10\%$ max relative error; FD has $O(\epsilon^2)$ truncation error)
+\end{itemize}
+
+\subsection{Gradient Correctness Validation ($\sim$30 minutes, 1 node)}
+
+\begin{lstlisting}[language=bash]
+cd validation
+sbatch validate_gradient_correctness.sbatch
+\end{lstlisting}
+
+\noindent
+Cross-validates the custom backward pass (AD-BTA) against JAX's native
+reverse-mode AD (AD-Loop) on the four models where AD-Loop fits in memory
+(GST-S, GST-C2, GST-C3, GST-M).
+Both methods are exact (no truncation error), so agreement proves
+correctness.
+Verifies the paper claim (Section~V): the two exact AD methods agree
+to below $10^{-7}$ in the worst case.
+Results are written to \texttt{validation/reference\_outputs/gradient\_correctness.csv}.
+
+\subsection{Full Reproduction}
+
+\begin{lstlisting}[language=bash]
+# Edit YOUR_ACCOUNT in all .sbatch files
+bash run_all_experiments.sh
+\end{lstlisting}
+
+\noindent
+This submits all experiments to SLURM.
+Total estimated wall-clock time: $\sim$28 node-hours.
+
+\subsection{Figure Generation}
+
+\begin{lstlisting}[language=bash]
+cd plotting && bash generate_all_figures.sh
+\end{lstlisting}
+
+\noindent
+Generates all paper figures from reference CSV data in \texttt{plotting/data/}.
+
+% ============================================================
+\section{Validation Criteria}
+% ============================================================
+
+\noindent
+Numerical correctness is verified by comparing the AD gradient
+$\nabla_\theta f_{\mathrm{AD}}$ against a central finite-difference
+reference $\nabla_\theta f_{\mathrm{FD}}$ at the initial hyperparameter
+values:
+
+\begin{itemize}
+  \item \textbf{Forward value:} $|f_{\mathrm{AD}} - f_{\mathrm{FD}}| / |f_{\mathrm{FD}}| < 10^{-6}$
+  \item \textbf{Gradient:} $\max_i |\nabla_i f_{\mathrm{AD}} - \nabla_i f_{\mathrm{FD}}| / (|\nabla_i f_{\mathrm{FD}}| + 10^{-10}) < 0.1$
+\end{itemize}
+
+\noindent
+The gradient tolerance is deliberately loose because central finite
+differences have $O(\epsilon^2)$ truncation error with step size
+$\epsilon = 10^{-3}$, which is the dominant error source.
+
+Performance metrics (wall-clock time, speedup, energy) are reported as
+mean $\pm$ standard deviation over 10 timed gradient evaluations,
+after 2 warmup iterations.
+
+% ============================================================
+\section{Artifact Directory Structure}
+% ============================================================
+
+\begin{lstlisting}[basicstyle=\scriptsize\ttfamily]
+artifact/
+  README.md, INSTALL.md, LICENSE
+  environment.yml
+  artifact_description.tex
+  source/
+    dalia/          # A1: DALIA/ADELIA source
+    serinv/         # A2: Serinv source
+  data/             # Input matrices (9 models + scaling)
+  experiments/
+    common/         # Shared utilities
+    tab2_*/         # Table 2
+    fig2_wallclock/ # Figure 2 (9 model dirs)
+    fig4_*/         # Figure 4
+    fig5_*/         # Figure 5 (scaling)
+    fig6_*/         # Figure 6
+    fig7_*/         # Figure 7
+  plotting/
+    scripts/        # 15 figure-generation scripts
+    data/           # Reference CSVs
+  validation/
+    validate_quick.sh
+    validate_gradient_correctness.py
+  run_all_experiments.sh
+\end{lstlisting}
+
+\end{document}

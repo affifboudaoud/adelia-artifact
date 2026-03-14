@@ -1,0 +1,27 @@
+W0313 01:27:34.655288  237157 cuda_executor.cc:1802] GPU interconnect information not available: INTERNAL: NVML doesn't support extracting fabric info or NVLink is not used by the device.
+W0313 01:27:34.660816  237159 cuda_executor.cc:1802] GPU interconnect information not available: INTERNAL: NVML doesn't support extracting fabric info or NVLink is not used by the device.
+W0313 01:27:34.666017  237158 cuda_executor.cc:1802] GPU interconnect information not available: INTERNAL: NVML doesn't support extracting fabric info or NVLink is not used by the device.
+W0313 01:27:34.670309  237160 cuda_executor.cc:1802] GPU interconnect information not available: INTERNAL: NVML doesn't support extracting fabric info or NVLink is not used by the device.
+W0313 01:27:35.028485  236380 cuda_executor.cc:1802] GPU interconnect information not available: INTERNAL: NVML doesn't support extracting fabric info or NVLink is not used by the device.
+W0313 01:27:35.059717  236380 cuda_executor.cc:1802] GPU interconnect information not available: INTERNAL: NVML doesn't support extracting fabric info or NVLink is not used by the device.
+W0313 01:27:35.091378  236380 cuda_executor.cc:1802] GPU interconnect information not available: INTERNAL: NVML doesn't support extracting fabric info or NVLink is not used by the device.
+W0313 01:27:35.123104  236380 cuda_executor.cc:1802] GPU interconnect information not available: INTERNAL: NVML doesn't support extracting fabric info or NVLink is not used by the device.
+Traceback (most recent call last):
+  File "/capstor/scratch/cscs/aboudaou/workspace/dalia/artifact/experiments/tab2_structure_comparison/run.py", line 536, in <module>
+    res = run_strategy(model_name, model_info, strategy, n_runs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/aboudaou/workspace/dalia/artifact/experiments/tab2_structure_comparison/run.py", line 410, in run_strategy
+    model = create_fn()
+            ^^^^^^^^^^^
+  File "/capstor/scratch/cscs/aboudaou/workspace/dalia/artifact/experiments/tab2_structure_comparison/run.py", line 103, in create_gst_small
+    return Model(
+           ^^^^^^
+  File "/capstor/scratch/cscs/aboudaou/workspace/dalia/DALIA/src/dalia/core/model.py", line 244, in __init__
+    y: NDArray = np.load(input_dir / "y.npy")
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/users/aboudaou/miniconda3/envs/serinv-env/lib/python3.11/site-packages/numpy/lib/_npyio_impl.py", line 454, in load
+    fid = stack.enter_context(open(os.fspath(file), "rb"))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/capstor/scratch/cscs/aboudaou/workspace/dalia/artifact/data/gst_small/y.npy'
+srun: error: nid006022: task 0: Exited with exit code 1
+srun: Terminating StepId=2860791.0

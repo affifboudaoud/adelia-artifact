@@ -1,0 +1,22 @@
+model,likelihood,nv,ns,nt,latent_dim,n_hyperparams,block_size,n_blocks,solver,min_nodes_ad,ad_gradient_time_mean,ad_gradient_time_std,ad_n_samples,fd_gradient_time_mean,fd_gradient_time_std,fd_n_samples,fd_n_nodes,per_gradient_speedup,node_seconds_ad,node_seconds_fd,single_eval_fits_1gpu,notes
+GS,gaussian,1,444,0,444,3,0,0,dense,1,0.003191,0.000,10,0.097764,0.000205,10,1,30.6,0.003191,0.097764,yes,
+PST,poisson,1,2272,0,2272,3,0,0,dense,1,0.110154,0.000,10,0.351415,0.000772,10,1,3.2,0.110154,0.351415,yes,
+GS-C2,gaussian,2,1819,0,3638,7,0,0,dense,1,0.051046,0.000,10,0.510751,0.000681,10,1,10.0,0.051046,0.510751,yes,
+GS-C3,gaussian,3,1093,0,3279,12,0,0,dense,1,0.042245,0.000,10,1.056505,0.001926,10,1,25.0,0.042245,1.056505,yes,
+GST-S,gaussian,1,92,5,466,4,92,5,BTA,1,0.005182,0.000,10,0.258393,0.000449,10,1,49.9,0.005182,0.258393,yes,
+GST-M,gaussian,1,812,100,81206,4,812,100,BTA,1,0.732934,0.000,10,2.706258,0.001848,10,1,3.7,0.732934,2.706258,yes,
+GST-L,gaussian,1,4002,250,1000506,4,4002,250,BTA,1,23.525,0.051,10,61.740,0.030,10,1,2.6,23.525,61.740,yes,
+GST-C2,gaussian,2,354,12,8498,9,708,12,BTA,1,0.069760,0.000,10,1.266533,0.003990,10,1,18.2,0.069760,1.266533,yes,
+GST-C3,gaussian,3,354,8,8499,15,1062,8,BTA,1,0.078446,0.000,10,2.647893,0.003439,10,1,33.8,0.078446,2.647893,yes,
+SA1,gaussian,3,1673,192,963651,15,5019,192,BTA,1,31.859,0.018,22,263.382,0.213,7,1,8.3,31.859,263.382,yes,AD@1n 1rank 31.86s; FD@1n 263.4s; both fit single GH200 GPU
+AP1,gaussian,3,4210,48,606246,15,12630,48,BTA,4,116.897,1.503,163,474.300,0.722,6,4,4.1,467.588,1897.200,no,FD@4n nocuda 474.3s; prev 6n NCCL 1084s; NCCL caused OOM@4n (63.95/63.99GB)
+WA1,gaussian,3,1247,512,1915395,15,3741,512,BTA,4,76.071,3.948,95,216.583,0.620,14,4,2.8,304.284,866.332,no,FD@4n nocuda 216.6s; prev 8n NCCL 163.9s; NCCL caused NaN@4n and @8n
+WA2-ns72,gaussian,3,72,48,10371,15,216,48,BTA,1,0.166,0.000,74,4.128,0.064,70,1,24.9,0.166,4.128,yes,WA2 spatial scaling at ns=72; both AD and FD on 1 node
+WA2-ns282,gaussian,3,282,48,40611,15,846,48,BTA,1,0.460,0.001,119,6.711,0.377,177,1,14.6,0.460,6.711,yes,WA2 spatial scaling at ns=282; both AD and FD on 1 node
+WA2-ns1119,gaussian,3,1119,48,161139,15,3357,48,BTA,1,3.128,0.003,111,28.366,0.207,170,1,9.1,3.128,28.366,yes,WA2 spatial scaling at ns=1119; both AD and FD on 1 node
+WA2,gaussian,3,4485,48,645843,15,13455,48,BTA,4,148.165,1.560,66,666.117,0.276,4,4,4.5,592.660,2664.468,no,FD@4n nocuda 666.1s; prev 6n NCCL 1257.8s; NCCL caused NaN@4n (72.77/72.84GB)
+WA1-small,gaussian,3,1247,2,7485,15,3741,2,BTA,1,0.130,0.001,521,2.944,0.134,334,1,22.6,0.130,2.944,yes,WA1 at nt=2 (tiny); single-node validation; both AD and FD converge
+WA1-nt32,gaussian,3,1247,32,119715,15,3741,32,BTA,1,2.565,0.002,107,23.109,0.187,263,1,9.0,2.565,23.109,yes,WA1 weak scaling at nt=32; both AD and FD on 1 node
+WA1-nt64,gaussian,3,1247,64,239427,15,3741,64,BTA,1,5.189,0.004,186,44.566,0.162,229,1,8.6,5.189,44.566,yes,WA1 weak scaling at nt=64; both AD and FD on 1 node
+WA1-nt128,gaussian,3,1247,128,478851,15,3741,128,BTA,1,10.491,0.010,182,88.751,0.096,214,1,8.5,10.491,88.751,yes,WA1 weak scaling at nt=128; both AD and FD on 1 node
+WA1-nt256,gaussian,3,1247,256,957699,15,3741,256,BTA,1,20.680,0.009,110,173.998,0.154,104,1,8.4,20.680,173.998,yes,WA1 weak scaling at nt=256; both AD and FD on 1 node

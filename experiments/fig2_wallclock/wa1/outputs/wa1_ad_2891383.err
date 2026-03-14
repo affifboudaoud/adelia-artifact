@@ -1,0 +1,122 @@
+W0314 18:51:49.952311  162281 cuda_executor.cc:1802] GPU interconnect information not available: INTERNAL: NVML doesn't support extracting fabric info or NVLink is not used by the device.
+W0314 18:51:49.961304  249171 cuda_executor.cc:1802] GPU interconnect information not available: INTERNAL: NVML doesn't support extracting fabric info or NVLink is not used by the device.
+W0314 18:51:49.961822  104024 cuda_executor.cc:1802] GPU interconnect information not available: INTERNAL: NVML doesn't support extracting fabric info or NVLink is not used by the device.
+W0314 18:51:49.962743  162280 cuda_executor.cc:1802] GPU interconnect information not available: INTERNAL: NVML doesn't support extracting fabric info or NVLink is not used by the device.
+W0314 18:51:49.966999  104023 cuda_executor.cc:1802] GPU interconnect information not available: INTERNAL: NVML doesn't support extracting fabric info or NVLink is not used by the device.
+W0314 18:51:49.977663  104025 cuda_executor.cc:1802] GPU interconnect information not available: INTERNAL: NVML doesn't support extracting fabric info or NVLink is not used by the device.
+W0314 18:51:49.978087  162283 cuda_executor.cc:1802] GPU interconnect information not available: INTERNAL: NVML doesn't support extracting fabric info or NVLink is not used by the device.
+W0314 18:51:49.978374  249173 cuda_executor.cc:1802] GPU interconnect information not available: INTERNAL: NVML doesn't support extracting fabric info or NVLink is not used by the device.
+W0314 18:51:49.979864  162282 cuda_executor.cc:1802] GPU interconnect information not available: INTERNAL: NVML doesn't support extracting fabric info or NVLink is not used by the device.
+W0314 18:51:49.980277  104022 cuda_executor.cc:1802] GPU interconnect information not available: INTERNAL: NVML doesn't support extracting fabric info or NVLink is not used by the device.
+W0314 18:51:49.980562  249172 cuda_executor.cc:1802] GPU interconnect information not available: INTERNAL: NVML doesn't support extracting fabric info or NVLink is not used by the device.
+W0314 18:51:49.981476  249170 cuda_executor.cc:1802] GPU interconnect information not available: INTERNAL: NVML doesn't support extracting fabric info or NVLink is not used by the device.
+W0314 18:51:50.015548  291408 cuda_executor.cc:1802] GPU interconnect information not available: INTERNAL: NVML doesn't support extracting fabric info or NVLink is not used by the device.
+W0314 18:51:50.017526  291405 cuda_executor.cc:1802] GPU interconnect information not available: INTERNAL: NVML doesn't support extracting fabric info or NVLink is not used by the device.
+W0314 18:51:50.029725  291406 cuda_executor.cc:1802] GPU interconnect information not available: INTERNAL: NVML doesn't support extracting fabric info or NVLink is not used by the device.
+W0314 18:51:50.030639  291407 cuda_executor.cc:1802] GPU interconnect information not available: INTERNAL: NVML doesn't support extracting fabric info or NVLink is not used by the device.
+W0314 18:51:50.341039  103305 cuda_executor.cc:1802] GPU interconnect information not available: INTERNAL: NVML doesn't support extracting fabric info or NVLink is not used by the device.
+W0314 18:51:50.341105  248404 cuda_executor.cc:1802] GPU interconnect information not available: INTERNAL: NVML doesn't support extracting fabric info or NVLink is not used by the device.
+W0314 18:51:50.351851  161557 cuda_executor.cc:1802] GPU interconnect information not available: INTERNAL: NVML doesn't support extracting fabric info or NVLink is not used by the device.
+W0314 18:51:50.372836  248404 cuda_executor.cc:1802] GPU interconnect information not available: INTERNAL: NVML doesn't support extracting fabric info or NVLink is not used by the device.
+W0314 18:51:50.373619  103305 cuda_executor.cc:1802] GPU interconnect information not available: INTERNAL: NVML doesn't support extracting fabric info or NVLink is not used by the device.
+W0314 18:51:50.383191  161557 cuda_executor.cc:1802] GPU interconnect information not available: INTERNAL: NVML doesn't support extracting fabric info or NVLink is not used by the device.
+W0314 18:51:50.387439  290686 cuda_executor.cc:1802] GPU interconnect information not available: INTERNAL: NVML doesn't support extracting fabric info or NVLink is not used by the device.
+W0314 18:51:50.404432  248404 cuda_executor.cc:1802] GPU interconnect information not available: INTERNAL: NVML doesn't support extracting fabric info or NVLink is not used by the device.
+W0314 18:51:50.404690  103305 cuda_executor.cc:1802] GPU interconnect information not available: INTERNAL: NVML doesn't support extracting fabric info or NVLink is not used by the device.
+W0314 18:51:50.414589  161557 cuda_executor.cc:1802] GPU interconnect information not available: INTERNAL: NVML doesn't support extracting fabric info or NVLink is not used by the device.
+W0314 18:51:50.419692  290686 cuda_executor.cc:1802] GPU interconnect information not available: INTERNAL: NVML doesn't support extracting fabric info or NVLink is not used by the device.
+W0314 18:51:50.436624  248404 cuda_executor.cc:1802] GPU interconnect information not available: INTERNAL: NVML doesn't support extracting fabric info or NVLink is not used by the device.
+W0314 18:51:50.439604  103305 cuda_executor.cc:1802] GPU interconnect information not available: INTERNAL: NVML doesn't support extracting fabric info or NVLink is not used by the device.
+W0314 18:51:50.446677  161557 cuda_executor.cc:1802] GPU interconnect information not available: INTERNAL: NVML doesn't support extracting fabric info or NVLink is not used by the device.
+W0314 18:51:50.451045  290686 cuda_executor.cc:1802] GPU interconnect information not available: INTERNAL: NVML doesn't support extracting fabric info or NVLink is not used by the device.
+W0314 18:51:50.482511  290686 cuda_executor.cc:1802] GPU interconnect information not available: INTERNAL: NVML doesn't support extracting fabric info or NVLink is not used by the device.
+/users/aboudaou/miniconda3/envs/serinv-env/lib/python3.11/site-packages/mpi4jax/_src/decorators.py:60: UserWarning: Not using CUDA-enabled MPI. If you are sure that your MPI library is built with CUDA support, set MPI4JAX_USE_CUDA_MPI=1. To silence this warning, set MPI4JAX_USE_CUDA_MPI=0.
+  warnings.warn(warn_msg)
+/users/aboudaou/miniconda3/envs/serinv-env/lib/python3.11/site-packages/mpi4jax/_src/decorators.py:60: UserWarning: Not using CUDA-enabled MPI. If you are sure that your MPI library is built with CUDA support, set MPI4JAX_USE_CUDA_MPI=1. To silence this warning, set MPI4JAX_USE_CUDA_MPI=0.
+  warnings.warn(warn_msg)
+/users/aboudaou/miniconda3/envs/serinv-env/lib/python3.11/site-packages/mpi4jax/_src/decorators.py:60: UserWarning: Not using CUDA-enabled MPI. If you are sure that your MPI library is built with CUDA support, set MPI4JAX_USE_CUDA_MPI=1. To silence this warning, set MPI4JAX_USE_CUDA_MPI=0.
+  warnings.warn(warn_msg)
+/users/aboudaou/miniconda3/envs/serinv-env/lib/python3.11/site-packages/mpi4jax/_src/decorators.py:60: UserWarning: Not using CUDA-enabled MPI. If you are sure that your MPI library is built with CUDA support, set MPI4JAX_USE_CUDA_MPI=1. To silence this warning, set MPI4JAX_USE_CUDA_MPI=0.
+  warnings.warn(warn_msg)
+Traceback (most recent call last):
+  File "/capstor/scratch/cscs/aboudaou/workspace/dalia/artifact/experiments/fig2_wallclock/wa1/run.py", line 237, in <module>
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "/capstor/scratch/cscs/aboudaou/workspace/dalia/artifact/experiments/fig2_wallclock/wa1/run.py", line 237, in <module>
+  File "/capstor/scratch/cscs/aboudaou/workspace/dalia/artifact/experiments/fig2_wallclock/wa1/run.py", line 237, in <module>
+Traceback (most recent call last):
+  File "/capstor/scratch/cscs/aboudaou/workspace/dalia/artifact/experiments/fig2_wallclock/wa1/run.py", line 237, in <module>
+    results_jax = dalia_jax.run()
+                  ^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/aboudaou/workspace/dalia/DALIA/src/dalia/core/dalia.py", line 516, in run
+    results_jax = dalia_jax.run()
+    results_jax = dalia_jax.run()
+                  ^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/aboudaou/workspace/dalia/DALIA/src/dalia/core/dalia.py", line 516, in run
+                  ^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/aboudaou/workspace/dalia/DALIA/src/dalia/core/dalia.py", line 516, in run
+    results_jax = dalia_jax.run()
+                  ^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/aboudaou/workspace/dalia/DALIA/src/dalia/core/dalia.py", line 516, in run
+    cov_theta = self.compute_covariance_hp(theta_star)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/aboudaou/workspace/dalia/DALIA/src/dalia/core/dalia.py", line 1152, in compute_covariance_hp
+    hess_theta = self._evaluate_hessian_f_from_gradients(theta_i)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/aboudaou/workspace/dalia/DALIA/src/dalia/core/dalia.py", line 1354, in _evaluate_hessian_f_from_gradients
+    eigvals = np.linalg.eigvalsh(hess)
+              ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/users/aboudaou/miniconda3/envs/serinv-env/lib/python3.11/site-packages/numpy/linalg/_linalg.py", line 1376, in eigvalsh
+    cov_theta = self.compute_covariance_hp(theta_star)
+    cov_theta = self.compute_covariance_hp(theta_star)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    cov_theta = self.compute_covariance_hp(theta_star)
+  File "/capstor/scratch/cscs/aboudaou/workspace/dalia/DALIA/src/dalia/core/dalia.py", line 1152, in compute_covariance_hp
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/aboudaou/workspace/dalia/DALIA/src/dalia/core/dalia.py", line 1152, in compute_covariance_hp
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/aboudaou/workspace/dalia/DALIA/src/dalia/core/dalia.py", line 1152, in compute_covariance_hp
+    hess_theta = self._evaluate_hessian_f_from_gradients(theta_i)
+    hess_theta = self._evaluate_hessian_f_from_gradients(theta_i)
+    hess_theta = self._evaluate_hessian_f_from_gradients(theta_i)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/aboudaou/workspace/dalia/DALIA/src/dalia/core/dalia.py", line 1354, in _evaluate_hessian_f_from_gradients
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/capstor/scratch/cscs/aboudaou/workspace/dalia/DALIA/src/dalia/core/dalia.py", line 1354, in _evaluate_hessian_f_from_gradients
+  File "/capstor/scratch/cscs/aboudaou/workspace/dalia/DALIA/src/dalia/core/dalia.py", line 1354, in _evaluate_hessian_f_from_gradients
+    eigvals = np.linalg.eigvalsh(hess)
+    eigvals = np.linalg.eigvalsh(hess)
+    eigvals = np.linalg.eigvalsh(hess)
+              ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/users/aboudaou/miniconda3/envs/serinv-env/lib/python3.11/site-packages/numpy/linalg/_linalg.py", line 1376, in eigvalsh
+              ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/users/aboudaou/miniconda3/envs/serinv-env/lib/python3.11/site-packages/numpy/linalg/_linalg.py", line 1376, in eigvalsh
+              ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/users/aboudaou/miniconda3/envs/serinv-env/lib/python3.11/site-packages/numpy/linalg/_linalg.py", line 1376, in eigvalsh
+    w = gufunc(a, signature=signature)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/users/aboudaou/miniconda3/envs/serinv-env/lib/python3.11/site-packages/numpy/linalg/_linalg.py", line 169, in _raise_linalgerror_eigenvalues_nonconvergence
+    raise LinAlgError("Eigenvalues did not converge")
+numpy.linalg.LinAlgError: Eigenvalues did not converge
+    w = gufunc(a, signature=signature)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/users/aboudaou/miniconda3/envs/serinv-env/lib/python3.11/site-packages/numpy/linalg/_linalg.py", line 169, in _raise_linalgerror_eigenvalues_nonconvergence
+    raise LinAlgError("Eigenvalues did not converge")
+numpy.linalg.LinAlgError: Eigenvalues did not converge
+    w = gufunc(a, signature=signature)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/users/aboudaou/miniconda3/envs/serinv-env/lib/python3.11/site-packages/numpy/linalg/_linalg.py", line 169, in _raise_linalgerror_eigenvalues_nonconvergence
+    raise LinAlgError("Eigenvalues did not converge")
+numpy.linalg.LinAlgError: Eigenvalues did not converge
+    w = gufunc(a, signature=signature)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/users/aboudaou/miniconda3/envs/serinv-env/lib/python3.11/site-packages/numpy/linalg/_linalg.py", line 169, in _raise_linalgerror_eigenvalues_nonconvergence
+    raise LinAlgError("Eigenvalues did not converge")
+numpy.linalg.LinAlgError: Eigenvalues did not converge
+srun: error: nid005695: task 1: Exited with exit code 1
+srun: Terminating StepId=2891383.0
+[2026-03-14T20:48:34.170] error: *** STEP 2891383.0 ON nid005689 CANCELLED AT 2026-03-14T20:48:34 DUE TO TASK FAILURE ***
+srun: error: nid005709: task 2: Exited with exit code 1
+srun: error: nid005713: task 3: Exited with exit code 1
+srun: error: nid005689: task 0: Exited with exit code 1

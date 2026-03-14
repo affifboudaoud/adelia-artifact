@@ -1,0 +1,8 @@
+[submodule "DALIA"]
+	path = DALIA
+	url = https://github.com/affifboudaoud/DALIA.git
+	branch = cleaning
+[submodule "serinv"]
+	path = serinv
+	url = https://github.com/affifboudaoud/serinv.git
+	branch = serinv_jax
