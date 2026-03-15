@@ -23,9 +23,7 @@ DATA_DIR = os.path.join(SCRIPT_DIR, "..", "data")
 EXPERIMENT_DIR = os.path.join(
     SCRIPT_DIR, "..", "..", "experiments", "fig5_scaling_study"
 )
-PAPER_FIG_DIR = os.path.join(
-    SCRIPT_DIR, "..", "..", "writing", "698c58632d8bba3fe6c13a59", "figures"
-)
+PAPER_FIG_DIR = os.path.join(SCRIPT_DIR, "..", "figures")
 
 CSV_FILE = "minimum_resources_comparison.csv"
 SCALING_CSV = os.path.join(EXPERIMENT_DIR, "results", "scaling_results.csv")

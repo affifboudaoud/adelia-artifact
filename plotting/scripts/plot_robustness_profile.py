@@ -17,9 +17,7 @@ import matplotlib.pyplot as plt
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 DATA_DIR = os.path.join(SCRIPT_DIR, "..", "data")
 OUTPUT_DIR = os.path.join(SCRIPT_DIR, "..", "figures")
-PAPER_DIR = os.path.join(
-    SCRIPT_DIR, "..", "..", "writing", "698c58632d8bba3fe6c13a59", "figures"
-)
+PAPER_DIR = os.path.join(SCRIPT_DIR, "..", "figures")
 
 AD_COLOR = "#2166ac"
 FD_COLOR = "#b2182b"

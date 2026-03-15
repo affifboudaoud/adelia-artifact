@@ -1,0 +1,86 @@
+Parsed parameters:
+  max_iter: 250
+  solver_min_p: 1
+  profile: False
+  precision: float64
+  benchmark_mode: True
+  n_benchmark_runs: 10
+  benchmark_method: finite_diff
+  output_csv: /capstor/scratch/cscs/aboudaou/workspace/dalia/artifact/plotting/data/fig6_raw_results.csv
+--- gst_medium: Gaussian Spatio-Temporal Model ---
+
+___________________________________ 
+___  __ \__    |__  /____  _/__    |
+__  / / /_  /| |_  /  __  / __  /| |
+_  /_/ /_  ___ |  /____/ /  _  ___ |
+/_____/ /_/  |_/_____/___/  /_/  |_|
+
+╔═══════════════════════════════════════════════════════╗
+║               Parallelization strategies              ║
+║ ╒═══════════════════════════════════════════╤═══════╕ ║
+║ │ Participating Processes / Total Processes │ 1 / 1 │ ║
+║ ├───────────────────────────────────────────┼───────┤ ║
+║ │ Parallelization through F()               │   1   │ ║
+║ ├───────────────────────────────────────────┼───────┤ ║
+║ │ Parallelization through Q()               │   1   │ ║
+║ ├───────────────────────────────────────────┼───────┤ ║
+║ │ Parallelization through S()               │   1   │ ║
+║ ╘═══════════════════════════════════════════╧═══════╛ ║
+╚═══════════════════════════════════════════════════════╝
+╔═══════════════════════════════╗
+║  Enabled Performance modules  ║
+║ ╒═══════════════════╤═══════╕ ║
+║ │ Array module      │ cupy  │ ║
+║ ├───────────────────┼───────┤ ║
+║ │ MPI available     │ True  │ ║
+║ ├───────────────────┼───────┤ ║
+║ │ Is MPI CUDA aware │ False │ ║
+║ ├───────────────────┼───────┤ ║
+║ │ Is NCCL available │ False │ ║
+║ ╘═══════════════════╧═══════╛ ║
+╚═══════════════════════════════╝
+╔═════════════════════════════════════════╗
+║              Memory Report              ║
+║ ╒════════════════════════╤════════════╕ ║
+║ │ Solver memory          │ 1004.77 MB │ ║
+║ ├────────────────────────┼────────────┤ ║
+║ │ Total memory used      │  1.09 GB   │ ║
+║ ├────────────────────────┼────────────┤ ║
+║ │ Total memory available │  1.10 GB   │ ║
+║ ╘════════════════════════╧════════════╛ ║
+╚═════════════════════════════════════════╝
+DALIA initialized.
+
+======================================================================
+GRADIENT BENCHMARK: gst_medium
+======================================================================
+Nodes: 1, Tasks: 1
+Hyperparameters: 4
+Benchmark runs: 10
+Energy monitor: enabled (Cray PM counters)
+
+Timing finite difference gradient...
+Allocated an extra 0.03 GB for BTA_mapping caching (total: 1.01)
+Allocated an extra 0.03 GB for BT_mapping caching (total: 1.04)
+rank 0 | iter 1 | objfunc_time: 2.703037 | solver_time: 2.018696 | construction_time: 0.414046
+rank 0 | iter 2 | objfunc_time: 2.702116 | solver_time: 2.019707 | construction_time: 0.413355
+rank 0 | iter 3 | objfunc_time: 2.696632 | solver_time: 2.016210 | construction_time: 0.413187
+rank 0 | iter 4 | objfunc_time: 2.694264 | solver_time: 2.014878 | construction_time: 0.412825
+rank 0 | iter 5 | objfunc_time: 2.693265 | solver_time: 2.015033 | construction_time: 0.412344
+rank 0 | iter 6 | objfunc_time: 2.731821 | solver_time: 2.037008 | construction_time: 0.419472
+rank 0 | iter 7 | objfunc_time: 2.869848 | solver_time: 2.125524 | construction_time: 0.442874
+rank 0 | iter 8 | objfunc_time: 2.877414 | solver_time: 2.131441 | construction_time: 0.443328
+rank 0 | iter 9 | objfunc_time: 2.886263 | solver_time: 2.136588 | construction_time: 0.444345
+rank 0 | iter 10 | objfunc_time: 2.881471 | solver_time: 2.137075 | construction_time: 0.443110
+rank 0 | iter 11 | objfunc_time: 2.880765 | solver_time: 2.134977 | construction_time: 0.443563
+  Mean: 2.7914s
+  Std:  0.0884s
+  Node energy/grad: 1990.6 J
+  GPU energy/grad:  1206.1 J
+  Other energy/grad: 407.0 J
+
+======================================================================
+Benchmark completed
+Results written to: /capstor/scratch/cscs/aboudaou/workspace/dalia/artifact/plotting/data/fig6_raw_results.csv
+======================================================================
+Job finished at Sun 15 Mar 2026 04:05:52 PM CET

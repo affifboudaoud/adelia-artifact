@@ -1,0 +1,1325 @@
+Parsed parameters:
+  max_iter: 250
+  solver_min_p: 1
+  profile: False
+  precision: float64
+  benchmark_mode: True
+  n_benchmark_runs: 10
+  benchmark_method: finite_diff
+  output_csv: /capstor/scratch/cscs/aboudaou/workspace/dalia/artifact/plotting/data/fig6_raw_results.csv
+Rank: 63 won't party tonight at 'feval' level because you need a multiple of 31 processes in the calling comm_group
+Parsed parameters:
+  max_iter: 250
+  solver_min_p: 1
+  profile: False
+  precision: float64
+  benchmark_mode: True
+  n_benchmark_runs: 10
+  benchmark_method: finite_diff
+  output_csv: /capstor/scratch/cscs/aboudaou/workspace/dalia/artifact/plotting/data/fig6_raw_results.csv
+Rank: 62 won't party tonight at 'feval' level because you need a multiple of 31 processes in the calling comm_group
+Parsed parameters:
+  max_iter: 250
+  solver_min_p: 1
+  profile: False
+  precision: float64
+  benchmark_mode: True
+  n_benchmark_runs: 10
+  benchmark_method: finite_diff
+  output_csv: /capstor/scratch/cscs/aboudaou/workspace/dalia/artifact/plotting/data/fig6_raw_results.csv
+--- sa1: Coregional (3-variate) Spatio-Temporal Model (distributed) ---
+
+___________________________________ 
+___  __ \__    |__  /____  _/__    |
+__  / / /_  /| |_  /  __  / __  /| |
+_  /_/ /_  ___ |  /____/ /  _  ___ |
+/_____/ /_/  |_/_____/___/  /_/  |_|
+
+╔═════════════════════════════════════════════════════════╗
+║                Parallelization strategies               ║
+║ ╒═══════════════════════════════════════════╤═════════╕ ║
+║ │ Participating Processes / Total Processes │ 62 / 64 │ ║
+║ ├───────────────────────────────────────────┼─────────┤ ║
+║ │ Parallelization through F()               │   31    │ ║
+║ ├───────────────────────────────────────────┼─────────┤ ║
+║ │ Parallelization through Q()               │    2    │ ║
+║ ├───────────────────────────────────────────┼─────────┤ ║
+║ │ Parallelization through S()               │    1    │ ║
+║ ╘═══════════════════════════════════════════╧═════════╛ ║
+╚═════════════════════════════════════════════════════════╝
+╔═══════════════════════════════╗
+║  Enabled Performance modules  ║
+║ ╒═══════════════════╤═══════╕ ║
+║ │ Array module      │ cupy  │ ║
+║ ├───────────────────┼───────┤ ║
+║ │ MPI available     │ True  │ ║
+║ ├───────────────────┼───────┤ ║
+║ │ Is MPI CUDA aware │ False │ ║
+║ ├───────────────────┼───────┤ ║
+║ │ Is NCCL available │ False │ ║
+║ ╘═══════════════════╧═══════╛ ║
+╚═══════════════════════════════╝
+╔═══════════════════════════════════════╗
+║             Memory Report             ║
+║ ╒════════════════════════╤══════════╕ ║
+║ │ Solver memory          │ 71.90 GB │ ║
+║ ├────────────────────────┼──────────┤ ║
+║ │ Total memory used      │ 79.26 GB │ ║
+║ ├────────────────────────┼──────────┤ ║
+║ │ Total memory available │ 79.58 GB │ ║
+║ ╘════════════════════════╧══════════╛ ║
+╚═══════════════════════════════════════╝
+DALIA initialized.
+Parsed parameters:
+  max_iter: 250
+  solver_min_p: 1
+  profile: False
+  precision: float64
+  benchmark_mode: True
+  n_benchmark_runs: 10
+  benchmark_method: finite_diff
+  output_csv: /capstor/scratch/cscs/aboudaou/workspace/dalia/artifact/plotting/data/fig6_raw_results.csv
+rank 8 | iter 1 | objfunc_time: 5.086362 | solver_time: 4.177792 | construction_time: 0.381587 | energy: node=5356J gpu=3687J cpu=759J (1050W)
+Parsed parameters:
+  max_iter: 250
+  solver_min_p: 1
+  profile: False
+  precision: float64
+  benchmark_mode: True
+  n_benchmark_runs: 10
+  benchmark_method: finite_diff
+  output_csv: /capstor/scratch/cscs/aboudaou/workspace/dalia/artifact/plotting/data/fig6_raw_results.csv
+rank 56 | iter 1 | objfunc_time: 5.086584 | solver_time: 4.148892 | construction_time: 0.383172 | energy: node=5116J gpu=3634J cpu=927J (1003W)
+Parsed parameters:
+  max_iter: 250
+  solver_min_p: 1
+  profile: False
+  precision: float64
+  benchmark_mode: True
+  n_benchmark_runs: 10
+  benchmark_method: finite_diff
+  output_csv: /capstor/scratch/cscs/aboudaou/workspace/dalia/artifact/plotting/data/fig6_raw_results.csv
+rank 12 | iter 1 | objfunc_time: 5.086120 | solver_time: 4.189615 | construction_time: 0.387486 | energy: node=5459J gpu=3761J cpu=855J (1070W)
+Parsed parameters:
+  max_iter: 250
+  solver_min_p: 1
+  profile: False
+  precision: float64
+  benchmark_mode: True
+  n_benchmark_runs: 10
+  benchmark_method: finite_diff
+  output_csv: /capstor/scratch/cscs/aboudaou/workspace/dalia/artifact/plotting/data/fig6_raw_results.csv
+rank 26 | iter 1 | objfunc_time: 5.086226 | solver_time: 4.155479 | construction_time: 0.400923 | energy: node=5267J gpu=3654J cpu=979J (1032W)
+Parsed parameters:
+  max_iter: 250
+  solver_min_p: 1
+  profile: False
+  precision: float64
+  benchmark_mode: True
+  n_benchmark_runs: 10
+  benchmark_method: finite_diff
+  output_csv: /capstor/scratch/cscs/aboudaou/workspace/dalia/artifact/plotting/data/fig6_raw_results.csv
+rank 2 | iter 1 | objfunc_time: 5.085889 | solver_time: 4.182393 | construction_time: 0.385520 | energy: node=5412J gpu=3719J cpu=807J (1061W)
+Parsed parameters:
+  max_iter: 250
+  solver_min_p: 1
+  profile: False
+  precision: float64
+  benchmark_mode: True
+  n_benchmark_runs: 10
+  benchmark_method: finite_diff
+  output_csv: /capstor/scratch/cscs/aboudaou/workspace/dalia/artifact/plotting/data/fig6_raw_results.csv
+rank 58 | iter 1 | objfunc_time: 5.085888 | solver_time: 4.192000 | construction_time: 0.389444 | energy: node=5307J gpu=3689J cpu=884J (1040W)
+Parsed parameters:
+  max_iter: 250
+  solver_min_p: 1
+  profile: False
+  precision: float64
+  benchmark_mode: True
+  n_benchmark_runs: 10
+  benchmark_method: finite_diff
+  output_csv: /capstor/scratch/cscs/aboudaou/workspace/dalia/artifact/plotting/data/fig6_raw_results.csv
+rank 33 | iter 1 | objfunc_time: 5.086057 | solver_time: 3.493507 | construction_time: 0.262522 | energy: node=5211J gpu=3642J cpu=959J (1021W)
+Parsed parameters:
+  max_iter: 250
+  solver_min_p: 1
+  profile: False
+  precision: float64
+  benchmark_mode: True
+  n_benchmark_runs: 10
+  benchmark_method: finite_diff
+  output_csv: /capstor/scratch/cscs/aboudaou/workspace/dalia/artifact/plotting/data/fig6_raw_results.csv
+rank 35 | iter 1 | objfunc_time: 4.956484 | solver_time: 3.489310 | construction_time: 0.259463 | energy: node=5016J gpu=3508J cpu=853J (983W)
+Parsed parameters:
+  max_iter: 250
+  solver_min_p: 1
+  profile: False
+  precision: float64
+  benchmark_mode: True
+  n_benchmark_runs: 10
+  benchmark_method: finite_diff
+  output_csv: /capstor/scratch/cscs/aboudaou/workspace/dalia/artifact/plotting/data/fig6_raw_results.csv
+rank 19 | iter 1 | objfunc_time: 5.085437 | solver_time: 3.531268 | construction_time: 0.266779 | energy: node=5256J gpu=3692J cpu=770J (1030W)
+Parsed parameters:
+  max_iter: 250
+  solver_min_p: 1
+  profile: False
+  precision: float64
+  benchmark_mode: True
+  n_benchmark_runs: 10
+  benchmark_method: finite_diff
+  output_csv: /capstor/scratch/cscs/aboudaou/workspace/dalia/artifact/plotting/data/fig6_raw_results.csv
+rank 36 | iter 1 | objfunc_time: 5.073236 | solver_time: 4.175469 | construction_time: 0.385847 | energy: node=5179J gpu=3694J cpu=861J (1015W)
+Parsed parameters:
+  max_iter: 250
+  solver_min_p: 1
+  profile: False
+  precision: float64
+  benchmark_mode: True
+  n_benchmark_runs: 10
+  benchmark_method: finite_diff
+  output_csv: /capstor/scratch/cscs/aboudaou/workspace/dalia/artifact/plotting/data/fig6_raw_results.csv
+rank 57 | iter 1 | objfunc_time: 5.085306 | solver_time: 3.535640 | construction_time: 0.259718 | energy: node=5008J gpu=3630J cpu=864J (982W)
+Parsed parameters:
+  max_iter: 250
+  solver_min_p: 1
+  profile: False
+  precision: float64
+  benchmark_mode: True
+  n_benchmark_runs: 10
+  benchmark_method: finite_diff
+  output_csv: /capstor/scratch/cscs/aboudaou/workspace/dalia/artifact/plotting/data/fig6_raw_results.csv
+rank 45 | iter 1 | objfunc_time: 5.084746 | solver_time: 3.495368 | construction_time: 0.270785 | energy: node=5124J gpu=3559J cpu=756J (1004W)
+Parsed parameters:
+  max_iter: 250
+  solver_min_p: 1
+  profile: False
+  precision: float64
+  benchmark_mode: True
+  n_benchmark_runs: 10
+  benchmark_method: finite_diff
+  output_csv: /capstor/scratch/cscs/aboudaou/workspace/dalia/artifact/plotting/data/fig6_raw_results.csv
+rank 31 | iter 1 | objfunc_time: 5.076180 | solver_time: 3.520879 | construction_time: 0.280471 | energy: node=7585J gpu=6911J cpu=1369J (1487W)
+Parsed parameters:
+  max_iter: 250
+  solver_min_p: 1
+  profile: False
+  precision: float64
+  benchmark_mode: True
+  n_benchmark_runs: 10
+  benchmark_method: finite_diff
+  output_csv: /capstor/scratch/cscs/aboudaou/workspace/dalia/artifact/plotting/data/fig6_raw_results.csv
+rank 43 | iter 1 | objfunc_time: 4.935471 | solver_time: 3.493477 | construction_time: 0.264090 | energy: node=5088J gpu=3399J cpu=858J (997W)
+Parsed parameters:
+  max_iter: 250
+  solver_min_p: 1
+  profile: False
+  precision: float64
+  benchmark_mode: True
+  n_benchmark_runs: 10
+  benchmark_method: finite_diff
+  output_csv: /capstor/scratch/cscs/aboudaou/workspace/dalia/artifact/plotting/data/fig6_raw_results.csv
+rank 38 | iter 1 | objfunc_time: 4.928349 | solver_time: 4.154696 | construction_time: 0.391803 | energy: node=5166J gpu=3472J cpu=769J (1013W)
+Parsed parameters:
+  max_iter: 250
+  solver_min_p: 1
+  profile: False
+  precision: float64
+  benchmark_mode: True
+  n_benchmark_runs: 10
+  benchmark_method: finite_diff
+  output_csv: /capstor/scratch/cscs/aboudaou/workspace/dalia/artifact/plotting/data/fig6_raw_results.csv
+rank 14 | iter 1 | objfunc_time: 5.075701 | solver_time: 4.158216 | construction_time: 0.388392 | energy: node=5272J gpu=3542J cpu=991J (1033W)
+Parsed parameters:
+  max_iter: 250
+  solver_min_p: 1
+  profile: False
+  precision: float64
+  benchmark_mode: True
+  n_benchmark_runs: 10
+  benchmark_method: finite_diff
+  output_csv: /capstor/scratch/cscs/aboudaou/workspace/dalia/artifact/plotting/data/fig6_raw_results.csv
+rank 25 | iter 1 | objfunc_time: 5.075091 | solver_time: 3.472910 | construction_time: 0.262731 | energy: node=5171J gpu=3632J cpu=690J (1014W)
+Parsed parameters:
+  max_iter: 250
+  solver_min_p: 1
+  profile: False
+  precision: float64
+  benchmark_mode: True
+  n_benchmark_runs: 10
+  benchmark_method: finite_diff
+  output_csv: /capstor/scratch/cscs/aboudaou/workspace/dalia/artifact/plotting/data/fig6_raw_results.csv
+rank 23 | iter 1 | objfunc_time: 5.075294 | solver_time: 3.514265 | construction_time: 0.262837 | energy: node=5164J gpu=3575J cpu=1014J (1012W)
+Parsed parameters:
+  max_iter: 250
+  solver_min_p: 1
+  profile: False
+  precision: float64
+  benchmark_mode: True
+  n_benchmark_runs: 10
+  benchmark_method: finite_diff
+  output_csv: /capstor/scratch/cscs/aboudaou/workspace/dalia/artifact/plotting/data/fig6_raw_results.csv
+rank 11 | iter 1 | objfunc_time: 4.953166 | solver_time: 3.556542 | construction_time: 0.259909 | energy: node=5145J gpu=3466J cpu=838J (1008W)
+Parsed parameters:
+  max_iter: 250
+  solver_min_p: 1
+  profile: False
+  precision: float64
+  benchmark_mode: True
+  n_benchmark_runs: 10
+  benchmark_method: finite_diff
+  output_csv: /capstor/scratch/cscs/aboudaou/workspace/dalia/artifact/plotting/data/fig6_raw_results.csv
+rank 49 | iter 1 | objfunc_time: 5.101907 | solver_time: 3.516935 | construction_time: 0.264710 | energy: node=5124J gpu=3608J cpu=910J (1004W)
+Parsed parameters:
+  max_iter: 250
+  solver_min_p: 1
+  profile: False
+  precision: float64
+  benchmark_mode: True
+  n_benchmark_runs: 10
+  benchmark_method: finite_diff
+  output_csv: /capstor/scratch/cscs/aboudaou/workspace/dalia/artifact/plotting/data/fig6_raw_results.csv
+rank 6 | iter 1 | objfunc_time: 5.075667 | solver_time: 4.192832 | construction_time: 0.395946 | energy: node=5184J gpu=3579J cpu=1065J (1016W)
+Parsed parameters:
+  max_iter: 250
+  solver_min_p: 1
+  profile: False
+  precision: float64
+  benchmark_mode: True
+  n_benchmark_runs: 10
+  benchmark_method: finite_diff
+  output_csv: /capstor/scratch/cscs/aboudaou/workspace/dalia/artifact/plotting/data/fig6_raw_results.csv
+rank 20 | iter 1 | objfunc_time: 5.075762 | solver_time: 4.129704 | construction_time: 0.391687 | energy: node=5606J gpu=3658J cpu=803J (1099W)
+Parsed parameters:
+  max_iter: 250
+  solver_min_p: 1
+  profile: False
+  precision: float64
+  benchmark_mode: True
+  n_benchmark_runs: 10
+  benchmark_method: finite_diff
+  output_csv: /capstor/scratch/cscs/aboudaou/workspace/dalia/artifact/plotting/data/fig6_raw_results.csv
+rank 10 | iter 1 | objfunc_time: 5.075024 | solver_time: 4.193548 | construction_time: 0.388451 | energy: node=5242J gpu=3676J cpu=880J (1027W)
+Parsed parameters:
+  max_iter: 250
+  solver_min_p: 1
+  profile: False
+  precision: float64
+  benchmark_mode: True
+  n_benchmark_runs: 10
+  benchmark_method: finite_diff
+  output_csv: /capstor/scratch/cscs/aboudaou/workspace/dalia/artifact/plotting/data/fig6_raw_results.csv
+rank 40 | iter 1 | objfunc_time: 4.929200 | solver_time: 4.182423 | construction_time: 0.392968 | energy: node=5529J gpu=3465J cpu=851J (1084W)
+Parsed parameters:
+  max_iter: 250
+  solver_min_p: 1
+  profile: False
+  precision: float64
+  benchmark_mode: True
+  n_benchmark_runs: 10
+  benchmark_method: finite_diff
+  output_csv: /capstor/scratch/cscs/aboudaou/workspace/dalia/artifact/plotting/data/fig6_raw_results.csv
+rank 41 | iter 1 | objfunc_time: 5.074758 | solver_time: 3.523270 | construction_time: 0.262931 | energy: node=5109J gpu=3623J cpu=851J (1001W)
+Parsed parameters:
+  max_iter: 250
+  solver_min_p: 1
+  profile: False
+  precision: float64
+  benchmark_mode: True
+  n_benchmark_runs: 10
+  benchmark_method: finite_diff
+  output_csv: /capstor/scratch/cscs/aboudaou/workspace/dalia/artifact/plotting/data/fig6_raw_results.csv
+rank 52 | iter 1 | objfunc_time: 5.074622 | solver_time: 4.179407 | construction_time: 0.397572 | energy: node=5148J gpu=3494J cpu=714J (1009W)
+Parsed parameters:
+  max_iter: 250
+  solver_min_p: 1
+  profile: False
+  precision: float64
+  benchmark_mode: True
+  n_benchmark_runs: 10
+  benchmark_method: finite_diff
+  output_csv: /capstor/scratch/cscs/aboudaou/workspace/dalia/artifact/plotting/data/fig6_raw_results.csv
+rank 42 | iter 1 | objfunc_time: 5.076665 | solver_time: 4.182078 | construction_time: 0.400247 | energy: node=4963J gpu=3688J cpu=750J (973W)
+Parsed parameters:
+  max_iter: 250
+  solver_min_p: 1
+  profile: False
+  precision: float64
+  benchmark_mode: True
+  n_benchmark_runs: 10
+  benchmark_method: finite_diff
+  output_csv: /capstor/scratch/cscs/aboudaou/workspace/dalia/artifact/plotting/data/fig6_raw_results.csv
+rank 27 | iter 1 | objfunc_time: 4.934029 | solver_time: 3.560426 | construction_time: 0.266770 | energy: node=4862J gpu=3433J cpu=734J (953W)
+Parsed parameters:
+  max_iter: 250
+  solver_min_p: 1
+  profile: False
+  precision: float64
+  benchmark_mode: True
+  n_benchmark_runs: 10
+  benchmark_method: finite_diff
+  output_csv: /capstor/scratch/cscs/aboudaou/workspace/dalia/artifact/plotting/data/fig6_raw_results.csv
+rank 50 | iter 1 | objfunc_time: 5.074619 | solver_time: 4.177439 | construction_time: 0.386615 | energy: node=5308J gpu=3695J cpu=758J (1040W)
+Parsed parameters:
+  max_iter: 250
+  solver_min_p: 1
+  profile: False
+  precision: float64
+  benchmark_mode: True
+  n_benchmark_runs: 10
+  benchmark_method: finite_diff
+  output_csv: /capstor/scratch/cscs/aboudaou/workspace/dalia/artifact/plotting/data/fig6_raw_results.csv
+rank 17 | iter 1 | objfunc_time: 5.073730 | solver_time: 3.489497 | construction_time: 0.261681 | energy: node=0J gpu=3614J cpu=837J (0W)
+Parsed parameters:
+  max_iter: 250
+  solver_min_p: 1
+  profile: False
+  precision: float64
+  benchmark_mode: True
+  n_benchmark_runs: 10
+  benchmark_method: finite_diff
+  output_csv: /capstor/scratch/cscs/aboudaou/workspace/dalia/artifact/plotting/data/fig6_raw_results.csv
+rank 46 | iter 1 | objfunc_time: 5.073284 | solver_time: 4.137693 | construction_time: 0.391952 | energy: node=5196J gpu=3743J cpu=968J (1018W)
+Parsed parameters:
+  max_iter: 250
+  solver_min_p: 1
+  profile: False
+  precision: float64
+  benchmark_mode: True
+  n_benchmark_runs: 10
+  benchmark_method: finite_diff
+  output_csv: /capstor/scratch/cscs/aboudaou/workspace/dalia/artifact/plotting/data/fig6_raw_results.csv
+rank 3 | iter 1 | objfunc_time: 5.073991 | solver_time: 3.556696 | construction_time: 0.270545 | energy: node=5296J gpu=3516J cpu=910J (1038W)
+Parsed parameters:
+  max_iter: 250
+  solver_min_p: 1
+  profile: False
+  precision: float64
+  benchmark_mode: True
+  n_benchmark_runs: 10
+  benchmark_method: finite_diff
+  output_csv: /capstor/scratch/cscs/aboudaou/workspace/dalia/artifact/plotting/data/fig6_raw_results.csv
+rank 37 | iter 1 | objfunc_time: 5.077880 | solver_time: 3.524426 | construction_time: 0.277641 | energy: node=5046J gpu=3540J cpu=938J (989W)
+Parsed parameters:
+  max_iter: 250
+  solver_min_p: 1
+  profile: False
+  precision: float64
+  benchmark_mode: True
+  n_benchmark_runs: 10
+  benchmark_method: finite_diff
+  output_csv: /capstor/scratch/cscs/aboudaou/workspace/dalia/artifact/plotting/data/fig6_raw_results.csv
+rank 30 | iter 1 | objfunc_time: 5.073861 | solver_time: 4.179832 | construction_time: 0.386559 | energy: node=5554J gpu=3623J cpu=828J (1089W)
+Parsed parameters:
+  max_iter: 250
+  solver_min_p: 1
+  profile: False
+  precision: float64
+  benchmark_mode: True
+  n_benchmark_runs: 10
+  benchmark_method: finite_diff
+  output_csv: /capstor/scratch/cscs/aboudaou/workspace/dalia/artifact/plotting/data/fig6_raw_results.csv
+rank 51 | iter 1 | objfunc_time: 5.073533 | solver_time: 3.508689 | construction_time: 0.263387 | energy: node=5296J gpu=3581J cpu=886J (1038W)
+Parsed parameters:
+  max_iter: 250
+  solver_min_p: 1
+  profile: False
+  precision: float64
+  benchmark_mode: True
+  n_benchmark_runs: 10
+  benchmark_method: finite_diff
+  output_csv: /capstor/scratch/cscs/aboudaou/workspace/dalia/artifact/plotting/data/fig6_raw_results.csv
+rank 5 | iter 1 | objfunc_time: 5.073309 | solver_time: 3.504992 | construction_time: 0.272841 | energy: node=5125J gpu=3579J cpu=924J (1005W)
+Parsed parameters:
+  max_iter: 250
+  solver_min_p: 1
+  profile: False
+  precision: float64
+  benchmark_mode: True
+  n_benchmark_runs: 10
+  benchmark_method: finite_diff
+  output_csv: /capstor/scratch/cscs/aboudaou/workspace/dalia/artifact/plotting/data/fig6_raw_results.csv
+rank 59 | iter 1 | objfunc_time: 5.073519 | solver_time: 3.529473 | construction_time: 0.262941 | energy: node=5086J gpu=3486J cpu=927J (997W)
+Parsed parameters:
+  max_iter: 250
+  solver_min_p: 1
+  profile: False
+  precision: float64
+  benchmark_mode: True
+  n_benchmark_runs: 10
+  benchmark_method: finite_diff
+  output_csv: /capstor/scratch/cscs/aboudaou/workspace/dalia/artifact/plotting/data/fig6_raw_results.csv
+rank 9 | iter 1 | objfunc_time: 5.073781 | solver_time: 3.508949 | construction_time: 0.259844 | energy: node=5322J gpu=3639J cpu=784J (1043W)
+Parsed parameters:
+  max_iter: 250
+  solver_min_p: 1
+  profile: False
+  precision: float64
+  benchmark_mode: True
+  n_benchmark_runs: 10
+  benchmark_method: finite_diff
+  output_csv: /capstor/scratch/cscs/aboudaou/workspace/dalia/artifact/plotting/data/fig6_raw_results.csv
+rank 16 | iter 1 | objfunc_time: 5.073069 | solver_time: 4.177956 | construction_time: 0.384916 | energy: node=5234J gpu=3693J cpu=740J (1026W)
+Parsed parameters:
+  max_iter: 250
+  solver_min_p: 1
+  profile: False
+  precision: float64
+  benchmark_mode: True
+  n_benchmark_runs: 10
+  benchmark_method: finite_diff
+  output_csv: /capstor/scratch/cscs/aboudaou/workspace/dalia/artifact/plotting/data/fig6_raw_results.csv
+rank 4 | iter 1 | objfunc_time: 5.073148 | solver_time: 4.132617 | construction_time: 0.389142 | energy: node=5376J gpu=3683J cpu=908J (1054W)
+Parsed parameters:
+  max_iter: 250
+  solver_min_p: 1
+  profile: False
+  precision: float64
+  benchmark_mode: True
+  n_benchmark_runs: 10
+  benchmark_method: finite_diff
+  output_csv: /capstor/scratch/cscs/aboudaou/workspace/dalia/artifact/plotting/data/fig6_raw_results.csv
+rank 28 | iter 1 | objfunc_time: 5.073436 | solver_time: 4.184630 | construction_time: 0.385271 | energy: node=5646J gpu=3723J cpu=980J (1107W)
+Parsed parameters:
+  max_iter: 250
+  solver_min_p: 1
+  profile: False
+  precision: float64
+  benchmark_mode: True
+  n_benchmark_runs: 10
+  benchmark_method: finite_diff
+  output_csv: /capstor/scratch/cscs/aboudaou/workspace/dalia/artifact/plotting/data/fig6_raw_results.csv
+rank 47 | iter 1 | objfunc_time: 5.072725 | solver_time: 3.539031 | construction_time: 0.272599 | energy: node=5182J gpu=3468J cpu=955J (1016W)
+Parsed parameters:
+  max_iter: 250
+  solver_min_p: 1
+  profile: False
+  precision: float64
+  benchmark_mode: True
+  n_benchmark_runs: 10
+  benchmark_method: finite_diff
+  output_csv: /capstor/scratch/cscs/aboudaou/workspace/dalia/artifact/plotting/data/fig6_raw_results.csv
+rank 15 | iter 1 | objfunc_time: 5.073108 | solver_time: 3.503384 | construction_time: 0.267060 | energy: node=5121J gpu=3500J cpu=691J (1004W)
+Parsed parameters:
+  max_iter: 250
+  solver_min_p: 1
+  profile: False
+  precision: float64
+  benchmark_mode: True
+  n_benchmark_runs: 10
+  benchmark_method: finite_diff
+  output_csv: /capstor/scratch/cscs/aboudaou/workspace/dalia/artifact/plotting/data/fig6_raw_results.csv
+rank 55 | iter 1 | objfunc_time: 4.923690 | solver_time: 3.530345 | construction_time: 0.264620 | energy: node=5334J gpu=3578J cpu=632J (1045W)
+Parsed parameters:
+  max_iter: 250
+  solver_min_p: 1
+  profile: False
+  precision: float64
+  benchmark_mode: True
+  n_benchmark_runs: 10
+  benchmark_method: finite_diff
+  output_csv: /capstor/scratch/cscs/aboudaou/workspace/dalia/artifact/plotting/data/fig6_raw_results.csv
+rank 54 | iter 1 | objfunc_time: 4.927013 | solver_time: 4.153792 | construction_time: 0.385729 | energy: node=0J gpu=3434J cpu=844J (0W)
+Parsed parameters:
+  max_iter: 250
+  solver_min_p: 1
+  profile: False
+  precision: float64
+  benchmark_mode: True
+  n_benchmark_runs: 10
+  benchmark_method: finite_diff
+  output_csv: /capstor/scratch/cscs/aboudaou/workspace/dalia/artifact/plotting/data/fig6_raw_results.csv
+rank 7 | iter 1 | objfunc_time: 5.072442 | solver_time: 3.509075 | construction_time: 0.264326 | energy: node=4940J gpu=3595J cpu=746J (968W)
+Parsed parameters:
+  max_iter: 250
+  solver_min_p: 1
+  profile: False
+  precision: float64
+  benchmark_mode: True
+  n_benchmark_runs: 10
+  benchmark_method: finite_diff
+  output_csv: /capstor/scratch/cscs/aboudaou/workspace/dalia/artifact/plotting/data/fig6_raw_results.csv
+rank 34 | iter 1 | objfunc_time: 4.650759 | solver_time: 4.186780 | construction_time: 0.399946 | energy: node=4974J gpu=3495J cpu=804J (975W)
+
+======================================================================
+GRADIENT BENCHMARK: sa1
+======================================================================
+Nodes: 64, Tasks: 64
+Hyperparameters: 15
+Benchmark runs: 10
+Energy monitor: enabled (Cray PM counters)
+
+Timing finite difference gradient...
+Allocated an extra 0.97 GB for BTA_mapping caching (total: 72.87)
+rank 0 | iter 1 | objfunc_time: 5.072918 | solver_time: 4.199585 | construction_time: 0.406753 | energy: node=5156J gpu=3596J cpu=867J (1011W)
+Parsed parameters:
+  max_iter: 250
+  solver_min_p: 1
+  profile: False
+  precision: float64
+  benchmark_mode: True
+  n_benchmark_runs: 10
+  benchmark_method: finite_diff
+  output_csv: /capstor/scratch/cscs/aboudaou/workspace/dalia/artifact/plotting/data/fig6_raw_results.csv
+rank 24 | iter 1 | objfunc_time: 5.073262 | solver_time: 4.181873 | construction_time: 0.385504 | energy: node=5251J gpu=3794J cpu=763J (1029W)
+Parsed parameters:
+  max_iter: 250
+  solver_min_p: 1
+  profile: False
+  precision: float64
+  benchmark_mode: True
+  n_benchmark_runs: 10
+  benchmark_method: finite_diff
+  output_csv: /capstor/scratch/cscs/aboudaou/workspace/dalia/artifact/plotting/data/fig6_raw_results.csv
+rank 32 | iter 1 | objfunc_time: 5.071397 | solver_time: 4.172876 | construction_time: 0.390021 | energy: node=5238J gpu=3708J cpu=852J (1027W)
+Parsed parameters:
+  max_iter: 250
+  solver_min_p: 1
+  profile: False
+  precision: float64
+  benchmark_mode: True
+  n_benchmark_runs: 10
+  benchmark_method: finite_diff
+  output_csv: /capstor/scratch/cscs/aboudaou/workspace/dalia/artifact/plotting/data/fig6_raw_results.csv
+rank 22 | iter 1 | objfunc_time: 5.085163 | solver_time: 4.162335 | construction_time: 0.386091 | energy: node=8248J gpu=6188J cpu=1276J (1617W)
+Parsed parameters:
+  max_iter: 250
+  solver_min_p: 1
+  profile: False
+  precision: float64
+  benchmark_mode: True
+  n_benchmark_runs: 10
+  benchmark_method: finite_diff
+  output_csv: /capstor/scratch/cscs/aboudaou/workspace/dalia/artifact/plotting/data/fig6_raw_results.csv
+rank 21 | iter 1 | objfunc_time: 5.074872 | solver_time: 3.480722 | construction_time: 0.262425 | energy: node=5277J gpu=3559J cpu=914J (1034W)
+Parsed parameters:
+  max_iter: 250
+  solver_min_p: 1
+  profile: False
+  precision: float64
+  benchmark_mode: True
+  n_benchmark_runs: 10
+  benchmark_method: finite_diff
+  output_csv: /capstor/scratch/cscs/aboudaou/workspace/dalia/artifact/plotting/data/fig6_raw_results.csv
+rank 39 | iter 1 | objfunc_time: 5.074497 | solver_time: 3.488004 | construction_time: 0.272913 | energy: node=5294J gpu=3755J cpu=910J (1038W)
+Parsed parameters:
+  max_iter: 250
+  solver_min_p: 1
+  profile: False
+  precision: float64
+  benchmark_mode: True
+  n_benchmark_runs: 10
+  benchmark_method: finite_diff
+  output_csv: /capstor/scratch/cscs/aboudaou/workspace/dalia/artifact/plotting/data/fig6_raw_results.csv
+rank 29 | iter 1 | objfunc_time: 4.512374 | solver_time: 3.510972 | construction_time: 0.260634 | energy: node=4639J gpu=3347J cpu=732J (909W)
+Parsed parameters:
+  max_iter: 250
+  solver_min_p: 1
+  profile: False
+  precision: float64
+  benchmark_mode: True
+  n_benchmark_runs: 10
+  benchmark_method: finite_diff
+  output_csv: /capstor/scratch/cscs/aboudaou/workspace/dalia/artifact/plotting/data/fig6_raw_results.csv
+rank 18 | iter 1 | objfunc_time: 5.076034 | solver_time: 4.191118 | construction_time: 0.388848 | energy: node=5480J gpu=3680J cpu=742J (1074W)
+Parsed parameters:
+  max_iter: 250
+  solver_min_p: 1
+  profile: False
+  precision: float64
+  benchmark_mode: True
+  n_benchmark_runs: 10
+  benchmark_method: finite_diff
+  output_csv: /capstor/scratch/cscs/aboudaou/workspace/dalia/artifact/plotting/data/fig6_raw_results.csv
+rank 13 | iter 1 | objfunc_time: 5.074565 | solver_time: 3.501194 | construction_time: 0.260962 | energy: node=5073J gpu=3567J cpu=828J (994W)
+Parsed parameters:
+  max_iter: 250
+  solver_min_p: 1
+  profile: False
+  precision: float64
+  benchmark_mode: True
+  n_benchmark_runs: 10
+  benchmark_method: finite_diff
+  output_csv: /capstor/scratch/cscs/aboudaou/workspace/dalia/artifact/plotting/data/fig6_raw_results.csv
+rank 48 | iter 1 | objfunc_time: 5.073158 | solver_time: 4.192867 | construction_time: 0.386694 | energy: node=5612J gpu=3888J cpu=963J (1100W)
+Parsed parameters:
+  max_iter: 250
+  solver_min_p: 1
+  profile: False
+  precision: float64
+  benchmark_mode: True
+  n_benchmark_runs: 10
+  benchmark_method: finite_diff
+  output_csv: /capstor/scratch/cscs/aboudaou/workspace/dalia/artifact/plotting/data/fig6_raw_results.csv
+rank 44 | iter 1 | objfunc_time: 5.072630 | solver_time: 4.164307 | construction_time: 0.406766 | energy: node=5445J gpu=3730J cpu=724J (1067W)
+Parsed parameters:
+  max_iter: 250
+  solver_min_p: 1
+  profile: False
+  precision: float64
+  benchmark_mode: True
+  n_benchmark_runs: 10
+  benchmark_method: finite_diff
+  output_csv: /capstor/scratch/cscs/aboudaou/workspace/dalia/artifact/plotting/data/fig6_raw_results.csv
+rank 60 | iter 1 | objfunc_time: 5.074331 | solver_time: 4.128395 | construction_time: 0.386171 | energy: node=5475J gpu=3830J cpu=1035J (1073W)
+Parsed parameters:
+  max_iter: 250
+  solver_min_p: 1
+  profile: False
+  precision: float64
+  benchmark_mode: True
+  n_benchmark_runs: 10
+  benchmark_method: finite_diff
+  output_csv: /capstor/scratch/cscs/aboudaou/workspace/dalia/artifact/plotting/data/fig6_raw_results.csv
+rank 53 | iter 1 | objfunc_time: 5.073473 | solver_time: 3.524900 | construction_time: 0.276745 | energy: node=5297J gpu=3666J cpu=948J (1038W)
+Parsed parameters:
+  max_iter: 250
+  solver_min_p: 1
+  profile: False
+  precision: float64
+  benchmark_mode: True
+  n_benchmark_runs: 10
+  benchmark_method: finite_diff
+  output_csv: /capstor/scratch/cscs/aboudaou/workspace/dalia/artifact/plotting/data/fig6_raw_results.csv
+rank 61 | iter 1 | objfunc_time: 5.076001 | solver_time: 3.513566 | construction_time: 0.272934 | energy: node=5357J gpu=3783J cpu=921J (1050W)
+Parsed parameters:
+  max_iter: 250
+  solver_min_p: 1
+  profile: False
+  precision: float64
+  benchmark_mode: True
+  n_benchmark_runs: 10
+  benchmark_method: finite_diff
+  output_csv: /capstor/scratch/cscs/aboudaou/workspace/dalia/artifact/plotting/data/fig6_raw_results.csv
+rank 1 | iter 1 | objfunc_time: 4.925150 | solver_time: 3.502221 | construction_time: 0.284486 | energy: node=5220J gpu=3622J cpu=911J (1023W)
+rank 26 | iter 2 | objfunc_time: 5.054609 | solver_time: 4.186039 | construction_time: 0.376167 | energy: node=5373J gpu=3523J cpu=1015J (1060W)
+rank 8 | iter 2 | objfunc_time: 5.054783 | solver_time: 4.179630 | construction_time: 0.364504 | energy: node=5265J gpu=3628J cpu=737J (1038W)
+rank 56 | iter 2 | objfunc_time: 4.923070 | solver_time: 4.141380 | construction_time: 0.363943 | energy: node=5016J gpu=3537J cpu=901J (989W)
+rank 58 | iter 2 | objfunc_time: 5.054187 | solver_time: 4.193106 | construction_time: 0.371978 | energy: node=5291J gpu=3709J cpu=876J (1044W)
+rank 2 | iter 2 | objfunc_time: 4.664773 | solver_time: 4.188964 | construction_time: 0.374301 | energy: node=5134J gpu=3450J cpu=738J (1013W)
+rank 33 | iter 2 | objfunc_time: 5.054193 | solver_time: 3.491565 | construction_time: 0.258912 | energy: node=5248J gpu=3646J cpu=963J (1035W)
+rank 45 | iter 2 | objfunc_time: 5.053434 | solver_time: 3.493678 | construction_time: 0.267986 | energy: node=5172J gpu=3580J cpu=748J (1020W)
+rank 35 | iter 2 | objfunc_time: 5.053792 | solver_time: 3.491540 | construction_time: 0.255940 | energy: node=5172J gpu=3604J cpu=895J (1020W)
+rank 36 | iter 2 | objfunc_time: 5.053575 | solver_time: 4.190338 | construction_time: 0.383465 | energy: node=3987J gpu=2732J cpu=652J (786W)
+rank 38 | iter 2 | objfunc_time: 5.043733 | solver_time: 4.166076 | construction_time: 0.372385 | energy: node=5226J gpu=3525J cpu=789J (1031W)
+rank 22 | iter 2 | objfunc_time: 5.053428 | solver_time: 4.136454 | construction_time: 0.373455 | energy: node=5633J gpu=3757J cpu=844J (1111W)
+rank 42 | iter 2 | objfunc_time: 4.892566 | solver_time: 4.183515 | construction_time: 0.385708 | energy: node=4935J gpu=3641J cpu=751J (973W)
+rank 61 | iter 2 | objfunc_time: 5.070108 | solver_time: 3.515623 | construction_time: 0.269408 | energy: node=5061J gpu=3617J cpu=855J (998W)
+rank 11 | iter 2 | objfunc_time: 4.897695 | solver_time: 3.556705 | construction_time: 0.275057 | energy: node=5223J gpu=3506J cpu=862J (1030W)
+rank 29 | iter 2 | objfunc_time: 5.043139 | solver_time: 3.510118 | construction_time: 0.257357 | energy: node=4995J gpu=3589J cpu=813J (985W)
+rank 23 | iter 2 | objfunc_time: 4.905630 | solver_time: 3.518577 | construction_time: 0.259886 | energy: node=5090J gpu=3521J cpu=1002J (1004W)
+rank 20 | iter 2 | objfunc_time: 5.043533 | solver_time: 4.131726 | construction_time: 0.374932 | energy: node=5655J gpu=3712J cpu=818J (1115W)
+rank 25 | iter 2 | objfunc_time: 5.043450 | solver_time: 3.471848 | construction_time: 0.257539 | energy: node=5060J gpu=3563J cpu=667J (998W)
+rank 12 | iter 2 | objfunc_time: 5.054656 | solver_time: 4.175877 | construction_time: 0.363945 | energy: node=5446J gpu=3760J cpu=844J (1074W)
+rank 13 | iter 2 | objfunc_time: 5.043271 | solver_time: 3.503922 | construction_time: 0.257064 | energy: node=5001J gpu=3530J cpu=821J (986W)
+rank 49 | iter 2 | objfunc_time: 5.043342 | solver_time: 3.520012 | construction_time: 0.261195 | energy: node=5075J gpu=3575J cpu=898J (1001W)
+rank 21 | iter 2 | objfunc_time: 5.042825 | solver_time: 3.483113 | construction_time: 0.260304 | energy: node=5155J gpu=3471J cpu=889J (1017W)
+rank 41 | iter 2 | objfunc_time: 5.043100 | solver_time: 3.522444 | construction_time: 0.259454 | energy: node=5005J gpu=3568J cpu=820J (987W)
+rank 40 | iter 2 | objfunc_time: 4.624844 | solver_time: 4.180395 | construction_time: 0.381167 | energy: node=5398J gpu=3328J cpu=829J (1065W)
+rank 27 | iter 2 | objfunc_time: 5.042813 | solver_time: 3.562919 | construction_time: 0.262819 | energy: node=5043J gpu=3548J cpu=770J (995W)
+rank 10 | iter 2 | objfunc_time: 5.043145 | solver_time: 4.199859 | construction_time: 0.375622 | energy: node=5189J gpu=3683J cpu=869J (1023W)
+rank 46 | iter 2 | objfunc_time: 5.042398 | solver_time: 4.140760 | construction_time: 0.374262 | energy: node=5256J gpu=3824J cpu=992J (1037W)
+rank 39 | iter 2 | objfunc_time: 5.042899 | solver_time: 3.487022 | construction_time: 0.268614 | energy: node=5069J gpu=3610J cpu=855J (1000W)
+rank 53 | iter 2 | objfunc_time: 5.043751 | solver_time: 3.522499 | construction_time: 0.272357 | energy: node=5044J gpu=3516J cpu=880J (995W)
+rank 17 | iter 2 | objfunc_time: 4.760042 | solver_time: 3.487881 | construction_time: 0.257680 | energy: node=0J gpu=3528J cpu=799J (0W)
+rank 9 | iter 2 | objfunc_time: 5.041549 | solver_time: 3.512610 | construction_time: 0.257789 | energy: node=5226J gpu=3583J cpu=762J (1031W)
+rank 5 | iter 2 | objfunc_time: 4.898962 | solver_time: 3.509761 | construction_time: 0.267287 | energy: node=235J gpu=122J cpu=50J (46W)
+rank 3 | iter 2 | objfunc_time: 5.042139 | solver_time: 3.558848 | construction_time: 0.264330 | energy: node=5206J gpu=3444J cpu=885J (1027W)
+rank 30 | iter 2 | objfunc_time: 4.897544 | solver_time: 4.194901 | construction_time: 0.370254 | energy: node=5302J gpu=3440J cpu=786J (1046W)
+rank 28 | iter 2 | objfunc_time: 5.041241 | solver_time: 4.177896 | construction_time: 0.372400 | energy: node=5598J gpu=3714J cpu=958J (1104W)
+rank 19 | iter 2 | objfunc_time: 5.053616 | solver_time: 3.532741 | construction_time: 0.263196 | energy: node=4066J gpu=2781J cpu=551J (802W)
+rank 59 | iter 2 | objfunc_time: 4.895841 | solver_time: 3.529654 | construction_time: 0.261073 | energy: node=5108J gpu=3481J cpu=928J (1007W)
+rank 16 | iter 2 | objfunc_time: 4.898551 | solver_time: 4.173950 | construction_time: 0.369279 | energy: node=5075J gpu=3580J cpu=697J (1001W)
+rank 44 | iter 2 | objfunc_time: 4.895697 | solver_time: 4.174881 | construction_time: 0.399111 | energy: node=5123J gpu=3470J cpu=669J (1010W)
+rank 4 | iter 2 | objfunc_time: 4.896441 | solver_time: 4.130229 | construction_time: 0.372870 | energy: node=5287J gpu=3586J cpu=881J (1043W)
+rank 54 | iter 2 | objfunc_time: 5.041004 | solver_time: 4.149928 | construction_time: 0.370002 | energy: node=0J gpu=3506J cpu=853J (0W)
+rank 1 | iter 2 | objfunc_time: 5.070129 | solver_time: 3.505320 | construction_time: 0.277331 | energy: node=5078J gpu=3533J cpu=866J (1002W)
+rank 34 | iter 2 | objfunc_time: 5.041476 | solver_time: 4.180722 | construction_time: 0.383775 | energy: node=5125J gpu=3712J cpu=830J (1011W)
+rank 37 | iter 2 | objfunc_time: 5.044430 | solver_time: 3.526587 | construction_time: 0.273201 | energy: node=4948J gpu=3468J cpu=911J (976W)
+rank 0 | iter 2 | objfunc_time: 5.041066 | solver_time: 4.190097 | construction_time: 0.391808 | energy: node=5186J gpu=3614J cpu=874J (1023W)
+rank 55 | iter 2 | objfunc_time: 5.040791 | solver_time: 3.531194 | construction_time: 0.260034 | energy: node=5441J gpu=3647J cpu=647J (1073W)
+rank 24 | iter 2 | objfunc_time: 5.040583 | solver_time: 4.182672 | construction_time: 0.367399 | energy: node=5296J gpu=3817J cpu=760J (1045W)
+rank 52 | iter 2 | objfunc_time: 5.042917 | solver_time: 4.180963 | construction_time: 0.380653 | energy: node=5069J gpu=3426J cpu=699J (1000W)
+rank 32 | iter 2 | objfunc_time: 4.896662 | solver_time: 4.175150 | construction_time: 0.374553 | energy: node=5178J gpu=3649J cpu=831J (1021W)
+rank 31 | iter 2 | objfunc_time: 5.045256 | solver_time: 3.523510 | construction_time: 0.275964 | energy: node=5125J gpu=3697J cpu=821J (1011W)
+rank 18 | iter 2 | objfunc_time: 4.906752 | solver_time: 4.181227 | construction_time: 0.374510 | energy: node=5415J gpu=3631J cpu=732J (1068W)
+rank 60 | iter 2 | objfunc_time: 5.042621 | solver_time: 4.144578 | construction_time: 0.373906 | energy: node=5398J gpu=3783J cpu=1011J (1065W)
+rank 50 | iter 2 | objfunc_time: 5.043339 | solver_time: 4.178512 | construction_time: 0.369635 | energy: node=5356J gpu=3766J cpu=769J (1056W)
+rank 6 | iter 2 | objfunc_time: 5.043495 | solver_time: 4.189340 | construction_time: 0.384300 | energy: node=5262J gpu=3616J cpu=1095J (1038W)
+rank 43 | iter 2 | objfunc_time: 5.043970 | solver_time: 3.495698 | construction_time: 0.271131 | energy: node=5489J gpu=3612J cpu=956J (1083W)
+rank 7 | iter 2 | objfunc_time: 5.040985 | solver_time: 3.512267 | construction_time: 0.260587 | energy: node=5142J gpu=3706J cpu=794J (1014W)
+rank 47 | iter 2 | objfunc_time: 4.895760 | solver_time: 3.539392 | construction_time: 0.265826 | energy: node=5190J gpu=3460J cpu=960J (1024W)
+rank 48 | iter 2 | objfunc_time: 5.041498 | solver_time: 4.192596 | construction_time: 0.370272 | energy: node=5613J gpu=3901J cpu=962J (1107W)
+rank 15 | iter 2 | objfunc_time: 5.041300 | solver_time: 3.505344 | construction_time: 0.263187 | energy: node=5180J gpu=3522J cpu=701J (1022W)
+rank 57 | iter 2 | objfunc_time: 5.053417 | solver_time: 3.540556 | construction_time: 0.255795 | energy: node=5063J gpu=3671J cpu=887J (999W)
+rank 14 | iter 2 | objfunc_time: 5.043727 | solver_time: 4.158356 | construction_time: 0.372177 | energy: node=5467J gpu=3685J cpu=1045J (1078W)
+rank 51 | iter 2 | objfunc_time: 5.041928 | solver_time: 3.519898 | construction_time: 0.259004 | energy: node=5421J gpu=3650J cpu=928J (1069W)
+rank 8 | iter 3 | objfunc_time: 5.212626 | solver_time: 4.193027 | construction_time: 0.365399 | energy: node=5303J gpu=3669J cpu=754J (1014W)
+rank 56 | iter 3 | objfunc_time: 5.212497 | solver_time: 4.147155 | construction_time: 0.366555 | energy: node=5184J gpu=3703J cpu=949J (992W)
+rank 26 | iter 3 | objfunc_time: 5.212341 | solver_time: 4.173793 | construction_time: 0.377509 | energy: node=5344J gpu=3707J cpu=1002J (1022W)
+rank 2 | iter 3 | objfunc_time: 5.211815 | solver_time: 4.207408 | construction_time: 0.369466 | energy: node=5475J gpu=3810J cpu=817J (1047W)
+rank 35 | iter 3 | objfunc_time: 5.084423 | solver_time: 3.488703 | construction_time: 0.255203 | energy: node=5173J gpu=3598J cpu=892J (989W)
+rank 58 | iter 3 | objfunc_time: 5.212067 | solver_time: 4.184425 | construction_time: 0.374898 | energy: node=5399J gpu=3787J cpu=904J (1033W)
+rank 33 | iter 3 | objfunc_time: 5.081255 | solver_time: 3.492990 | construction_time: 0.259628 | energy: node=5146J gpu=3604J cpu=942J (984W)
+rank 36 | iter 3 | objfunc_time: 5.211702 | solver_time: 4.176639 | construction_time: 0.374745 | energy: node=6692J gpu=5353J cpu=1159J (1280W)
+rank 22 | iter 3 | objfunc_time: 5.211306 | solver_time: 4.146540 | construction_time: 0.366834 | energy: node=5791J gpu=3855J cpu=874J (1108W)
+rank 29 | iter 3 | objfunc_time: 5.201170 | solver_time: 3.508275 | construction_time: 0.257411 | energy: node=5084J gpu=3651J cpu=837J (972W)
+rank 37 | iter 3 | objfunc_time: 5.202694 | solver_time: 3.526979 | construction_time: 0.271913 | energy: node=5094J gpu=3573J cpu=948J (974W)
+rank 18 | iter 3 | objfunc_time: 5.202287 | solver_time: 4.184404 | construction_time: 0.370000 | energy: node=5570J gpu=3749J cpu=756J (1065W)
+rank 25 | iter 3 | objfunc_time: 5.201572 | solver_time: 3.472588 | construction_time: 0.257950 | energy: node=5171J gpu=3645J cpu=687J (989W)
+rank 11 | iter 3 | objfunc_time: 5.201604 | solver_time: 3.552780 | construction_time: 0.273213 | energy: node=5522J gpu=3689J cpu=936J (1056W)
+rank 23 | iter 3 | objfunc_time: 5.201263 | solver_time: 3.519713 | construction_time: 0.259409 | energy: node=5406J gpu=3715J cpu=1089J (1034W)
+rank 43 | iter 3 | objfunc_time: 5.201616 | solver_time: 3.494614 | construction_time: 0.271189 | energy: node=5509J gpu=3632J cpu=970J (1054W)
+rank 61 | iter 3 | objfunc_time: 5.201750 | solver_time: 3.512625 | construction_time: 0.267317 | energy: node=5234J gpu=3711J cpu=900J (1001W)
+rank 49 | iter 3 | objfunc_time: 5.201210 | solver_time: 3.519935 | construction_time: 0.261134 | energy: node=5111J gpu=3601J cpu=903J (978W)
+rank 20 | iter 3 | objfunc_time: 4.917672 | solver_time: 4.128971 | construction_time: 0.375139 | energy: node=5419J gpu=3517J cpu=764J (1036W)
+rank 13 | iter 3 | objfunc_time: 5.059013 | solver_time: 3.502965 | construction_time: 0.257215 | energy: node=5094J gpu=3585J cpu=834J (974W)
+rank 46 | iter 3 | objfunc_time: 5.200295 | solver_time: 4.149455 | construction_time: 0.369206 | energy: node=5307J gpu=3844J cpu=1003J (1015W)
+rank 6 | iter 3 | objfunc_time: 5.201899 | solver_time: 4.200653 | construction_time: 0.378457 | energy: node=5286J gpu=3623J cpu=1105J (1011W)
+rank 14 | iter 3 | objfunc_time: 5.056983 | solver_time: 4.173867 | construction_time: 0.373526 | energy: node=5174J gpu=3442J cpu=971J (990W)
+rank 40 | iter 3 | objfunc_time: 5.057495 | solver_time: 4.179919 | construction_time: 0.376298 | energy: node=5760J gpu=3689J cpu=902J (1102W)
+rank 10 | iter 3 | objfunc_time: 5.200744 | solver_time: 4.201926 | construction_time: 0.371713 | energy: node=5384J gpu=3850J cpu=916J (1030W)
+rank 41 | iter 3 | objfunc_time: 5.201197 | solver_time: 3.524953 | construction_time: 0.259113 | energy: node=5187J gpu=3661J cpu=866J (992W)
+rank 12 | iter 3 | objfunc_time: 5.200903 | solver_time: 4.185893 | construction_time: 0.394808 | energy: node=5533J gpu=3825J cpu=867J (1058W)
+rank 39 | iter 3 | objfunc_time: 5.200750 | solver_time: 3.487623 | construction_time: 0.267543 | energy: node=5200J gpu=3708J cpu=895J (995W)
+rank 17 | iter 3 | objfunc_time: 5.200516 | solver_time: 3.488678 | construction_time: 0.258131 | energy: node=0J gpu=3664J cpu=856J (0W)
+rank 3 | iter 3 | objfunc_time: 5.199584 | solver_time: 3.560053 | construction_time: 0.264757 | energy: node=5368J gpu=3548J cpu=925J (1027W)
+rank 51 | iter 3 | objfunc_time: 5.228114 | solver_time: 3.517915 | construction_time: 0.258440 | energy: node=5335J gpu=3594J cpu=902J (1020W)
+rank 54 | iter 3 | objfunc_time: 5.198785 | solver_time: 4.150838 | construction_time: 0.370189 | energy: node=0J gpu=3640J cpu=907J (0W)
+rank 59 | iter 3 | objfunc_time: 5.199213 | solver_time: 3.529645 | construction_time: 0.260680 | energy: node=3090J gpu=1988J cpu=538J (591W)
+rank 48 | iter 3 | objfunc_time: 5.199530 | solver_time: 4.187541 | construction_time: 0.370225 | energy: node=5602J gpu=3892J cpu=961J (1071W)
+rank 55 | iter 3 | objfunc_time: 5.198910 | solver_time: 3.528635 | construction_time: 0.259780 | energy: node=5509J gpu=3684J cpu=661J (1054W)
+rank 34 | iter 3 | objfunc_time: 5.199430 | solver_time: 4.180650 | construction_time: 0.377575 | energy: node=5309J gpu=3797J cpu=883J (1015W)
+rank 16 | iter 3 | objfunc_time: 5.051145 | solver_time: 4.183982 | construction_time: 0.369329 | energy: node=5093J gpu=3588J cpu=699J (974W)
+rank 5 | iter 3 | objfunc_time: 5.199803 | solver_time: 3.508315 | construction_time: 0.265251 | energy: node=9975J gpu=5539J cpu=1775J (1908W)
+rank 52 | iter 3 | objfunc_time: 5.198402 | solver_time: 4.189807 | construction_time: 0.384355 | energy: node=5312J gpu=3625J cpu=756J (1016W)
+rank 7 | iter 3 | objfunc_time: 5.199145 | solver_time: 3.516357 | construction_time: 0.259008 | energy: node=5164J gpu=3724J cpu=796J (988W)
+rank 44 | iter 3 | objfunc_time: 5.198959 | solver_time: 4.163896 | construction_time: 0.391770 | energy: node=5301J gpu=3651J cpu=704J (1014W)
+rank 0 | iter 3 | objfunc_time: 4.911226 | solver_time: 4.188821 | construction_time: 0.386368 | energy: node=5071J gpu=3510J cpu=846J (970W)
+rank 47 | iter 3 | objfunc_time: 5.058084 | solver_time: 3.539854 | construction_time: 0.264775 | energy: node=5206J gpu=3462J cpu=969J (996W)
+rank 15 | iter 3 | objfunc_time: 5.199336 | solver_time: 3.506097 | construction_time: 0.262682 | energy: node=5126J gpu=3502J cpu=691J (980W)
+rank 24 | iter 3 | objfunc_time: 5.198768 | solver_time: 4.175845 | construction_time: 0.367614 | energy: node=5334J gpu=3882J cpu=770J (1020W)
+rank 1 | iter 3 | objfunc_time: 5.198881 | solver_time: 3.503655 | construction_time: 0.277242 | energy: node=5178J gpu=3592J cpu=899J (990W)
+rank 42 | iter 3 | objfunc_time: 4.638991 | solver_time: 4.193990 | construction_time: 0.379645 | energy: node=4834J gpu=3545J cpu=732J (925W)
+rank 53 | iter 3 | objfunc_time: 5.200111 | solver_time: 3.523692 | construction_time: 0.271597 | energy: node=5343J gpu=3690J cpu=961J (1022W)
+rank 27 | iter 3 | objfunc_time: 5.200711 | solver_time: 3.567781 | construction_time: 0.261064 | energy: node=5310J gpu=3710J cpu=833J (1016W)
+rank 9 | iter 3 | objfunc_time: 5.199525 | solver_time: 3.510345 | construction_time: 0.257433 | energy: node=5449J gpu=3691J cpu=808J (1042W)
+rank 30 | iter 3 | objfunc_time: 5.199574 | solver_time: 4.194384 | construction_time: 0.371259 | energy: node=5793J gpu=3797J cpu=885J (1108W)
+rank 19 | iter 3 | objfunc_time: 5.199451 | solver_time: 3.536916 | construction_time: 0.276514 | energy: node=6813J gpu=5591J cpu=1090J (1303W)
+rank 31 | iter 3 | objfunc_time: 5.202258 | solver_time: 3.520993 | construction_time: 0.274688 | energy: node=5304J gpu=3786J cpu=867J (1014W)
+rank 4 | iter 3 | objfunc_time: 5.199119 | solver_time: 4.134555 | construction_time: 0.372297 | energy: node=5623J gpu=3875J cpu=964J (1076W)
+rank 60 | iter 3 | objfunc_time: 5.200502 | solver_time: 4.154078 | construction_time: 0.367525 | energy: node=5490J gpu=3855J cpu=1041J (1050W)
+rank 28 | iter 3 | objfunc_time: 4.916206 | solver_time: 4.205749 | construction_time: 0.367759 | energy: node=5600J gpu=3711J cpu=957J (1071W)
+rank 57 | iter 3 | objfunc_time: 5.200702 | solver_time: 3.536064 | construction_time: 0.285136 | energy: node=5243J gpu=3771J cpu=914J (1003W)
+rank 32 | iter 3 | objfunc_time: 5.197750 | solver_time: 4.167626 | construction_time: 0.369193 | energy: node=5525J gpu=3945J cpu=923J (1057W)
+rank 38 | iter 3 | objfunc_time: 5.211378 | solver_time: 4.173649 | construction_time: 0.381960 | energy: node=5452J gpu=3688J cpu=839J (1043W)
+rank 45 | iter 3 | objfunc_time: 5.211794 | solver_time: 3.492467 | construction_time: 0.267549 | energy: node=5526J gpu=3792J cpu=842J (1057W)
+rank 21 | iter 3 | objfunc_time: 5.201143 | solver_time: 3.483336 | construction_time: 0.260140 | energy: node=5604J gpu=3747J cpu=1014J (1072W)
+rank 50 | iter 3 | objfunc_time: 5.200757 | solver_time: 4.192637 | construction_time: 0.370778 | energy: node=5668J gpu=3909J cpu=841J (1084W)
+rank 8 | iter 4 | objfunc_time: 5.056572 | solver_time: 4.191684 | construction_time: 0.364331 | energy: node=5286J gpu=3632J cpu=751J (1042W)
+rank 26 | iter 4 | objfunc_time: 5.056050 | solver_time: 4.177965 | construction_time: 0.374306 | energy: node=5301J gpu=3665J cpu=993J (1045W)
+rank 58 | iter 4 | objfunc_time: 5.055622 | solver_time: 4.181344 | construction_time: 0.375465 | energy: node=2949J gpu=1928J cpu=484J (581W)
+rank 50 | iter 4 | objfunc_time: 5.071748 | solver_time: 4.196907 | construction_time: 0.368807 | energy: node=5303J gpu=3782J cpu=762J (1046W)
+rank 36 | iter 4 | objfunc_time: 5.055330 | solver_time: 4.196184 | construction_time: 0.375769 | energy: node=5228J gpu=3716J cpu=889J (1031W)
+rank 35 | iter 4 | objfunc_time: 5.055425 | solver_time: 3.489624 | construction_time: 0.255306 | energy: node=5199J gpu=3617J cpu=900J (1025W)
+rank 38 | iter 4 | objfunc_time: 5.054968 | solver_time: 4.172627 | construction_time: 0.378120 | energy: node=5318J gpu=3569J cpu=813J (1049W)
+rank 37 | iter 4 | objfunc_time: 5.044109 | solver_time: 3.531435 | construction_time: 0.271366 | energy: node=5056J gpu=3550J cpu=931J (997W)
+rank 20 | iter 4 | objfunc_time: 5.045440 | solver_time: 4.128775 | construction_time: 0.374702 | energy: node=5502J gpu=3600J cpu=776J (1085W)
+rank 11 | iter 4 | objfunc_time: 5.045867 | solver_time: 3.553987 | construction_time: 0.272340 | energy: node=5293J gpu=3556J cpu=879J (1044W)
+rank 14 | iter 4 | objfunc_time: 4.902480 | solver_time: 4.168395 | construction_time: 0.370729 | energy: node=5226J gpu=3457J cpu=977J (1030W)
+rank 19 | iter 4 | objfunc_time: 5.043095 | solver_time: 3.534424 | construction_time: 0.274328 | energy: node=5271J gpu=3716J cpu=782J (1039W)
+rank 43 | iter 4 | objfunc_time: 4.899327 | solver_time: 3.495503 | construction_time: 0.269568 | energy: node=5129J gpu=3412J cpu=865J (1011W)
+rank 25 | iter 4 | objfunc_time: 5.045208 | solver_time: 3.474418 | construction_time: 0.257459 | energy: node=5002J gpu=3531J cpu=650J (986W)
+rank 29 | iter 4 | objfunc_time: 5.045539 | solver_time: 3.510050 | construction_time: 0.257342 | energy: node=4939J gpu=3543J cpu=798J (974W)
+rank 23 | iter 4 | objfunc_time: 5.044784 | solver_time: 3.522568 | construction_time: 0.259055 | energy: node=5149J gpu=3546J cpu=1007J (1015W)
+rank 49 | iter 4 | objfunc_time: 4.906179 | solver_time: 3.518620 | construction_time: 0.260925 | energy: node=5034J gpu=3549J cpu=881J (993W)
+rank 6 | iter 4 | objfunc_time: 5.044919 | solver_time: 4.199079 | construction_time: 0.378072 | energy: node=5328J gpu=3636J cpu=1107J (1051W)
+rank 41 | iter 4 | objfunc_time: 5.044824 | solver_time: 3.527633 | construction_time: 0.259159 | energy: node=5153J gpu=3640J cpu=861J (1016W)
+rank 61 | iter 4 | objfunc_time: 5.045268 | solver_time: 3.512870 | construction_time: 0.268221 | energy: node=5068J gpu=3602J cpu=864J (999W)
+rank 10 | iter 4 | objfunc_time: 4.626047 | solver_time: 4.192273 | construction_time: 0.372429 | energy: node=5006J gpu=3492J cpu=835J (987W)
+rank 31 | iter 4 | objfunc_time: 5.043073 | solver_time: 3.524004 | construction_time: 0.274308 | energy: node=5125J gpu=3691J cpu=827J (1010W)
+rank 56 | iter 4 | objfunc_time: 5.056235 | solver_time: 4.140644 | construction_time: 0.364219 | energy: node=5175J gpu=3695J cpu=947J (1020W)
+rank 40 | iter 4 | objfunc_time: 4.623345 | solver_time: 4.177067 | construction_time: 0.375909 | energy: node=5379J gpu=3318J cpu=834J (1061W)
+rank 13 | iter 4 | objfunc_time: 5.044584 | solver_time: 3.505444 | construction_time: 0.256885 | energy: node=5173J gpu=3630J cpu=862J (1020W)
+rank 12 | iter 4 | objfunc_time: 5.044407 | solver_time: 4.184320 | construction_time: 0.388109 | energy: node=5404J gpu=3727J cpu=833J (1065W)
+rank 27 | iter 4 | objfunc_time: 5.044394 | solver_time: 3.565935 | construction_time: 0.261528 | energy: node=5062J gpu=3555J cpu=781J (998W)
+rank 53 | iter 4 | objfunc_time: 5.046759 | solver_time: 3.523336 | construction_time: 0.271540 | energy: node=5051J gpu=3513J cpu=876J (996W)
+rank 39 | iter 4 | objfunc_time: 5.044216 | solver_time: 3.489376 | construction_time: 0.267704 | energy: node=5043J gpu=3611J cpu=851J (994W)
+rank 57 | iter 4 | objfunc_time: 4.905508 | solver_time: 3.534273 | construction_time: 0.280236 | energy: node=4964J gpu=3611J cpu=848J (979W)
+rank 30 | iter 4 | objfunc_time: 5.043454 | solver_time: 4.191957 | construction_time: 0.371102 | energy: node=5522J gpu=3579J cpu=823J (1089W)
+rank 9 | iter 4 | objfunc_time: 4.897407 | solver_time: 3.510974 | construction_time: 0.257503 | energy: node=5119J gpu=3522J cpu=739J (1009W)
+rank 45 | iter 4 | objfunc_time: 5.055419 | solver_time: 3.494806 | construction_time: 0.266724 | energy: node=5121J gpu=3558J cpu=753J (1010W)
+rank 2 | iter 4 | objfunc_time: 5.055572 | solver_time: 4.191604 | construction_time: 0.369804 | energy: node=5350J gpu=3683J cpu=788J (1055W)
+rank 51 | iter 4 | objfunc_time: 5.043706 | solver_time: 3.514278 | construction_time: 0.258834 | energy: node=5065J gpu=3445J cpu=837J (999W)
+rank 17 | iter 4 | objfunc_time: 5.043436 | solver_time: 3.487606 | construction_time: 0.258147 | energy: node=0J gpu=3568J cpu=816J (0W)
+rank 4 | iter 4 | objfunc_time: 5.043105 | solver_time: 4.138491 | construction_time: 0.372708 | energy: node=5489J gpu=3753J cpu=934J (1082W)
+rank 48 | iter 4 | objfunc_time: 5.042957 | solver_time: 4.184428 | construction_time: 0.370424 | energy: node=5493J gpu=3798J cpu=930J (1083W)
+rank 46 | iter 4 | objfunc_time: 5.043275 | solver_time: 4.143762 | construction_time: 0.370869 | energy: node=5109J gpu=3666J cpu=946J (1007W)
+rank 22 | iter 4 | objfunc_time: 5.042480 | solver_time: 4.162204 | construction_time: 0.391469 | energy: node=5521J gpu=3665J cpu=836J (1089W)
+rank 5 | iter 4 | objfunc_time: 4.896942 | solver_time: 3.512339 | construction_time: 0.264991 | energy: node=4842J gpu=3410J cpu=850J (955W)
+rank 34 | iter 4 | objfunc_time: 5.042603 | solver_time: 4.182453 | construction_time: 0.377421 | energy: node=5265J gpu=3764J cpu=865J (1038W)
+rank 3 | iter 4 | objfunc_time: 5.043033 | solver_time: 3.559415 | construction_time: 0.264175 | energy: node=5215J gpu=3462J cpu=888J (1028W)
+rank 1 | iter 4 | objfunc_time: 5.042810 | solver_time: 3.503224 | construction_time: 0.274489 | energy: node=5046J gpu=3504J cpu=859J (995W)
+rank 44 | iter 4 | objfunc_time: 5.042611 | solver_time: 4.180647 | construction_time: 0.391965 | energy: node=5212J gpu=3527J cpu=683J (1028W)
+rank 0 | iter 4 | objfunc_time: 4.757375 | solver_time: 4.186312 | construction_time: 0.386261 | energy: node=5130J gpu=3552J cpu=865J (1011W)
+rank 55 | iter 4 | objfunc_time: 5.042943 | solver_time: 3.532298 | construction_time: 0.260345 | energy: node=5397J gpu=3634J cpu=652J (1064W)
+rank 52 | iter 4 | objfunc_time: 5.042085 | solver_time: 4.196955 | construction_time: 0.376457 | energy: node=5233J gpu=3576J cpu=732J (1032W)
+rank 16 | iter 4 | objfunc_time: 5.042820 | solver_time: 4.188370 | construction_time: 0.370125 | energy: node=5179J gpu=3661J cpu=724J (1021W)
+rank 7 | iter 4 | objfunc_time: 5.042651 | solver_time: 3.517825 | construction_time: 0.259440 | energy: node=4961J gpu=3605J cpu=755J (978W)
+rank 47 | iter 4 | objfunc_time: 5.042690 | solver_time: 3.542397 | construction_time: 0.264515 | energy: node=5246J gpu=3480J cpu=973J (1034W)
+rank 32 | iter 4 | objfunc_time: 5.040827 | solver_time: 4.191400 | construction_time: 0.371491 | energy: node=5202J gpu=3642J cpu=844J (1026W)
+rank 33 | iter 4 | objfunc_time: 5.055513 | solver_time: 3.492848 | construction_time: 0.259429 | energy: node=5297J gpu=3675J cpu=980J (1044W)
+rank 18 | iter 4 | objfunc_time: 5.045480 | solver_time: 4.187280 | construction_time: 0.372829 | energy: node=5509J gpu=3695J cpu=762J (1086W)
+rank 60 | iter 4 | objfunc_time: 5.044287 | solver_time: 4.141086 | construction_time: 0.370110 | energy: node=5423J gpu=3783J cpu=1025J (1069W)
+rank 21 | iter 4 | objfunc_time: 5.044802 | solver_time: 3.486686 | construction_time: 0.258995 | energy: node=5321J gpu=3576J cpu=937J (1049W)
+rank 15 | iter 4 | objfunc_time: 5.042768 | solver_time: 3.502933 | construction_time: 0.262958 | energy: node=5136J gpu=3504J cpu=690J (1013W)
+rank 28 | iter 4 | objfunc_time: 5.042962 | solver_time: 4.196535 | construction_time: 0.368864 | energy: node=5707J gpu=3803J cpu=997J (1125W)
+rank 54 | iter 4 | objfunc_time: 5.042289 | solver_time: 4.150076 | construction_time: 0.369647 | energy: node=0J gpu=3614J cpu=902J (0W)
+rank 24 | iter 4 | objfunc_time: 5.042841 | solver_time: 4.199797 | construction_time: 0.365610 | energy: node=5459J gpu=3977J cpu=814J (1076W)
+rank 59 | iter 4 | objfunc_time: 5.042800 | solver_time: 3.531471 | construction_time: 0.260247 | energy: node=8023J gpu=6269J cpu=1560J (1582W)
+rank 42 | iter 4 | objfunc_time: 5.044922 | solver_time: 4.196830 | construction_time: 0.381125 | energy: node=5304J gpu=4016J cpu=835J (1046W)
+rank 26 | iter 5 | objfunc_time: 5.000929 | solver_time: 4.183151 | construction_time: 0.376775 | energy: node=5150J gpu=3551J cpu=950J (1027W)
+rank 50 | iter 5 | objfunc_time: 5.000434 | solver_time: 4.180162 | construction_time: 0.379977 | energy: node=5258J gpu=3627J cpu=747J (1048W)
+rank 35 | iter 5 | objfunc_time: 5.016539 | solver_time: 3.492059 | construction_time: 0.255030 | energy: node=5194J gpu=3603J cpu=899J (1035W)
+rank 38 | iter 5 | objfunc_time: 4.999848 | solver_time: 4.168264 | construction_time: 0.377070 | energy: node=5250J gpu=3529J cpu=790J (1047W)
+rank 53 | iter 5 | objfunc_time: 4.705490 | solver_time: 3.521113 | construction_time: 0.289035 | energy: node=4835J gpu=3368J cpu=828J (964W)
+rank 20 | iter 5 | objfunc_time: 4.990463 | solver_time: 4.127010 | construction_time: 0.374631 | energy: node=5605J gpu=3658J cpu=811J (1117W)
+rank 61 | iter 5 | objfunc_time: 4.989585 | solver_time: 3.514841 | construction_time: 0.267670 | energy: node=5028J gpu=3585J cpu=855J (1002W)
+rank 6 | iter 5 | objfunc_time: 4.989877 | solver_time: 4.179221 | construction_time: 0.376582 | energy: node=5330J gpu=3616J cpu=1101J (1062W)
+rank 43 | iter 5 | objfunc_time: 4.844508 | solver_time: 3.495764 | construction_time: 0.267910 | energy: node=5118J gpu=3418J cpu=873J (1020W)
+rank 14 | iter 5 | objfunc_time: 5.010607 | solver_time: 4.162436 | construction_time: 0.371432 | energy: node=5073J gpu=3363J cpu=933J (1011W)
+rank 18 | iter 5 | objfunc_time: 4.990161 | solver_time: 4.180517 | construction_time: 0.369502 | energy: node=5326J gpu=3569J cpu=715J (1062W)
+rank 19 | iter 5 | objfunc_time: 5.016488 | solver_time: 3.534873 | construction_time: 0.264267 | energy: node=5173J gpu=3652J cpu=763J (1031W)
+rank 25 | iter 5 | objfunc_time: 4.990082 | solver_time: 3.476893 | construction_time: 0.257750 | energy: node=4931J gpu=3501J cpu=645J (983W)
+rank 37 | iter 5 | objfunc_time: 4.850613 | solver_time: 3.525561 | construction_time: 0.270732 | energy: node=4873J gpu=3421J cpu=886J (971W)
+rank 56 | iter 5 | objfunc_time: 4.989558 | solver_time: 4.152190 | construction_time: 0.394285 | energy: node=5161J gpu=3666J cpu=937J (1029W)
+rank 23 | iter 5 | objfunc_time: 4.989521 | solver_time: 3.520398 | construction_time: 0.259008 | energy: node=5214J gpu=3590J cpu=1031J (1039W)
+rank 11 | iter 5 | objfunc_time: 5.016516 | solver_time: 3.558435 | construction_time: 0.268962 | energy: node=5272J gpu=3548J cpu=873J (1051W)
+rank 41 | iter 5 | objfunc_time: 4.989495 | solver_time: 3.529160 | construction_time: 0.259146 | energy: node=5003J gpu=3549J cpu=830J (997W)
+rank 13 | iter 5 | objfunc_time: 5.016552 | solver_time: 3.503046 | construction_time: 0.257183 | energy: node=5108J gpu=3594J cpu=850J (1018W)
+rank 21 | iter 5 | objfunc_time: 5.004823 | solver_time: 3.483243 | construction_time: 0.258702 | energy: node=5231J gpu=3524J cpu=903J (1043W)
+rank 33 | iter 5 | objfunc_time: 4.801883 | solver_time: 3.491354 | construction_time: 0.259422 | energy: node=4946J gpu=3461J cpu=888J (986W)
+rank 10 | iter 5 | objfunc_time: 4.682004 | solver_time: 4.189899 | construction_time: 0.371722 | energy: node=5064J gpu=3543J cpu=851J (1009W)
+rank 29 | iter 5 | objfunc_time: 4.989671 | solver_time: 3.510840 | construction_time: 0.256868 | energy: node=4966J gpu=3560J cpu=804J (990W)
+rank 12 | iter 5 | objfunc_time: 4.989315 | solver_time: 4.194884 | construction_time: 0.389923 | energy: node=5308J gpu=3663J cpu=815J (1058W)
+rank 27 | iter 5 | objfunc_time: 4.989303 | solver_time: 3.566737 | construction_time: 0.260509 | energy: node=5030J gpu=3543J cpu=762J (1003W)
+rank 60 | iter 5 | objfunc_time: 5.016537 | solver_time: 4.171121 | construction_time: 0.367849 | energy: node=5359J gpu=3737J cpu=1005J (1068W)
+rank 39 | iter 5 | objfunc_time: 4.989353 | solver_time: 3.489420 | construction_time: 0.266988 | energy: node=4975J gpu=3567J cpu=840J (992W)
+rank 2 | iter 5 | objfunc_time: 4.987778 | solver_time: 4.190432 | construction_time: 0.397980 | energy: node=5320J gpu=3649J cpu=779J (1060W)
+rank 9 | iter 5 | objfunc_time: 5.016555 | solver_time: 3.511263 | construction_time: 0.257800 | energy: node=5317J gpu=3625J cpu=775J (1060W)
+rank 28 | iter 5 | objfunc_time: 4.708569 | solver_time: 4.184306 | construction_time: 0.368121 | energy: node=5412J gpu=3512J cpu=916J (1079W)
+rank 31 | iter 5 | objfunc_time: 4.992036 | solver_time: 3.520899 | construction_time: 0.274103 | energy: node=5088J gpu=3673J cpu=811J (1014W)
+rank 51 | iter 5 | objfunc_time: 4.988126 | solver_time: 3.519469 | construction_time: 0.257909 | energy: node=5573J gpu=3543J cpu=975J (1111W)
+rank 45 | iter 5 | objfunc_time: 4.568472 | solver_time: 3.489882 | construction_time: 0.274827 | energy: node=4864J gpu=3381J cpu=697J (970W)
+rank 46 | iter 5 | objfunc_time: 5.016526 | solver_time: 4.143580 | construction_time: 0.367938 | energy: node=5170J gpu=3713J cpu=960J (1031W)
+rank 17 | iter 5 | objfunc_time: 4.988620 | solver_time: 3.488964 | construction_time: 0.259043 | energy: node=0J gpu=3539J cpu=806J (0W)
+rank 1 | iter 5 | objfunc_time: 4.987519 | solver_time: 3.506113 | construction_time: 0.273032 | energy: node=4943J gpu=3473J cpu=836J (985W)
+rank 15 | iter 5 | objfunc_time: 5.016548 | solver_time: 3.502113 | construction_time: 0.262896 | energy: node=5121J gpu=3496J cpu=687J (1021W)
+rank 5 | iter 5 | objfunc_time: 4.851313 | solver_time: 3.506496 | construction_time: 0.264319 | energy: node=4879J gpu=3431J cpu=863J (973W)
+rank 24 | iter 5 | objfunc_time: 4.987249 | solver_time: 4.179251 | construction_time: 0.370154 | energy: node=5195J gpu=3721J cpu=749J (1036W)
+rank 22 | iter 5 | objfunc_time: 5.016517 | solver_time: 4.185243 | construction_time: 0.385290 | energy: node=5508J gpu=3636J cpu=828J (1098W)
+rank 52 | iter 5 | objfunc_time: 4.698071 | solver_time: 4.194030 | construction_time: 0.377759 | energy: node=4983J gpu=3335J cpu=681J (993W)
+rank 55 | iter 5 | objfunc_time: 4.987320 | solver_time: 3.527834 | construction_time: 0.259601 | energy: node=5421J gpu=3636J cpu=646J (1081W)
+rank 54 | iter 5 | objfunc_time: 4.987013 | solver_time: 4.146102 | construction_time: 0.369716 | energy: node=0J gpu=3437J cpu=835J (0W)
+rank 0 | iter 5 | objfunc_time: 4.843254 | solver_time: 4.181986 | construction_time: 0.383447 | energy: node=5090J gpu=3552J cpu=847J (1015W)
+rank 16 | iter 5 | objfunc_time: 4.702722 | solver_time: 4.172848 | construction_time: 0.369674 | energy: node=1665J gpu=1000J cpu=247J (332W)
+rank 44 | iter 5 | objfunc_time: 4.987656 | solver_time: 4.162478 | construction_time: 0.391058 | energy: node=5151J gpu=3502J cpu=665J (1027W)
+rank 47 | iter 5 | objfunc_time: 4.986959 | solver_time: 3.539830 | construction_time: 0.262659 | energy: node=5214J gpu=3468J cpu=962J (1039W)
+rank 32 | iter 5 | objfunc_time: 4.986409 | solver_time: 4.188079 | construction_time: 0.368832 | energy: node=5153J gpu=3594J cpu=830J (1027W)
+rank 36 | iter 5 | objfunc_time: 4.613406 | solver_time: 4.177970 | construction_time: 0.373438 | energy: node=5040J gpu=3558J cpu=832J (1005W)
+rank 3 | iter 5 | objfunc_time: 4.987771 | solver_time: 3.558149 | construction_time: 0.263794 | energy: node=5166J gpu=3431J cpu=872J (1030W)
+rank 30 | iter 5 | objfunc_time: 4.988288 | solver_time: 4.182379 | construction_time: 0.370094 | energy: node=5448J gpu=3573J cpu=807J (1086W)
+rank 34 | iter 5 | objfunc_time: 4.839785 | solver_time: 4.193183 | construction_time: 0.374912 | energy: node=5201J gpu=3730J cpu=844J (1037W)
+rank 59 | iter 5 | objfunc_time: 5.016560 | solver_time: 3.531444 | construction_time: 0.260067 | energy: node=5249J gpu=3560J cpu=970J (1046W)
+rank 48 | iter 5 | objfunc_time: 5.016556 | solver_time: 4.183757 | construction_time: 0.369404 | energy: node=5666J gpu=3933J cpu=968J (1129W)
+rank 40 | iter 5 | objfunc_time: 4.989380 | solver_time: 4.170970 | construction_time: 0.373984 | energy: node=5815J gpu=3709J cpu=918J (1159W)
+rank 8 | iter 5 | objfunc_time: 4.869049 | solver_time: 4.188122 | construction_time: 0.365709 | energy: node=5184J gpu=3560J cpu=727J (1033W)
+rank 42 | iter 5 | objfunc_time: 5.016537 | solver_time: 4.190567 | construction_time: 0.377969 | energy: node=5197J gpu=3895J cpu=815J (1036W)
+rank 7 | iter 5 | objfunc_time: 5.016547 | solver_time: 3.510920 | construction_time: 0.258698 | energy: node=5124J gpu=3705J cpu=788J (1021W)
+rank 58 | iter 5 | objfunc_time: 5.000291 | solver_time: 4.190305 | construction_time: 0.374874 | energy: node=8160J gpu=6371J cpu=1402J (1627W)
+rank 57 | iter 5 | objfunc_time: 4.651903 | solver_time: 3.535481 | construction_time: 0.280232 | energy: node=4992J gpu=3626J cpu=860J (995W)
+rank 4 | iter 5 | objfunc_time: 4.840618 | solver_time: 4.128156 | construction_time: 0.371329 | energy: node=5382J gpu=3710J cpu=909J (1073W)
+rank 49 | iter 5 | objfunc_time: 4.997159 | solver_time: 3.516897 | construction_time: 0.260617 | energy: node=5351J gpu=3738J cpu=956J (1067W)
+rank 11 | iter 6 | objfunc_time: 5.143738 | solver_time: 3.561670 | construction_time: 0.268729 | energy: node=1793J gpu=1035J cpu=291J (349W)
+rank 35 | iter 6 | objfunc_time: 5.127430 | solver_time: 3.492776 | construction_time: 0.256334 | energy: node=5260J gpu=3640J cpu=919J (1023W)
+rank 26 | iter 6 | objfunc_time: 5.127868 | solver_time: 4.182997 | construction_time: 0.372000 | energy: node=5325J gpu=3703J cpu=1002J (1035W)
+rank 36 | iter 6 | objfunc_time: 5.143693 | solver_time: 4.174376 | construction_time: 0.374977 | energy: node=5258J gpu=3797J cpu=876J (1022W)
+rank 58 | iter 6 | objfunc_time: 5.127686 | solver_time: 4.186576 | construction_time: 0.374669 | energy: node=5283J gpu=3681J cpu=874J (1027W)
+rank 50 | iter 6 | objfunc_time: 5.143754 | solver_time: 4.195706 | construction_time: 0.375306 | energy: node=5387J gpu=3707J cpu=780J (1047W)
+rank 38 | iter 6 | objfunc_time: 5.143775 | solver_time: 4.175532 | construction_time: 0.376982 | energy: node=5310J gpu=3565J cpu=811J (1032W)
+rank 20 | iter 6 | objfunc_time: 5.117789 | solver_time: 4.129826 | construction_time: 0.373184 | energy: node=5703J gpu=3727J cpu=824J (1109W)
+rank 43 | iter 6 | objfunc_time: 5.143778 | solver_time: 3.496911 | construction_time: 0.267460 | energy: node=5257J gpu=3489J cpu=909J (1022W)
+rank 18 | iter 6 | objfunc_time: 4.972565 | solver_time: 4.199602 | construction_time: 0.372155 | energy: node=5172J gpu=3420J cpu=685J (1005W)
+rank 6 | iter 6 | objfunc_time: 5.143744 | solver_time: 4.175326 | construction_time: 0.377776 | energy: node=5406J gpu=3704J cpu=1129J (1051W)
+rank 14 | iter 6 | objfunc_time: 5.143774 | solver_time: 4.162479 | construction_time: 0.370767 | energy: node=5330J gpu=3571J cpu=1006J (1036W)
+rank 61 | iter 6 | objfunc_time: 5.117194 | solver_time: 3.512581 | construction_time: 0.267599 | energy: node=5144J gpu=3654J cpu=883J (1000W)
+rank 23 | iter 6 | objfunc_time: 5.143789 | solver_time: 3.522060 | construction_time: 0.259183 | energy: node=5393J gpu=3690J cpu=1080J (1048W)
+rank 40 | iter 6 | objfunc_time: 5.143757 | solver_time: 4.174797 | construction_time: 0.376659 | energy: node=6000J gpu=3798J cpu=950J (1166W)
+rank 49 | iter 6 | objfunc_time: 5.143784 | solver_time: 3.518445 | construction_time: 0.261308 | energy: node=4556J gpu=3196J cpu=754J (886W)
+rank 10 | iter 6 | objfunc_time: 5.143794 | solver_time: 4.181878 | construction_time: 0.371442 | energy: node=5416J gpu=3900J cpu=934J (1053W)
+rank 19 | iter 6 | objfunc_time: 5.143761 | solver_time: 3.533657 | construction_time: 0.263057 | energy: node=5379J gpu=3781J cpu=803J (1046W)
+rank 25 | iter 6 | objfunc_time: 5.143782 | solver_time: 3.475341 | construction_time: 0.257834 | energy: node=5107J gpu=3599J cpu=677J (993W)
+rank 29 | iter 6 | objfunc_time: 5.034229 | solver_time: 3.515207 | construction_time: 0.257172 | energy: node=4933J gpu=3566J cpu=799J (959W)
+rank 13 | iter 6 | objfunc_time: 5.143763 | solver_time: 3.501768 | construction_time: 0.258124 | energy: node=5272J gpu=3681J cpu=889J (1025W)
+rank 56 | iter 6 | objfunc_time: 5.143744 | solver_time: 4.148465 | construction_time: 0.387075 | energy: node=5244J gpu=3745J cpu=967J (1019W)
+rank 57 | iter 6 | objfunc_time: 5.115807 | solver_time: 3.536302 | construction_time: 0.280764 | energy: node=5070J gpu=3655J cpu=866J (986W)
+rank 12 | iter 6 | objfunc_time: 5.143751 | solver_time: 4.176843 | construction_time: 0.385575 | energy: node=5584J gpu=3869J cpu=880J (1086W)
+rank 60 | iter 6 | objfunc_time: 5.143776 | solver_time: 4.153653 | construction_time: 0.370095 | energy: node=5421J gpu=3789J cpu=1023J (1054W)
+rank 27 | iter 6 | objfunc_time: 5.143795 | solver_time: 3.568164 | construction_time: 0.260442 | energy: node=5064J gpu=3558J cpu=787J (984W)
+rank 46 | iter 6 | objfunc_time: 5.113740 | solver_time: 4.149028 | construction_time: 0.369436 | energy: node=5215J gpu=3785J cpu=971J (1014W)
+rank 39 | iter 6 | objfunc_time: 5.143741 | solver_time: 3.488485 | construction_time: 0.265370 | energy: node=5104J gpu=3655J cpu=864J (992W)
+rank 9 | iter 6 | objfunc_time: 5.143769 | solver_time: 3.510602 | construction_time: 0.257450 | energy: node=5382J gpu=3667J cpu=793J (1046W)
+rank 17 | iter 6 | objfunc_time: 5.115729 | solver_time: 3.488682 | construction_time: 0.258759 | energy: node=0J gpu=3627J cpu=859J (0W)
+rank 2 | iter 6 | objfunc_time: 5.143747 | solver_time: 4.181308 | construction_time: 0.393672 | energy: node=5414J gpu=3731J cpu=797J (1053W)
+rank 45 | iter 6 | objfunc_time: 5.115499 | solver_time: 3.493690 | construction_time: 0.274833 | energy: node=5204J gpu=3605J cpu=770J (1012W)
+rank 30 | iter 6 | objfunc_time: 5.143797 | solver_time: 4.184778 | construction_time: 0.370614 | energy: node=5593J gpu=3645J cpu=836J (1087W)
+rank 37 | iter 6 | objfunc_time: 5.143718 | solver_time: 3.528629 | construction_time: 0.269160 | energy: node=5090J gpu=3555J cpu=945J (990W)
+rank 4 | iter 6 | objfunc_time: 5.115319 | solver_time: 4.131103 | construction_time: 0.371916 | energy: node=5512J gpu=3810J cpu=942J (1072W)
+rank 48 | iter 6 | objfunc_time: 4.612055 | solver_time: 4.185373 | construction_time: 0.370335 | energy: node=5207J gpu=3536J cpu=863J (1012W)
+rank 3 | iter 6 | objfunc_time: 5.143776 | solver_time: 3.561865 | construction_time: 0.263751 | energy: node=5231J gpu=3485J cpu=891J (1017W)
+rank 51 | iter 6 | objfunc_time: 5.143783 | solver_time: 3.514544 | construction_time: 0.258532 | energy: node=5309J gpu=3596J cpu=897J (1032W)
+rank 24 | iter 6 | objfunc_time: 5.143782 | solver_time: 4.191811 | construction_time: 0.366091 | energy: node=5299J gpu=3801J cpu=777J (1030W)
+rank 55 | iter 6 | objfunc_time: 5.143781 | solver_time: 3.531818 | construction_time: 0.259694 | energy: node=5507J gpu=3680J cpu=662J (1071W)
+rank 59 | iter 6 | objfunc_time: 5.143781 | solver_time: 3.530627 | construction_time: 0.260041 | energy: node=5254J gpu=3564J cpu=972J (1021W)
+rank 7 | iter 6 | objfunc_time: 5.143783 | solver_time: 3.517467 | construction_time: 0.258008 | energy: node=5085J gpu=3692J cpu=778J (989W)
+rank 15 | iter 6 | objfunc_time: 5.114763 | solver_time: 3.504163 | construction_time: 0.262858 | energy: node=5168J gpu=3518J cpu=701J (1005W)
+rank 54 | iter 6 | objfunc_time: 4.828440 | solver_time: 4.147549 | construction_time: 0.370599 | energy: node=0J gpu=3392J cpu=832J (0W)
+rank 47 | iter 6 | objfunc_time: 5.143750 | solver_time: 3.538367 | construction_time: 0.263034 | energy: node=5400J gpu=3567J cpu=1001J (1050W)
+rank 0 | iter 6 | objfunc_time: 5.143771 | solver_time: 4.184155 | construction_time: 0.384997 | energy: node=5397J gpu=3806J cpu=928J (1049W)
+rank 16 | iter 6 | objfunc_time: 5.143789 | solver_time: 4.181459 | construction_time: 0.370158 | energy: node=8776J gpu=6807J cpu=1217J (1706W)
+rank 42 | iter 6 | objfunc_time: 5.143772 | solver_time: 4.188356 | construction_time: 0.379651 | energy: node=1505J gpu=962J cpu=248J (293W)
+rank 5 | iter 6 | objfunc_time: 5.115394 | solver_time: 3.511920 | construction_time: 0.264396 | energy: node=5064J gpu=3543J cpu=908J (984W)
+rank 44 | iter 6 | objfunc_time: 5.143713 | solver_time: 4.176469 | construction_time: 0.392809 | energy: node=5330J gpu=3647J cpu=708J (1036W)
+rank 52 | iter 6 | objfunc_time: 5.143776 | solver_time: 4.186857 | construction_time: 0.378717 | energy: node=5313J gpu=3643J cpu=753J (1033W)
+rank 1 | iter 6 | objfunc_time: 5.143706 | solver_time: 3.507845 | construction_time: 0.272275 | energy: node=5312J gpu=3669J cpu=933J (1033W)
+rank 33 | iter 6 | objfunc_time: 5.116606 | solver_time: 3.492367 | construction_time: 0.276319 | energy: node=5282J gpu=3666J cpu=980J (1027W)
+rank 31 | iter 6 | objfunc_time: 5.143741 | solver_time: 3.522659 | construction_time: 0.274296 | energy: node=5252J gpu=3781J cpu=855J (1021W)
+rank 22 | iter 6 | objfunc_time: 5.143707 | solver_time: 4.147390 | construction_time: 0.386336 | energy: node=5811J gpu=3874J cpu=888J (1130W)
+rank 28 | iter 6 | objfunc_time: 5.143719 | solver_time: 4.192610 | construction_time: 0.370743 | energy: node=5926J gpu=3945J cpu=1042J (1152W)
+rank 41 | iter 6 | objfunc_time: 5.143778 | solver_time: 3.524807 | construction_time: 0.259498 | energy: node=5157J gpu=3658J cpu=864J (1003W)
+rank 21 | iter 6 | objfunc_time: 4.897179 | solver_time: 3.481158 | construction_time: 0.258404 | energy: node=5225J gpu=3520J cpu=909J (1016W)
+rank 34 | iter 6 | objfunc_time: 5.143770 | solver_time: 4.204552 | construction_time: 0.376039 | energy: node=5464J gpu=3924J cpu=913J (1062W)
+rank 32 | iter 6 | objfunc_time: 5.143760 | solver_time: 4.185686 | construction_time: 0.372652 | energy: node=5469J gpu=3866J cpu=907J (1063W)
+rank 53 | iter 6 | objfunc_time: 4.980635 | solver_time: 3.519823 | construction_time: 0.284937 | energy: node=5443J gpu=3733J cpu=978J (1058W)
+rank 8 | iter 6 | objfunc_time: 5.143720 | solver_time: 4.184989 | construction_time: 0.397829 | energy: node=5712J gpu=3931J cpu=827J (1110W)
+rank 11 | iter 7 | objfunc_time: 4.907744 | solver_time: 3.561472 | construction_time: 0.266539 | energy: node=9257J gpu=6410J cpu=1587J (1880W)
+rank 33 | iter 7 | objfunc_time: 4.903000 | solver_time: 3.494918 | construction_time: 0.266055 | energy: node=5146J gpu=3590J cpu=940J (1045W)
+rank 58 | iter 7 | objfunc_time: 4.907502 | solver_time: 4.192433 | construction_time: 0.375112 | energy: node=5225J gpu=3627J cpu=861J (1061W)
+rank 35 | iter 7 | objfunc_time: 4.907106 | solver_time: 3.489721 | construction_time: 0.255641 | energy: node=5132J gpu=3559J cpu=886J (1042W)
+rank 36 | iter 7 | objfunc_time: 4.907256 | solver_time: 4.187888 | construction_time: 0.372350 | energy: node=5045J gpu=3545J cpu=837J (1025W)
+rank 57 | iter 7 | objfunc_time: 4.895845 | solver_time: 3.539100 | construction_time: 0.277708 | energy: node=4888J gpu=3549J cpu=840J (993W)
+rank 38 | iter 7 | objfunc_time: 4.773590 | solver_time: 4.171709 | construction_time: 0.378361 | energy: node=5167J gpu=3424J cpu=775J (1049W)
+rank 37 | iter 7 | objfunc_time: 4.610842 | solver_time: 3.526633 | construction_time: 0.268484 | energy: node=4588J gpu=3211J cpu=810J (932W)
+rank 31 | iter 7 | objfunc_time: 4.898888 | solver_time: 3.518871 | construction_time: 0.273133 | energy: node=5021J gpu=3646J cpu=801J (1020W)
+rank 14 | iter 7 | objfunc_time: 4.897117 | solver_time: 4.161951 | construction_time: 0.371299 | energy: node=5179J gpu=3460J cpu=958J (1052W)
+rank 61 | iter 7 | objfunc_time: 4.897158 | solver_time: 3.512523 | construction_time: 0.268278 | energy: node=3265J gpu=2218J cpu=512J (663W)
+rank 43 | iter 7 | objfunc_time: 4.896892 | solver_time: 3.493921 | construction_time: 0.265120 | energy: node=5071J gpu=3395J cpu=862J (1030W)
+rank 18 | iter 7 | objfunc_time: 4.755998 | solver_time: 4.197629 | construction_time: 0.368955 | energy: node=5213J gpu=3453J cpu=685J (1059W)
+rank 8 | iter 7 | objfunc_time: 4.923452 | solver_time: 4.178316 | construction_time: 0.394114 | energy: node=226J gpu=126J cpu=43J (46W)
+rank 23 | iter 7 | objfunc_time: 4.896832 | solver_time: 3.523053 | construction_time: 0.258915 | energy: node=2156J gpu=1332J cpu=411J (438W)
+rank 6 | iter 7 | objfunc_time: 4.896825 | solver_time: 4.180831 | construction_time: 0.373713 | energy: node=5182J gpu=3520J cpu=1064J (1052W)
+rank 40 | iter 7 | objfunc_time: 4.896509 | solver_time: 4.175018 | construction_time: 0.374598 | energy: node=5643J gpu=3545J cpu=874J (1146W)
+rank 49 | iter 7 | objfunc_time: 4.896780 | solver_time: 3.517801 | construction_time: 0.260843 | energy: node=5856J gpu=4855J cpu=1092J (1189W)
+rank 10 | iter 7 | objfunc_time: 4.896745 | solver_time: 4.194603 | construction_time: 0.373220 | energy: node=5222J gpu=3535J cpu=872J (1061W)
+rank 25 | iter 7 | objfunc_time: 4.896504 | solver_time: 3.478467 | construction_time: 0.257889 | energy: node=4907J gpu=3479J cpu=638J (997W)
+rank 41 | iter 7 | objfunc_time: 4.753370 | solver_time: 3.522795 | construction_time: 0.259314 | energy: node=4931J gpu=3519J cpu=823J (1001W)
+rank 19 | iter 7 | objfunc_time: 4.339363 | solver_time: 3.531143 | construction_time: 0.265180 | energy: node=4763J gpu=3340J cpu=677J (967W)
+rank 13 | iter 7 | objfunc_time: 4.896052 | solver_time: 3.502042 | construction_time: 0.257509 | energy: node=5029J gpu=3538J cpu=827J (1021W)
+rank 50 | iter 7 | objfunc_time: 4.907378 | solver_time: 4.185904 | construction_time: 0.375459 | energy: node=5202J gpu=3539J cpu=741J (1057W)
+rank 21 | iter 7 | objfunc_time: 4.896201 | solver_time: 3.484538 | construction_time: 0.258415 | energy: node=4936J gpu=3363J cpu=835J (1003W)
+rank 12 | iter 7 | objfunc_time: 4.896218 | solver_time: 4.190583 | construction_time: 0.390161 | energy: node=5233J gpu=3579J cpu=795J (1063W)
+rank 56 | iter 7 | objfunc_time: 4.896298 | solver_time: 4.145899 | construction_time: 0.391609 | energy: node=4974J gpu=3492J cpu=892J (1010W)
+rank 29 | iter 7 | objfunc_time: 4.896354 | solver_time: 3.510854 | construction_time: 0.256505 | energy: node=4841J gpu=3492J cpu=780J (983W)
+rank 60 | iter 7 | objfunc_time: 4.895855 | solver_time: 4.149234 | construction_time: 0.367933 | energy: node=5284J gpu=3659J cpu=983J (1073W)
+rank 26 | iter 7 | objfunc_time: 4.907425 | solver_time: 4.185528 | construction_time: 0.373722 | energy: node=5117J gpu=3513J cpu=958J (1039W)
+rank 27 | iter 7 | objfunc_time: 4.895947 | solver_time: 3.567248 | construction_time: 0.261136 | energy: node=5022J gpu=3506J cpu=772J (1020W)
+rank 9 | iter 7 | objfunc_time: 4.895359 | solver_time: 3.512037 | construction_time: 0.257741 | energy: node=5153J gpu=3545J cpu=756J (1047W)
+rank 42 | iter 7 | objfunc_time: 4.897123 | solver_time: 4.192994 | construction_time: 0.377638 | energy: node=8905J gpu=6064J cpu=1374J (1809W)
+rank 3 | iter 7 | objfunc_time: 4.894741 | solver_time: 3.559943 | construction_time: 0.264602 | energy: node=5125J gpu=3406J cpu=869J (1041W)
+rank 48 | iter 7 | objfunc_time: 4.894646 | solver_time: 4.194324 | construction_time: 0.370944 | energy: node=5416J gpu=3733J cpu=908J (1100W)
+rank 30 | iter 7 | objfunc_time: 4.894894 | solver_time: 4.181503 | construction_time: 0.370900 | energy: node=5328J gpu=3441J cpu=770J (1082W)
+rank 51 | iter 7 | objfunc_time: 4.895292 | solver_time: 3.519194 | construction_time: 0.257911 | energy: node=4979J gpu=3399J cpu=813J (1011W)
+rank 28 | iter 7 | objfunc_time: 4.895009 | solver_time: 4.191826 | construction_time: 0.368113 | energy: node=5501J gpu=3619J cpu=940J (1117W)
+rank 4 | iter 7 | objfunc_time: 4.894815 | solver_time: 4.135171 | construction_time: 0.371339 | energy: node=5263J gpu=3576J cpu=883J (1069W)
+rank 22 | iter 7 | objfunc_time: 4.894367 | solver_time: 4.142723 | construction_time: 0.383738 | energy: node=5459J gpu=3590J cpu=811J (1109W)
+rank 24 | iter 7 | objfunc_time: 4.894506 | solver_time: 4.189759 | construction_time: 0.368241 | energy: node=5118J gpu=3627J cpu=733J (1039W)
+rank 59 | iter 7 | objfunc_time: 4.894759 | solver_time: 3.533546 | construction_time: 0.259712 | energy: node=5084J gpu=3464J cpu=925J (1033W)
+rank 54 | iter 7 | objfunc_time: 4.894126 | solver_time: 4.146279 | construction_time: 0.370489 | energy: node=0J gpu=3508J cpu=873J (0W)
+rank 46 | iter 7 | objfunc_time: 4.894488 | solver_time: 4.149138 | construction_time: 0.368472 | energy: node=5134J gpu=3683J cpu=954J (1043W)
+rank 52 | iter 7 | objfunc_time: 4.893646 | solver_time: 4.183502 | construction_time: 0.377944 | energy: node=5103J gpu=3443J cpu=703J (1036W)
+rank 5 | iter 7 | objfunc_time: 4.894118 | solver_time: 3.510096 | construction_time: 0.264644 | energy: node=4907J gpu=3455J cpu=864J (997W)
+rank 34 | iter 7 | objfunc_time: 4.615385 | solver_time: 4.180130 | construction_time: 0.373881 | energy: node=4970J gpu=3469J cpu=800J (1009W)
+rank 1 | iter 7 | objfunc_time: 4.894388 | solver_time: 3.505745 | construction_time: 0.272141 | energy: node=4959J gpu=3466J cpu=846J (1007W)
+rank 15 | iter 7 | objfunc_time: 4.753021 | solver_time: 3.504339 | construction_time: 0.262976 | energy: node=4838J gpu=3325J cpu=634J (983W)
+rank 16 | iter 7 | objfunc_time: 4.894091 | solver_time: 4.179708 | construction_time: 0.369416 | energy: node=5087J gpu=3570J cpu=697J (1033W)
+rank 7 | iter 7 | objfunc_time: 4.894378 | solver_time: 3.515476 | construction_time: 0.258460 | energy: node=4994J gpu=3611J cpu=756J (1014W)
+rank 0 | iter 7 | objfunc_time: 4.894154 | solver_time: 4.185857 | construction_time: 0.380562 | energy: node=5158J gpu=3565J cpu=875J (1048W)
+rank 47 | iter 7 | objfunc_time: 4.894064 | solver_time: 3.536900 | construction_time: 0.262612 | energy: node=5169J gpu=3448J cpu=951J (1050W)
+rank 45 | iter 7 | objfunc_time: 4.894747 | solver_time: 3.490787 | construction_time: 0.274095 | energy: node=4994J gpu=3491J cpu=719J (1014W)
+rank 2 | iter 7 | objfunc_time: 4.894974 | solver_time: 4.186517 | construction_time: 0.390405 | energy: node=5434J gpu=3719J cpu=812J (1104W)
+rank 53 | iter 7 | objfunc_time: 4.897608 | solver_time: 3.520827 | construction_time: 0.285267 | energy: node=5228J gpu=3606J cpu=918J (1062W)
+rank 17 | iter 7 | objfunc_time: 4.895321 | solver_time: 3.489435 | construction_time: 0.259099 | energy: node=0J gpu=3562J cpu=820J (0W)
+rank 55 | iter 7 | objfunc_time: 4.748740 | solver_time: 3.531495 | construction_time: 0.259785 | energy: node=5254J gpu=3542J cpu=613J (1067W)
+rank 39 | iter 7 | objfunc_time: 4.896084 | solver_time: 3.490749 | construction_time: 0.265040 | energy: node=4873J gpu=3519J cpu=812J (990W)
+rank 32 | iter 7 | objfunc_time: 4.893785 | solver_time: 4.171659 | construction_time: 0.369328 | energy: node=5304J gpu=3778J cpu=865J (1077W)
+rank 44 | iter 7 | objfunc_time: 4.894368 | solver_time: 4.160571 | construction_time: 0.389531 | energy: node=5367J gpu=3662J cpu=704J (1090W)
+rank 20 | iter 7 | objfunc_time: 4.896926 | solver_time: 4.129703 | construction_time: 0.374434 | energy: node=5781J gpu=3787J cpu=857J (1174W)
+rank 11 | iter 8 | objfunc_time: 4.916386 | solver_time: 3.561527 | construction_time: 0.265613 | energy: node=5285J gpu=3542J cpu=881J (1072W)
+rank 33 | iter 8 | objfunc_time: 4.915966 | solver_time: 3.493327 | construction_time: 0.266021 | energy: node=3514J gpu=2353J cpu=604J (712W)
+rank 35 | iter 8 | objfunc_time: 4.915860 | solver_time: 3.494192 | construction_time: 0.254925 | energy: node=5080J gpu=3528J cpu=871J (1030W)
+rank 58 | iter 8 | objfunc_time: 4.781229 | solver_time: 4.188778 | construction_time: 0.374075 | energy: node=4969J gpu=3410J cpu=798J (1007W)
+rank 36 | iter 8 | objfunc_time: 4.915726 | solver_time: 4.173143 | construction_time: 0.374278 | energy: node=5138J gpu=3671J cpu=850J (1042W)
+rank 57 | iter 8 | objfunc_time: 4.915485 | solver_time: 3.538495 | construction_time: 0.265889 | energy: node=4878J gpu=3553J cpu=832J (989W)
+rank 38 | iter 8 | objfunc_time: 4.914914 | solver_time: 4.174689 | construction_time: 0.377099 | energy: node=5262J gpu=3573J cpu=802J (1067W)
+rank 42 | iter 8 | objfunc_time: 4.908769 | solver_time: 4.175754 | construction_time: 0.412255 | energy: node=4896J gpu=3637J cpu=733J (993W)
+rank 53 | iter 8 | objfunc_time: 4.903788 | solver_time: 3.521465 | construction_time: 0.284909 | energy: node=5030J gpu=3494J cpu=873J (1020W)
+rank 37 | iter 8 | objfunc_time: 4.906199 | solver_time: 3.527992 | construction_time: 0.267255 | energy: node=4848J gpu=3412J cpu=879J (983W)
+rank 46 | iter 8 | objfunc_time: 4.902388 | solver_time: 4.145703 | construction_time: 0.370543 | energy: node=5015J gpu=3604J cpu=923J (1017W)
+rank 8 | iter 8 | objfunc_time: 4.906078 | solver_time: 4.180711 | construction_time: 0.393472 | energy: node=5230J gpu=3595J cpu=730J (1060W)
+rank 43 | iter 8 | objfunc_time: 4.768507 | solver_time: 3.493899 | construction_time: 0.265701 | energy: node=4911J gpu=3281J cpu=814J (996W)
+rank 18 | iter 8 | objfunc_time: 4.624406 | solver_time: 4.194610 | construction_time: 0.371368 | energy: node=4912J gpu=3207J cpu=641J (996W)
+rank 61 | iter 8 | objfunc_time: 4.905977 | solver_time: 3.512840 | construction_time: 0.269786 | energy: node=6905J gpu=5637J cpu=1212J (1400W)
+rank 6 | iter 8 | objfunc_time: 4.905296 | solver_time: 4.189593 | construction_time: 0.377210 | energy: node=5165J gpu=3532J cpu=1061J (1047W)
+rank 23 | iter 8 | objfunc_time: 4.905187 | solver_time: 3.520858 | construction_time: 0.258700 | energy: node=8445J gpu=6533J cpu=1711J (1712W)
+rank 49 | iter 8 | objfunc_time: 4.905249 | solver_time: 3.520003 | construction_time: 0.260733 | energy: node=4926J gpu=3484J cpu=854J (999W)
+rank 40 | iter 8 | objfunc_time: 4.905134 | solver_time: 4.185355 | construction_time: 0.375883 | energy: node=5719J gpu=3646J cpu=885J (1160W)
+rank 19 | iter 8 | objfunc_time: 4.905215 | solver_time: 3.533257 | construction_time: 0.268131 | energy: node=5089J gpu=3635J cpu=744J (1032W)
+rank 10 | iter 8 | objfunc_time: 4.905248 | solver_time: 4.185400 | construction_time: 0.373432 | energy: node=5220J gpu=3717J cpu=879J (1058W)
+rank 20 | iter 8 | objfunc_time: 4.932122 | solver_time: 4.131812 | construction_time: 0.375163 | energy: node=5553J gpu=3649J cpu=793J (1126W)
+rank 12 | iter 8 | objfunc_time: 4.904761 | solver_time: 4.193224 | construction_time: 0.386599 | energy: node=5238J gpu=3583J cpu=794J (1062W)
+rank 50 | iter 8 | objfunc_time: 4.905183 | solver_time: 4.187215 | construction_time: 0.391070 | energy: node=5136J gpu=3504J cpu=722J (1041W)
+rank 21 | iter 8 | objfunc_time: 4.905029 | solver_time: 3.486535 | construction_time: 0.258656 | energy: node=4970J gpu=3381J cpu=846J (1008W)
+rank 25 | iter 8 | objfunc_time: 4.767389 | solver_time: 3.474464 | construction_time: 0.258046 | energy: node=4763J gpu=3396J cpu=609J (966W)
+rank 56 | iter 8 | objfunc_time: 4.759428 | solver_time: 4.152244 | construction_time: 0.387743 | energy: node=4960J gpu=3498J cpu=895J (1006W)
+rank 29 | iter 8 | objfunc_time: 4.905130 | solver_time: 3.512015 | construction_time: 0.257091 | energy: node=4939J gpu=3544J cpu=800J (1001W)
+rank 26 | iter 8 | objfunc_time: 4.763394 | solver_time: 4.194038 | construction_time: 0.384443 | energy: node=5030J gpu=3465J cpu=923J (1020W)
+rank 60 | iter 8 | objfunc_time: 4.904478 | solver_time: 4.166707 | construction_time: 0.370060 | energy: node=5360J gpu=3745J cpu=1007J (1087W)
+rank 39 | iter 8 | objfunc_time: 4.905238 | solver_time: 3.486457 | construction_time: 0.265163 | energy: node=4885J gpu=3502J cpu=813J (990W)
+rank 22 | iter 8 | objfunc_time: 4.903369 | solver_time: 4.159495 | construction_time: 0.385756 | energy: node=5467J gpu=3616J cpu=809J (1108W)
+rank 9 | iter 8 | objfunc_time: 4.903852 | solver_time: 3.513138 | construction_time: 0.257360 | energy: node=1390J gpu=780J cpu=203J (282W)
+rank 45 | iter 8 | objfunc_time: 4.904150 | solver_time: 3.491852 | construction_time: 0.276417 | energy: node=5073J gpu=3529J cpu=742J (1029W)
+rank 3 | iter 8 | objfunc_time: 4.755858 | solver_time: 3.560904 | construction_time: 0.263868 | energy: node=4935J gpu=3286J cpu=824J (1001W)
+rank 2 | iter 8 | objfunc_time: 4.903766 | solver_time: 4.185958 | construction_time: 0.394171 | energy: node=5268J gpu=3647J cpu=771J (1068W)
+rank 17 | iter 8 | objfunc_time: 4.904189 | solver_time: 3.490163 | construction_time: 0.259042 | energy: node=0J gpu=3452J cpu=776J (0W)
+rank 30 | iter 8 | objfunc_time: 4.755520 | solver_time: 4.183513 | construction_time: 0.370859 | energy: node=5330J gpu=3454J cpu=775J (1081W)
+rank 4 | iter 8 | objfunc_time: 4.903308 | solver_time: 4.133658 | construction_time: 0.372164 | energy: node=5262J gpu=3597J cpu=878J (1067W)
+rank 48 | iter 8 | objfunc_time: 4.903528 | solver_time: 4.185956 | construction_time: 0.370003 | energy: node=5292J gpu=3679J cpu=871J (1073W)
+rank 24 | iter 8 | objfunc_time: 4.758252 | solver_time: 4.189624 | construction_time: 0.365489 | energy: node=4911J gpu=3463J cpu=692J (996W)
+rank 28 | iter 8 | objfunc_time: 4.761573 | solver_time: 4.195649 | construction_time: 0.369585 | energy: node=5428J gpu=3559J cpu=926J (1101W)
+rank 59 | iter 8 | objfunc_time: 4.902939 | solver_time: 3.534916 | construction_time: 0.259753 | energy: node=5130J gpu=3486J cpu=941J (1040W)
+rank 54 | iter 8 | objfunc_time: 4.902761 | solver_time: 4.150138 | construction_time: 0.370584 | energy: node=0J gpu=3546J cpu=865J (0W)
+rank 1 | iter 8 | objfunc_time: 4.903108 | solver_time: 3.507801 | construction_time: 0.273073 | energy: node=4998J gpu=3486J cpu=850J (1013W)
+rank 44 | iter 8 | objfunc_time: 4.902729 | solver_time: 4.198846 | construction_time: 0.389242 | energy: node=1879J gpu=1142J cpu=250J (381W)
+rank 52 | iter 8 | objfunc_time: 4.762357 | solver_time: 4.190960 | construction_time: 0.381089 | energy: node=4952J gpu=3313J cpu=681J (1004W)
+rank 0 | iter 8 | objfunc_time: 4.902642 | solver_time: 4.171113 | construction_time: 0.384241 | energy: node=5250J gpu=3679J cpu=883J (1064W)
+rank 16 | iter 8 | objfunc_time: 4.902923 | solver_time: 4.189323 | construction_time: 0.369447 | energy: node=5043J gpu=3555J cpu=691J (1022W)
+rank 47 | iter 8 | objfunc_time: 4.753480 | solver_time: 3.543815 | construction_time: 0.262469 | energy: node=5099J gpu=3393J cpu=940J (1034W)
+rank 13 | iter 8 | objfunc_time: 4.904929 | solver_time: 3.504546 | construction_time: 0.257458 | energy: node=5134J gpu=3589J cpu=852J (1041W)
+rank 31 | iter 8 | objfunc_time: 4.906303 | solver_time: 3.519309 | construction_time: 0.272846 | energy: node=5135J gpu=3687J cpu=827J (1041W)
+rank 14 | iter 8 | objfunc_time: 4.906346 | solver_time: 4.172855 | construction_time: 0.370811 | energy: node=5097J gpu=3387J cpu=944J (1033W)
+rank 27 | iter 8 | objfunc_time: 4.904445 | solver_time: 3.566772 | construction_time: 0.260824 | energy: node=5112J gpu=3588J cpu=793J (1036W)
+rank 55 | iter 8 | objfunc_time: 4.903268 | solver_time: 3.532273 | construction_time: 0.259814 | energy: node=5328J gpu=3566J cpu=638J (1080W)
+rank 5 | iter 8 | objfunc_time: 4.902694 | solver_time: 3.511012 | construction_time: 0.263998 | energy: node=5029J gpu=3522J cpu=896J (1020W)
+rank 32 | iter 8 | objfunc_time: 4.901862 | solver_time: 4.199063 | construction_time: 0.371683 | energy: node=5119J gpu=3566J cpu=833J (1038W)
+rank 34 | iter 8 | objfunc_time: 4.902963 | solver_time: 4.189483 | construction_time: 0.375258 | energy: node=5307J gpu=3885J cpu=872J (1076W)
+rank 51 | iter 8 | objfunc_time: 4.903492 | solver_time: 3.515131 | construction_time: 0.258437 | energy: node=5076J gpu=3441J cpu=834J (1029W)
+rank 15 | iter 8 | objfunc_time: 4.761762 | solver_time: 3.503308 | construction_time: 0.263068 | energy: node=5053J gpu=3457J cpu=679J (1024W)
+rank 7 | iter 8 | objfunc_time: 4.902672 | solver_time: 3.519476 | construction_time: 0.258912 | energy: node=5178J gpu=3747J cpu=799J (1050W)
+rank 41 | iter 8 | objfunc_time: 4.761623 | solver_time: 3.524654 | construction_time: 0.259255 | energy: node=5095J gpu=3620J cpu=846J (1033W)
+rank 33 | iter 9 | objfunc_time: 5.056681 | solver_time: 3.495170 | construction_time: 0.266055 | energy: node=6258J gpu=5034J cpu=1160J (1234W)
+rank 58 | iter 9 | objfunc_time: 5.056838 | solver_time: 4.182029 | construction_time: 0.374437 | energy: node=5200J gpu=3630J cpu=851J (1025W)
+rank 35 | iter 9 | objfunc_time: 5.056394 | solver_time: 3.492335 | construction_time: 0.255139 | energy: node=5108J gpu=3551J cpu=880J (1007W)
+rank 36 | iter 9 | objfunc_time: 4.928941 | solver_time: 4.193029 | construction_time: 0.372404 | energy: node=5040J gpu=3542J cpu=832J (994W)
+rank 57 | iter 9 | objfunc_time: 5.056152 | solver_time: 3.538131 | construction_time: 0.264712 | energy: node=4895J gpu=3555J cpu=838J (965W)
+rank 37 | iter 9 | objfunc_time: 4.903791 | solver_time: 3.526928 | construction_time: 0.265837 | energy: node=4865J gpu=3443J cpu=879J (959W)
+rank 53 | iter 9 | objfunc_time: 5.047929 | solver_time: 3.525545 | construction_time: 0.284803 | energy: node=5188J gpu=3584J cpu=916J (1023W)
+rank 18 | iter 9 | objfunc_time: 4.905818 | solver_time: 4.202093 | construction_time: 0.369064 | energy: node=5267J gpu=3539J cpu=697J (1038W)
+rank 14 | iter 9 | objfunc_time: 5.047080 | solver_time: 4.169527 | construction_time: 0.371369 | energy: node=5239J gpu=3495J cpu=974J (1033W)
+rank 61 | iter 9 | objfunc_time: 5.046798 | solver_time: 3.514696 | construction_time: 0.266678 | energy: node=5074J gpu=3611J cpu=860J (1000W)
+rank 43 | iter 9 | objfunc_time: 5.046759 | solver_time: 3.496674 | construction_time: 0.265305 | energy: node=5389J gpu=3558J cpu=938J (1062W)
+rank 8 | iter 9 | objfunc_time: 4.903838 | solver_time: 4.196028 | construction_time: 0.394687 | energy: node=4987J gpu=3411J cpu=683J (983W)
+rank 23 | iter 9 | objfunc_time: 5.045891 | solver_time: 3.523962 | construction_time: 0.259917 | energy: node=5268J gpu=3614J cpu=1055J (1038W)
+rank 19 | iter 9 | objfunc_time: 5.045937 | solver_time: 3.534905 | construction_time: 0.269137 | energy: node=5526J gpu=3449J cpu=837J (1089W)
+rank 49 | iter 9 | objfunc_time: 5.045976 | solver_time: 3.517203 | construction_time: 0.261115 | energy: node=5083J gpu=3583J cpu=891J (1002W)
+rank 13 | iter 9 | objfunc_time: 5.045754 | solver_time: 3.505917 | construction_time: 0.257557 | energy: node=5239J gpu=3664J cpu=882J (1033W)
+rank 6 | iter 9 | objfunc_time: 4.901444 | solver_time: 4.183117 | construction_time: 0.375619 | energy: node=5120J gpu=3464J cpu=1042J (1009W)
+rank 21 | iter 9 | objfunc_time: 5.045611 | solver_time: 3.484857 | construction_time: 0.258573 | energy: node=5257J gpu=3547J cpu=909J (1036W)
+rank 12 | iter 9 | objfunc_time: 4.904100 | solver_time: 4.177192 | construction_time: 0.387727 | energy: node=5252J gpu=3584J cpu=799J (1035W)
+rank 25 | iter 9 | objfunc_time: 5.045631 | solver_time: 3.475448 | construction_time: 0.257777 | energy: node=5139J gpu=3620J cpu=687J (1013W)
+rank 11 | iter 9 | objfunc_time: 5.057062 | solver_time: 3.560217 | construction_time: 0.264070 | energy: node=5279J gpu=3548J cpu=881J (1041W)
+rank 39 | iter 9 | objfunc_time: 5.045401 | solver_time: 3.488386 | construction_time: 0.264333 | energy: node=5137J gpu=3655J cpu=865J (1013W)
+rank 29 | iter 9 | objfunc_time: 5.045696 | solver_time: 3.511167 | construction_time: 0.256973 | energy: node=5018J gpu=3592J cpu=814J (989W)
+rank 26 | iter 9 | objfunc_time: 5.045690 | solver_time: 4.190079 | construction_time: 0.383483 | energy: node=5157J gpu=3591J cpu=960J (1017W)
+rank 50 | iter 9 | objfunc_time: 5.045561 | solver_time: 4.191053 | construction_time: 0.385885 | energy: node=5345J gpu=3602J cpu=770J (1054W)
+rank 42 | iter 9 | objfunc_time: 5.049515 | solver_time: 4.191177 | construction_time: 0.402511 | energy: node=5060J gpu=3760J cpu=783J (997W)
+rank 27 | iter 9 | objfunc_time: 4.898742 | solver_time: 3.563991 | construction_time: 0.260494 | energy: node=4998J gpu=3516J cpu=756J (985W)
+rank 60 | iter 9 | objfunc_time: 5.045312 | solver_time: 4.153766 | construction_time: 0.367764 | energy: node=5163J gpu=3602J cpu=948J (1018W)
+rank 17 | iter 9 | objfunc_time: 5.044533 | solver_time: 3.490532 | construction_time: 0.258477 | energy: node=0J gpu=3562J cpu=822J (0W)
+rank 9 | iter 9 | objfunc_time: 5.044524 | solver_time: 3.511336 | construction_time: 0.257422 | energy: node=9269J gpu=6335J cpu=1365J (1827W)
+rank 2 | iter 9 | objfunc_time: 5.044336 | solver_time: 4.189374 | construction_time: 0.392591 | energy: node=5347J gpu=3666J cpu=799J (1054W)
+rank 51 | iter 9 | objfunc_time: 5.044164 | solver_time: 3.519573 | construction_time: 0.258747 | energy: node=5069J gpu=3441J cpu=837J (999W)
+rank 22 | iter 9 | objfunc_time: 5.044881 | solver_time: 4.140522 | construction_time: 0.390077 | energy: node=5642J gpu=3762J cpu=848J (1112W)
+rank 3 | iter 9 | objfunc_time: 5.044941 | solver_time: 3.564656 | construction_time: 0.263616 | energy: node=5169J gpu=3428J cpu=884J (1019W)
+rank 30 | iter 9 | objfunc_time: 5.044643 | solver_time: 4.191608 | construction_time: 0.370395 | energy: node=5493J gpu=3591J cpu=820J (1083W)
+rank 55 | iter 9 | objfunc_time: 4.898930 | solver_time: 3.534594 | construction_time: 0.259549 | energy: node=5233J gpu=3529J cpu=613J (1032W)
+rank 59 | iter 9 | objfunc_time: 5.043615 | solver_time: 3.533151 | construction_time: 0.259399 | energy: node=5114J gpu=3488J cpu=936J (1008W)
+rank 24 | iter 9 | objfunc_time: 4.900133 | solver_time: 4.196710 | construction_time: 0.368201 | energy: node=5090J gpu=3623J cpu=728J (1003W)
+rank 54 | iter 9 | objfunc_time: 5.043441 | solver_time: 4.149440 | construction_time: 0.369759 | energy: node=0J gpu=3527J cpu=870J (0W)
+rank 28 | iter 9 | objfunc_time: 4.623054 | solver_time: 4.195205 | construction_time: 0.368190 | energy: node=5279J gpu=3428J cpu=900J (1041W)
+rank 0 | iter 9 | objfunc_time: 5.043438 | solver_time: 4.196897 | construction_time: 0.382890 | energy: node=5212J gpu=3650J cpu=890J (1027W)
+rank 5 | iter 9 | objfunc_time: 5.043546 | solver_time: 3.507389 | construction_time: 0.264090 | energy: node=5121J gpu=3572J cpu=922J (1009W)
+rank 15 | iter 9 | objfunc_time: 5.043901 | solver_time: 3.503188 | construction_time: 0.261839 | energy: node=5212J gpu=3533J cpu=708J (1027W)
+rank 46 | iter 9 | objfunc_time: 4.906572 | solver_time: 4.166410 | construction_time: 0.368184 | energy: node=5134J gpu=3673J cpu=960J (1012W)
+rank 52 | iter 9 | objfunc_time: 4.904088 | solver_time: 4.190884 | construction_time: 0.380848 | energy: node=5224J gpu=3536J cpu=736J (1030W)
+rank 47 | iter 9 | objfunc_time: 5.043377 | solver_time: 3.539080 | construction_time: 0.262386 | energy: node=5207J gpu=3460J cpu=960J (1026W)
+rank 44 | iter 9 | objfunc_time: 5.043293 | solver_time: 4.195934 | construction_time: 0.388174 | energy: node=8903J gpu=6588J cpu=1182J (1755W)
+rank 7 | iter 9 | objfunc_time: 5.043308 | solver_time: 3.516098 | construction_time: 0.258925 | energy: node=4967J gpu=3599J cpu=749J (979W)
+rank 16 | iter 9 | objfunc_time: 5.043216 | solver_time: 4.186752 | construction_time: 0.370529 | energy: node=5196J gpu=3668J cpu=723J (1024W)
+rank 32 | iter 9 | objfunc_time: 5.042605 | solver_time: 4.190851 | construction_time: 0.369158 | energy: node=5112J gpu=3568J cpu=825J (1008W)
+rank 38 | iter 9 | objfunc_time: 5.056014 | solver_time: 4.174444 | construction_time: 0.376705 | energy: node=5320J gpu=3575J cpu=804J (1049W)
+rank 40 | iter 9 | objfunc_time: 5.046045 | solver_time: 4.194072 | construction_time: 0.373968 | energy: node=5880J gpu=3780J cpu=930J (1159W)
+rank 20 | iter 9 | objfunc_time: 5.046140 | solver_time: 4.129618 | construction_time: 0.374548 | energy: node=5788J gpu=3810J cpu=847J (1141W)
+rank 34 | iter 9 | objfunc_time: 5.043891 | solver_time: 4.188966 | construction_time: 0.373962 | energy: node=5347J gpu=3844J cpu=880J (1054W)
+rank 48 | iter 9 | objfunc_time: 5.044291 | solver_time: 4.185212 | construction_time: 0.369660 | energy: node=5437J gpu=3774J cpu=911J (1072W)
+rank 45 | iter 9 | objfunc_time: 4.623650 | solver_time: 3.492041 | construction_time: 0.276687 | energy: node=4852J gpu=3390J cpu=696J (956W)
+rank 56 | iter 9 | objfunc_time: 5.046175 | solver_time: 4.156708 | construction_time: 0.392027 | energy: node=5372J gpu=3836J cpu=997J (1059W)
+rank 1 | iter 9 | objfunc_time: 5.043692 | solver_time: 3.506268 | construction_time: 0.271936 | energy: node=5349J gpu=3687J cpu=946J (1054W)
+rank 31 | iter 9 | objfunc_time: 5.047072 | solver_time: 3.519530 | construction_time: 0.272268 | energy: node=5349J gpu=2497J cpu=867J (1054W)
+rank 4 | iter 9 | objfunc_time: 5.043854 | solver_time: 4.132610 | construction_time: 0.371492 | energy: node=5617J gpu=3859J cpu=969J (1107W)
+rank 41 | iter 9 | objfunc_time: 5.072827 | solver_time: 3.527463 | construction_time: 0.259359 | energy: node=5383J gpu=3783J cpu=923J (1061W)
+rank 10 | iter 9 | objfunc_time: 4.907418 | solver_time: 4.201396 | construction_time: 0.371741 | energy: node=5470J gpu=3900J cpu=944J (1078W)
+rank 58 | iter 10 | objfunc_time: 4.762634 | solver_time: 4.196880 | construction_time: 0.373959 | energy: node=5010J gpu=3469J cpu=820J (1048W)
+rank 57 | iter 10 | objfunc_time: 4.762070 | solver_time: 3.538930 | construction_time: 0.265085 | energy: node=4704J gpu=3437J cpu=792J (984W)
+rank 42 | iter 10 | objfunc_time: 4.755353 | solver_time: 4.177743 | construction_time: 0.404667 | energy: node=4871J gpu=3549J cpu=738J (1019W)
+rank 35 | iter 10 | objfunc_time: 4.762163 | solver_time: 3.494750 | construction_time: 0.255161 | energy: node=5016J gpu=3488J cpu=856J (1050W)
+rank 18 | iter 10 | objfunc_time: 4.752736 | solver_time: 4.189830 | construction_time: 0.371063 | energy: node=5051J gpu=3340J cpu=666J (1057W)
+rank 46 | iter 10 | objfunc_time: 4.749520 | solver_time: 4.138512 | construction_time: 0.369517 | energy: node=4972J gpu=3521J cpu=906J (1040W)
+rank 43 | iter 10 | objfunc_time: 4.752122 | solver_time: 3.497543 | construction_time: 0.265069 | energy: node=5228J gpu=3452J cpu=892J (1094W)
+rank 23 | iter 10 | objfunc_time: 4.751702 | solver_time: 3.521824 | construction_time: 0.259109 | energy: node=5046J gpu=3490J cpu=983J (1056W)
+rank 14 | iter 10 | objfunc_time: 4.752371 | solver_time: 4.165884 | construction_time: 0.370447 | energy: node=4935J gpu=3259J cpu=899J (1033W)
+rank 25 | iter 10 | objfunc_time: 4.751482 | solver_time: 3.476650 | construction_time: 0.257549 | energy: node=4855J gpu=3436J cpu=630J (1016W)
+rank 8 | iter 10 | objfunc_time: 4.751988 | solver_time: 4.194986 | construction_time: 0.391737 | energy: node=4900J gpu=3353J cpu=674J (1025W)
+rank 40 | iter 10 | objfunc_time: 4.752144 | solver_time: 4.174455 | construction_time: 0.375151 | energy: node=5429J gpu=3385J cpu=824J (1136W)
+rank 29 | iter 10 | objfunc_time: 4.751424 | solver_time: 3.514605 | construction_time: 0.257136 | energy: node=4821J gpu=3466J cpu=775J (1009W)
+rank 19 | iter 10 | objfunc_time: 4.751710 | solver_time: 3.533889 | construction_time: 0.269774 | energy: node=5008J gpu=3543J cpu=726J (1048W)
+rank 50 | iter 10 | objfunc_time: 4.751397 | solver_time: 4.183389 | construction_time: 0.387645 | energy: node=5085J gpu=3439J cpu=709J (1064W)
+rank 20 | iter 10 | objfunc_time: 4.752356 | solver_time: 4.128945 | construction_time: 0.374340 | energy: node=5496J gpu=3545J cpu=781J (1150W)
+rank 41 | iter 10 | objfunc_time: 4.778632 | solver_time: 3.525337 | construction_time: 0.259073 | energy: node=4978J gpu=3525J cpu=830J (1042W)
+rank 11 | iter 10 | objfunc_time: 4.752084 | solver_time: 3.557512 | construction_time: 0.274121 | energy: node=5189J gpu=3482J cpu=857J (1086W)
+rank 13 | iter 10 | objfunc_time: 4.751567 | solver_time: 3.506263 | construction_time: 0.256990 | energy: node=4811J gpu=3395J cpu=775J (1007W)
+rank 56 | iter 10 | objfunc_time: 4.751598 | solver_time: 4.168909 | construction_time: 0.378648 | energy: node=5071J gpu=3566J cpu=930J (1061W)
+rank 49 | iter 10 | objfunc_time: 4.751793 | solver_time: 3.518522 | construction_time: 0.261016 | energy: node=4913J gpu=3477J cpu=853J (1028W)
+rank 12 | iter 10 | objfunc_time: 4.751364 | solver_time: 4.190850 | construction_time: 0.386158 | energy: node=5232J gpu=3565J cpu=790J (1095W)
+rank 60 | iter 10 | objfunc_time: 4.751037 | solver_time: 4.159788 | construction_time: 0.370391 | energy: node=5009J gpu=3437J cpu=911J (1048W)
+rank 6 | iter 10 | objfunc_time: 4.751554 | solver_time: 4.180087 | construction_time: 0.376430 | energy: node=5014J gpu=3391J cpu=1015J (1049W)
+rank 31 | iter 10 | objfunc_time: 4.465265 | solver_time: 3.514610 | construction_time: 0.271549 | energy: node=4622J gpu=3304J cpu=701J (967W)
+rank 9 | iter 10 | objfunc_time: 4.750804 | solver_time: 3.511299 | construction_time: 0.257380 | energy: node=5136J gpu=3535J cpu=739J (1075W)
+rank 45 | iter 10 | objfunc_time: 4.750255 | solver_time: 3.491983 | construction_time: 0.275008 | energy: node=4956J gpu=3453J cpu=716J (1037W)
+rank 39 | iter 10 | objfunc_time: 4.751753 | solver_time: 3.491181 | construction_time: 0.264313 | energy: node=4937J gpu=3537J cpu=821J (1033W)
+rank 2 | iter 10 | objfunc_time: 4.749718 | solver_time: 4.183955 | construction_time: 0.391601 | energy: node=5213J gpu=3532J cpu=750J (1091W)
+rank 22 | iter 10 | objfunc_time: 4.750535 | solver_time: 4.144915 | construction_time: 0.385386 | energy: node=5382J gpu=3504J cpu=794J (1126W)
+rank 30 | iter 10 | objfunc_time: 4.749951 | solver_time: 4.186024 | construction_time: 0.369983 | energy: node=5213J gpu=3355J cpu=758J (1091W)
+rank 17 | iter 10 | objfunc_time: 4.611647 | solver_time: 3.488368 | construction_time: 0.258075 | energy: node=0J gpu=3389J cpu=758J (0W)
+rank 51 | iter 10 | objfunc_time: 4.750297 | solver_time: 3.517420 | construction_time: 0.258438 | energy: node=4958J gpu=3386J cpu=812J (1038W)
+rank 55 | iter 10 | objfunc_time: 4.610362 | solver_time: 3.534683 | construction_time: 0.259421 | energy: node=5045J gpu=3402J cpu=582J (1056W)
+rank 4 | iter 10 | objfunc_time: 4.749719 | solver_time: 4.133983 | construction_time: 0.372939 | energy: node=5251J gpu=3566J cpu=874J (1099W)
+rank 37 | iter 10 | objfunc_time: 4.612560 | solver_time: 3.528796 | construction_time: 0.266141 | energy: node=4609J gpu=3261J cpu=817J (964W)
+rank 3 | iter 10 | objfunc_time: 4.609086 | solver_time: 3.560024 | construction_time: 0.263287 | energy: node=4877J gpu=3243J cpu=809J (1021W)
+rank 48 | iter 10 | objfunc_time: 4.749859 | solver_time: 4.178496 | construction_time: 0.370452 | energy: node=5140J gpu=3542J cpu=841J (1076W)
+rank 24 | iter 10 | objfunc_time: 4.749739 | solver_time: 4.189291 | construction_time: 0.366011 | energy: node=5004J gpu=3543J cpu=710J (1047W)
+rank 59 | iter 10 | objfunc_time: 4.750355 | solver_time: 3.535053 | construction_time: 0.260377 | energy: node=4937J gpu=3366J cpu=890J (1033W)
+rank 54 | iter 10 | objfunc_time: 4.602838 | solver_time: 4.152690 | construction_time: 0.370269 | energy: node=0J gpu=3284J cpu=817J (0W)
+rank 15 | iter 10 | objfunc_time: 4.749580 | solver_time: 3.505140 | construction_time: 0.262579 | energy: node=5003J gpu=3412J cpu=668J (1047W)
+rank 53 | iter 10 | objfunc_time: 4.750637 | solver_time: 3.521714 | construction_time: 0.282831 | energy: node=4963J gpu=3453J cpu=858J (1039W)
+rank 36 | iter 10 | objfunc_time: 4.762207 | solver_time: 4.195202 | construction_time: 0.374523 | energy: node=5070J gpu=3563J cpu=835J (1061W)
+rank 16 | iter 10 | objfunc_time: 4.609626 | solver_time: 4.181561 | construction_time: 0.370127 | energy: node=4914J gpu=3397J cpu=666J (1028W)
+rank 0 | iter 10 | objfunc_time: 4.749543 | solver_time: 4.194068 | construction_time: 0.383046 | energy: node=5034J gpu=3466J cpu=846J (1053W)
+rank 7 | iter 10 | objfunc_time: 4.600879 | solver_time: 3.516762 | construction_time: 0.258337 | energy: node=4712J gpu=3410J cpu=694J (986W)
+rank 28 | iter 10 | objfunc_time: 4.749646 | solver_time: 4.187118 | construction_time: 0.370336 | energy: node=5502J gpu=3641J cpu=939J (1151W)
+rank 47 | iter 10 | objfunc_time: 4.749458 | solver_time: 3.539507 | construction_time: 0.262107 | energy: node=1048J gpu=536J cpu=197J (219W)
+rank 1 | iter 10 | objfunc_time: 4.749340 | solver_time: 3.505488 | construction_time: 0.271659 | energy: node=4990J gpu=3479J cpu=851J (1044W)
+rank 32 | iter 10 | objfunc_time: 4.748714 | solver_time: 4.180276 | construction_time: 0.373355 | energy: node=4993J gpu=3452J cpu=793J (1045W)
+rank 33 | iter 10 | objfunc_time: 4.763015 | solver_time: 3.495026 | construction_time: 0.266481 | energy: node=6306J gpu=5178J cpu=1256J (1320W)
+rank 21 | iter 10 | objfunc_time: 4.471956 | solver_time: 3.486091 | construction_time: 0.258603 | energy: node=4936J gpu=3345J cpu=838J (1033W)
+rank 5 | iter 10 | objfunc_time: 4.749561 | solver_time: 3.511070 | construction_time: 0.282149 | energy: node=4869J gpu=3429J cpu=866J (1019W)
+rank 10 | iter 10 | objfunc_time: 4.778642 | solver_time: 4.190457 | construction_time: 0.373679 | energy: node=5263J gpu=3735J cpu=891J (1101W)
+rank 44 | iter 10 | objfunc_time: 4.749331 | solver_time: 4.164590 | construction_time: 0.388552 | energy: node=5260J gpu=3578J cpu=689J (1101W)
+rank 52 | iter 10 | objfunc_time: 4.749839 | solver_time: 4.183625 | construction_time: 0.381553 | energy: node=5259J gpu=3555J cpu=735J (1100W)
+rank 38 | iter 10 | objfunc_time: 4.748175 | solver_time: 4.171660 | construction_time: 0.395637 | energy: node=5171J gpu=3451J cpu=777J (1082W)
+rank 27 | iter 10 | objfunc_time: 4.750875 | solver_time: 3.566651 | construction_time: 0.260595 | energy: node=5000J gpu=3527J cpu=757J (1046W)
+rank 34 | iter 10 | objfunc_time: 4.749546 | solver_time: 4.200652 | construction_time: 0.375971 | energy: node=5183J gpu=3674J cpu=841J (1085W)
+rank 26 | iter 10 | objfunc_time: 4.751625 | solver_time: 4.192757 | construction_time: 0.378421 | energy: node=5308J gpu=3681J cpu=1006J (1111W)
+rank 61 | iter 10 | objfunc_time: 4.752538 | solver_time: 3.513777 | construction_time: 0.267106 | energy: node=5191J gpu=3694J cpu=893J (1086W)
+rank 0 | iter 11 | objfunc_time: 4.856122 | solver_time: 4.181018 | construction_time: 0.382229 | energy: node=5102J gpu=3548J cpu=853J (987W)
+rank 33 | iter 11 | objfunc_time: 5.153052 | solver_time: 3.495445 | construction_time: 0.266058 | energy: node=5190J gpu=3622J cpu=952J (1004W)
+rank 57 | iter 11 | objfunc_time: 5.152484 | solver_time: 3.539386 | construction_time: 0.264139 | energy: node=5050J gpu=3656J cpu=881J (977W)
+rank 37 | iter 11 | objfunc_time: 5.003691 | solver_time: 3.530722 | construction_time: 0.266114 | energy: node=5064J gpu=3536J cpu=939J (980W)
+rank 35 | iter 11 | objfunc_time: 5.139438 | solver_time: 3.487027 | construction_time: 0.278069 | energy: node=5285J gpu=3657J cpu=916J (1022W)
+rank 19 | iter 11 | objfunc_time: 5.142381 | solver_time: 3.534995 | construction_time: 0.269778 | energy: node=5208J gpu=3659J cpu=765J (1007W)
+rank 23 | iter 11 | objfunc_time: 5.142615 | solver_time: 3.522080 | construction_time: 0.259520 | energy: node=5344J gpu=3659J cpu=1073J (1034W)
+rank 18 | iter 11 | objfunc_time: 5.142709 | solver_time: 4.183092 | construction_time: 0.368907 | energy: node=5490J gpu=3708J cpu=742J (1062W)
+rank 14 | iter 11 | objfunc_time: 5.142964 | solver_time: 4.176607 | construction_time: 0.371516 | energy: node=5295J gpu=3521J cpu=998J (1024W)
+rank 29 | iter 11 | objfunc_time: 5.142318 | solver_time: 3.512927 | construction_time: 0.256751 | energy: node=5099J gpu=3650J cpu=843J (986W)
+rank 61 | iter 11 | objfunc_time: 5.169166 | solver_time: 3.512878 | construction_time: 0.267315 | energy: node=5265J gpu=3740J cpu=910J (1019W)
+rank 8 | iter 11 | objfunc_time: 5.142869 | solver_time: 4.190673 | construction_time: 0.391732 | energy: node=1801J gpu=1089J cpu=253J (348W)
+rank 49 | iter 11 | objfunc_time: 5.142190 | solver_time: 3.517030 | construction_time: 0.260630 | energy: node=5125J gpu=3599J cpu=902J (991W)
+rank 20 | iter 11 | objfunc_time: 5.142656 | solver_time: 4.131310 | construction_time: 0.373473 | energy: node=5714J gpu=3750J cpu=831J (1105W)
+rank 56 | iter 11 | objfunc_time: 5.142535 | solver_time: 4.137446 | construction_time: 0.378353 | energy: node=5260J gpu=3775J cpu=962J (1018W)
+rank 10 | iter 11 | objfunc_time: 5.142699 | solver_time: 4.188037 | construction_time: 0.371963 | energy: node=5430J gpu=3817J cpu=921J (1050W)
+rank 41 | iter 11 | objfunc_time: 5.142121 | solver_time: 3.528550 | construction_time: 0.259333 | energy: node=5290J gpu=3733J cpu=898J (1023W)
+rank 43 | iter 11 | objfunc_time: 5.142329 | solver_time: 3.497895 | construction_time: 0.263729 | energy: node=2795J gpu=1732J cpu=454J (541W)
+rank 25 | iter 11 | objfunc_time: 5.142061 | solver_time: 3.475081 | construction_time: 0.257658 | energy: node=5111J gpu=3595J cpu=677J (989W)
+rank 21 | iter 11 | objfunc_time: 5.142140 | solver_time: 3.486964 | construction_time: 0.258840 | energy: node=5268J gpu=3544J cpu=913J (1019W)
+rank 12 | iter 11 | objfunc_time: 5.141893 | solver_time: 4.198814 | construction_time: 0.386428 | energy: node=5413J gpu=3737J cpu=840J (1047W)
+rank 6 | iter 11 | objfunc_time: 5.141786 | solver_time: 4.171059 | construction_time: 0.374923 | energy: node=5206J gpu=3569J cpu=1082J (1007W)
+rank 50 | iter 11 | objfunc_time: 5.142189 | solver_time: 4.195421 | construction_time: 0.386412 | energy: node=5394J gpu=3868J cpu=781J (1043W)
+rank 39 | iter 11 | objfunc_time: 4.996062 | solver_time: 3.487331 | construction_time: 0.264193 | energy: node=5146J gpu=3657J cpu=870J (995W)
+rank 9 | iter 11 | objfunc_time: 5.141270 | solver_time: 3.512109 | construction_time: 0.257220 | energy: node=5228J gpu=3593J cpu=754J (1011W)
+rank 60 | iter 11 | objfunc_time: 4.582006 | solver_time: 4.156140 | construction_time: 0.368098 | energy: node=5079J gpu=3469J cpu=930J (983W)
+rank 27 | iter 11 | objfunc_time: 4.995812 | solver_time: 3.569308 | construction_time: 0.260576 | energy: node=4977J gpu=3511J cpu=757J (963W)
+rank 58 | iter 11 | objfunc_time: 5.153209 | solver_time: 4.190949 | construction_time: 0.373736 | energy: node=5332J gpu=3734J cpu=889J (1031W)
+rank 45 | iter 11 | objfunc_time: 5.002120 | solver_time: 3.494372 | construction_time: 0.274752 | energy: node=5033J gpu=3516J cpu=732J (974W)
+rank 42 | iter 11 | objfunc_time: 5.143407 | solver_time: 4.201962 | construction_time: 0.401254 | energy: node=5137J gpu=3849J cpu=799J (994W)
+rank 3 | iter 11 | objfunc_time: 5.140755 | solver_time: 3.560577 | construction_time: 0.263283 | energy: node=5404J gpu=3559J cpu=938J (1045W)
+rank 2 | iter 11 | objfunc_time: 5.141113 | solver_time: 4.186160 | construction_time: 0.390588 | energy: node=5454J gpu=3772J cpu=815J (1055W)
+rank 51 | iter 11 | objfunc_time: 5.140585 | solver_time: 3.522293 | construction_time: 0.258311 | energy: node=5255J gpu=3544J cpu=889J (1017W)
+rank 30 | iter 11 | objfunc_time: 5.140710 | solver_time: 4.180329 | construction_time: 0.369857 | energy: node=5488J gpu=3607J cpu=811J (1062W)
+rank 4 | iter 11 | objfunc_time: 5.140298 | solver_time: 4.132740 | construction_time: 0.371597 | energy: node=5437J gpu=3739J cpu=922J (1052W)
+rank 52 | iter 11 | objfunc_time: 5.140595 | solver_time: 4.196753 | construction_time: 0.382534 | energy: node=5300J gpu=3634J cpu=745J (1025W)
+rank 5 | iter 11 | objfunc_time: 4.995556 | solver_time: 3.512885 | construction_time: 0.278010 | energy: node=4994J gpu=3505J cpu=897J (966W)
+rank 59 | iter 11 | objfunc_time: 5.140874 | solver_time: 3.531505 | construction_time: 0.260082 | energy: node=5278J gpu=3551J cpu=977J (1021W)
+rank 15 | iter 11 | objfunc_time: 5.002070 | solver_time: 3.504708 | construction_time: 0.262523 | energy: node=5183J gpu=3542J cpu=706J (1003W)
+rank 28 | iter 11 | objfunc_time: 5.140449 | solver_time: 4.186751 | construction_time: 0.368212 | energy: node=5566J gpu=3660J cpu=956J (1077W)
+rank 34 | iter 11 | objfunc_time: 5.140268 | solver_time: 4.190982 | construction_time: 0.373754 | energy: node=5349J gpu=3838J cpu=890J (1035W)
+rank 24 | iter 11 | objfunc_time: 4.997872 | solver_time: 4.173838 | construction_time: 0.368589 | energy: node=5067J gpu=3617J cpu=726J (980W)
+rank 55 | iter 11 | objfunc_time: 5.139989 | solver_time: 3.529387 | construction_time: 0.259909 | energy: node=5441J gpu=3649J cpu=654J (1053W)
+rank 46 | iter 11 | objfunc_time: 5.144487 | solver_time: 4.161485 | construction_time: 0.367005 | energy: node=5292J gpu=3842J cpu=1001J (1024W)
+rank 36 | iter 11 | objfunc_time: 5.139914 | solver_time: 4.193972 | construction_time: 0.389078 | energy: node=5251J gpu=3739J cpu=890J (1016W)
+rank 16 | iter 11 | objfunc_time: 4.996087 | solver_time: 4.171545 | construction_time: 0.370299 | energy: node=5159J gpu=3631J cpu=714J (998W)
+rank 44 | iter 11 | objfunc_time: 5.139624 | solver_time: 4.173785 | construction_time: 0.388069 | energy: node=5369J gpu=3664J cpu=712J (1039W)
+rank 47 | iter 11 | objfunc_time: 5.139799 | solver_time: 3.540539 | construction_time: 0.262425 | energy: node=9598J gpu=5902J cpu=1790J (1857W)
+rank 1 | iter 11 | objfunc_time: 5.140298 | solver_time: 3.504842 | construction_time: 0.271786 | energy: node=5213J gpu=3605J cpu=908J (1008W)
+rank 38 | iter 11 | objfunc_time: 5.138507 | solver_time: 4.169229 | construction_time: 0.390858 | energy: node=5346J gpu=3602J cpu=812J (1034W)
+rank 32 | iter 11 | objfunc_time: 5.138805 | solver_time: 4.181165 | construction_time: 0.370327 | energy: node=5386J gpu=3831J cpu=888J (1042W)
+  Mean: 5.4929s
+  Std:  0.1599s
+  Node energy/grad: 5590.9 J
+  GPU energy/grad:  3927.2 J
+  Other energy/grad: 686.5 J
+
+======================================================================
+Benchmark completed
+Results written to: /capstor/scratch/cscs/aboudaou/workspace/dalia/artifact/plotting/data/fig6_raw_results.csv
+======================================================================
+rank 31 | iter 11 | objfunc_time: 5.142090 | solver_time: 3.519854 | construction_time: 0.271152 | energy: node=5232J gpu=3747J cpu=849J (1012W)
+rank 11 | iter 11 | objfunc_time: 5.141799 | solver_time: 3.559191 | construction_time: 0.270448 | energy: node=5522J gpu=3679J cpu=934J (1068W)
+rank 13 | iter 11 | objfunc_time: 5.142217 | solver_time: 3.507478 | construction_time: 0.257428 | energy: node=5356J gpu=3728J cpu=909J (1036W)
+rank 22 | iter 11 | objfunc_time: 5.141007 | solver_time: 4.151696 | construction_time: 0.384292 | energy: node=5819J gpu=3884J cpu=888J (1126W)
+rank 40 | iter 11 | objfunc_time: 5.142461 | solver_time: 4.172988 | construction_time: 0.373352 | energy: node=5992J gpu=3814J cpu=952J (1159W)
+rank 54 | iter 11 | objfunc_time: 4.859402 | solver_time: 4.154001 | construction_time: 0.371096 | energy: node=0J gpu=3415J cpu=834J (0W)
+rank 53 | iter 11 | objfunc_time: 5.139914 | solver_time: 3.525598 | construction_time: 0.281701 | energy: node=5310J gpu=3653J cpu=948J (1027W)
+rank 17 | iter 11 | objfunc_time: 5.141411 | solver_time: 3.490973 | construction_time: 0.257614 | energy: node=0J gpu=3667J cpu=865J (0W)
+rank 7 | iter 11 | objfunc_time: 5.139733 | solver_time: 3.515936 | construction_time: 0.258316 | energy: node=5060J gpu=3654J cpu=769J (979W)
+rank 48 | iter 11 | objfunc_time: 5.140415 | solver_time: 4.192864 | construction_time: 0.369601 | energy: node=5580J gpu=3882J cpu=955J (1079W)
+rank 26 | iter 11 | objfunc_time: 5.002488 | solver_time: 4.181522 | construction_time: 0.382149 | energy: node=5475J gpu=3809J cpu=1043J (1059W)
+Job finished at Sun 15 Mar 2026 11:42:23 PM CET

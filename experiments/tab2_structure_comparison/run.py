@@ -23,6 +23,7 @@ import os
 import time
 import gc
 import subprocess
+import threading
 from collections import OrderedDict
 from datetime import datetime
 
@@ -365,6 +366,45 @@ def get_gpu_memory_used_gib():
         return 0.0
 
 
+def _cuda_used_bytes():
+    """Current GPU memory usage in bytes via CUDA runtime (device-global)."""
+    import cupy as cp
+
+    free, total = cp.cuda.runtime.memGetInfo()
+    return total - free
+
+
+def _track_jax_peak_memory(fn, *args, **kwargs):
+    """Run *fn* while sampling GPU memory in a background thread.
+
+    Uses ``cudaMemGetInfo`` (device-global, independent of allocator type) so
+    the measurement is correct with both BFC and platform allocators.
+
+    Returns ``(result, peak_gib)`` where *peak_gib* is the peak memory above
+    the pre-call baseline in GiB.
+    """
+    baseline = _cuda_used_bytes()
+    peak_bytes = [baseline]
+    stop_event = threading.Event()
+
+    def _sampler():
+        while not stop_event.is_set():
+            cur = _cuda_used_bytes()
+            if cur > peak_bytes[0]:
+                peak_bytes[0] = cur
+            stop_event.wait(0.001)
+
+    t = threading.Thread(target=_sampler, daemon=True)
+    t.start()
+    result = fn(*args, **kwargs)
+    cur = _cuda_used_bytes()
+    if cur > peak_bytes[0]:
+        peak_bytes[0] = cur
+    stop_event.set()
+    t.join(timeout=2.0)
+    return result, max(0.0, peak_bytes[0] - baseline) / (1024**3)
+
+
 def make_dalia_config(solver_type, gradient_method, n_hyperparameters):
     return dalia_config.parse_config({
         "solver": {"type": solver_type},
@@ -434,11 +474,22 @@ def run_strategy(model_name, model_info, strategy, n_runs):
                 dalia.jax_objective, dalia.jax_grad_func = factory(
                     dalia, ad_mode=ad_mode)
 
-        result = time_gradient(dalia, n_runs=n_runs, warmup_runs=2)
-        mem_after = get_gpu_memory_used_gib()
-        peak_mem = mem_after - mem_before
-        if peak_mem < 0:
-            peak_mem = mem_after
+        if strategy == "FD":
+            result = time_gradient(dalia, n_runs=n_runs, warmup_runs=2)
+            mem_after = get_gpu_memory_used_gib()
+            peak_mem = mem_after - mem_before
+            if peak_mem < 0:
+                peak_mem = mem_after
+        else:
+            # Measure peak memory during a dedicated warmup call so the
+            # sampler thread does not interfere with the timed runs.
+            theta = dalia.model.theta.copy()
+            if hasattr(theta, "get"):
+                theta = theta.get()
+            _, peak_mem = _track_jax_peak_memory(
+                dalia.jax_grad_func, theta
+            )
+            result = time_gradient(dalia, n_runs=n_runs, warmup_runs=2)
 
         return {
             "mean": result["mean"],

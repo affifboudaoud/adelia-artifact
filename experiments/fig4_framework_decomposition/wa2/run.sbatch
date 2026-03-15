@@ -2,6 +2,7 @@
 #SBATCH --job-name=fig4_wa2
 #SBATCH --nodes=4
 #SBATCH --ntasks-per-node=1
+#SBATCH --gpus-per-task=1
 #SBATCH --time=03:00:00
 #SBATCH --account=lp16
 #SBATCH --output=outputs/fig4_wa2_%j.log

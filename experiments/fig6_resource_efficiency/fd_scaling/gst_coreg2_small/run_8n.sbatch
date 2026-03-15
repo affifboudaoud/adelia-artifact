@@ -2,6 +2,7 @@
 #SBATCH --job-name=fig6_gst_coreg2_small_fd_8n
 #SBATCH --nodes=8
 #SBATCH --ntasks-per-node=1
+#SBATCH --gpus-per-task=1
 #SBATCH --time=00:20:00
 #SBATCH --account=lp16
 #SBATCH --output=outputs/gst_coreg2_small_fd_8n_%j.log

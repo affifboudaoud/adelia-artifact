@@ -1,0 +1,1224 @@
+Parsed parameters:
+  max_iter: 250
+  solver_min_p: 1
+  profile: False
+  precision: float64
+  benchmark_mode: True
+  n_benchmark_runs: 20
+  benchmark_method: both
+  output_csv: None
+--- Table 2: Structure-Preserving vs Generic Differentiation ---
+
+============================================================
+Model: GST-S (5 \times 92)
+============================================================
+  FD... 
+___________________________________ 
+___  __ \__    |__  /____  _/__    |
+__  / / /_  /| |_  /  __  / __  /| |
+_  /_/ /_  ___ |  /____/ /  _  ___ |
+/_____/ /_/  |_/_____/___/  /_/  |_|
+
+╔═══════════════════════════════════════════════════════╗
+║               Parallelization strategies              ║
+║ ╒═══════════════════════════════════════════╤═══════╕ ║
+║ │ Participating Processes / Total Processes │ 1 / 1 │ ║
+║ ├───────────────────────────────────────────┼───────┤ ║
+║ │ Parallelization through F()               │   1   │ ║
+║ ├───────────────────────────────────────────┼───────┤ ║
+║ │ Parallelization through Q()               │   1   │ ║
+║ ├───────────────────────────────────────────┼───────┤ ║
+║ │ Parallelization through S()               │   1   │ ║
+║ ╘═══════════════════════════════════════════╧═══════╛ ║
+╚═══════════════════════════════════════════════════════╝
+╔═══════════════════════════════╗
+║  Enabled Performance modules  ║
+║ ╒═══════════════════╤═══════╕ ║
+║ │ Array module      │ cupy  │ ║
+║ ├───────────────────┼───────┤ ║
+║ │ MPI available     │ True  │ ║
+║ ├───────────────────┼───────┤ ║
+║ │ Is MPI CUDA aware │ False │ ║
+║ ├───────────────────┼───────┤ ║
+║ │ Is NCCL available │ False │ ║
+║ ╘═══════════════════╧═══════╛ ║
+╚═══════════════════════════════╝
+╔════════════════════════════════════════╗
+║             Memory Report              ║
+║ ╒════════════════════════╤═══════════╕ ║
+║ │ Solver memory          │ 616.97 KB │ ║
+║ ├────────────────────────┼───────────┤ ║
+║ │ Total memory used      │  2.21 MB  │ ║
+║ ├────────────────────────┼───────────┤ ║
+║ │ Total memory available │  2.37 MB  │ ║
+║ ╘════════════════════════╧═══════════╛ ║
+╚════════════════════════════════════════╝
+DALIA initialized.
+Allocated an extra 0.00 GB for BTA_mapping caching (total: 0.00)
+Allocated an extra 0.00 GB for BT_mapping caching (total: 0.00)
+rank 0 | iter 1 | objfunc_time: 0.344225 | solver_time: 0.054484 | construction_time: 0.222924
+rank 0 | iter 2 | objfunc_time: 0.343933 | solver_time: 0.055076 | construction_time: 0.221827
+rank 0 | iter 3 | objfunc_time: 0.342936 | solver_time: 0.054844 | construction_time: 0.221095
+rank 0 | iter 4 | objfunc_time: 0.344172 | solver_time: 0.055361 | construction_time: 0.221706
+rank 0 | iter 5 | objfunc_time: 0.345229 | solver_time: 0.055044 | construction_time: 0.223024
+rank 0 | iter 6 | objfunc_time: 0.345938 | solver_time: 0.054833 | construction_time: 0.223056
+rank 0 | iter 7 | objfunc_time: 0.343248 | solver_time: 0.055227 | construction_time: 0.221395
+rank 0 | iter 8 | objfunc_time: 0.342797 | solver_time: 0.054624 | construction_time: 0.221251
+rank 0 | iter 9 | objfunc_time: 0.340604 | solver_time: 0.054253 | construction_time: 0.219906
+rank 0 | iter 10 | objfunc_time: 0.343646 | solver_time: 0.054620 | construction_time: 0.221979
+rank 0 | iter 11 | objfunc_time: 0.341767 | solver_time: 0.054204 | construction_time: 0.221086
+rank 0 | iter 12 | objfunc_time: 0.341262 | solver_time: 0.054819 | construction_time: 0.219825
+rank 0 | iter 13 | objfunc_time: 0.341449 | solver_time: 0.054768 | construction_time: 0.220076
+rank 0 | iter 14 | objfunc_time: 0.341079 | solver_time: 0.054451 | construction_time: 0.220184
+rank 0 | iter 15 | objfunc_time: 0.339774 | solver_time: 0.054354 | construction_time: 0.219141
+rank 0 | iter 16 | objfunc_time: 0.339681 | solver_time: 0.054322 | construction_time: 0.219278
+rank 0 | iter 17 | objfunc_time: 0.339253 | solver_time: 0.053618 | construction_time: 0.219504
+rank 0 | iter 18 | objfunc_time: 0.340560 | solver_time: 0.054297 | construction_time: 0.220132
+rank 0 | iter 19 | objfunc_time: 0.338267 | solver_time: 0.053975 | construction_time: 0.218550
+rank 0 | iter 20 | objfunc_time: 0.333527 | solver_time: 0.052492 | construction_time: 0.216056
+rank 0 | iter 21 | objfunc_time: 0.324739 | solver_time: 0.050812 | construction_time: 0.210615
+0.3407s (+/- 0.0045), 0.4 GiB
+  AD-Dense... Using JAX automatic differentiation with JIT compilation (Gaussian likelihood)
+JIT compiling objective + gradient...
+JIT compilation done in 2.5s.
+
+___________________________________ 
+___  __ \__    |__  /____  _/__    |
+__  / / /_  /| |_  /  __  / __  /| |
+_  /_/ /_  ___ |  /____/ /  _  ___ |
+/_____/ /_/  |_/_____/___/  /_/  |_|
+
+╔═══════════════════════════════════════════════════════╗
+║               Parallelization strategies              ║
+║ ╒═══════════════════════════════════════════╤═══════╕ ║
+║ │ Participating Processes / Total Processes │ 1 / 1 │ ║
+║ ├───────────────────────────────────────────┼───────┤ ║
+║ │ Parallelization through F()               │   1   │ ║
+║ ├───────────────────────────────────────────┼───────┤ ║
+║ │ Parallelization through Q()               │   1   │ ║
+║ ├───────────────────────────────────────────┼───────┤ ║
+║ │ Parallelization through S()               │   1   │ ║
+║ ╘═══════════════════════════════════════════╧═══════╛ ║
+╚═══════════════════════════════════════════════════════╝
+╔═══════════════════════════════╗
+║  Enabled Performance modules  ║
+║ ╒═══════════════════╤═══════╕ ║
+║ │ Array module      │ cupy  │ ║
+║ ├───────────────────┼───────┤ ║
+║ │ MPI available     │ True  │ ║
+║ ├───────────────────┼───────┤ ║
+║ │ Is MPI CUDA aware │ False │ ║
+║ ├───────────────────┼───────┤ ║
+║ │ Is NCCL available │ False │ ║
+║ ╘═══════════════════╧═══════╛ ║
+╚═══════════════════════════════╝
+╔═══════════════════════════════════════╗
+║             Memory Report             ║
+║ ╒════════════════════════╤══════════╕ ║
+║ │ Solver memory          │ 3.31 MB  │ ║
+║ ├────────────────────────┼──────────┤ ║
+║ │ Total memory used      │ 3.26 MB  │ ║
+║ ├────────────────────────┼──────────┤ ║
+║ │ Total memory available │ 41.95 MB │ ║
+║ ╘════════════════════════╧══════════╛ ║
+╚═══════════════════════════════════════╝
+DALIA initialized.
+0.0042s (+/- 0.0000), 0.1 GiB
+  AD-Loop... Using JAX automatic differentiation with JIT compilation (Gaussian likelihood)
+JIT compiling objective + gradient...
+JIT compilation done in 3.9s.
+
+___________________________________ 
+___  __ \__    |__  /____  _/__    |
+__  / / /_  /| |_  /  __  / __  /| |
+_  /_/ /_  ___ |  /____/ /  _  ___ |
+/_____/ /_/  |_/_____/___/  /_/  |_|
+
+╔═══════════════════════════════════════════════════════╗
+║               Parallelization strategies              ║
+║ ╒═══════════════════════════════════════════╤═══════╕ ║
+║ │ Participating Processes / Total Processes │ 1 / 1 │ ║
+║ ├───────────────────────────────────────────┼───────┤ ║
+║ │ Parallelization through F()               │   1   │ ║
+║ ├───────────────────────────────────────────┼───────┤ ║
+║ │ Parallelization through Q()               │   1   │ ║
+║ ├───────────────────────────────────────────┼───────┤ ║
+║ │ Parallelization through S()               │   1   │ ║
+║ ╘═══════════════════════════════════════════╧═══════╛ ║
+╚═══════════════════════════════════════════════════════╝
+╔═══════════════════════════════╗
+║  Enabled Performance modules  ║
+║ ╒═══════════════════╤═══════╕ ║
+║ │ Array module      │ cupy  │ ║
+║ ├───────────────────┼───────┤ ║
+║ │ MPI available     │ True  │ ║
+║ ├───────────────────┼───────┤ ║
+║ │ Is MPI CUDA aware │ False │ ║
+║ ├───────────────────┼───────┤ ║
+║ │ Is NCCL available │ False │ ║
+║ ╘═══════════════════╧═══════╛ ║
+╚═══════════════════════════════╝
+╔══════════════════════════════════════╗
+║            Memory Report             ║
+║ ╒════════════════════════╤═════════╕ ║
+║ │ Solver memory          │ 0.00 B  │ ║
+║ ├────────────────────────┼─────────┤ ║
+║ │ Total memory used      │ 1.61 MB │ ║
+║ ├────────────────────────┼─────────┤ ║
+║ │ Total memory available │ 1.92 MB │ ║
+║ ╘════════════════════════╧═════════╛ ║
+╚══════════════════════════════════════╝
+DALIA initialized.
+JIT compiling objective + gradient...
+JIT compilation done in 3.9s.
+0.0070s (+/- 0.0001), 0.0 GiB
+  AD-Loop-Ckpt... Using JAX automatic differentiation with JIT compilation (Gaussian likelihood)
+JIT compiling objective + gradient...
+JIT compilation done in 4.0s.
+
+___________________________________ 
+___  __ \__    |__  /____  _/__    |
+__  / / /_  /| |_  /  __  / __  /| |
+_  /_/ /_  ___ |  /____/ /  _  ___ |
+/_____/ /_/  |_/_____/___/  /_/  |_|
+
+╔═══════════════════════════════════════════════════════╗
+║               Parallelization strategies              ║
+║ ╒═══════════════════════════════════════════╤═══════╕ ║
+║ │ Participating Processes / Total Processes │ 1 / 1 │ ║
+║ ├───────────────────────────────────────────┼───────┤ ║
+║ │ Parallelization through F()               │   1   │ ║
+║ ├───────────────────────────────────────────┼───────┤ ║
+║ │ Parallelization through Q()               │   1   │ ║
+║ ├───────────────────────────────────────────┼───────┤ ║
+║ │ Parallelization through S()               │   1   │ ║
+║ ╘═══════════════════════════════════════════╧═══════╛ ║
+╚═══════════════════════════════════════════════════════╝
+╔═══════════════════════════════╗
+║  Enabled Performance modules  ║
+║ ╒═══════════════════╤═══════╕ ║
+║ │ Array module      │ cupy  │ ║
+║ ├───────────────────┼───────┤ ║
+║ │ MPI available     │ True  │ ║
+║ ├───────────────────┼───────┤ ║
+║ │ Is MPI CUDA aware │ False │ ║
+║ ├───────────────────┼───────┤ ║
+║ │ Is NCCL available │ False │ ║
+║ ╘═══════════════════╧═══════╛ ║
+╚═══════════════════════════════╝
+╔══════════════════════════════════════╗
+║            Memory Report             ║
+║ ╒════════════════════════╤═════════╕ ║
+║ │ Solver memory          │ 0.00 B  │ ║
+║ ├────────────────────────┼─────────┤ ║
+║ │ Total memory used      │ 1.61 MB │ ║
+║ ├────────────────────────┼─────────┤ ║
+║ │ Total memory available │ 1.88 MB │ ║
+║ ╘════════════════════════╧═════════╛ ║
+╚══════════════════════════════════════╝
+DALIA initialized.
+JIT compiling objective + gradient...
+JIT compilation done in 3.5s.
+0.0073s (+/- 0.0001), 0.0 GiB
+  AD-BTA... Using JAX automatic differentiation with JIT compilation (Gaussian likelihood)
+JIT compiling objective + gradient...
+JIT compilation done in 3.8s.
+
+___________________________________ 
+___  __ \__    |__  /____  _/__    |
+__  / / /_  /| |_  /  __  / __  /| |
+_  /_/ /_  ___ |  /____/ /  _  ___ |
+/_____/ /_/  |_/_____/___/  /_/  |_|
+
+╔═══════════════════════════════════════════════════════╗
+║               Parallelization strategies              ║
+║ ╒═══════════════════════════════════════════╤═══════╕ ║
+║ │ Participating Processes / Total Processes │ 1 / 1 │ ║
+║ ├───────────────────────────────────────────┼───────┤ ║
+║ │ Parallelization through F()               │   1   │ ║
+║ ├───────────────────────────────────────────┼───────┤ ║
+║ │ Parallelization through Q()               │   1   │ ║
+║ ├───────────────────────────────────────────┼───────┤ ║
+║ │ Parallelization through S()               │   1   │ ║
+║ ╘═══════════════════════════════════════════╧═══════╛ ║
+╚═══════════════════════════════════════════════════════╝
+╔═══════════════════════════════╗
+║  Enabled Performance modules  ║
+║ ╒═══════════════════╤═══════╕ ║
+║ │ Array module      │ cupy  │ ║
+║ ├───────────────────┼───────┤ ║
+║ │ MPI available     │ True  │ ║
+║ ├───────────────────┼───────┤ ║
+║ │ Is MPI CUDA aware │ False │ ║
+║ ├───────────────────┼───────┤ ║
+║ │ Is NCCL available │ False │ ║
+║ ╘═══════════════════╧═══════╛ ║
+╚═══════════════════════════════╝
+╔══════════════════════════════════════╗
+║            Memory Report             ║
+║ ╒════════════════════════╤═════════╕ ║
+║ │ Solver memory          │ 0.00 B  │ ║
+║ ├────────────────────────┼─────────┤ ║
+║ │ Total memory used      │ 1.61 MB │ ║
+║ ├────────────────────────┼─────────┤ ║
+║ │ Total memory available │ 1.92 MB │ ║
+║ ╘════════════════════════╧═════════╛ ║
+╚══════════════════════════════════════╝
+DALIA initialized.
+0.0058s (+/- 0.0001), 0.0 GiB
+
+============================================================
+Model: GST-C2 (12 \times 708)
+============================================================
+  FD... 
+___________________________________ 
+___  __ \__    |__  /____  _/__    |
+__  / / /_  /| |_  /  __  / __  /| |
+_  /_/ /_  ___ |  /____/ /  _  ___ |
+/_____/ /_/  |_/_____/___/  /_/  |_|
+
+╔═══════════════════════════════════════════════════════╗
+║               Parallelization strategies              ║
+║ ╒═══════════════════════════════════════════╤═══════╕ ║
+║ │ Participating Processes / Total Processes │ 1 / 1 │ ║
+║ ├───────────────────────────────────────────┼───────┤ ║
+║ │ Parallelization through F()               │   1   │ ║
+║ ├───────────────────────────────────────────┼───────┤ ║
+║ │ Parallelization through Q()               │   1   │ ║
+║ ├───────────────────────────────────────────┼───────┤ ║
+║ │ Parallelization through S()               │   1   │ ║
+║ ╘═══════════════════════════════════════════╧═══════╛ ║
+╚═══════════════════════════════════════════════════════╝
+╔═══════════════════════════════╗
+║  Enabled Performance modules  ║
+║ ╒═══════════════════╤═══════╕ ║
+║ │ Array module      │ cupy  │ ║
+║ ├───────────────────┼───────┤ ║
+║ │ MPI available     │ True  │ ║
+║ ├───────────────────┼───────┤ ║
+║ │ Is MPI CUDA aware │ False │ ║
+║ ├───────────────────┼───────┤ ║
+║ │ Is NCCL available │ False │ ║
+║ ╘═══════════════════╧═══════╛ ║
+╚═══════════════════════════════╝
+╔════════════════════════════════════════╗
+║             Memory Report              ║
+║ ╒════════════════════════╤═══════════╕ ║
+║ │ Solver memory          │ 88.09 MB  │ ║
+║ ├────────────────────────┼───────────┤ ║
+║ │ Total memory used      │ 110.46 MB │ ║
+║ ├────────────────────────┼───────────┤ ║
+║ │ Total memory available │ 111.17 MB │ ║
+║ ╘════════════════════════╧═══════════╛ ║
+╚════════════════════════════════════════╝
+DALIA initialized.
+Allocated an extra 0.01 GB for BTA_mapping caching (total: 0.09)
+Allocated an extra 0.01 GB for BT_mapping caching (total: 0.10)
+rank 0 | iter 1 | objfunc_time: 1.471256 | solver_time: 0.460362 | construction_time: 0.860687
+rank 0 | iter 2 | objfunc_time: 1.664674 | solver_time: 0.484557 | construction_time: 1.003471
+rank 0 | iter 3 | objfunc_time: 1.667128 | solver_time: 0.484645 | construction_time: 1.005027
+rank 0 | iter 4 | objfunc_time: 1.665507 | solver_time: 0.483119 | construction_time: 1.005746
+rank 0 | iter 5 | objfunc_time: 1.662708 | solver_time: 0.483951 | construction_time: 1.002230
+rank 0 | iter 6 | objfunc_time: 1.654518 | solver_time: 0.482472 | construction_time: 0.997035
+rank 0 | iter 7 | objfunc_time: 1.651225 | solver_time: 0.482099 | construction_time: 0.994745
+rank 0 | iter 8 | objfunc_time: 1.648107 | solver_time: 0.481477 | construction_time: 0.993522
+rank 0 | iter 9 | objfunc_time: 1.646530 | solver_time: 0.481248 | construction_time: 0.992478
+rank 0 | iter 10 | objfunc_time: 1.643051 | solver_time: 0.480791 | construction_time: 0.990499
+rank 0 | iter 11 | objfunc_time: 1.634640 | solver_time: 0.479544 | construction_time: 0.984102
+rank 0 | iter 12 | objfunc_time: 1.630025 | solver_time: 0.478981 | construction_time: 0.981128
+rank 0 | iter 13 | objfunc_time: 1.626825 | solver_time: 0.476998 | construction_time: 0.979829
+rank 0 | iter 14 | objfunc_time: 1.617198 | solver_time: 0.476402 | construction_time: 0.972545
+rank 0 | iter 15 | objfunc_time: 1.621702 | solver_time: 0.475419 | construction_time: 0.976879
+rank 0 | iter 16 | objfunc_time: 1.617096 | solver_time: 0.476669 | construction_time: 0.972020
+rank 0 | iter 17 | objfunc_time: 1.618755 | solver_time: 0.477119 | construction_time: 0.972842
+rank 0 | iter 18 | objfunc_time: 1.607221 | solver_time: 0.475410 | construction_time: 0.965476
+rank 0 | iter 19 | objfunc_time: 1.600519 | solver_time: 0.472157 | construction_time: 0.963014
+rank 0 | iter 20 | objfunc_time: 1.628644 | solver_time: 0.476458 | construction_time: 0.982863
+rank 0 | iter 21 | objfunc_time: 1.714906 | solver_time: 0.479094 | construction_time: 1.057517
+1.6411s (+/- 0.0259), 0.2 GiB
+  AD-Dense... Using JAX automatic differentiation with JIT compilation (CoregionalModel, 2 variates)
+JIT compiling coregional objective + gradient...
+JIT compilation done in 39.1s.
+
+___________________________________ 
+___  __ \__    |__  /____  _/__    |
+__  / / /_  /| |_  /  __  / __  /| |
+_  /_/ /_  ___ |  /____/ /  _  ___ |
+/_____/ /_/  |_/_____/___/  /_/  |_|
+
+╔═══════════════════════════════════════════════════════╗
+║               Parallelization strategies              ║
+║ ╒═══════════════════════════════════════════╤═══════╕ ║
+║ │ Participating Processes / Total Processes │ 1 / 1 │ ║
+║ ├───────────────────────────────────────────┼───────┤ ║
+║ │ Parallelization through F()               │   1   │ ║
+║ ├───────────────────────────────────────────┼───────┤ ║
+║ │ Parallelization through Q()               │   1   │ ║
+║ ├───────────────────────────────────────────┼───────┤ ║
+║ │ Parallelization through S()               │   1   │ ║
+║ ╘═══════════════════════════════════════════╧═══════╛ ║
+╚═══════════════════════════════════════════════════════╝
+╔═══════════════════════════════╗
+║  Enabled Performance modules  ║
+║ ╒═══════════════════╤═══════╕ ║
+║ │ Array module      │ cupy  │ ║
+║ ├───────────────────┼───────┤ ║
+║ │ MPI available     │ True  │ ║
+║ ├───────────────────┼───────┤ ║
+║ │ Is MPI CUDA aware │ False │ ║
+║ ├───────────────────┼───────┤ ║
+║ │ Is NCCL available │ False │ ║
+║ ╘═══════════════════╧═══════╛ ║
+╚═══════════════════════════════╝
+╔════════════════════════════════════════╗
+║             Memory Report              ║
+║ ╒════════════════════════╤═══════════╕ ║
+║ │ Solver memory          │  1.08 GB  │ ║
+║ ├────────────────────────┼───────────┤ ║
+║ │ Total memory used      │ 573.33 MB │ ║
+║ ├────────────────────────┼───────────┤ ║
+║ │ Total memory available │ 577.05 MB │ ║
+║ ╘════════════════════════╧═══════════╛ ║
+╚════════════════════════════════════════╝
+DALIA initialized.
+0.2940s (+/- 0.0013), 2.9 GiB
+  AD-Loop... Using JAX automatic differentiation with JIT compilation (CoregionalModel, 2 variates)
+JIT compiling coregional objective + gradient...
+JIT compilation done in 12.1s.
+
+___________________________________ 
+___  __ \__    |__  /____  _/__    |
+__  / / /_  /| |_  /  __  / __  /| |
+_  /_/ /_  ___ |  /____/ /  _  ___ |
+/_____/ /_/  |_/_____/___/  /_/  |_|
+
+╔═══════════════════════════════════════════════════════╗
+║               Parallelization strategies              ║
+║ ╒═══════════════════════════════════════════╤═══════╕ ║
+║ │ Participating Processes / Total Processes │ 1 / 1 │ ║
+║ ├───────────────────────────────────────────┼───────┤ ║
+║ │ Parallelization through F()               │   1   │ ║
+║ ├───────────────────────────────────────────┼───────┤ ║
+║ │ Parallelization through Q()               │   1   │ ║
+║ ├───────────────────────────────────────────┼───────┤ ║
+║ │ Parallelization through S()               │   1   │ ║
+║ ╘═══════════════════════════════════════════╧═══════╛ ║
+╚═══════════════════════════════════════════════════════╝
+╔═══════════════════════════════╗
+║  Enabled Performance modules  ║
+║ ╒═══════════════════╤═══════╕ ║
+║ │ Array module      │ cupy  │ ║
+║ ├───────────────────┼───────┤ ║
+║ │ MPI available     │ True  │ ║
+║ ├───────────────────┼───────┤ ║
+║ │ Is MPI CUDA aware │ False │ ║
+║ ├───────────────────┼───────┤ ║
+║ │ Is NCCL available │ False │ ║
+║ ╘═══════════════════╧═══════╛ ║
+╚═══════════════════════════════╝
+╔═══════════════════════════════════════╗
+║             Memory Report             ║
+║ ╒════════════════════════╤══════════╕ ║
+║ │ Solver memory          │  0.00 B  │ ║
+║ ├────────────────────────┼──────────┤ ║
+║ │ Total memory used      │ 22.37 MB │ ║
+║ ├────────────────────────┼──────────┤ ║
+║ │ Total memory available │ 26.08 MB │ ║
+║ ╘════════════════════════╧══════════╛ ║
+╚═══════════════════════════════════════╝
+DALIA initialized.
+JIT compiling coregional objective + gradient...
+JIT compilation done in 16.6s.
+0.0748s (+/- 0.0001), 0.9 GiB
+  AD-Loop-Ckpt... Using JAX automatic differentiation with JIT compilation (CoregionalModel, 2 variates)
+JIT compiling coregional objective + gradient...
+JIT compilation done in 11.8s.
+
+___________________________________ 
+___  __ \__    |__  /____  _/__    |
+__  / / /_  /| |_  /  __  / __  /| |
+_  /_/ /_  ___ |  /____/ /  _  ___ |
+/_____/ /_/  |_/_____/___/  /_/  |_|
+
+╔═══════════════════════════════════════════════════════╗
+║               Parallelization strategies              ║
+║ ╒═══════════════════════════════════════════╤═══════╕ ║
+║ │ Participating Processes / Total Processes │ 1 / 1 │ ║
+║ ├───────────────────────────────────────────┼───────┤ ║
+║ │ Parallelization through F()               │   1   │ ║
+║ ├───────────────────────────────────────────┼───────┤ ║
+║ │ Parallelization through Q()               │   1   │ ║
+║ ├───────────────────────────────────────────┼───────┤ ║
+║ │ Parallelization through S()               │   1   │ ║
+║ ╘═══════════════════════════════════════════╧═══════╛ ║
+╚═══════════════════════════════════════════════════════╝
+╔═══════════════════════════════╗
+║  Enabled Performance modules  ║
+║ ╒═══════════════════╤═══════╕ ║
+║ │ Array module      │ cupy  │ ║
+║ ├───────────────────┼───────┤ ║
+║ │ MPI available     │ True  │ ║
+║ ├───────────────────┼───────┤ ║
+║ │ Is MPI CUDA aware │ False │ ║
+║ ├───────────────────┼───────┤ ║
+║ │ Is NCCL available │ False │ ║
+║ ╘═══════════════════╧═══════╛ ║
+╚═══════════════════════════════╝
+╔═══════════════════════════════════════╗
+║             Memory Report             ║
+║ ╒════════════════════════╤══════════╕ ║
+║ │ Solver memory          │  0.00 B  │ ║
+║ ├────────────────────────┼──────────┤ ║
+║ │ Total memory used      │ 22.37 MB │ ║
+║ ├────────────────────────┼──────────┤ ║
+║ │ Total memory available │ 26.08 MB │ ║
+║ ╘════════════════════════╧══════════╛ ║
+╚═══════════════════════════════════════╝
+DALIA initialized.
+JIT compiling coregional objective + gradient...
+JIT compilation done in 17.1s.
+0.0848s (+/- 0.0001), 1.0 GiB
+  AD-BTA... Using JAX automatic differentiation with JIT compilation (CoregionalModel, 2 variates)
+JIT compiling coregional objective + gradient...
+JIT compilation done in 12.0s.
+
+___________________________________ 
+___  __ \__    |__  /____  _/__    |
+__  / / /_  /| |_  /  __  / __  /| |
+_  /_/ /_  ___ |  /____/ /  _  ___ |
+/_____/ /_/  |_/_____/___/  /_/  |_|
+
+╔═══════════════════════════════════════════════════════╗
+║               Parallelization strategies              ║
+║ ╒═══════════════════════════════════════════╤═══════╕ ║
+║ │ Participating Processes / Total Processes │ 1 / 1 │ ║
+║ ├───────────────────────────────────────────┼───────┤ ║
+║ │ Parallelization through F()               │   1   │ ║
+║ ├───────────────────────────────────────────┼───────┤ ║
+║ │ Parallelization through Q()               │   1   │ ║
+║ ├───────────────────────────────────────────┼───────┤ ║
+║ │ Parallelization through S()               │   1   │ ║
+║ ╘═══════════════════════════════════════════╧═══════╛ ║
+╚═══════════════════════════════════════════════════════╝
+╔═══════════════════════════════╗
+║  Enabled Performance modules  ║
+║ ╒═══════════════════╤═══════╕ ║
+║ │ Array module      │ cupy  │ ║
+║ ├───────────────────┼───────┤ ║
+║ │ MPI available     │ True  │ ║
+║ ├───────────────────┼───────┤ ║
+║ │ Is MPI CUDA aware │ False │ ║
+║ ├───────────────────┼───────┤ ║
+║ │ Is NCCL available │ False │ ║
+║ ╘═══════════════════╧═══════╛ ║
+╚═══════════════════════════════╝
+╔═══════════════════════════════════════╗
+║             Memory Report             ║
+║ ╒════════════════════════╤══════════╕ ║
+║ │ Solver memory          │  0.00 B  │ ║
+║ ├────────────────────────┼──────────┤ ║
+║ │ Total memory used      │ 22.37 MB │ ║
+║ ├────────────────────────┼──────────┤ ║
+║ │ Total memory available │ 26.08 MB │ ║
+║ ╘════════════════════════╧══════════╛ ║
+╚═══════════════════════════════════════╝
+DALIA initialized.
+0.0794s (+/- 0.0001), 0.2 GiB
+
+============================================================
+Model: GST-C3 (8 \times 1062)
+============================================================
+  FD... 
+___________________________________ 
+___  __ \__    |__  /____  _/__    |
+__  / / /_  /| |_  /  __  / __  /| |
+_  /_/ /_  ___ |  /____/ /  _  ___ |
+/_____/ /_/  |_/_____/___/  /_/  |_|
+
+╔═══════════════════════════════════════════════════════╗
+║               Parallelization strategies              ║
+║ ╒═══════════════════════════════════════════╤═══════╕ ║
+║ │ Participating Processes / Total Processes │ 1 / 1 │ ║
+║ ├───────────────────────────────────────────┼───────┤ ║
+║ │ Parallelization through F()               │   1   │ ║
+║ ├───────────────────────────────────────────┼───────┤ ║
+║ │ Parallelization through Q()               │   1   │ ║
+║ ├───────────────────────────────────────────┼───────┤ ║
+║ │ Parallelization through S()               │   1   │ ║
+║ ╘═══════════════════════════════════════════╧═══════╛ ║
+╚═══════════════════════════════════════════════════════╝
+╔═══════════════════════════════╗
+║  Enabled Performance modules  ║
+║ ╒═══════════════════╤═══════╕ ║
+║ │ Array module      │ cupy  │ ║
+║ ├───────────────────┼───────┤ ║
+║ │ MPI available     │ True  │ ║
+║ ├───────────────────┼───────┤ ║
+║ │ Is MPI CUDA aware │ False │ ║
+║ ├───────────────────┼───────┤ ║
+║ │ Is NCCL available │ False │ ║
+║ ╘═══════════════════╧═══════╛ ║
+╚═══════════════════════════════╝
+╔════════════════════════════════════════╗
+║             Memory Report              ║
+║ ╒════════════════════════╤═══════════╕ ║
+║ │ Solver memory          │ 129.27 MB │ ║
+║ ├────────────────────────┼───────────┤ ║
+║ │ Total memory used      │ 162.31 MB │ ║
+║ ├────────────────────────┼───────────┤ ║
+║ │ Total memory available │ 163.48 MB │ ║
+║ ╘════════════════════════╧═══════════╛ ║
+╚════════════════════════════════════════╝
+DALIA initialized.
+Allocated an extra 0.01 GB for BTA_mapping caching (total: 0.13)
+Allocated an extra 0.01 GB for BT_mapping caching (total: 0.14)
+rank 0 | iter 1 | objfunc_time: 2.837385 | solver_time: 0.715802 | construction_time: 1.926319
+rank 0 | iter 2 | objfunc_time: 2.840369 | solver_time: 0.716063 | construction_time: 1.928717
+rank 0 | iter 3 | objfunc_time: 2.832847 | solver_time: 0.716207 | construction_time: 1.920968
+rank 0 | iter 4 | objfunc_time: 2.831190 | solver_time: 0.716438 | construction_time: 1.918960
+rank 0 | iter 5 | objfunc_time: 2.836711 | solver_time: 0.716100 | construction_time: 1.924467
+rank 0 | iter 6 | objfunc_time: 2.844700 | solver_time: 0.717260 | construction_time: 1.930284
+rank 0 | iter 7 | objfunc_time: 2.846701 | solver_time: 0.718016 | construction_time: 1.932107
+rank 0 | iter 8 | objfunc_time: 2.848540 | solver_time: 0.718739 | construction_time: 1.932001
+rank 0 | iter 9 | objfunc_time: 2.852463 | solver_time: 0.718954 | construction_time: 1.935385
+rank 0 | iter 10 | objfunc_time: 2.857373 | solver_time: 0.719154 | construction_time: 1.939915
+rank 0 | iter 11 | objfunc_time: 2.861250 | solver_time: 0.720363 | construction_time: 1.941970
+rank 0 | iter 12 | objfunc_time: 2.855890 | solver_time: 0.719856 | construction_time: 1.937890
+rank 0 | iter 13 | objfunc_time: 2.864568 | solver_time: 0.719794 | construction_time: 1.946292
+rank 0 | iter 14 | objfunc_time: 2.870585 | solver_time: 0.720046 | construction_time: 1.951086
+rank 0 | iter 15 | objfunc_time: 2.867755 | solver_time: 0.719982 | construction_time: 1.948972
+rank 0 | iter 16 | objfunc_time: 2.865908 | solver_time: 0.718735 | construction_time: 1.948305
+rank 0 | iter 17 | objfunc_time: 2.862927 | solver_time: 0.719174 | construction_time: 1.944918
+rank 0 | iter 18 | objfunc_time: 2.858166 | solver_time: 0.719195 | construction_time: 1.940928
+rank 0 | iter 19 | objfunc_time: 2.860034 | solver_time: 0.718383 | construction_time: 1.943957
+rank 0 | iter 20 | objfunc_time: 2.861080 | solver_time: 0.718970 | construction_time: 1.943916
+rank 0 | iter 21 | objfunc_time: 2.856694 | solver_time: 0.719429 | construction_time: 1.939251
+2.8538s (+/- 0.0114), 0.2 GiB
+  AD-Dense... Using JAX automatic differentiation with JIT compilation (CoregionalModel, 3 variates)
+JIT compiling coregional objective + gradient...
+JIT compilation done in 49.6s.
+
+___________________________________ 
+___  __ \__    |__  /____  _/__    |
+__  / / /_  /| |_  /  __  / __  /| |
+_  /_/ /_  ___ |  /____/ /  _  ___ |
+/_____/ /_/  |_/_____/___/  /_/  |_|
+
+╔═══════════════════════════════════════════════════════╗
+║               Parallelization strategies              ║
+║ ╒═══════════════════════════════════════════╤═══════╕ ║
+║ │ Participating Processes / Total Processes │ 1 / 1 │ ║
+║ ├───────────────────────────────────────────┼───────┤ ║
+║ │ Parallelization through F()               │   1   │ ║
+║ ├───────────────────────────────────────────┼───────┤ ║
+║ │ Parallelization through Q()               │   1   │ ║
+║ ├───────────────────────────────────────────┼───────┤ ║
+║ │ Parallelization through S()               │   1   │ ║
+║ ╘═══════════════════════════════════════════╧═══════╛ ║
+╚═══════════════════════════════════════════════════════╝
+╔═══════════════════════════════╗
+║  Enabled Performance modules  ║
+║ ╒═══════════════════╤═══════╕ ║
+║ │ Array module      │ cupy  │ ║
+║ ├───────────────────┼───────┤ ║
+║ │ MPI available     │ True  │ ║
+║ ├───────────────────┼───────┤ ║
+║ │ Is MPI CUDA aware │ False │ ║
+║ ├───────────────────┼───────┤ ║
+║ │ Is NCCL available │ False │ ║
+║ ╘═══════════════════╧═══════╛ ║
+╚═══════════════════════════════╝
+╔════════════════════════════════════════╗
+║             Memory Report              ║
+║ ╒════════════════════════╤═══════════╕ ║
+║ │ Solver memory          │  1.08 GB  │ ║
+║ ├────────────────────────┼───────────┤ ║
+║ │ Total memory used      │ 584.14 MB │ ║
+║ ├────────────────────────┼───────────┤ ║
+║ │ Total memory available │ 587.41 MB │ ║
+║ ╘════════════════════════╧═══════════╛ ║
+╚════════════════════════════════════════╝
+DALIA initialized.
+0.3902s (+/- 0.0006), 3.3 GiB
+  AD-Loop... Using JAX automatic differentiation with JIT compilation (CoregionalModel, 3 variates)
+JIT compiling coregional objective + gradient...
+JIT compilation done in 28.3s.
+
+___________________________________ 
+___  __ \__    |__  /____  _/__    |
+__  / / /_  /| |_  /  __  / __  /| |
+_  /_/ /_  ___ |  /____/ /  _  ___ |
+/_____/ /_/  |_/_____/___/  /_/  |_|
+
+╔═══════════════════════════════════════════════════════╗
+║               Parallelization strategies              ║
+║ ╒═══════════════════════════════════════════╤═══════╕ ║
+║ │ Participating Processes / Total Processes │ 1 / 1 │ ║
+║ ├───────────────────────────────────────────┼───────┤ ║
+║ │ Parallelization through F()               │   1   │ ║
+║ ├───────────────────────────────────────────┼───────┤ ║
+║ │ Parallelization through Q()               │   1   │ ║
+║ ├───────────────────────────────────────────┼───────┤ ║
+║ │ Parallelization through S()               │   1   │ ║
+║ ╘═══════════════════════════════════════════╧═══════╛ ║
+╚═══════════════════════════════════════════════════════╝
+╔═══════════════════════════════╗
+║  Enabled Performance modules  ║
+║ ╒═══════════════════╤═══════╕ ║
+║ │ Array module      │ cupy  │ ║
+║ ├───────────────────┼───────┤ ║
+║ │ MPI available     │ True  │ ║
+║ ├───────────────────┼───────┤ ║
+║ │ Is MPI CUDA aware │ False │ ║
+║ ├───────────────────┼───────┤ ║
+║ │ Is NCCL available │ False │ ║
+║ ╘═══════════════════╧═══════╛ ║
+╚═══════════════════════════════╝
+╔═══════════════════════════════════════╗
+║             Memory Report             ║
+║ ╒════════════════════════╤══════════╕ ║
+║ │ Solver memory          │  0.00 B  │ ║
+║ ├────────────────────────┼──────────┤ ║
+║ │ Total memory used      │ 33.04 MB │ ║
+║ ├────────────────────────┼──────────┤ ║
+║ │ Total memory available │ 36.32 MB │ ║
+║ ╘════════════════════════╧══════════╛ ║
+╚═══════════════════════════════════════╝
+DALIA initialized.
+JIT compiling coregional objective + gradient...
+JIT compilation done in 21.2s.
+0.0829s (+/- 0.0001), 1.3 GiB
+  AD-Loop-Ckpt... Using JAX automatic differentiation with JIT compilation (CoregionalModel, 3 variates)
+JIT compiling coregional objective + gradient...
+JIT compilation done in 28.4s.
+
+___________________________________ 
+___  __ \__    |__  /____  _/__    |
+__  / / /_  /| |_  /  __  / __  /| |
+_  /_/ /_  ___ |  /____/ /  _  ___ |
+/_____/ /_/  |_/_____/___/  /_/  |_|
+
+╔═══════════════════════════════════════════════════════╗
+║               Parallelization strategies              ║
+║ ╒═══════════════════════════════════════════╤═══════╕ ║
+║ │ Participating Processes / Total Processes │ 1 / 1 │ ║
+║ ├───────────────────────────────────────────┼───────┤ ║
+║ │ Parallelization through F()               │   1   │ ║
+║ ├───────────────────────────────────────────┼───────┤ ║
+║ │ Parallelization through Q()               │   1   │ ║
+║ ├───────────────────────────────────────────┼───────┤ ║
+║ │ Parallelization through S()               │   1   │ ║
+║ ╘═══════════════════════════════════════════╧═══════╛ ║
+╚═══════════════════════════════════════════════════════╝
+╔═══════════════════════════════╗
+║  Enabled Performance modules  ║
+║ ╒═══════════════════╤═══════╕ ║
+║ │ Array module      │ cupy  │ ║
+║ ├───────────────────┼───────┤ ║
+║ │ MPI available     │ True  │ ║
+║ ├───────────────────┼───────┤ ║
+║ │ Is MPI CUDA aware │ False │ ║
+║ ├───────────────────┼───────┤ ║
+║ │ Is NCCL available │ False │ ║
+║ ╘═══════════════════╧═══════╛ ║
+╚═══════════════════════════════╝
+╔═══════════════════════════════════════╗
+║             Memory Report             ║
+║ ╒════════════════════════╤══════════╕ ║
+║ │ Solver memory          │  0.00 B  │ ║
+║ ├────────────────────────┼──────────┤ ║
+║ │ Total memory used      │ 33.04 MB │ ║
+║ ├────────────────────────┼──────────┤ ║
+║ │ Total memory available │ 36.32 MB │ ║
+║ ╘════════════════════════╧══════════╛ ║
+╚═══════════════════════════════════════╝
+DALIA initialized.
+JIT compiling coregional objective + gradient...
+JIT compilation done in 21.4s.
+0.0936s (+/- 0.0001), 1.5 GiB
+  AD-BTA... Using JAX automatic differentiation with JIT compilation (CoregionalModel, 3 variates)
+JIT compiling coregional objective + gradient...
+JIT compilation done in 30.3s.
+
+___________________________________ 
+___  __ \__    |__  /____  _/__    |
+__  / / /_  /| |_  /  __  / __  /| |
+_  /_/ /_  ___ |  /____/ /  _  ___ |
+/_____/ /_/  |_/_____/___/  /_/  |_|
+
+╔═══════════════════════════════════════════════════════╗
+║               Parallelization strategies              ║
+║ ╒═══════════════════════════════════════════╤═══════╕ ║
+║ │ Participating Processes / Total Processes │ 1 / 1 │ ║
+║ ├───────────────────────────────────────────┼───────┤ ║
+║ │ Parallelization through F()               │   1   │ ║
+║ ├───────────────────────────────────────────┼───────┤ ║
+║ │ Parallelization through Q()               │   1   │ ║
+║ ├───────────────────────────────────────────┼───────┤ ║
+║ │ Parallelization through S()               │   1   │ ║
+║ ╘═══════════════════════════════════════════╧═══════╛ ║
+╚═══════════════════════════════════════════════════════╝
+╔═══════════════════════════════╗
+║  Enabled Performance modules  ║
+║ ╒═══════════════════╤═══════╕ ║
+║ │ Array module      │ cupy  │ ║
+║ ├───────────────────┼───────┤ ║
+║ │ MPI available     │ True  │ ║
+║ ├───────────────────┼───────┤ ║
+║ │ Is MPI CUDA aware │ False │ ║
+║ ├───────────────────┼───────┤ ║
+║ │ Is NCCL available │ False │ ║
+║ ╘═══════════════════╧═══════╛ ║
+╚═══════════════════════════════╝
+╔═══════════════════════════════════════╗
+║             Memory Report             ║
+║ ╒════════════════════════╤══════════╕ ║
+║ │ Solver memory          │  0.00 B  │ ║
+║ ├────────────────────────┼──────────┤ ║
+║ │ Total memory used      │ 33.04 MB │ ║
+║ ├────────────────────────┼──────────┤ ║
+║ │ Total memory available │ 36.32 MB │ ║
+║ ╘════════════════════════╧══════════╛ ║
+╚═══════════════════════════════════════╝
+DALIA initialized.
+0.0959s (+/- 0.0001), 0.3 GiB
+
+============================================================
+Model: GST-M (100 \times 812)
+============================================================
+  FD... 
+___________________________________ 
+___  __ \__    |__  /____  _/__    |
+__  / / /_  /| |_  /  __  / __  /| |
+_  /_/ /_  ___ |  /____/ /  _  ___ |
+/_____/ /_/  |_/_____/___/  /_/  |_|
+
+╔═══════════════════════════════════════════════════════╗
+║               Parallelization strategies              ║
+║ ╒═══════════════════════════════════════════╤═══════╕ ║
+║ │ Participating Processes / Total Processes │ 1 / 1 │ ║
+║ ├───────────────────────────────────────────┼───────┤ ║
+║ │ Parallelization through F()               │   1   │ ║
+║ ├───────────────────────────────────────────┼───────┤ ║
+║ │ Parallelization through Q()               │   1   │ ║
+║ ├───────────────────────────────────────────┼───────┤ ║
+║ │ Parallelization through S()               │   1   │ ║
+║ ╘═══════════════════════════════════════════╧═══════╛ ║
+╚═══════════════════════════════════════════════════════╝
+╔═══════════════════════════════╗
+║  Enabled Performance modules  ║
+║ ╒═══════════════════╤═══════╕ ║
+║ │ Array module      │ cupy  │ ║
+║ ├───────────────────┼───────┤ ║
+║ │ MPI available     │ True  │ ║
+║ ├───────────────────┼───────┤ ║
+║ │ Is MPI CUDA aware │ False │ ║
+║ ├───────────────────┼───────┤ ║
+║ │ Is NCCL available │ False │ ║
+║ ╘═══════════════════╧═══════╛ ║
+╚═══════════════════════════════╝
+╔═════════════════════════════════════════╗
+║              Memory Report              ║
+║ ╒════════════════════════╤════════════╕ ║
+║ │ Solver memory          │ 1004.77 MB │ ║
+║ ├────────────────────────┼────────────┤ ║
+║ │ Total memory used      │  1.04 GB   │ ║
+║ ├────────────────────────┼────────────┤ ║
+║ │ Total memory available │  1.04 GB   │ ║
+║ ╘════════════════════════╧════════════╛ ║
+╚═════════════════════════════════════════╝
+DALIA initialized.
+Allocated an extra 0.03 GB for BTA_mapping caching (total: 1.01)
+Allocated an extra 0.03 GB for BT_mapping caching (total: 1.04)
+rank 0 | iter 1 | objfunc_time: 2.704245 | solver_time: 1.994828 | construction_time: 0.422427
+rank 0 | iter 2 | objfunc_time: 2.707115 | solver_time: 1.998050 | construction_time: 0.422259
+rank 0 | iter 3 | objfunc_time: 2.709362 | solver_time: 1.996405 | construction_time: 0.423454
+rank 0 | iter 4 | objfunc_time: 2.712520 | solver_time: 1.998015 | construction_time: 0.423988
+rank 0 | iter 5 | objfunc_time: 2.711674 | solver_time: 1.997528 | construction_time: 0.423797
+rank 0 | iter 6 | objfunc_time: 2.708790 | solver_time: 1.995209 | construction_time: 0.422817
+rank 0 | iter 7 | objfunc_time: 2.706435 | solver_time: 1.991306 | construction_time: 0.423698
+rank 0 | iter 8 | objfunc_time: 2.705422 | solver_time: 1.993008 | construction_time: 0.423002
+rank 0 | iter 9 | objfunc_time: 2.706751 | solver_time: 1.994722 | construction_time: 0.422769
+rank 0 | iter 10 | objfunc_time: 2.706713 | solver_time: 1.993766 | construction_time: 0.422777
+rank 0 | iter 11 | objfunc_time: 2.702257 | solver_time: 1.990224 | construction_time: 0.422640
+rank 0 | iter 12 | objfunc_time: 2.706752 | solver_time: 1.994291 | construction_time: 0.423029
+rank 0 | iter 13 | objfunc_time: 2.718749 | solver_time: 2.002498 | construction_time: 0.424905
+rank 0 | iter 14 | objfunc_time: 2.713482 | solver_time: 1.999293 | construction_time: 0.423920
+rank 0 | iter 15 | objfunc_time: 2.702659 | solver_time: 1.993397 | construction_time: 0.421548
+rank 0 | iter 16 | objfunc_time: 2.703605 | solver_time: 1.994305 | construction_time: 0.422329
+rank 0 | iter 17 | objfunc_time: 2.705928 | solver_time: 1.994861 | construction_time: 0.422780
+rank 0 | iter 18 | objfunc_time: 2.700316 | solver_time: 1.990683 | construction_time: 0.421607
+rank 0 | iter 19 | objfunc_time: 2.702637 | solver_time: 1.991318 | construction_time: 0.422922
+rank 0 | iter 20 | objfunc_time: 2.699732 | solver_time: 1.990374 | construction_time: 0.422155
+rank 0 | iter 21 | objfunc_time: 2.700276 | solver_time: 1.990422 | construction_time: 0.422006
+2.7066s (+/- 0.0048), 2.4 GiB
+  AD-Dense... Using JAX automatic differentiation with JIT compilation (Gaussian likelihood)
+OOM
+  AD-Loop... Using JAX automatic differentiation with JIT compilation (Gaussian likelihood)
+JIT compiling objective + gradient...
+JIT compilation done in 11.3s.
+
+___________________________________ 
+___  __ \__    |__  /____  _/__    |
+__  / / /_  /| |_  /  __  / __  /| |
+_  /_/ /_  ___ |  /____/ /  _  ___ |
+/_____/ /_/  |_/_____/___/  /_/  |_|
+
+╔═══════════════════════════════════════════════════════╗
+║               Parallelization strategies              ║
+║ ╒═══════════════════════════════════════════╤═══════╕ ║
+║ │ Participating Processes / Total Processes │ 1 / 1 │ ║
+║ ├───────────────────────────────────────────┼───────┤ ║
+║ │ Parallelization through F()               │   1   │ ║
+║ ├───────────────────────────────────────────┼───────┤ ║
+║ │ Parallelization through Q()               │   1   │ ║
+║ ├───────────────────────────────────────────┼───────┤ ║
+║ │ Parallelization through S()               │   1   │ ║
+║ ╘═══════════════════════════════════════════╧═══════╛ ║
+╚═══════════════════════════════════════════════════════╝
+╔═══════════════════════════════╗
+║  Enabled Performance modules  ║
+║ ╒═══════════════════╤═══════╕ ║
+║ │ Array module      │ cupy  │ ║
+║ ├───────────────────┼───────┤ ║
+║ │ MPI available     │ True  │ ║
+║ ├───────────────────┼───────┤ ║
+║ │ Is MPI CUDA aware │ False │ ║
+║ ├───────────────────┼───────┤ ║
+║ │ Is NCCL available │ False │ ║
+║ ╘═══════════════════╧═══════╛ ║
+╚═══════════════════════════════╝
+╔═══════════════════════════════════════╗
+║             Memory Report             ║
+║ ╒════════════════════════╤══════════╕ ║
+║ │ Solver memory          │  0.00 B  │ ║
+║ ├────────────────────────┼──────────┤ ║
+║ │ Total memory used      │ 56.69 MB │ ║
+║ ├────────────────────────┼──────────┤ ║
+║ │ Total memory available │ 75.42 MB │ ║
+║ ╘════════════════════════╧══════════╛ ║
+╚═══════════════════════════════════════╝
+DALIA initialized.
+JIT compiling objective + gradient...
+JIT compilation done in 10.0s.
+0.7803s (+/- 0.0003), 8.4 GiB
+  AD-Loop-Ckpt... Using JAX automatic differentiation with JIT compilation (Gaussian likelihood)
+JIT compiling objective + gradient...
+JIT compilation done in 11.3s.
+
+___________________________________ 
+___  __ \__    |__  /____  _/__    |
+__  / / /_  /| |_  /  __  / __  /| |
+_  /_/ /_  ___ |  /____/ /  _  ___ |
+/_____/ /_/  |_/_____/___/  /_/  |_|
+
+╔═══════════════════════════════════════════════════════╗
+║               Parallelization strategies              ║
+║ ╒═══════════════════════════════════════════╤═══════╕ ║
+║ │ Participating Processes / Total Processes │ 1 / 1 │ ║
+║ ├───────────────────────────────────────────┼───────┤ ║
+║ │ Parallelization through F()               │   1   │ ║
+║ ├───────────────────────────────────────────┼───────┤ ║
+║ │ Parallelization through Q()               │   1   │ ║
+║ ├───────────────────────────────────────────┼───────┤ ║
+║ │ Parallelization through S()               │   1   │ ║
+║ ╘═══════════════════════════════════════════╧═══════╛ ║
+╚═══════════════════════════════════════════════════════╝
+╔═══════════════════════════════╗
+║  Enabled Performance modules  ║
+║ ╒═══════════════════╤═══════╕ ║
+║ │ Array module      │ cupy  │ ║
+║ ├───────────────────┼───────┤ ║
+║ │ MPI available     │ True  │ ║
+║ ├───────────────────┼───────┤ ║
+║ │ Is MPI CUDA aware │ False │ ║
+║ ├───────────────────┼───────┤ ║
+║ │ Is NCCL available │ False │ ║
+║ ╘═══════════════════╧═══════╛ ║
+╚═══════════════════════════════╝
+╔═══════════════════════════════════════╗
+║             Memory Report             ║
+║ ╒════════════════════════╤══════════╕ ║
+║ │ Solver memory          │  0.00 B  │ ║
+║ ├────────────────────────┼──────────┤ ║
+║ │ Total memory used      │ 56.69 MB │ ║
+║ ├────────────────────────┼──────────┤ ║
+║ │ Total memory available │ 75.42 MB │ ║
+║ ╘════════════════════════╧══════════╛ ║
+╚═══════════════════════════════════════╝
+DALIA initialized.
+JIT compiling objective + gradient...
+JIT compilation done in 10.1s.
+0.8649s (+/- 0.0006), 6.4 GiB
+  AD-BTA... Using JAX automatic differentiation with JIT compilation (Gaussian likelihood)
+JIT compiling objective + gradient...
+JIT compilation done in 11.2s.
+
+___________________________________ 
+___  __ \__    |__  /____  _/__    |
+__  / / /_  /| |_  /  __  / __  /| |
+_  /_/ /_  ___ |  /____/ /  _  ___ |
+/_____/ /_/  |_/_____/___/  /_/  |_|
+
+╔═══════════════════════════════════════════════════════╗
+║               Parallelization strategies              ║
+║ ╒═══════════════════════════════════════════╤═══════╕ ║
+║ │ Participating Processes / Total Processes │ 1 / 1 │ ║
+║ ├───────────────────────────────────────────┼───────┤ ║
+║ │ Parallelization through F()               │   1   │ ║
+║ ├───────────────────────────────────────────┼───────┤ ║
+║ │ Parallelization through Q()               │   1   │ ║
+║ ├───────────────────────────────────────────┼───────┤ ║
+║ │ Parallelization through S()               │   1   │ ║
+║ ╘═══════════════════════════════════════════╧═══════╛ ║
+╚═══════════════════════════════════════════════════════╝
+╔═══════════════════════════════╗
+║  Enabled Performance modules  ║
+║ ╒═══════════════════╤═══════╕ ║
+║ │ Array module      │ cupy  │ ║
+║ ├───────────────────┼───────┤ ║
+║ │ MPI available     │ True  │ ║
+║ ├───────────────────┼───────┤ ║
+║ │ Is MPI CUDA aware │ False │ ║
+║ ├───────────────────┼───────┤ ║
+║ │ Is NCCL available │ False │ ║
+║ ╘═══════════════════╧═══════╛ ║
+╚═══════════════════════════════╝
+╔═══════════════════════════════════════╗
+║             Memory Report             ║
+║ ╒════════════════════════╤══════════╕ ║
+║ │ Solver memory          │  0.00 B  │ ║
+║ ├────────────────────────┼──────────┤ ║
+║ │ Total memory used      │ 56.69 MB │ ║
+║ ├────────────────────────┼──────────┤ ║
+║ │ Total memory available │ 75.42 MB │ ║
+║ ╘════════════════════════╧══════════╛ ║
+╚═══════════════════════════════════════╝
+DALIA initialized.
+0.7004s (+/- 0.0005), 1.1 GiB
+
+============================================================
+Model: GST-L (250 \times 4002)
+============================================================
+  FD... 
+___________________________________ 
+___  __ \__    |__  /____  _/__    |
+__  / / /_  /| |_  /  __  / __  /| |
+_  /_/ /_  ___ |  /____/ /  _  ___ |
+/_____/ /_/  |_/_____/___/  /_/  |_|
+
+╔═══════════════════════════════════════════════════════╗
+║               Parallelization strategies              ║
+║ ╒═══════════════════════════════════════════╤═══════╕ ║
+║ │ Participating Processes / Total Processes │ 1 / 1 │ ║
+║ ├───────────────────────────────────────────┼───────┤ ║
+║ │ Parallelization through F()               │   1   │ ║
+║ ├───────────────────────────────────────────┼───────┤ ║
+║ │ Parallelization through Q()               │   1   │ ║
+║ ├───────────────────────────────────────────┼───────┤ ║
+║ │ Parallelization through S()               │   1   │ ║
+║ ╘═══════════════════════════════════════════╧═══════╛ ║
+╚═══════════════════════════════════════════════════════╝
+╔═══════════════════════════════╗
+║  Enabled Performance modules  ║
+║ ╒═══════════════════╤═══════╕ ║
+║ │ Array module      │ cupy  │ ║
+║ ├───────────────────┼───────┤ ║
+║ │ MPI available     │ True  │ ║
+║ ├───────────────────┼───────┤ ║
+║ │ Is MPI CUDA aware │ False │ ║
+║ ├───────────────────┼───────┤ ║
+║ │ Is NCCL available │ False │ ║
+║ ╘═══════════════════╧═══════╛ ║
+╚═══════════════════════════════╝
+╔═══════════════════════════════════════╗
+║             Memory Report             ║
+║ ╒════════════════════════╤══════════╕ ║
+║ │ Solver memory          │ 59.59 GB │ ║
+║ ├────────────────────────┼──────────┤ ║
+║ │ Total memory used      │ 60.27 GB │ ║
+║ ├────────────────────────┼──────────┤ ║
+║ │ Total memory available │ 60.33 GB │ ║
+║ ╘════════════════════════╧══════════╛ ║
+╚═══════════════════════════════════════╝
+DALIA initialized.
+Allocated an extra 0.37 GB for BTA_mapping caching (total: 59.96)
+Allocated an extra 0.33 GB for BT_mapping caching (total: 60.29)
+rank 0 | iter 1 | objfunc_time: 56.550593 | solver_time: 51.479534 | construction_time: 3.924647
+rank 0 | iter 2 | objfunc_time: 56.553717 | solver_time: 51.479764 | construction_time: 3.926286
+rank 0 | iter 3 | objfunc_time: 56.545824 | solver_time: 51.481115 | construction_time: 3.922798
+rank 0 | iter 4 | objfunc_time: 56.544088 | solver_time: 51.479870 | construction_time: 3.924406
+rank 0 | iter 5 | objfunc_time: 56.549121 | solver_time: 51.483946 | construction_time: 3.924781
+rank 0 | iter 6 | objfunc_time: 56.537758 | solver_time: 51.477133 | construction_time: 3.921277
+rank 0 | iter 7 | objfunc_time: 56.533400 | solver_time: 51.472816 | construction_time: 3.921981
+rank 0 | iter 8 | objfunc_time: 56.541447 | solver_time: 51.482668 | construction_time: 3.922576
+rank 0 | iter 9 | objfunc_time: 56.548694 | solver_time: 51.487823 | construction_time: 3.922085
+rank 0 | iter 10 | objfunc_time: 56.557180 | solver_time: 51.499485 | construction_time: 3.921822
+rank 0 | iter 11 | objfunc_time: 56.550240 | solver_time: 51.488529 | construction_time: 3.923592
+rank 0 | iter 12 | objfunc_time: 56.570894 | solver_time: 51.509467 | construction_time: 3.923153
+rank 0 | iter 13 | objfunc_time: 56.571449 | solver_time: 51.506538 | construction_time: 3.923374
+rank 0 | iter 14 | objfunc_time: 56.583975 | solver_time: 51.518059 | construction_time: 3.925171
+rank 0 | iter 15 | objfunc_time: 56.593743 | solver_time: 51.526168 | construction_time: 3.923475
+rank 0 | iter 16 | objfunc_time: 56.577372 | solver_time: 51.509649 | construction_time: 3.924616
+rank 0 | iter 17 | objfunc_time: 56.594154 | solver_time: 51.504191 | construction_time: 3.932506
+rank 0 | iter 18 | objfunc_time: 56.702060 | solver_time: 51.503132 | construction_time: 3.978207
+rank 0 | iter 19 | objfunc_time: 56.654351 | solver_time: 51.498105 | construction_time: 3.959496
+rank 0 | iter 20 | objfunc_time: 56.658282 | solver_time: 51.487800 | construction_time: 3.958476
+rank 0 | iter 21 | objfunc_time: 56.615081 | solver_time: 51.493500 | construction_time: 3.946286
+56.5792s (+/- 0.0449), 76.9 GiB
+  AD-Dense... OOM
+  AD-Loop... Using JAX automatic differentiation with JIT compilation (Gaussian likelihood)
+JIT compiling objective + gradient...
+JIT compilation done in 41.1s.
+
+___________________________________ 
+___  __ \__    |__  /____  _/__    |
+__  / / /_  /| |_  /  __  / __  /| |
+_  /_/ /_  ___ |  /____/ /  _  ___ |
+/_____/ /_/  |_/_____/___/  /_/  |_|
+
+╔═══════════════════════════════════════════════════════╗
+║               Parallelization strategies              ║
+║ ╒═══════════════════════════════════════════╤═══════╕ ║
+║ │ Participating Processes / Total Processes │ 1 / 1 │ ║
+║ ├───────────────────────────────────────────┼───────┤ ║
+║ │ Parallelization through F()               │   1   │ ║
+║ ├───────────────────────────────────────────┼───────┤ ║
+║ │ Parallelization through Q()               │   1   │ ║
+║ ├───────────────────────────────────────────┼───────┤ ║
+║ │ Parallelization through S()               │   1   │ ║
+║ ╘═══════════════════════════════════════════╧═══════╛ ║
+╚═══════════════════════════════════════════════════════╝
+╔═══════════════════════════════╗
+║  Enabled Performance modules  ║
+║ ╒═══════════════════╤═══════╕ ║
+║ │ Array module      │ cupy  │ ║
+║ ├───────────────────┼───────┤ ║
+║ │ MPI available     │ True  │ ║
+║ ├───────────────────┼───────┤ ║
+║ │ Is MPI CUDA aware │ False │ ║
+║ ├───────────────────┼───────┤ ║
+║ │ Is NCCL available │ False │ ║
+║ ╘═══════════════════╧═══════╛ ║
+╚═══════════════════════════════╝
+╔════════════════════════════════════════╗
+║             Memory Report              ║
+║ ╒════════════════════════╤═══════════╕ ║
+║ │ Solver memory          │  0.00 B   │ ║
+║ ├────────────────────────┼───────────┤ ║
+║ │ Total memory used      │ 693.82 MB │ ║
+║ ├────────────────────────┼───────────┤ ║
+║ │ Total memory available │  1.02 GB  │ ║
+║ ╘════════════════════════╧═══════════╛ ║
+╚════════════════════════════════════════╝
+DALIA initialized.
+JIT compiling objective + gradient...
+OOM
+  AD-Loop-Ckpt... Using JAX automatic differentiation with JIT compilation (Gaussian likelihood)
+JIT compiling objective + gradient...
+JIT compilation done in 40.7s.
+
+___________________________________ 
+___  __ \__    |__  /____  _/__    |
+__  / / /_  /| |_  /  __  / __  /| |
+_  /_/ /_  ___ |  /____/ /  _  ___ |
+/_____/ /_/  |_/_____/___/  /_/  |_|
+
+╔═══════════════════════════════════════════════════════╗
+║               Parallelization strategies              ║
+║ ╒═══════════════════════════════════════════╤═══════╕ ║
+║ │ Participating Processes / Total Processes │ 1 / 1 │ ║
+║ ├───────────────────────────────────────────┼───────┤ ║
+║ │ Parallelization through F()               │   1   │ ║
+║ ├───────────────────────────────────────────┼───────┤ ║
+║ │ Parallelization through Q()               │   1   │ ║
+║ ├───────────────────────────────────────────┼───────┤ ║
+║ │ Parallelization through S()               │   1   │ ║
+║ ╘═══════════════════════════════════════════╧═══════╛ ║
+╚═══════════════════════════════════════════════════════╝
+╔═══════════════════════════════╗
+║  Enabled Performance modules  ║
+║ ╒═══════════════════╤═══════╕ ║
+║ │ Array module      │ cupy  │ ║
+║ ├───────────────────┼───────┤ ║
+║ │ MPI available     │ True  │ ║
+║ ├───────────────────┼───────┤ ║
+║ │ Is MPI CUDA aware │ False │ ║
+║ ├───────────────────┼───────┤ ║
+║ │ Is NCCL available │ False │ ║
+║ ╘═══════════════════╧═══════╛ ║
+╚═══════════════════════════════╝
+╔════════════════════════════════════════╗
+║             Memory Report              ║
+║ ╒════════════════════════╤═══════════╕ ║
+║ │ Solver memory          │  0.00 B   │ ║
+║ ├────────────────────────┼───────────┤ ║
+║ │ Total memory used      │ 693.82 MB │ ║
+║ ├────────────────────────┼───────────┤ ║
+║ │ Total memory available │  1.02 GB  │ ║
+║ ╘════════════════════════╧═══════════╛ ║
+╚════════════════════════════════════════╝
+DALIA initialized.
+JIT compiling objective + gradient...
+OOM
+  AD-BTA... Using JAX automatic differentiation with JIT compilation (Gaussian likelihood)
+JIT compiling objective + gradient...
+JIT compilation done in 40.4s.
+
+___________________________________ 
+___  __ \__    |__  /____  _/__    |
+__  / / /_  /| |_  /  __  / __  /| |
+_  /_/ /_  ___ |  /____/ /  _  ___ |
+/_____/ /_/  |_/_____/___/  /_/  |_|
+
+╔═══════════════════════════════════════════════════════╗
+║               Parallelization strategies              ║
+║ ╒═══════════════════════════════════════════╤═══════╕ ║
+║ │ Participating Processes / Total Processes │ 1 / 1 │ ║
+║ ├───────────────────────────────────────────┼───────┤ ║
+║ │ Parallelization through F()               │   1   │ ║
+║ ├───────────────────────────────────────────┼───────┤ ║
+║ │ Parallelization through Q()               │   1   │ ║
+║ ├───────────────────────────────────────────┼───────┤ ║
+║ │ Parallelization through S()               │   1   │ ║
+║ ╘═══════════════════════════════════════════╧═══════╛ ║
+╚═══════════════════════════════════════════════════════╝
+╔═══════════════════════════════╗
+║  Enabled Performance modules  ║
+║ ╒═══════════════════╤═══════╕ ║
+║ │ Array module      │ cupy  │ ║
+║ ├───────────────────┼───────┤ ║
+║ │ MPI available     │ True  │ ║
+║ ├───────────────────┼───────┤ ║
+║ │ Is MPI CUDA aware │ False │ ║
+║ ├───────────────────┼───────┤ ║
+║ │ Is NCCL available │ False │ ║
+║ ╘═══════════════════╧═══════╛ ║
+╚═══════════════════════════════╝
+╔════════════════════════════════════════╗
+║             Memory Report              ║
+║ ╒════════════════════════╤═══════════╕ ║
+║ │ Solver memory          │  0.00 B   │ ║
+║ ├────────────────────────┼───────────┤ ║
+║ │ Total memory used      │ 693.82 MB │ ║
+║ ├────────────────────────┼───────────┤ ║
+║ │ Total memory available │  1.02 GB  │ ║
+║ ╘════════════════════════╧═══════════╛ ║
+╚════════════════════════════════════════╝
+DALIA initialized.
+23.8276s (+/- 0.0167), 63.3 GiB
+
+====================================================================================================
+Table 2: Per-gradient time (s) and peak GPU memory (GiB)
+====================================================================================================
+Model    n x b                    FD t         FD mem     AD-Dense t   AD-Dense mem      AD-Loop t    AD-Loop mem AD-Loop-Ckpt t AD-Loop-Ckpt mem       AD-BTA t     AD-BTA mem
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+GST-S    5x92                    0.341            0.4         0.0042           <0.1         0.0070           <0.1         0.0073           <0.1         0.0058           <0.1
+GST-C2   12x708                  1.641            0.2          0.294            2.9          0.075            0.9          0.085            1.0          0.079            0.2
+GST-C3   8x1062                  2.854            0.2          0.390            3.3          0.083            1.3          0.094            1.5          0.096            0.3
+GST-M    100x812                 2.707            2.4            OOM            OOM          0.780            8.4          0.865            6.4          0.700            1.1
+GST-L    250x4002               56.579           76.9            OOM            OOM            OOM            OOM            OOM            OOM         23.828           63.3
+====================================================================================================
+Results written to: /capstor/scratch/cscs/aboudaou/workspace/dalia/artifact/experiments/tab2_structure_comparison/tab2_results.csv
+--- Finished ---
+Job finished at Sun 15 Mar 2026 06:52:40 PM CET

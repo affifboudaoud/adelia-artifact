@@ -20,9 +20,7 @@ import pandas as pd
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 DATA_DIR = os.path.join(SCRIPT_DIR, "..", "data")
-PAPER_FIG_DIR = os.path.join(
-    SCRIPT_DIR, "..", "..", "writing", "698c58632d8bba3fe6c13a59", "figures"
-)
+PAPER_FIG_DIR = os.path.join(SCRIPT_DIR, "..", "figures")
 
 CSV_FILE = "minimum_resources_comparison.csv"
 OUTPUT_FILENAME = "minimum_resources.pdf"

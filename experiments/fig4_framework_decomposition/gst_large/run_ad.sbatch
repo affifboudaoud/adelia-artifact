@@ -2,6 +2,7 @@
 #SBATCH --job-name=fig4_gstl_ad
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=1
+#SBATCH --gpus-per-task=1
 #SBATCH --time=01:00:00
 #SBATCH --account=lp16
 #SBATCH --output=outputs/fig4_gst_large_ad_%j.log

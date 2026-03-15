@@ -20,17 +20,15 @@ import pandas as pd
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 DATA_DIR = os.path.join(SCRIPT_DIR, "..", "data")
-PAPER_FIG_DIR = os.path.join(
-    SCRIPT_DIR, "..", "..", "writing", "698c58632d8bba3fe6c13a59", "figures"
-)
+PAPER_FIG_DIR = os.path.join(SCRIPT_DIR, "..", "figures")
 
 CSV_FILE = "resource_efficiency_all_updated.csv"
 
 MODELS = {
-    "sa1":  (r"SA1 ($d{=}15$) [AD@1]",  "-",  "s", "#5a9e91"),
-    "ap1":  (r"AP1 ($d{=}15$) [AD@4]",  "-",  "D", "#8a8078"),
-    "wa1":  (r"WA1 ($d{=}15$) [AD@4]",  "-",  "^", "#c4a265"),
-    "wa2":  (r"WA2 ($d{=}15$) [AD@4]",  "-",  "v", "#506070"),
+    "sa1":  (r"SA1 [AD@1]",  "-",  "s", "#5a9e91"),
+    "ap1":  (r"AP1 [AD@4]",  "-",  "D", "#8a8078"),
+    "wa1":  (r"WA1 [AD@4]",  "-",  "^", "#c4a265"),
+    "wa2":  (r"WA2 [AD@4]",  "-",  "v", "#506070"),
 }
 
 FIGSIZE = (7.16, 3.8)
@@ -164,8 +162,8 @@ def plot_dual_panel(df):
     ax_wall.text(0.02, 0.02, "FD faster", transform=ax_wall.transAxes,
                  fontsize=8, alpha=0.7, color="red", va="bottom",
                  fontweight="bold")
-    ax_wall.text(0.02, 0.98, "AD faster", transform=ax_wall.transAxes,
-                 fontsize=8, alpha=0.7, color="green", va="top",
+    ax_wall.text(0.98, 0.98, "AD faster", transform=ax_wall.transAxes,
+                 fontsize=8, alpha=0.7, color="green", va="top", ha="right",
                  fontweight="bold")
 
     # --- Panel (b) formatting --- LINEAR y

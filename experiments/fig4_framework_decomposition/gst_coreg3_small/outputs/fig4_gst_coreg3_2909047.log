@@ -1,0 +1,118 @@
+=== Framework comparison: gst_coreg3_small ===
+Parsed parameters:
+  max_iter: 250
+  solver_min_p: 1
+  profile: False
+  precision: float64
+  output_dir: /capstor/scratch/cscs/aboudaou/workspace/dalia/artifact/experiments/fig4_framework_decomposition/gst_coreg3_small/../results
+--- gst_coreg3_small: Coregional (3-variate) Spatio-Temporal Model ---
+Using JAX automatic differentiation with JIT compilation (CoregionalModel, 3 variates)
+JIT compiling coregional objective + gradient...
+JIT compilation done in 26.1s.
+
+___________________________________ 
+___  __ \__    |__  /____  _/__    |
+__  / / /_  /| |_  /  __  / __  /| |
+_  /_/ /_  ___ |  /____/ /  _  ___ |
+/_____/ /_/  |_/_____/___/  /_/  |_|
+
+╔═══════════════════════════════════════════════════════╗
+║               Parallelization strategies              ║
+║ ╒═══════════════════════════════════════════╤═══════╕ ║
+║ │ Participating Processes / Total Processes │ 1 / 1 │ ║
+║ ├───────────────────────────────────────────┼───────┤ ║
+║ │ Parallelization through F()               │   1   │ ║
+║ ├───────────────────────────────────────────┼───────┤ ║
+║ │ Parallelization through Q()               │   1   │ ║
+║ ├───────────────────────────────────────────┼───────┤ ║
+║ │ Parallelization through S()               │   1   │ ║
+║ ╘═══════════════════════════════════════════╧═══════╛ ║
+╚═══════════════════════════════════════════════════════╝
+╔═══════════════════════════════╗
+║  Enabled Performance modules  ║
+║ ╒═══════════════════╤═══════╕ ║
+║ │ Array module      │ cupy  │ ║
+║ ├───────────────────┼───────┤ ║
+║ │ MPI available     │ True  │ ║
+║ ├───────────────────┼───────┤ ║
+║ │ Is MPI CUDA aware │ False │ ║
+║ ├───────────────────┼───────┤ ║
+║ │ Is NCCL available │ False │ ║
+║ ╘═══════════════════╧═══════╛ ║
+╚═══════════════════════════════╝
+╔═══════════════════════════════════════╗
+║             Memory Report             ║
+║ ╒════════════════════════╤══════════╕ ║
+║ │ Solver memory          │  0.00 B  │ ║
+║ ├────────────────────────┼──────────┤ ║
+║ │ Total memory used      │ 66.08 MB │ ║
+║ ├────────────────────────┼──────────┤ ║
+║ │ Total memory available │ 72.98 MB │ ║
+║ ╘════════════════════════╧══════════╛ ║
+╚═══════════════════════════════════════╝
+DALIA initialized.
+
+___________________________________ 
+___  __ \__    |__  /____  _/__    |
+__  / / /_  /| |_  /  __  / __  /| |
+_  /_/ /_  ___ |  /____/ /  _  ___ |
+/_____/ /_/  |_/_____/___/  /_/  |_|
+
+╔═══════════════════════════════════════════════════════╗
+║               Parallelization strategies              ║
+║ ╒═══════════════════════════════════════════╤═══════╕ ║
+║ │ Participating Processes / Total Processes │ 1 / 1 │ ║
+║ ├───────────────────────────────────────────┼───────┤ ║
+║ │ Parallelization through F()               │   1   │ ║
+║ ├───────────────────────────────────────────┼───────┤ ║
+║ │ Parallelization through Q()               │   1   │ ║
+║ ├───────────────────────────────────────────┼───────┤ ║
+║ │ Parallelization through S()               │   1   │ ║
+║ ╘═══════════════════════════════════════════╧═══════╛ ║
+╚═══════════════════════════════════════════════════════╝
+╔═══════════════════════════════╗
+║  Enabled Performance modules  ║
+║ ╒═══════════════════╤═══════╕ ║
+║ │ Array module      │ cupy  │ ║
+║ ├───────────────────┼───────┤ ║
+║ │ MPI available     │ True  │ ║
+║ ├───────────────────┼───────┤ ║
+║ │ Is MPI CUDA aware │ False │ ║
+║ ├───────────────────┼───────┤ ║
+║ │ Is NCCL available │ False │ ║
+║ ╘═══════════════════╧═══════╛ ║
+╚═══════════════════════════════╝
+╔════════════════════════════════════════╗
+║             Memory Report              ║
+║ ╒════════════════════════╤═══════════╕ ║
+║ │ Solver memory          │ 129.27 MB │ ║
+║ ├────────────────────────┼───────────┤ ║
+║ │ Total memory used      │ 228.40 MB │ ║
+║ ├────────────────────────┼───────────┤ ║
+║ │ Total memory available │ 231.47 MB │ ║
+║ ╘════════════════════════╧═══════════╛ ║
+╚════════════════════════════════════════╝
+DALIA initialized.
+Allocated an extra 0.01 GB for BTA_mapping caching (total: 0.13)
+Allocated an extra 0.01 GB for BT_mapping caching (total: 0.14)
+
+Framework comparison: gst_coreg3_small
+  JAX forward:   0.033292 +/- 0.000037s
+  CuPy forward:  0.092994 +/- 0.000624s
+  r (CuPy/JAX):  2.79
+  JAX gradient:  0.095202 +/- 0.000075s
+  JAX backward:  0.061910s (total - forward)
+  Written to: /capstor/scratch/cscs/aboudaou/workspace/dalia/artifact/experiments/fig4_framework_decomposition/gst_coreg3_small/../results/single_eval_comparison.csv
+rank 0 | iter 1 | objfunc_time: 2.929098 | solver_time: 0.815350 | construction_time: 1.918864
+rank 0 | iter 2 | objfunc_time: 2.831277 | solver_time: 0.719630 | construction_time: 1.916647
+rank 0 | iter 3 | objfunc_time: 2.865221 | solver_time: 0.721377 | construction_time: 1.945488
+rank 0 | iter 4 | objfunc_time: 2.887089 | solver_time: 0.722915 | construction_time: 1.964038
+rank 0 | iter 5 | objfunc_time: 2.886116 | solver_time: 0.722242 | construction_time: 1.963400
+rank 0 | iter 6 | objfunc_time: 2.885124 | solver_time: 0.722424 | construction_time: 1.962824
+rank 0 | iter 7 | objfunc_time: 2.885278 | solver_time: 0.722497 | construction_time: 1.963123
+rank 0 | iter 8 | objfunc_time: 2.865436 | solver_time: 0.721620 | construction_time: 1.944153
+rank 0 | iter 9 | objfunc_time: 2.855610 | solver_time: 0.721169 | construction_time: 1.937170
+rank 0 | iter 10 | objfunc_time: 2.853663 | solver_time: 0.721082 | construction_time: 1.935474
+rank 0 | iter 11 | objfunc_time: 2.848411 | solver_time: 0.720319 | construction_time: 1.932862
+  Written to: /capstor/scratch/cscs/aboudaou/workspace/dalia/artifact/experiments/fig4_framework_decomposition/gst_coreg3_small/../results/memory_breakdown.csv
+Job finished at Sun 15 Mar 2026 03:37:49 PM CET

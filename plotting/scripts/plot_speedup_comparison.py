@@ -55,9 +55,7 @@ SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 DEFAULT_CSV_PATH = os.path.join(
     SCRIPT_DIR, "..", "results", "speedup_optimization_time_no_jit.csv"
 )
-DEFAULT_OUTPUT_DIR = os.path.join(
-    SCRIPT_DIR, "..", "writing", "698c58632d8bba3fe6c13a59", "figures"
-)
+DEFAULT_OUTPUT_DIR = os.path.join(SCRIPT_DIR, "..", "figures")
 DEFAULT_OUTPUT_FILENAME = "speedup_comparison.pdf"
 
 COLORS = {"FD": "#4878CF", "JAX": "#D65F5F"}

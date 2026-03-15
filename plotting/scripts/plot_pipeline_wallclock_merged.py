@@ -1,9 +1,7 @@
-"""Merged wall-clock figure: JIT + optimization + Hessian for AD vs FD,
-with per-gradient speedup and c_AD annotations.
+"""Wall-clock figure: optimization + Hessian for AD vs FD.
 
-Combines the previous minimum_resources and pipeline_wallclock figures into
-a single figure.  Annotations show (per-grad speedup, end-to-end speedup)
-above each model's FD bar.
+Stacked bar chart with per-gradient and end-to-end speedup annotations.
+No JIT time in the bars (JIT is a one-time cost, not part of the pipeline).
 
 Usage:
     python plot_pipeline_wallclock_merged.py
@@ -20,9 +18,7 @@ import pandas as pd
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 DATA_DIR = os.path.join(SCRIPT_DIR, "..", "data")
-PAPER_FIG_DIR = os.path.join(
-    SCRIPT_DIR, "..", "..", "writing", "698c58632d8bba3fe6c13a59", "figures"
-)
+PAPER_FIG_DIR = os.path.join(SCRIPT_DIR, "..", "figures")
 
 CSV_FILE = "pipeline_wallclock.csv"
 OUTPUT_FILENAME = "pipeline_wallclock_merged.pdf"
@@ -36,18 +32,18 @@ LARGE_MODELS = ["GST-L", "SA1", "AP1", "WA1", "WA2"]
 
 COLORS = {
     "fd_optim": "#c4a265",
-    "fd_hessian": "#dbc598",
+    "fd_hessian": "#c4a265",
     "ad_optim": "#5a9e91",
-    "ad_hessian": "#96c8be",
+    "ad_hessian": "#5a9e91",
 }
 HATCH_HESSIAN = "///"
 
 FIGURE_WIDTH = 7.16
-FIGURE_HEIGHT = 3.8
+FIGURE_HEIGHT = 2.8
 BAR_WIDTH = 0.30
 FONT_SIZE_TICKS = 9
 FONT_SIZE_LABELS = 10
-FONT_SIZE_SPEEDUP = 8
+FONT_SIZE_SPEEDUP = 7.5
 EDGECOLOR = "black"
 LINEWIDTH = 0.5
 
@@ -61,14 +57,6 @@ def load_data():
     return df
 
 
-def make_label(row, c_ad):
-    if c_ad < 1.0:
-        c_str = f"{c_ad:.2f}"
-    else:
-        c_str = f"{c_ad:.1f}"
-    return f"{row['model']}\n$c_{{\\mathrm{{AD}}}}$={c_str}"
-
-
 def plot_panel(ax, df_panel, ylim_top, panel_title, time_unit="s"):
     n = len(df_panel)
     x = np.arange(n)
@@ -77,20 +65,16 @@ def plot_panel(ax, df_panel, ylim_top, panel_title, time_unit="s"):
     unit_label = "h" if time_unit == "h" else "s"
 
     for i, (_, row) in enumerate(df_panel.iterrows()):
-        d = int(row["d"])
-        t_eval = row["t_per_grad_fd"] / (2 * d + 1)
-        c_ad = row["t_per_grad_ad"] / t_eval
         per_grad_speedup = row["t_per_grad_fd"] / row["t_per_grad_ad"]
 
         fd_optim = row["t_optim_fd"] / scale
         fd_hessian = row["t_hessian_fd"] / scale
-        ad_jit = row["t_jit_ad"] / scale
         ad_optim = row["t_optim_ad"] / scale
         ad_hessian = row["t_hessian_ad"] / scale
 
-        fd_total = row["t_total_fd"] / scale
-        ad_total = row["t_total_ad"] / scale
-        e2e_speedup = fd_total / ad_total
+        fd_total = (row["t_optim_fd"] + row["t_hessian_fd"]) / scale
+        ad_total = (row["t_optim_ad"] + row["t_hessian_ad"]) / scale
+        e2e_speedup = fd_total / ad_total if ad_total > 0 else 0
 
         # FD bar (right)
         ax.bar(
@@ -118,7 +102,7 @@ def plot_panel(ax, df_panel, ylim_top, panel_title, time_unit="s"):
             hatch=HATCH_HESSIAN, zorder=3,
         )
 
-        # Annotation: (per-grad speedup, e2e speedup) above FD bar
+        # Annotation: (per-grad speedup, e2e speedup) above taller bar
         fd_top = fd_optim + fd_hessian
         ad_top = ad_optim + ad_hessian
         bar_top = max(fd_top, ad_top)
@@ -133,18 +117,12 @@ def plot_panel(ax, df_panel, ylim_top, panel_title, time_unit="s"):
             annotation_clip=False,
         )
 
-    # x-axis labels with c_AD
-    labels = []
-    for _, row in df_panel.iterrows():
-        d = int(row["d"])
-        t_eval = row["t_per_grad_fd"] / (2 * d + 1)
-        c_ad = row["t_per_grad_ad"] / t_eval
-        labels.append(make_label(row, c_ad))
+    labels = [row["model"] for _, row in df_panel.iterrows()]
 
     ax.set_ylim(0, ylim_top)
-    ax.set_xlim(-1.0, n - 0.4)
+    ax.set_xlim(-0.7, n - 0.3)
     ax.set_xticks(x)
-    ax.set_xticklabels(labels, fontsize=FONT_SIZE_TICKS - 1)
+    ax.set_xticklabels(labels, fontsize=FONT_SIZE_TICKS)
     ax.set_ylabel(f"Wall-clock time ({unit_label})", fontsize=FONT_SIZE_LABELS)
     ax.tick_params(axis="y", labelsize=FONT_SIZE_TICKS)
     ax.yaxis.grid(True, linestyle="--", alpha=0.3)
@@ -171,12 +149,11 @@ def plot_pipeline(df):
         gridspec_kw={"width_ratios": [4, 5]},
     )
 
-    plot_panel(ax_fast, df_fast, ylim_top=340,
+    plot_panel(ax_fast, df_fast, ylim_top=1800,
                panel_title="(a) Small/medium models")
-    plot_panel(ax_large, df_large, ylim_top=32,
+    plot_panel(ax_large, df_large, ylim_top=18,
                panel_title="(b) Large models", time_unit="h")
 
-    # Legend
     patches = [
         mpatches.Patch(color=COLORS["ad_optim"], label="Optimization (AD)"),
         mpatches.Patch(
@@ -189,16 +166,19 @@ def plot_pipeline(df):
             linewidth=LINEWIDTH, hatch=HATCH_HESSIAN, label="Hessian (FD)",
         ),
     ]
-    ax_large.legend(
+    fig.legend(
         handles=patches,
         fontsize=FONT_SIZE_LABELS - 2,
-        loc="upper left",
-        framealpha=0.9,
+        loc="lower center",
+        ncol=4,
+        frameon=False,
         handlelength=1.2,
         handletextpad=0.4,
+        columnspacing=1.5,
     )
 
     fig.tight_layout()
+    fig.subplots_adjust(bottom=0.18)
     return fig
 
 

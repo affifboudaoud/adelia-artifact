@@ -1,0 +1,86 @@
+Parsed parameters:
+  max_iter: 250
+  solver_min_p: 1
+  profile: False
+  precision: float64
+  benchmark_mode: True
+  n_benchmark_runs: 10
+  benchmark_method: finite_diff
+  output_csv: /capstor/scratch/cscs/aboudaou/workspace/dalia/artifact/plotting/data/fig6_raw_results.csv
+--- sa1: Coregional (3-variate) Spatio-Temporal Model (distributed) ---
+
+___________________________________ 
+___  __ \__    |__  /____  _/__    |
+__  / / /_  /| |_  /  __  / __  /| |
+_  /_/ /_  ___ |  /____/ /  _  ___ |
+/_____/ /_/  |_/_____/___/  /_/  |_|
+
+╔═══════════════════════════════════════════════════════╗
+║               Parallelization strategies              ║
+║ ╒═══════════════════════════════════════════╤═══════╕ ║
+║ │ Participating Processes / Total Processes │ 1 / 1 │ ║
+║ ├───────────────────────────────────────────┼───────┤ ║
+║ │ Parallelization through F()               │   1   │ ║
+║ ├───────────────────────────────────────────┼───────┤ ║
+║ │ Parallelization through Q()               │   1   │ ║
+║ ├───────────────────────────────────────────┼───────┤ ║
+║ │ Parallelization through S()               │   1   │ ║
+║ ╘═══════════════════════════════════════════╧═══════╛ ║
+╚═══════════════════════════════════════════════════════╝
+╔═══════════════════════════════╗
+║  Enabled Performance modules  ║
+║ ╒═══════════════════╤═══════╕ ║
+║ │ Array module      │ cupy  │ ║
+║ ├───────────────────┼───────┤ ║
+║ │ MPI available     │ True  │ ║
+║ ├───────────────────┼───────┤ ║
+║ │ Is MPI CUDA aware │ False │ ║
+║ ├───────────────────┼───────┤ ║
+║ │ Is NCCL available │ False │ ║
+║ ╘═══════════════════╧═══════╛ ║
+╚═══════════════════════════════╝
+╔═══════════════════════════════════════╗
+║             Memory Report             ║
+║ ╒════════════════════════╤══════════╕ ║
+║ │ Solver memory          │ 71.90 GB │ ║
+║ ├────────────────────────┼──────────┤ ║
+║ │ Total memory used      │ 79.26 GB │ ║
+║ ├────────────────────────┼──────────┤ ║
+║ │ Total memory available │ 79.49 GB │ ║
+║ ╘════════════════════════╧══════════╛ ║
+╚═══════════════════════════════════════╝
+DALIA initialized.
+
+======================================================================
+GRADIENT BENCHMARK: sa1
+======================================================================
+Nodes: 1, Tasks: 1
+Hyperparameters: 15
+Benchmark runs: 10
+Energy monitor: enabled (Cray PM counters)
+
+Timing finite difference gradient...
+Allocated an extra 0.97 GB for BTA_mapping caching (total: 72.87)
+Allocated an extra 0.96 GB for BT_mapping caching (total: 73.83)
+rank 0 | iter 1 | objfunc_time: 254.092796 | solver_time: 239.099268 | construction_time: 11.571475 | energy: node=281011J gpu=203499J cpu=42610J (1106W)
+rank 0 | iter 2 | objfunc_time: 253.755927 | solver_time: 238.869129 | construction_time: 11.506525 | energy: node=279482J gpu=202681J cpu=41897J (1101W)
+rank 0 | iter 3 | objfunc_time: 253.841029 | solver_time: 238.942524 | construction_time: 11.514546 | energy: node=279158J gpu=202838J cpu=41729J (1100W)
+rank 0 | iter 4 | objfunc_time: 253.884802 | solver_time: 238.955123 | construction_time: 11.559809 | energy: node=279488J gpu=203207J cpu=41895J (1101W)
+rank 0 | iter 5 | objfunc_time: 254.112094 | solver_time: 238.948477 | construction_time: 11.800646 | energy: node=279631J gpu=203237J cpu=41794J (1100W)
+rank 0 | iter 6 | objfunc_time: 254.086605 | solver_time: 239.002000 | construction_time: 11.660806 | energy: node=279569J gpu=203238J cpu=41696J (1100W)
+rank 0 | iter 7 | objfunc_time: 253.699915 | solver_time: 238.707438 | construction_time: 11.588903 | energy: node=278557J gpu=203080J cpu=41271J (1098W)
+rank 0 | iter 8 | objfunc_time: 253.955733 | solver_time: 238.975334 | construction_time: 11.577463 | energy: node=278980J gpu=203308J cpu=41408J (1099W)
+rank 0 | iter 9 | objfunc_time: 254.174858 | solver_time: 239.178613 | construction_time: 11.586370 | energy: node=279221J gpu=203035J cpu=41447J (1099W)
+rank 0 | iter 10 | objfunc_time: 254.192778 | solver_time: 239.202154 | construction_time: 11.584995 | energy: node=279892J gpu=203421J cpu=41544J (1101W)
+rank 0 | iter 11 | objfunc_time: 254.146040 | solver_time: 239.188807 | construction_time: 11.557372 | energy: node=279227J gpu=203205J cpu=41381J (1099W)
+  Mean: 254.0414s
+  Std:  0.1958s
+  Node energy/grad: 279320.5 J
+  GPU energy/grad:  203125.0 J
+  Other energy/grad: 34589.3 J
+
+======================================================================
+Benchmark completed
+Results written to: /capstor/scratch/cscs/aboudaou/workspace/dalia/artifact/plotting/data/fig6_raw_results.csv
+======================================================================
+Job finished at Sun 15 Mar 2026 04:59:13 PM CET

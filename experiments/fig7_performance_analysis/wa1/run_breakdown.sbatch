@@ -2,6 +2,7 @@
 #SBATCH --job-name=wa1_breakdown
 #SBATCH --nodes=4
 #SBATCH --ntasks-per-node=1
+#SBATCH --gpus-per-task=1
 #SBATCH --time=01:00:00
 #SBATCH --account=g34
 #SBATCH --output=outputs/wa1_breakdown_%j.log

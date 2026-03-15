@@ -1,0 +1,94 @@
+Parsed parameters:
+  max_iter: 250
+  solver_min_p: 1
+  profile: False
+  precision: float64
+--- wa1: Coregional (3-variate) Spatio-Temporal Model (distributed, 4 nodes) ---
+Using distributed JAX autodiff (two-phase) with 4 ranks (CoregionalModel, 3 variates)
+Two-phase (fori, chunk=59, RS=scan, grad_prior=two-phase): JIT compiling all stages...
+  compiling Cholesky + forward sub...
+  compiling merged bwd+SI...
+  compiling prior logdet + gradient...
+  compiling quad gradient...
+  compiling scalar gradient...
+  all stages compiled in 116.0s.
+
+___________________________________ 
+___  __ \__    |__  /____  _/__    |
+__  / / /_  /| |_  /  __  / __  /| |
+_  /_/ /_  ___ |  /____/ /  _  ___ |
+/_____/ /_/  |_/_____/___/  /_/  |_|
+
+╔═══════════════════════════════════════════════════════╗
+║               Parallelization strategies              ║
+║ ╒═══════════════════════════════════════════╤═══════╕ ║
+║ │ Participating Processes / Total Processes │ 4 / 4 │ ║
+║ ├───────────────────────────────────────────┼───────┤ ║
+║ │ Parallelization through F()               │   1   │ ║
+║ ├───────────────────────────────────────────┼───────┤ ║
+║ │ Parallelization through Q()               │   1   │ ║
+║ ├───────────────────────────────────────────┼───────┤ ║
+║ │ Parallelization through S()               │   4   │ ║
+║ ╘═══════════════════════════════════════════╧═══════╛ ║
+╚═══════════════════════════════════════════════════════╝
+╔═══════════════════════════════╗
+║  Enabled Performance modules  ║
+║ ╒═══════════════════╤═══════╕ ║
+║ │ Array module      │ cupy  │ ║
+║ ├───────────────────┼───────┤ ║
+║ │ MPI available     │ True  │ ║
+║ ├───────────────────┼───────┤ ║
+║ │ Is MPI CUDA aware │ False │ ║
+║ ├───────────────────┼───────┤ ║
+║ │ Is NCCL available │ False │ ║
+║ ╘═══════════════════╧═══════╛ ║
+╚═══════════════════════════════╝
+╔═══════════════════════════════════════╗
+║             Memory Report             ║
+║ ╒════════════════════════╤══════════╕ ║
+║ │ Solver memory          │  0.00 B  │ ║
+║ ├────────────────────────┼──────────┤ ║
+║ │ Total memory used      │ 14.60 GB │ ║
+║ ├────────────────────────┼──────────┤ ║
+║ │ Total memory available │ 15.03 GB │ ║
+║ ╘════════════════════════╧══════════╛ ║
+╚═══════════════════════════════════════╝
+DALIA initialized.
+  dry run 1: chol_fwd_sub=9.98s  chol_detail.precompute=0.14s  chol_detail.local_blocks=7.84s  chol_detail._rs_t0=687990.04s  chol_detail.rs_allgather=1.85s  chol_detail.rs_factorize=0.08s  chol_detail.rs_aggregate=1.93s  chol_detail.boundary_update=0.07s  bwd_si=6.30s  grad_prior=14.68s  compute_f=0.23s  grad_quad=1.24s  grad_scalar=0.00s  (total=32.44s)
+  dry run 2: chol_fwd_sub=10.01s  chol_detail.precompute=0.14s  chol_detail.local_blocks=7.88s  chol_detail._rs_t0=688022.83s  chol_detail.rs_allgather=1.85s  chol_detail.rs_factorize=0.08s  chol_detail.rs_aggregate=1.94s  chol_detail.boundary_update=0.06s  bwd_si=6.30s  grad_prior=14.95s  compute_f=0.03s  grad_quad=1.23s  grad_scalar=0.00s  (total=32.53s)
+  run 1/3: chol_fwd_sub=10.27s  chol_detail.precompute=0.14s  chol_detail.local_blocks=7.91s  chol_detail._rs_t0=688055.66s  chol_detail.rs_allgather=2.08s  chol_detail.rs_factorize=0.08s  chol_detail.rs_aggregate=2.16s  chol_detail.boundary_update=0.06s  bwd_si=6.31s  grad_prior=14.67s  compute_f=0.03s  grad_quad=1.22s  grad_scalar=0.00s  (total=32.52s)
+  run 2/3: chol_fwd_sub=10.19s  chol_detail.precompute=0.14s  chol_detail.local_blocks=8.02s  chol_detail._rs_t0=688088.13s  chol_detail.rs_allgather=1.89s  chol_detail.rs_factorize=0.08s  chol_detail.rs_aggregate=1.97s  chol_detail.boundary_update=0.07s  bwd_si=6.60s  grad_prior=14.81s  compute_f=0.03s  grad_quad=1.23s  grad_scalar=0.00s  (total=32.86s)
+Parsed parameters:
+  max_iter: 250
+  solver_min_p: 1
+  profile: False
+  precision: float64
+  run 3/3: chol_fwd_sub=10.42s  chol_detail.precompute=0.14s  chol_detail.local_blocks=7.88s  chol_detail._rs_t0=688121.25s  chol_detail.rs_allgather=2.24s  chol_detail.rs_factorize=0.08s  chol_detail.rs_aggregate=2.32s  chol_detail.boundary_update=0.07s  bwd_si=6.30s  grad_prior=14.91s  compute_f=0.03s  grad_quad=1.22s  grad_scalar=0.00s  (total=32.88s)
+Parsed parameters:
+  max_iter: 250
+  solver_min_p: 1
+  profile: False
+  precision: float64
+Parsed parameters:
+  max_iter: 250
+  solver_min_p: 1
+  profile: False
+  precision: float64
+
+Per-stage breakdown: WA1 (3 runs)
+  chol_fwd_sub        : 10.2941s +/- 0.0924s (31.4%)
+  chol_detail.precompute: 0.1383s +/- 0.0011s (0.0%)
+  chol_detail.local_blocks: 7.9363s +/- 0.0568s (0.0%)
+  chol_detail._rs_t0  : 688088.3462s +/- 26.7801s (0.0%)
+  chol_detail.rs_allgather: 2.0668s +/- 0.1426s (0.0%)
+  chol_detail.rs_factorize: 0.0819s +/- 0.0003s (0.0%)
+  chol_detail.rs_aggregate: 2.1487s +/- 0.1423s (0.0%)
+  chol_detail.boundary_update: 0.0660s +/- 0.0047s (0.0%)
+  bwd_si              : 6.4035s +/- 0.1401s (19.6%)
+  grad_prior          : 14.7986s +/- 0.0980s (45.2%)
+  compute_f           : 0.0307s +/- 0.0004s (0.1%)
+  grad_quad           : 1.2269s +/- 0.0032s (3.7%)
+  grad_scalar         : 0.0002s +/- 0.0000s (0.0%)
+  total               : 32.7538s
+  Written to: /capstor/scratch/cscs/aboudaou/workspace/dalia/artifact/plotting/data/distributed_breakdown.csv
+Job finished at Sun 15 Mar 2026 05:32:56 PM CET

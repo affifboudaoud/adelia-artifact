@@ -1,0 +1,113 @@
+Parsed parameters:
+  max_iter: 250
+  solver_min_p: 4
+  profile: False
+  precision: float64
+  benchmark_mode: True
+  n_benchmark_runs: 3
+  benchmark_method: finite_diff
+  output_csv: None
+--- ap1: Coregional (3-variate) Spatio-Temporal Model (distributed, 4 nodes) ---
+Distributed solver slicing: [12, 12, 12, 12]
+
+___________________________________ 
+___  __ \__    |__  /____  _/__    |
+__  / / /_  /| |_  /  __  / __  /| |
+_  /_/ /_  ___ |  /____/ /  _  ___ |
+/_____/ /_/  |_/_____/___/  /_/  |_|
+
+╔═══════════════════════════════════════════════════════╗
+║               Parallelization strategies              ║
+║ ╒═══════════════════════════════════════════╤═══════╕ ║
+║ │ Participating Processes / Total Processes │ 4 / 4 │ ║
+║ ├───────────────────────────────────────────┼───────┤ ║
+║ │ Parallelization through F()               │   1   │ ║
+║ ├───────────────────────────────────────────┼───────┤ ║
+║ │ Parallelization through Q()               │   1   │ ║
+║ ├───────────────────────────────────────────┼───────┤ ║
+║ │ Parallelization through S()               │   4   │ ║
+║ ╘═══════════════════════════════════════════╧═══════╛ ║
+╚═══════════════════════════════════════════════════════╝
+╔═══════════════════════════════╗
+║  Enabled Performance modules  ║
+║ ╒═══════════════════╤═══════╕ ║
+║ │ Array module      │ cupy  │ ║
+║ ├───────────────────┼───────┤ ║
+║ │ MPI available     │ True  │ ║
+║ ├───────────────────┼───────┤ ║
+║ │ Is MPI CUDA aware │ False │ ║
+║ ├───────────────────┼───────┤ ║
+║ │ Is NCCL available │ False │ ║
+║ ╘═══════════════════╧═══════╛ ║
+╚═══════════════════════════════╝
+╔═══════════════════════════════════════╗
+║             Memory Report             ║
+║ ╒════════════════════════╤══════════╕ ║
+║ │ Solver memory          │ 61.81 GB │ ║
+║ ├────────────────────────┼──────────┤ ║
+║ │ Total memory used      │ 66.08 GB │ ║
+║ ├────────────────────────┼──────────┤ ║
+║ │ Total memory available │ 66.15 GB │ ║
+║ ╘════════════════════════╧══════════╛ ║
+╚═══════════════════════════════════════╝
+DALIA initialized.
+Parsed parameters:
+  max_iter: 250
+  solver_min_p: 4
+  profile: False
+  precision: float64
+  benchmark_mode: True
+  n_benchmark_runs: 3
+  benchmark_method: finite_diff
+  output_csv: None
+rank 3 | iter 1 | objfunc_time: 480.228382 | solver_time: 470.476822 | construction_time: 8.147342 | energy: node=527815J gpu=351963J cpu=84250J (1099W)
+Parsed parameters:
+  max_iter: 250
+  solver_min_p: 4
+  profile: False
+  precision: float64
+  benchmark_mode: True
+  n_benchmark_runs: 3
+  benchmark_method: finite_diff
+  output_csv: None
+rank 2 | iter 1 | objfunc_time: 480.255930 | solver_time: 469.979828 | construction_time: 8.421117 | energy: node=526899J gpu=349874J cpu=84349J (1097W)
+Parsed parameters:
+  max_iter: 250
+  solver_min_p: 4
+  profile: False
+  precision: float64
+  benchmark_mode: True
+  n_benchmark_runs: 3
+  benchmark_method: finite_diff
+  output_csv: None
+rank 1 | iter 1 | objfunc_time: 480.225727 | solver_time: 469.756320 | construction_time: 8.550697 | energy: node=495061J gpu=349315J cpu=78584J (1031W)
+
+======================================================================
+GRADIENT BENCHMARK: ap1
+======================================================================
+Nodes: 4, Tasks: 4
+Hyperparameters: 15
+Benchmark runs: 3
+
+Timing finite difference gradient...
+Allocated an extra 0.15 GB for BTA_mapping caching (total: 61.97)
+rank 0 | iter 1 | objfunc_time: 480.087303 | solver_time: 469.899933 | construction_time: 8.364558 | energy: node=434015J gpu=285694J cpu=78817J (904W)
+rank 3 | iter 2 | objfunc_time: 478.899667 | solver_time: 469.133659 | construction_time: 8.172440 | energy: node=525476J gpu=355545J cpu=83366J (1097W)
+rank 0 | iter 2 | objfunc_time: 478.927103 | solver_time: 469.045780 | construction_time: 8.189694 | energy: node=433216J gpu=287767J cpu=79218J (905W)
+rank 2 | iter 2 | objfunc_time: 478.898107 | solver_time: 468.951076 | construction_time: 8.224722 | energy: node=524677J gpu=347017J cpu=83735J (1096W)
+rank 1 | iter 2 | objfunc_time: 478.897048 | solver_time: 468.789088 | construction_time: 8.336437 | energy: node=493191J gpu=348268J cpu=78110J (1030W)
+rank 2 | iter 3 | objfunc_time: 479.412789 | solver_time: 469.220664 | construction_time: 8.376043 | energy: node=524357J gpu=348512J cpu=83873J (1094W)
+rank 3 | iter 3 | objfunc_time: 479.412820 | solver_time: 469.327502 | construction_time: 8.363903 | energy: node=525387J gpu=357245J cpu=82759J (1096W)
+rank 1 | iter 3 | objfunc_time: 479.412816 | solver_time: 469.541857 | construction_time: 8.180320 | energy: node=492967J gpu=347240J cpu=78257J (1028W)
+rank 0 | iter 3 | objfunc_time: 479.412768 | solver_time: 469.386105 | construction_time: 8.279170 | energy: node=433278J gpu=284479J cpu=79046J (904W)
+rank 2 | iter 4 | objfunc_time: 479.402219 | solver_time: 469.325160 | construction_time: 8.298126 | energy: node=524634J gpu=347228J cpu=83723J (1094W)
+rank 3 | iter 4 | objfunc_time: 479.251724 | solver_time: 469.410170 | construction_time: 8.221995 | energy: node=525215J gpu=356100J cpu=83191J (1096W)
+rank 0 | iter 4 | objfunc_time: 479.418198 | solver_time: 469.418025 | construction_time: 8.267847 | energy: node=431717J gpu=284159J cpu=78335J (901W)
+  Mean: 479.3759s
+  Std:  0.3177s
+
+======================================================================
+Benchmark completed
+======================================================================
+rank 1 | iter 4 | objfunc_time: 479.388447 | solver_time: 469.547203 | construction_time: 8.167084 | energy: node=490876J gpu=347049J cpu=77555J (1024W)
+Job finished at Sun 15 Mar 2026 06:43:54 PM CET

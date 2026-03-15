@@ -189,11 +189,6 @@ def run_with_method(model, gradient_method, max_iter, verbose=True,
         model=model,
         config=dalia_config.parse_config(dalia_dict),
     )
-
-    from energy_monitor import EnergyMonitor
-    from dalia import comm_rank
-    dalia.energy_monitor = EnergyMonitor(rank=comm_rank)
-
     return dalia
 
 

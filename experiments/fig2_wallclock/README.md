@@ -1,8 +1,7 @@
 # Figure 2: Wallclock Timing
 
-Runs end-to-end L-BFGS optimization using both JAX autodiff (AD) and finite
-differences (FD) across all 9 models, measuring total wallclock time and
-per-gradient cost. Reproduces **Figure 2** in the paper.
+Compares end-to-end wall-clock time for JAX autodiff (AD) vs finite differences
+(FD) across all 9 models. Reproduces **Figure 2** in the paper.
 
 ## Models
 
@@ -63,12 +62,70 @@ sbatch --export=ALL,MAX_ITER=1000 --time=12:00:00 run_ad.sbatch
 
 ### Per-stage breakdown (for analysis)
 
-WA1 has dedicated breakdown scripts. For AP1/WA2, use the breakdown sbatch:
 ```bash
 cd wa1 && sbatch run_breakdown.sbatch
 cd ap1 && sbatch run_breakdown.sbatch
 cd wa2 && sbatch run_breakdown.sbatch
 ```
+
+## Generating the Figure
+
+After running the benchmarks, generate the plotting CSV and the figure:
+
+```bash
+# 1. Generate pipeline_wallclock.csv from benchmark results
+python generate_csv.py
+
+# 2. Generate the figure
+cd ../../plotting
+python scripts/plot_pipeline_wallclock_merged.py
+```
+
+Output: `plotting/figures/pipeline_wallclock_merged.pdf`
+
+## How the Wallclock Estimates Work
+
+The figure reports estimated total wall-clock time (optimization + Hessian) for
+both AD and FD. The key design choice: **we use the same number of L-BFGS
+iterations for both methods** to ensure a fair comparison at equal computational
+budget. This is conservative for two reasons:
+
+1. **AD computes exact gradients**, so L-BFGS typically converges to a better
+   solution in the same number of iterations. FD's approximate gradients can
+   cause the line search to stall or the optimizer to converge to a worse point.
+
+2. **FD often needs more iterations** than AD to reach the same solution quality,
+   so using AD's iteration count underestimates FD's true cost.
+
+### Formulas
+
+The per-gradient time (`t_grad_AD`, `t_grad_FD`) is measured directly from
+benchmark runs. The total wallclock is estimated as:
+
+```
+AD wallclock = n_iters × t_grad_AD  +  2 × d × t_grad_AD
+               ├── optimization ──┘     ├── Hessian ──────┘
+
+FD wallclock = n_iters × t_grad_FD  +  ceil(n_eval_hess / F) × t_eval_f
+               ├── optimization ──┘     ├── Hessian ────────────────────┘
+```
+
+Where:
+- `n_iters` = AD's iteration count (same for both)
+- `d` = number of hyperparameters
+- `t_eval_f` = single objective evaluation time = `t_grad_FD / ceil((2d+1) / F)`
+- `n_eval_hess` = `1 + 2d + 2d(d-1)` (2nd-order finite differences of the objective)
+- `F` = number of F()-level parallel ranks
+
+The AD Hessian uses central differences of the analytical gradient (2d gradient
+evaluations). The FD Hessian uses 2nd-order finite differences of the objective
+function (O(d²) evaluations), parallelized across F() ranks.
+
+JIT compilation time is excluded from the figure because it is a one-time cost
+that is amortized over the optimization run.
+
+The `generate_csv.py` script implements these formulas and reads per-gradient
+times from `results/benchmark_results.csv`.
 
 ## Distributed AD Architecture
 

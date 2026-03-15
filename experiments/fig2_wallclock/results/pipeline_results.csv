@@ -1,5 +1,0 @@
-model,method,n_nodes,n_hyperparams,n_iterations,per_gradient_mean,per_gradient_std,optimization_time,hessian_time,marginals_time,wallclock_time,jit_time,final_f,timestamp
-gst_coreg2_small,jax_autodiff,1,9,32,0.136139,0.001554,4.5950,2.8158,0.7792,11.5144,10.4185,-28099.047925,2026-03-13T13:25:57.019158
-gst_medium,jax_autodiff,1,4,33,0.751516,0.001459,25.6522,6.4489,0.4260,37.7414,10.2355,32089.285333,2026-03-13T13:26:10.023067
-gst_medium,finite_diff,1,4,33,2.627628,0.002137,89.3719,9.9435,0.3682,99.6839,,32089.285332,2026-03-13T13:27:55.845793
-gst_coreg2_small,finite_diff,1,9,31,9.551428,0.033260,305.8050,81.8175,0.5955,388.2181,,-28099.047982,2026-03-13T13:32:38.183729

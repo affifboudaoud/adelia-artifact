@@ -2,6 +2,7 @@
 #SBATCH --job-name=adelia_wa1_nt64
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=1
+#SBATCH --gpus-per-task=1
 #SBATCH --time=01:00:00
 #SBATCH --account=lp16
 #SBATCH --output=outputs/wa1_nt64_%j.log
