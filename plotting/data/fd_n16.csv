@@ -1,9 +1,0 @@
-model,method,n_nodes,n_tasks,n_hyperparams,gradient_time_mean,gradient_time_std,timestamp
-gst_small,finite_diff,16,16,4,0.030308,0.000665,2026-02-12T18:18:23.916052
-gs_small,finite_diff,16,16,3,0.017105,0.000410,2026-02-12T18:19:25.814599
-pst_small,finite_diff,16,16,3,0.036715,0.000275,2026-02-12T18:20:02.196897
-gst_medium,finite_diff,16,16,4,0.318419,0.000490,2026-02-12T18:20:49.981806
-gs_coreg2_small,finite_diff,16,16,7,0.039756,0.001219,2026-02-12T18:21:37.099159
-gs_coreg3_small,finite_diff,16,16,12,0.102498,0.000872,2026-02-12T18:22:40.981006
-gst_coreg2_small,finite_diff,16,16,9,0.146726,0.000725,2026-02-12T18:23:16.748213
-gst_coreg3_small,finite_diff,16,16,15,0.185908,0.001421,2026-02-12T18:23:38.206400

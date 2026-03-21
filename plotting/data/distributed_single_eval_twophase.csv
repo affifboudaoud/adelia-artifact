@@ -1,4 +1,0 @@
-model,n_hyperparams,jax_fwd_time_mean,jax_fwd_time_std,cupy_eval_time_mean,cupy_eval_time_std,ratio_cupy_over_jax,n_runs
-wa1,15,47.695538,0.402813,,,,10
-ap1,15,76.597040,1.560890,,,,10
-wa2,15,90.647555,2.610194,,,,10

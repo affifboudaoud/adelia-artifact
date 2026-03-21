@@ -18,6 +18,8 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 
+import figure_style
+
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 DATA_DIR = os.path.join(SCRIPT_DIR, "..", "data")
 PAPER_FIG_DIR = os.path.join(SCRIPT_DIR, "..", "figures")
@@ -41,19 +43,17 @@ FAST_MODELS = ["GST-S", "GST-C2", "GST-C3", "GST-M"]
 LARGE_MODELS = ["GST-L", "SA1", "AP1", "WA1", "WA2"]
 
 COLORS = {
-    "AD": "#5a9e91",
-    "AD_overhead": "#8a8078",
-    "FD": "#c4a265",
-    "teval_tick": "#333333",
+    "AD": "#E8899A",
+    "AD_overhead": "#D4A843",
+    "FD": "#6B7B8D",
+    "teval_tick": "#2B2D42",
 }
 
 FIGURE_WIDTH = 7.16
 FIGURE_HEIGHT = 3.5
 BAR_WIDTH = 0.35
-FONT_SIZE_TICKS = 9
-FONT_SIZE_LABELS = 10
-FONT_SIZE_SPEEDUP = 9
-FONT_SIZE_NODES = 8
+FONT_SIZE_SPEEDUP = 7.5
+FONT_SIZE_NODES = 7.5
 EDGECOLOR = "black"
 LINEWIDTH = 0.5
 
@@ -118,9 +118,9 @@ def plot_panel(ax, df_panel, ylim_top, panel_title, skip_nodes=None):
         if c_ad[i] <= 1.0:
             ax.bar(
                 ad_x, ad_times[i], BAR_WIDTH,
-                yerr=ad_ci[i], capsize=3,
+                yerr=ad_ci[i], capsize=5,
                 color=COLORS["AD"], edgecolor=EDGECOLOR, linewidth=LINEWIDTH,
-                error_kw={"linewidth": 0.8, "zorder": 5},
+                error_kw={"linewidth": 1.5, "capthick": 1.5, "zorder": 5},
                 zorder=3,
             )
         else:
@@ -132,10 +132,10 @@ def plot_panel(ax, df_panel, ylim_top, panel_title, skip_nodes=None):
             ax.bar(
                 ad_x, ad_times[i] - t_eval[i], BAR_WIDTH,
                 bottom=t_eval[i],
-                yerr=ad_ci[i], capsize=3,
+                yerr=ad_ci[i], capsize=5,
                 color=COLORS["AD_overhead"], edgecolor=EDGECOLOR,
                 linewidth=LINEWIDTH,
-                error_kw={"linewidth": 0.8, "zorder": 5},
+                error_kw={"linewidth": 1.5, "capthick": 1.5, "zorder": 5},
                 zorder=3,
             )
 
@@ -145,11 +145,11 @@ def plot_panel(ax, df_panel, ylim_top, panel_title, skip_nodes=None):
         fd_times,
         BAR_WIDTH,
         yerr=fd_ci,
-        capsize=3,
+        capsize=5,
         color=COLORS["FD"],
         edgecolor=EDGECOLOR,
         linewidth=LINEWIDTH,
-        error_kw={"linewidth": 0.8, "zorder": 5},
+        error_kw={"linewidth": 1.5, "capthick": 1.5, "zorder": 5},
         zorder=3,
     )
 
@@ -193,24 +193,18 @@ def plot_panel(ax, df_panel, ylim_top, panel_title, skip_nodes=None):
 
     ax.set_ylim(0, ylim_top)
     ax.set_xticks(x)
-    ax.set_xticklabels(labels, fontsize=FONT_SIZE_TICKS - 1)
-    ax.set_ylabel("Per-gradient time (s)", fontsize=FONT_SIZE_LABELS)
-    ax.tick_params(axis="y", labelsize=FONT_SIZE_TICKS)
+    ax.set_xticklabels(labels)
+    ax.set_ylabel("Per-gradient time (s)")
+    ax.tick_params(axis="y")
     ax.yaxis.grid(True, linestyle="--", alpha=0.3)
     ax.set_axisbelow(True)
     ax.spines["top"].set_visible(False)
     ax.spines["right"].set_visible(False)
-    ax.set_title(panel_title, fontsize=FONT_SIZE_LABELS)
+    ax.set_title(panel_title)
 
 
 def plot_minimum_resources(df):
-    matplotlib.rcParams.update({
-        "font.family": "serif",
-        "text.usetex": False,
-        "mathtext.fontset": "cm",
-        "pdf.fonttype": 42,
-        "ps.fonttype": 42,
-    })
+    figure_style.apply()
 
     df_fast = df[df["model"].isin(FAST_MODELS)].reset_index(drop=True)
     df_large = df[df["model"].isin(LARGE_MODELS)].reset_index(drop=True)
@@ -236,7 +230,6 @@ def plot_minimum_resources(df):
     )
     ax_fast.legend(
         handles=[ad_patch, overhead_patch, fd_patch, teval_line],
-        fontsize=FONT_SIZE_LABELS - 1,
         loc="upper left",
         framealpha=0.9,
         handlelength=1.2,

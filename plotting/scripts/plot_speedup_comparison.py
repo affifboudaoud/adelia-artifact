@@ -18,6 +18,8 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 
+import figure_style
+
 # ============================================================
 # CONFIGURATION — Edit these to customize the figure
 # ============================================================
@@ -58,14 +60,11 @@ DEFAULT_CSV_PATH = os.path.join(
 DEFAULT_OUTPUT_DIR = os.path.join(SCRIPT_DIR, "..", "figures")
 DEFAULT_OUTPUT_FILENAME = "speedup_comparison.pdf"
 
-COLORS = {"FD": "#4878CF", "JAX": "#D65F5F"}
+COLORS = {"FD": "#6B7B8D", "JAX": "#E8899A"}
 HATCHES = {"FD": None, "JAX": "//"}
 FIGURE_WIDTH = 7.16
 FIGURE_HEIGHT = 4.5
 BAR_WIDTH = 0.35
-FONT_SIZE_TICKS = 8
-FONT_SIZE_LABELS = 9
-FONT_SIZE_TITLES = 9
 FONT_SIZE_SPEEDUP = 7
 EDGECOLOR = "black"
 LINEWIDTH = 0.5
@@ -167,10 +166,10 @@ def plot_single_panel(ax, df, gpu):
 
     labels = make_x_labels(panel_df)
     ax.set_xticks(x)
-    ax.set_xticklabels(labels, fontsize=FONT_SIZE_TICKS)
+    ax.set_xticklabels(labels)
 
-    ax.set_ylabel("Time (s)", fontsize=FONT_SIZE_LABELS)
-    ax.tick_params(axis="y", labelsize=FONT_SIZE_TICKS)
+    ax.set_ylabel("Time (s)")
+    ax.tick_params(axis="y")
     ax.yaxis.grid(True, linestyle="--", alpha=0.3)
     ax.set_axisbelow(True)
 
@@ -192,15 +191,7 @@ def main():
     )
     args = parser.parse_args()
 
-    matplotlib.rcParams.update(
-        {
-            "font.family": "serif",
-            "text.usetex": False,
-            "mathtext.fontset": "cm",
-            "pdf.fonttype": 42,
-            "ps.fonttype": 42,
-        }
-    )
+    figure_style.apply()
 
     df = load_and_prepare_data(args.csv)
     small_df, large_df = split_into_groups(df, GROUPING_THRESHOLD_SECONDS)
@@ -222,7 +213,6 @@ def main():
             label = next(panel_labels)
             ax.set_title(
                 f"({label}) {GPU_NAMES[gpu]} \u2014 {group_name}",
-                fontsize=FONT_SIZE_TITLES,
                 fontweight="bold",
             )
 
@@ -232,7 +222,6 @@ def main():
         labels,
         loc="lower center",
         ncol=2,
-        fontsize=FONT_SIZE_LABELS,
         frameon=False,
         bbox_to_anchor=(0.5, -0.02),
     )

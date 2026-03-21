@@ -14,13 +14,15 @@ import pandas as pd
 import matplotlib
 import matplotlib.pyplot as plt
 
+import figure_style
+
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 DATA_DIR = os.path.join(SCRIPT_DIR, "..", "data")
 OUTPUT_DIR = os.path.join(SCRIPT_DIR, "..", "figures")
 PAPER_DIR = os.path.join(SCRIPT_DIR, "..", "figures")
 
-AD_COLOR = "#2166ac"
-FD_COLOR = "#b2182b"
+AD_COLOR = "#E8899A"
+FD_COLOR = "#6B7B8D"
 
 DPI = 300
 
@@ -107,9 +109,9 @@ def _plot_single_panel(ax, rates_df, title=None, show_ylabel=True, show_legend=F
     ax.get_xaxis().set_major_formatter(matplotlib.ticker.ScalarFormatter())
     ax.tick_params(axis="x", which="minor", bottom=False)
 
-    ax.set_xlabel(r"Perturbation magnitude $\delta$", fontsize=8)
+    ax.set_xlabel(r"Perturbation magnitude $\delta$")
     if show_ylabel:
-        ax.set_ylabel("Success rate (%)", fontsize=8)
+        ax.set_ylabel("Success rate (%)")
     ax.set_ylim(-5, 105)
     ax.set_yticks([0, 25, 50, 75, 100])
 
@@ -118,16 +120,15 @@ def _plot_single_panel(ax, rates_df, title=None, show_ylabel=True, show_legend=F
     ax.spines["right"].set_visible(False)
 
     if title:
-        ax.set_title(title, fontsize=8, pad=4)
+        ax.set_title(title, pad=4)
     if show_legend:
-        ax.legend(fontsize=7, framealpha=0.9, loc="lower left")
-    ax.tick_params(labelsize=7)
+        ax.legend(framealpha=0.9, loc="lower left")
+    ax.tick_params()
 
 
 def plot_profile_multi(df):
     """Multi-panel figure, one panel per model found in the data."""
-    matplotlib.rcParams["font.family"] = "serif"
-    matplotlib.rcParams["mathtext.fontset"] = "dejavuserif"
+    figure_style.apply()
 
     models_in_data = [m for m in PANEL_ORDER if m in df["model"].unique()]
     if not models_in_data:
@@ -162,8 +163,7 @@ def plot_profile_multi(df):
 
 def plot_profile_single(df):
     """Single-panel figure (backward compat)."""
-    matplotlib.rcParams["font.family"] = "serif"
-    matplotlib.rcParams["mathtext.fontset"] = "dejavuserif"
+    figure_style.apply()
 
     fig, ax = plt.subplots(figsize=(3.5, 2.5))
     rates = compute_success_rates(df)

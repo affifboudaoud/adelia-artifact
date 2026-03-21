@@ -10,6 +10,8 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 
+import figure_style
+
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 DATA_DIR = os.path.join(SCRIPT_DIR, "..", "data")
 OUTPUT_DIR = os.path.join(SCRIPT_DIR, "..", "figures")
@@ -26,8 +28,8 @@ MODEL_LABELS = {
 
 MODEL_ORDER = ["gst_small", "gst_coreg2_small", "gst_coreg3_small", "gst_medium", "gst_large"]
 
-FWD_COLOR = "#2166ac"
-BWD_COLOR = "#b2182b"
+FWD_COLOR = "#E8899A"
+BWD_COLOR = "#D4A843"
 
 FIGSIZE = (7, 4)
 DPI = 300
@@ -40,6 +42,7 @@ def load_data():
 
 
 def plot_breakdown(df):
+    figure_style.apply()
     fig, ax = plt.subplots(figsize=FIGSIZE)
 
     ad_data = df[df["method"] == "AD"]
@@ -81,14 +84,14 @@ def plot_breakdown(df):
                 f"{ratio:.1f}x\n({bwd_pct:.0f}%)",
                 (x[i], total),
                 textcoords="offset points", xytext=(0, 5),
-                fontsize=7, ha="center", color="#333333",
+                fontsize=7, ha="center", color="#2B2D42",
             )
 
-    ax.set_xlabel("Model", fontsize=11)
-    ax.set_ylabel("Per-gradient time (s)", fontsize=11)
+    ax.set_xlabel("Model")
+    ax.set_ylabel("Per-gradient time (s)")
     ax.set_xticks(x)
     ax.set_xticklabels([MODEL_LABELS.get(m, m) for m in models])
-    ax.legend(fontsize=9, loc="upper left", framealpha=0.9)
+    ax.legend(loc="upper left", framealpha=0.9)
     ax.grid(True, alpha=0.3, axis="y", zorder=0)
     ax.set_ylim(bottom=0)
 

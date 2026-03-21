@@ -15,6 +15,8 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 
+import figure_style
+
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 DATA_DIR = os.path.join(SCRIPT_DIR, "..", "data")
 PAPER_FIG_DIR = os.path.join(SCRIPT_DIR, "..", "figures")
@@ -32,10 +34,10 @@ STAGE_NAMES = {
 }
 STAGE_ORDER = ["chol_fwd_sub", "bwd_si", "grad_prior", "grad_quad"]
 STAGE_COLORS = {
-    "chol_fwd_sub": "#5a9e91",
-    "bwd_si": "#96c8be",
-    "grad_prior": "#8a8078",
-    "grad_quad": "#b8b0a8",
+    "chol_fwd_sub": "#E8899A",
+    "bwd_si": "#F2BCC5",
+    "grad_prior": "#6B7B8D",
+    "grad_quad": "#9AABB8",
 }
 
 FIGURE_WIDTH = 3.5
@@ -48,13 +50,7 @@ def load_data():
 
 
 def plot_analysis(breakdown):
-    matplotlib.rcParams.update({
-        "font.family": "serif",
-        "text.usetex": False,
-        "mathtext.fontset": "cm",
-        "pdf.fonttype": 42,
-        "ps.fonttype": 42,
-    })
+    figure_style.apply()
 
     fig, ax = plt.subplots(figsize=(FIGURE_WIDTH, FIGURE_HEIGHT))
 
@@ -81,8 +77,8 @@ def plot_analysis(breakdown):
         var_sum = (rows["time_std"] ** 2).sum()
         n_runs = rows["n_runs"].values[0] if not rows.empty else 5
         total_cis[i] = 1.96 * np.sqrt(var_sum) / np.sqrt(n_runs)
-    ax.errorbar(x, bottoms, yerr=total_cis, fmt="none", ecolor="#333333",
-                capsize=4, elinewidth=1.0, capthick=1.0, zorder=5)
+    ax.errorbar(x, bottoms, yerr=total_cis, fmt="none", ecolor="#2B2D42",
+                capsize=5, elinewidth=1.5, capthick=1.5, zorder=5)
 
     # Percentage annotations for the two Python-loop stages combined
     for i, model in enumerate(DIST_MODELS):
@@ -94,14 +90,13 @@ def plot_analysis(breakdown):
             f"{loop_pct:.0f}%",
             (x[i], bottoms[i] + total_cis[i]),
             textcoords="offset points", xytext=(0, 4),
-            fontsize=9, ha="center", color="#333333",
+            fontsize=8, ha="center", color="#2B2D42",
         )
 
     ax.set_xticks(x)
-    ax.set_xticklabels(DIST_MODELS, fontsize=9)
-    ax.set_ylabel("Per-gradient time (s)", fontsize=9)
-    ax.tick_params(axis="y", labelsize=8)
-    ax.legend(fontsize=7.5, loc="upper left", framealpha=0.9,
+    ax.set_xticklabels(DIST_MODELS)
+    ax.set_ylabel("Per-gradient time (s)")
+    ax.legend(loc="upper left", framealpha=0.9,
               bbox_to_anchor=(0.0, 1.02))
     ax.yaxis.grid(True, linestyle="--", alpha=0.3)
     ax.set_axisbelow(True)

@@ -15,17 +15,19 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 
+import figure_style
+
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 DATA_DIR = os.path.join(SCRIPT_DIR, "..", "data")
 PAPER_FIG_DIR = os.path.join(SCRIPT_DIR, "..", "figures")
 
 OUTPUT_FILENAME = "framework_decomposition.pdf"
 
-COLOR_AD = "#5a9e91"
-COLOR_ALGO = "#8a8078"
-COLOR_JAX_FASTER = "#dceee9"   # light teal for r > 1
-COLOR_PARITY = "#e8e8e8"       # light gray for r ~ 1
-COLOR_CUPY_FASTER = "#ede4d3"  # light sand for r < 1
+COLOR_AD = "#E8899A"
+COLOR_ALGO = "#D4A843"
+COLOR_JAX_FASTER = "#F5DDE2"   # light pink for r > 1
+COLOR_PARITY = "#EDECEB"       # warm light gray for r ~ 1
+COLOR_CUPY_FASTER = "#DDE1E6"  # light slate for r < 1
 
 FIGURE_WIDTH = 3.5
 FIGURE_HEIGHT = 3.2
@@ -39,12 +41,57 @@ def load_all_data():
     """Load and merge data from all required CSVs."""
     single_eval = pd.read_csv(os.path.join(DATA_DIR, "single_eval_comparison.csv"))
     memory = pd.read_csv(os.path.join(DATA_DIR, "memory_breakdown.csv"))
-    minres = pd.read_csv(os.path.join(DATA_DIR, "minimum_resources_comparison.csv"))
+
+    # Build per-gradient speedup from fig6 raw results instead of the
+    # old minimum_resources_comparison.csv.
+    fig6_path = os.path.join(DATA_DIR, "fig6_raw_results.csv")
+    minres = _build_minres_from_fig6(fig6_path)
 
     dist_path = os.path.join(DATA_DIR, "distributed_single_eval.csv")
     dist_eval = pd.read_csv(dist_path) if os.path.exists(dist_path) else pd.DataFrame()
 
     return single_eval, memory, minres, dist_eval
+
+
+# Map from fig6 model names to display labels used by build_data().
+_MODEL_LABEL_MAP = {
+    "gst_small": "GST-S",
+    "gst_medium": "GST-M",
+    "gst_large": "GST-L",
+    "gst_coreg2_small": "GST-C2",
+    "gst_coreg3_small": "GST-C3",
+    "sa1": "SA1",
+    "ap1": "AP1",
+    "wa1": "WA1",
+    "wa2": "WA2",
+}
+
+
+def _build_minres_from_fig6(fig6_path):
+    """Compute per-gradient speedup from fig6_raw_results.csv.
+
+    For each model, takes the AD gradient time at min nodes and the FD
+    gradient time at the same node count (minimum resources comparison).
+    """
+    raw = pd.read_csv(fig6_path)
+    rows = []
+    for model, label in _MODEL_LABEL_MAP.items():
+        ad = raw[(raw["model"] == model) & (raw["method"] == "jax_autodiff")]
+        if ad.empty:
+            continue
+        ad_row = ad.sort_values("n_nodes").iloc[0]
+        ad_nodes = int(ad_row["n_nodes"])
+        ad_time = float(ad_row["gradient_time_mean"])
+
+        fd = raw[(raw["model"] == model) & (raw["method"] == "finite_diff")
+                 & (raw["n_nodes"] == ad_nodes)]
+        if fd.empty:
+            continue
+        fd_time = float(fd.iloc[0]["gradient_time_mean"])
+
+        speedup = fd_time / ad_time if ad_time > 0 else 0
+        rows.append({"model": label, "per_gradient_speedup": speedup})
+    return pd.DataFrame(rows)
 
 
 def build_data(single_eval, memory, minres, dist_eval):
@@ -125,13 +172,7 @@ def build_data(single_eval, memory, minres, dist_eval):
 
 
 def plot_framework_decomposition(df):
-    matplotlib.rcParams.update({
-        "font.family": "serif",
-        "text.usetex": False,
-        "mathtext.fontset": "cm",
-        "pdf.fonttype": 42,
-        "ps.fonttype": 42,
-    })
+    figure_style.apply()
 
     fig, ax = plt.subplots(figsize=(FIGURE_WIDTH, FIGURE_HEIGHT))
 
@@ -172,7 +213,7 @@ def plot_framework_decomposition(df):
     }
     regime_colors = {
         "jax": COLOR_JAX_FASTER,
-        "parity": "#999999",
+        "parity": "#6B7B8D",
         "cupy": COLOR_CUPY_FASTER,
     }
     for y_start, y_end, key in regime_spans:
@@ -182,14 +223,14 @@ def plot_framework_decomposition(df):
         ax.text(
             xlim_right, y_mid, regime_labels[key],
             ha="right", va="center", fontsize=7,
-            color="#444444", style="italic",
+            color="#2B2D42", style="italic",
         )
 
     # Connector lines
     for i in range(len(df)):
         obs = df.iloc[i]["observed_speedup"]
         algo = df.iloc[i]["algo_speedup"]
-        ax.plot([algo, obs], [y[i], y[i]], color="#aaaaaa",
+        ax.plot([algo, obs], [y[i], y[i]], color="#9AABB8",
                 linewidth=1.5, zorder=2)
 
     # Plot dots -- use diamonds for distributed
@@ -241,20 +282,19 @@ def plot_framework_decomposition(df):
         ylabels.append(f"{label}  $r$={r:.1f}")
 
     ax.set_yticks(y)
-    ax.set_yticklabels(ylabels, fontsize=7.5)
+    ax.set_yticklabels(ylabels)
     ax.set_xlim(0, xlim_right)
     ax.set_ylim(len(df) - 0.5, -0.5)  # exact bounds so bands fill to axes
-    ax.set_xlabel("Speedup over FD", fontsize=9)
-    ax.set_title("Observed vs. algorithmic speedup", fontsize=9, fontweight="bold")
+    ax.set_xlabel("Speedup over FD")
+    ax.set_title("Observed vs. algorithmic speedup", fontweight="bold")
 
     # Legend for dots only
-    ax.legend(fontsize=6, loc="lower right", framealpha=0.9)
+    ax.legend(loc="lower right", framealpha=0.9)
 
     ax.xaxis.grid(True, linestyle="--", alpha=0.3)
     ax.set_axisbelow(True)
     ax.spines["top"].set_visible(False)
     ax.spines["right"].set_visible(False)
-    ax.tick_params(labelsize=8)
 
     fig.tight_layout()
     return fig

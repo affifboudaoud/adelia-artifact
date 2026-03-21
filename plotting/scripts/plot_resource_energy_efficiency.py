@@ -18,6 +18,8 @@ import matplotlib.ticker as mticker
 import numpy as np
 import pandas as pd
 
+import figure_style
+
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 DATA_DIR = os.path.join(SCRIPT_DIR, "..", "data")
 PAPER_FIG_DIR = os.path.join(SCRIPT_DIR, "..", "figures")
@@ -25,10 +27,10 @@ PAPER_FIG_DIR = os.path.join(SCRIPT_DIR, "..", "figures")
 CSV_FILE = "resource_efficiency_all_updated.csv"
 
 MODELS = {
-    "sa1":  (r"SA1 [AD@1]",  "-",  "s", "#5a9e91"),
-    "ap1":  (r"AP1 [AD@4]",  "-",  "D", "#8a8078"),
-    "wa1":  (r"WA1 [AD@4]",  "-",  "^", "#c4a265"),
-    "wa2":  (r"WA2 [AD@4]",  "-",  "v", "#506070"),
+    "sa1":  (r"SA1 [AD@1]",  "-",  "s", "#D4A843"),
+    "ap1":  (r"AP1 [AD@4]",  "-",  "D", "#6B7B8D"),
+    "wa1":  (r"WA1 [AD@4]",  "-",  "^", "#2B2D42"),
+    "wa2":  (r"WA2 [AD@4]",  "-",  "v", "#4A5568"),
 }
 
 FIGSIZE = (7.16, 3.8)
@@ -67,13 +69,7 @@ def get_fd_data(mdf):
 
 
 def plot_dual_panel(df):
-    matplotlib.rcParams.update({
-        "font.family": "serif",
-        "text.usetex": False,
-        "mathtext.fontset": "cm",
-        "pdf.fonttype": 42,
-        "ps.fonttype": 42,
-    })
+    figure_style.apply()
 
     fig, (ax_wall, ax_energy) = plt.subplots(
         1, 2, figsize=FIGSIZE, sharey=False
@@ -122,7 +118,7 @@ def plot_dual_panel(df):
             fd_nodes, wall_ratios, yerr=ratio_cis,
             marker=marker, markersize=MARKER_SIZE, linewidth=LINE_WIDTH,
             linestyle=lstyle, color=color, label=disp_label, zorder=3,
-            capsize=2, elinewidth=0.6, capthick=0.6,
+            capsize=4, elinewidth=1.2, capthick=1.2,
         )
 
         # Panel (b): Measured energy ratio
@@ -153,17 +149,17 @@ def plot_dual_panel(df):
     ylims_wall = ax_wall.get_ylim()
     ax_wall.set_ylim(bottom=0)
     ylims_wall = ax_wall.get_ylim()
-    ax_wall.axhspan(0, 1.0, alpha=0.06, color="red", zorder=0)
-    ax_wall.axhspan(1.0, ylims_wall[1], alpha=0.06, color="green", zorder=0)
-    ax_wall.set_xlabel("Number of FD nodes", fontsize=9)
-    ax_wall.set_ylabel("Finite diff. time / Autodiff time", fontsize=9)
-    ax_wall.set_title(r"$\bf{(a)}$ Per-gradient time ratio", fontsize=9)
+    ax_wall.axhspan(0, 1.0, alpha=0.10, color="#DDE1E6", zorder=0)
+    ax_wall.axhspan(1.0, ylims_wall[1], alpha=0.10, color="#F5DDE2", zorder=0)
+    ax_wall.set_xlabel("Number of FD nodes")
+    ax_wall.set_ylabel("Finite diff. time / Autodiff time")
+    ax_wall.set_title(r"$\bf{(a)}$ Per-gradient time ratio")
     ax_wall.grid(True, alpha=0.3, which="both", zorder=0)
     ax_wall.text(0.02, 0.02, "FD faster", transform=ax_wall.transAxes,
-                 fontsize=8, alpha=0.7, color="red", va="bottom",
+                 fontsize=8, alpha=0.7, color="#6B7B8D", va="bottom",
                  fontweight="bold")
     ax_wall.text(0.98, 0.98, "AD faster", transform=ax_wall.transAxes,
-                 fontsize=8, alpha=0.7, color="green", va="top", ha="right",
+                 fontsize=8, alpha=0.7, color="#E8899A", va="top", ha="right",
                  fontweight="bold")
 
     # --- Panel (b) formatting --- LINEAR y
@@ -175,17 +171,17 @@ def plot_dual_panel(df):
 
     ax_energy.set_ylim(bottom=-1.0)
     ylims_energy = ax_energy.get_ylim()
-    ax_energy.axhspan(ylims_energy[0], 1.0, alpha=0.06, color="red", zorder=0)
-    ax_energy.axhspan(1.0, ylims_energy[1], alpha=0.06, color="green", zorder=0)
-    ax_energy.set_xlabel("Number of FD nodes", fontsize=9)
-    ax_energy.set_ylabel("Finite diff. energy / Autodiff energy", fontsize=9)
-    ax_energy.set_title(r"$\bf{(b)}$ Measured energy ratio", fontsize=9)
+    ax_energy.axhspan(ylims_energy[0], 1.0, alpha=0.10, color="#DDE1E6", zorder=0)
+    ax_energy.axhspan(1.0, ylims_energy[1], alpha=0.10, color="#F5DDE2", zorder=0)
+    ax_energy.set_xlabel("Number of FD nodes")
+    ax_energy.set_ylabel("Finite diff. energy / Autodiff energy")
+    ax_energy.set_title(r"$\bf{(b)}$ Measured energy ratio")
     ax_energy.grid(True, alpha=0.3, which="both", zorder=0)
     ax_energy.text(0.02, 0.02, "FD cheaper", transform=ax_energy.transAxes,
-                   fontsize=8, alpha=0.7, color="red", va="bottom",
+                   fontsize=8, alpha=0.7, color="#6B7B8D", va="bottom",
                    fontweight="bold")
     ax_energy.text(0.02, 0.98, "AD cheaper", transform=ax_energy.transAxes,
-                   fontsize=8, alpha=0.7, color="green", va="top",
+                   fontsize=8, alpha=0.7, color="#E8899A", va="top",
                    fontweight="bold")
 
     # Shared legend below
@@ -194,7 +190,6 @@ def plot_dual_panel(df):
         handles, labels,
         loc="lower center",
         ncol=4,
-        fontsize=7.5,
         frameon=True,
         framealpha=0.9,
         bbox_to_anchor=(0.5, -0.02),
