@@ -38,8 +38,8 @@ pip install gdown
 
 ```bash
 # 1. Install (see INSTALL.md for detailed instructions)
-cd artifact/source/dalia && pip install -e .
-cd artifact/source/serinv && pip install -e .
+cd artifact/dalia && pip install -e .
+cd artifact/serinv && pip install -e .
 
 # 2. Validate (1 GH200 node, ~2 min)
 cd artifact/validation
@@ -81,14 +81,6 @@ resource requirements, reproduction steps, and output descriptions.
 | Figure 6: Resource efficiency | [`experiments/fig6_resource_efficiency/`](experiments/fig6_resource_efficiency/README.md) | 4--128 | ~12 h |
 | Figure 7: Performance analysis | [`experiments/fig7_performance_analysis/`](experiments/fig7_performance_analysis/README.md) | 4 | ~1 h |
 
-### Running All Experiments
-
-```bash
-bash run_all_experiments.sh
-```
-
-This submits all SBATCH jobs. See each experiment's README for individual
-submission instructions.
 
 ### Plotting
 
@@ -112,11 +104,9 @@ from experiments to CSVs to figures.
 | gst_large | Synthetic Gaussian ST, ns=4002, nt=250 | Generated via SPDE |
 | gst_coreg2_small | Synthetic 2-variate, ns=354, nt=12 | Generated via SPDE |
 | gst_coreg3_small | Synthetic 3-variate, ns=354, nt=8 | Generated via SPDE |
-| sa1 | ERA5 surface analysis, ns=1673, nt=192 | Copernicus CDS |
-| ap1 | Aerial photography, Switzerland | swisstopo |
-| wa1 | ERA5 wind/temperature, ns=1247, nt=512 | Copernicus CDS |
-| wa2 | ERA5 precip/soil/dewpoint, ns=4485, nt=48 | Copernicus CDS |
+| gst_temperature | Temperature dataset, ns=945, nt=365 | Generated via SPDE |
+| SA_1 | Benchmark 3-variate, ns=1673, nt=192 | DALIA Zenodo |
+| AP1 | Air pollution (Italy), ns=4210, nt=48 | DALIA Zenodo |
+| WA_1 | Benchmark 3-variate, ns=1247, nt=512 | DALIA Zenodo |
+| WA_2 | Benchmark 3-variate, ns=4485, nt=48 | DALIA Zenodo |
 
-### License
-
-BSD-3-Clause. See `LICENSE`.

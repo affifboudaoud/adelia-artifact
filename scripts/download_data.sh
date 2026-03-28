@@ -10,7 +10,7 @@ set -euo pipefail
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 ARTIFACT_DIR="$(dirname "$SCRIPT_DIR")"
-FILE_ID="1kJF1wHH4BOHS50T7kaLec2trcvb_JNxR"
+FILE_ID="1E3828dmBa6g8zru3ypFv0WrhWoPUT7R_"
 
 if [ -d "$ARTIFACT_DIR/data" ]; then
     echo "data/ directory already exists. Remove it first to re-download."
@@ -23,10 +23,10 @@ if ! command -v gdown &> /dev/null; then
 fi
 
 echo "Downloading data archive from Google Drive..."
-gdown "$FILE_ID" -O "$ARTIFACT_DIR/data.tar.gz"
+gdown "$FILE_ID" -O "$ARTIFACT_DIR/artifact_data.zip"
 
 echo "Extracting..."
-tar -xzf "$ARTIFACT_DIR/data.tar.gz" -C "$ARTIFACT_DIR"
+unzip -q "$ARTIFACT_DIR/artifact_data.zip" -d "$ARTIFACT_DIR"
 
-rm "$ARTIFACT_DIR/data.tar.gz"
+rm "$ARTIFACT_DIR/artifact_data.zip"
 echo "Done. Data extracted to $ARTIFACT_DIR/data/"
