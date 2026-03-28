@@ -328,12 +328,39 @@ def create_gst_large():
     )
 
 
+def create_gst_temperature():
+    data_dir = os.path.join(ARTIFACT_DIR, "data", "gst_temperature")
+    st = SpatioTemporalSubModel(config=submodels_config.parse_config({
+        "type": "spatio_temporal",
+        "input_dir": f"{data_dir}/inputs_spatio_temporal",
+        "spatial_domain_dimension": 2,
+        "r_s": -0.960279229160082, "r_t": -0.3068528194400548, "sigma_st": -2.112085713764618,
+        "manifold": "plane",
+        "ph_s": {"type": "penalized_complexity", "alpha": 0.01, "u": 0.5},
+        "ph_t": {"type": "penalized_complexity", "alpha": 0.01, "u": 5},
+        "ph_st": {"type": "penalized_complexity", "alpha": 0.01, "u": 3},
+    }))
+    reg = RegressionSubModel(config=submodels_config.parse_config({
+        "type": "regression",
+        "input_dir": f"{data_dir}/inputs_regression",
+        "n_fixed_effects": 4, "fixed_effects_prior_precision": 0.001,
+    }))
+    return Model(
+        submodels=[reg, st],
+        likelihood_config=likelihood_config.parse_config({
+            "type": "gaussian", "prec_o": 4,
+            "prior_hyperparameters": {"type": "penalized_complexity", "alpha": 0.01, "u": 5},
+        }),
+    )
+
+
 MODELS = OrderedDict([
     ("GST-S",  {"create": create_gst_small,        "dims": r"5 \times 92",    "coregional": False}),
     ("GST-C2", {"create": create_gst_coreg2_small,  "dims": r"12 \times 708",  "coregional": True}),
     ("GST-C3", {"create": create_gst_coreg3_small,  "dims": r"8 \times 1062",  "coregional": True}),
     ("GST-M",  {"create": create_gst_medium,        "dims": r"100 \times 812", "coregional": False}),
     ("GST-L",  {"create": create_gst_large,         "dims": r"250 \times 4002","coregional": False}),
+    ("GST-T",  {"create": create_gst_temperature,   "dims": r"365 \times 2865","coregional": False}),
 ])
 
 

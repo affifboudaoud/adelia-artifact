@@ -1,10 +1,10 @@
 #!/bin/bash
 #SBATCH --job-name=adelia_ap1_fd
-#SBATCH --nodes=4
+#SBATCH --nodes=128
 #SBATCH --ntasks-per-node=1
 #SBATCH --gpus-per-task=1
-#SBATCH --time=02:00:00
-#SBATCH --account=lp16
+#SBATCH --time=01:30:00
+#SBATCH --account=g34
 #SBATCH --output=outputs/ap1_fd_%j.log
 #SBATCH --error=outputs/ap1_fd_%j.err
 

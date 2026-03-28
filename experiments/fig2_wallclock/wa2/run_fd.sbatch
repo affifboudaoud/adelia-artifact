@@ -1,10 +1,10 @@
 #!/bin/bash
 #SBATCH --job-name=adelia_wa2_fd
-#SBATCH --nodes=4
+#SBATCH --nodes=16
 #SBATCH --ntasks-per-node=1
 #SBATCH --gpus-per-task=1
-#SBATCH --time=02:00:00
-#SBATCH --account=lp16
+#SBATCH --time=12:00:00
+#SBATCH --account=g34
 #SBATCH --output=outputs/wa2_fd_%j.log
 #SBATCH --error=outputs/wa2_fd_%j.err
 

@@ -58,6 +58,7 @@ _MODEL_LABEL_MAP = {
     "gst_small": "GST-S",
     "gst_medium": "GST-M",
     "gst_large": "GST-L",
+    "gst_temperature": "GST-T",
     "gst_coreg2_small": "GST-C2",
     "gst_coreg3_small": "GST-C3",
     "sa1": "SA1",
@@ -104,6 +105,7 @@ def build_data(single_eval, memory, minres, dist_eval):
         "gst_coreg3_small": "GST-C3",
         "gst_medium": "GST-M",
         "gst_large": "GST-L",
+        "gst_temperature": "GST-T",
     }
 
     for m_key, m_label in model_map.items():

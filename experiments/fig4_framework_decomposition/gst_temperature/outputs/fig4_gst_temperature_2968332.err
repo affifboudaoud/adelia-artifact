@@ -1,0 +1,14 @@
+W0321 14:50:19.883977  285524 cuda_executor.cc:1802] GPU interconnect information not available: INTERNAL: NVML doesn't support extracting fabric info or NVLink is not used by the device.
+W0321 14:50:19.917340  284622 cuda_executor.cc:1802] GPU interconnect information not available: INTERNAL: NVML doesn't support extracting fabric info or NVLink is not used by the device.
+E0321 14:55:20.666314  284622 pjrt_stream_executor_client.cc:2085] Execution of replica 0 failed: RESOURCE_EXHAUSTED: Failed to allocate request for 46.50GiB (49924347872B) on device ordinal 0
+Traceback (most recent call last):
+  File "/capstor/scratch/cscs/aboudaou/workspace/dalia/artifact/experiments/fig2_wallclock/gst_temperature/run.py", line 105, in <module>
+    run_framework_comparison(dalia_jax, dalia_fd, args, "gst_temperature")
+  File "/capstor/scratch/cscs/aboudaou/workspace/dalia/artifact/experiments/fig2_wallclock/gst_temperature/../../common/benchmark_utils.py", line 595, in run_framework_comparison
+    dalia_jax.jax_grad_func(theta_jax)
+  File "/capstor/scratch/cscs/aboudaou/workspace/dalia/DALIA/src/dalia/core/autodiff/factory.py", line 165, in objective_with_grad
+    (f_val, x_val), grad_val = value_and_grad_fn(theta_jax)
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: RESOURCE_EXHAUSTED: Failed to allocate request for 46.50GiB (49924347872B) on device ordinal 0
+srun: error: nid005789: task 0: Exited with exit code 1
+srun: Terminating StepId=2968332.0

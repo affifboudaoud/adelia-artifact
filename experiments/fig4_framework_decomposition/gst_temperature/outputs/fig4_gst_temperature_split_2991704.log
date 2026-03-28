@@ -1,0 +1,111 @@
+Parsed parameters:
+  max_iter: 250
+  solver_min_p: 1
+  profile: False
+  precision: float64
+  output_dir: /capstor/scratch/cscs/aboudaou/workspace/dalia/artifact/experiments/fig4_framework_decomposition/gst_temperature/../results
+=== Framework decomposition: gst_temperature (split phases) ===
+
+--- Phase 1: JAX measurements ---
+Using JAX automatic differentiation with JIT compilation (Gaussian likelihood)
+JIT compiling objective + gradient...
+JIT compilation done in 29.1s.
+
+___________________________________ 
+___  __ \__    |__  /____  _/__    |
+__  / / /_  /| |_  /  __  / __  /| |
+_  /_/ /_  ___ |  /____/ /  _  ___ |
+/_____/ /_/  |_/_____/___/  /_/  |_|
+
+╔═══════════════════════════════════════════════════════╗
+║               Parallelization strategies              ║
+║ ╒═══════════════════════════════════════════╤═══════╕ ║
+║ │ Participating Processes / Total Processes │ 1 / 1 │ ║
+║ ├───────────────────────────────────────────┼───────┤ ║
+║ │ Parallelization through F()               │   1   │ ║
+║ ├───────────────────────────────────────────┼───────┤ ║
+║ │ Parallelization through Q()               │   1   │ ║
+║ ├───────────────────────────────────────────┼───────┤ ║
+║ │ Parallelization through S()               │   1   │ ║
+║ ╘═══════════════════════════════════════════╧═══════╛ ║
+╚═══════════════════════════════════════════════════════╝
+╔═══════════════════════════════╗
+║  Enabled Performance modules  ║
+║ ╒═══════════════════╤═══════╕ ║
+║ │ Array module      │ cupy  │ ║
+║ ├───────────────────┼───────┤ ║
+║ │ MPI available     │ True  │ ║
+║ ├───────────────────┼───────┤ ║
+║ │ Is MPI CUDA aware │ False │ ║
+║ ├───────────────────┼───────┤ ║
+║ │ Is NCCL available │ False │ ║
+║ ╘═══════════════════╧═══════╛ ║
+╚═══════════════════════════════╝
+╔════════════════════════════════════════╗
+║             Memory Report              ║
+║ ╒════════════════════════╤═══════════╕ ║
+║ │ Solver memory          │  0.00 B   │ ║
+║ ├────────────────────────┼───────────┤ ║
+║ │ Total memory used      │ 717.22 MB │ ║
+║ ├────────────────────────┼───────────┤ ║
+║ │ Total memory available │ 864.25 MB │ ║
+║ ╘════════════════════════╧═══════════╛ ║
+╚════════════════════════════════════════╝
+DALIA initialized.
+  JAX forward:     5.752779 +/- 0.010976s
+  JAX fwd+bwd:     17.044336 +/- 0.005453s
+  JAX backward:    11.291557s
+
+--- Phase 2: CuPy/Serinv measurements ---
+
+___________________________________ 
+___  __ \__    |__  /____  _/__    |
+__  / / /_  /| |_  /  __  / __  /| |
+_  /_/ /_  ___ |  /____/ /  _  ___ |
+/_____/ /_/  |_/_____/___/  /_/  |_|
+
+╔═══════════════════════════════════════════════════════╗
+║               Parallelization strategies              ║
+║ ╒═══════════════════════════════════════════╤═══════╕ ║
+║ │ Participating Processes / Total Processes │ 1 / 1 │ ║
+║ ├───────────────────────────────────────────┼───────┤ ║
+║ │ Parallelization through F()               │   1   │ ║
+║ ├───────────────────────────────────────────┼───────┤ ║
+║ │ Parallelization through Q()               │   1   │ ║
+║ ├───────────────────────────────────────────┼───────┤ ║
+║ │ Parallelization through S()               │   1   │ ║
+║ ╘═══════════════════════════════════════════╧═══════╛ ║
+╚═══════════════════════════════════════════════════════╝
+╔═══════════════════════════════╗
+║  Enabled Performance modules  ║
+║ ╒═══════════════════╤═══════╕ ║
+║ │ Array module      │ cupy  │ ║
+║ ├───────────────────┼───────┤ ║
+║ │ MPI available     │ True  │ ║
+║ ├───────────────────┼───────┤ ║
+║ │ Is MPI CUDA aware │ False │ ║
+║ ├───────────────────┼───────┤ ║
+║ │ Is NCCL available │ False │ ║
+║ ╘═══════════════════╧═══════╛ ║
+╚═══════════════════════════════╝
+╔═══════════════════════════════════════╗
+║             Memory Report             ║
+║ ╒════════════════════════╤══════════╕ ║
+║ │ Solver memory          │ 44.61 GB │ ║
+║ ├────────────────────────┼──────────┤ ║
+║ │ Total memory used      │ 45.31 GB │ ║
+║ ├────────────────────────┼──────────┤ ║
+║ │ Total memory available │ 45.37 GB │ ║
+║ ╘════════════════════════╧══════════╛ ║
+╚═══════════════════════════════════════╝
+DALIA initialized.
+Allocated an extra 0.38 GB for BTA_mapping caching (total: 44.99)
+Allocated an extra 0.36 GB for BT_mapping caching (total: 45.35)
+  CuPy forward:    5.059100 +/- 0.003582s
+  Ratio (CuPy/JAX): 0.88
+Results appended to /capstor/scratch/cscs/aboudaou/workspace/dalia/artifact/experiments/fig4_framework_decomposition/gst_temperature/../results/single_eval_comparison.csv
+
+--- Summary ---
+  JAX fwd: 5.7528s, CuPy fwd: 5.0591s, r=0.88, beta=1.96
+--- Finished ---
+Job finished at Wed 25 Mar 2026 02:03:26 AM CET

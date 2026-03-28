@@ -33,7 +33,7 @@ ARTIFACT_DIR = os.environ.get(
     "ARTIFACT_DIR",
     os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..", "..")),
 )
-DATA_DIR = os.path.join(ARTIFACT_DIR, "data", "wa2")
+DATA_DIR = os.path.join(os.environ.get("ZENODO_DATA_DIR", os.path.join(ARTIFACT_DIR, "data")), "WA_2")
 
 NV = 3
 NS = 4485
@@ -175,10 +175,6 @@ def run_with_method(model, gradient_method, max_iter, verbose=True):
             "max_iter": max_iter, "gtol": 1e-3,
             "disp": verbose, "maxcor": len(model.theta),
         },
-        "f_reduction_tol": 1e-3,
-        "f_reduction_lag": 10,
-        "theta_reduction_lag": 10,
-        "theta_reduction_tol": 1e-4,
         "inner_iteration_max_iter": 50,
         "eps_inner_iteration": 1e-3,
         "eps_gradient_f": 1e-3,

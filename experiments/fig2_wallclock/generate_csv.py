@@ -54,6 +54,8 @@ MODELS = [
     ("gst_small",        "GST-S",  4, 1, "monolithic"),
     ("gst_medium",       "GST-M",  4, 1, "monolithic"),
     ("gst_large",        "GST-L",  4, 1, "monolithic"),
+    ("bst_rainfall",     "BST-Rain",  3, 1, "monolithic"),
+    ("gst_temperature",  "GST-Temp",  4, 1, "monolithic"),
     ("gst_coreg2_small", "GST-C2", 9, 1, "monolithic"),
     ("gst_coreg3_small", "GST-C3", 15, 1, "monolithic"),
     ("sa1",              "SA1",    15, 1, "monolithic"),
@@ -67,35 +69,57 @@ def compute_wallclock(ad_entry, fd_entry, n_hp, nodes):
     """Compute estimated wallclock for AD and FD at equal iteration count."""
     t_grad_ad = float(ad_entry["per_gradient_mean"])
     t_grad_fd = float(fd_entry["per_gradient_mean"])
+    std_ad = float(ad_entry.get("per_gradient_std", 0) or 0)
+    std_fd = float(fd_entry.get("per_gradient_std", 0) or 0)
+    n_runs_ad = int(ad_entry["n_iterations"])
+    n_runs_fd = int(fd_entry["n_iterations"])
     n_iters_ad = int(ad_entry["n_iterations"])
     n_iters_fd = int(fd_entry["n_iterations"])
     jit_time = float(ad_entry.get("jit_time", 0) or 0)
 
-    # Use AD iteration count for both (conservative for FD)
+    # Use AD iteration count for both
     n_iters = n_iters_ad
 
     # AD wallclock
     ad_opt = n_iters * t_grad_ad
     ad_hess = 2 * n_hp * t_grad_ad
-    ad_total = jit_time + ad_opt + ad_hess
+    ad_total = ad_opt + ad_hess
 
     # FD wallclock
-    # F()-level parallelism: for distributed models with FD, F() = nodes
-    # For single-node, F() = 1
-    n_feval = nodes  # F()-level parallel ranks for FD
+    n_feval = 1  # F()=1 in all benchmark runs (S()=nodes)
 
     # Single objective eval time
     n_perturbations = 2 * n_hp + 1
-    evals_per_grad = math.ceil(n_perturbations / n_feval)
+    evals_per_grad = n_perturbations
     t_eval_f = t_grad_fd / evals_per_grad
 
     fd_opt = n_iters * t_grad_fd
 
     # FD Hessian: 2nd-order finite differences of objective
     no_eval_hess = 1 + 2 * n_hp + 4 * n_hp * (n_hp - 1) // 2
-    fd_hess = math.ceil(no_eval_hess / n_feval) * t_eval_f
+    fd_hess = no_eval_hess * t_eval_f
 
     fd_total = fd_opt + fd_hess
+
+    # 95% CI on total wallclock (t-distribution critical values)
+    # Hardcoded to avoid scipy dependency
+    _t95 = {1: 12.706, 2: 4.303, 3: 3.182, 4: 2.776, 5: 2.571,
+            10: 2.228, 20: 2.086, 30: 2.042, 50: 2.009, 100: 1.984}
+    def _t95_lookup(df):
+        if df <= 0: return 4.303
+        if df in _t95: return _t95[df]
+        return min(_t95.values(), key=lambda v: abs(v - 2.0))
+    t_95_ad = _t95_lookup(n_runs_ad - 1)
+    t_95_fd = _t95_lookup(n_runs_fd - 1)
+
+    # Propagate: total = (n_iters + 2d) * t_grad, so std_total = (n_iters + 2d) * std_grad
+    ad_total_se = (n_iters + 2 * n_hp) * std_ad / math.sqrt(max(n_runs_ad, 1))
+    ad_ci95 = t_95_ad * ad_total_se
+
+    fd_opt_se = n_iters * std_fd / math.sqrt(max(n_runs_fd, 1))
+    fd_hess_se = no_eval_hess * (std_fd / evals_per_grad) / math.sqrt(max(n_runs_fd, 1))
+    fd_total_se = math.sqrt(fd_opt_se**2 + fd_hess_se**2)
+    fd_ci95 = t_95_fd * fd_total_se
 
     return {
         "n_iters_fd": n_iters_fd,
@@ -109,6 +133,8 @@ def compute_wallclock(ad_entry, fd_entry, n_hp, nodes):
         "t_optim_ad": ad_opt,
         "t_total_fd": fd_total,
         "t_total_ad": ad_total,
+        "ci95_total_ad": ad_ci95,
+        "ci95_total_fd": fd_ci95,
         "speedup_optim": fd_opt / ad_opt if ad_opt > 0 else 0,
         "speedup_hessian": fd_hess / ad_hess if ad_hess > 0 else 0,
         "speedup_total": fd_total / ad_total if ad_total > 0 else 0,
@@ -131,6 +157,7 @@ def main():
         "t_hessian_fd", "t_hessian_ad",
         "t_optim_fd", "t_optim_ad",
         "t_total_fd", "t_total_ad",
+        "ci95_total_ad", "ci95_total_fd",
         "speedup_optim", "speedup_hessian", "speedup_total",
     ]
 

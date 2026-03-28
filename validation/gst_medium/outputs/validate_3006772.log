@@ -1,0 +1,136 @@
+======================================================================
+NUMERICAL VALIDATION: gst_medium
+======================================================================
+
+Phase 1: JAX AD forward + gradient
+Using JAX automatic differentiation with JIT compilation (Gaussian likelihood)
+JIT compiling objective + gradient...
+JIT compilation done in 10.9s.
+
+___________________________________ 
+___  __ \__    |__  /____  _/__    |
+__  / / /_  /| |_  /  __  / __  /| |
+_  /_/ /_  ___ |  /____/ /  _  ___ |
+/_____/ /_/  |_/_____/___/  /_/  |_|
+
+╔═══════════════════════════════════════════════════════╗
+║               Parallelization strategies              ║
+║ ╒═══════════════════════════════════════════╤═══════╕ ║
+║ │ Participating Processes / Total Processes │ 1 / 1 │ ║
+║ ├───────────────────────────────────────────┼───────┤ ║
+║ │ Parallelization through F()               │   1   │ ║
+║ ├───────────────────────────────────────────┼───────┤ ║
+║ │ Parallelization through Q()               │   1   │ ║
+║ ├───────────────────────────────────────────┼───────┤ ║
+║ │ Parallelization through S()               │   1   │ ║
+║ ╘═══════════════════════════════════════════╧═══════╛ ║
+╚═══════════════════════════════════════════════════════╝
+╔═══════════════════════════════╗
+║  Enabled Performance modules  ║
+║ ╒═══════════════════╤═══════╕ ║
+║ │ Array module      │ cupy  │ ║
+║ ├───────────────────┼───────┤ ║
+║ │ MPI available     │ True  │ ║
+║ ├───────────────────┼───────┤ ║
+║ │ Is MPI CUDA aware │ False │ ║
+║ ├───────────────────┼───────┤ ║
+║ │ Is NCCL available │ False │ ║
+║ ╘═══════════════════╧═══════╛ ║
+╚═══════════════════════════════╝
+╔═══════════════════════════════════════╗
+║             Memory Report             ║
+║ ╒════════════════════════╤══════════╕ ║
+║ │ Solver memory          │  0.00 B  │ ║
+║ ├────────────────────────┼──────────┤ ║
+║ │ Total memory used      │ 56.69 MB │ ║
+║ ├────────────────────────┼──────────┤ ║
+║ │ Total memory available │ 75.42 MB │ ║
+║ ╘════════════════════════╧══════════╛ ║
+╚═══════════════════════════════════════╝
+DALIA initialized.
+  n_hyperparameters: 4
+  theta: [0. 0. 0. 4.]
+  precision: float64
+  JAX forward: f=1953918.9523719251 (6.31s)
+  JAX forward+grad: f=1953918.9523719251 (0.70s)
+
+Phase 2: CuPy/serinv forward + FD gradient
+
+___________________________________ 
+___  __ \__    |__  /____  _/__    |
+__  / / /_  /| |_  /  __  / __  /| |
+_  /_/ /_  ___ |  /____/ /  _  ___ |
+/_____/ /_/  |_/_____/___/  /_/  |_|
+
+╔═══════════════════════════════════════════════════════╗
+║               Parallelization strategies              ║
+║ ╒═══════════════════════════════════════════╤═══════╕ ║
+║ │ Participating Processes / Total Processes │ 1 / 1 │ ║
+║ ├───────────────────────────────────────────┼───────┤ ║
+║ │ Parallelization through F()               │   1   │ ║
+║ ├───────────────────────────────────────────┼───────┤ ║
+║ │ Parallelization through Q()               │   1   │ ║
+║ ├───────────────────────────────────────────┼───────┤ ║
+║ │ Parallelization through S()               │   1   │ ║
+║ ╘═══════════════════════════════════════════╧═══════╛ ║
+╚═══════════════════════════════════════════════════════╝
+╔═══════════════════════════════╗
+║  Enabled Performance modules  ║
+║ ╒═══════════════════╤═══════╕ ║
+║ │ Array module      │ cupy  │ ║
+║ ├───────────────────┼───────┤ ║
+║ │ MPI available     │ True  │ ║
+║ ├───────────────────┼───────┤ ║
+║ │ Is MPI CUDA aware │ False │ ║
+║ ├───────────────────┼───────┤ ║
+║ │ Is NCCL available │ False │ ║
+║ ╘═══════════════════╧═══════╛ ║
+╚═══════════════════════════════╝
+╔═════════════════════════════════════════╗
+║              Memory Report              ║
+║ ╒════════════════════════╤════════════╕ ║
+║ │ Solver memory          │ 1004.77 MB │ ║
+║ ├────────────────────────┼────────────┤ ║
+║ │ Total memory used      │  1.04 GB   │ ║
+║ ├────────────────────────┼────────────┤ ║
+║ │ Total memory available │  1.04 GB   │ ║
+║ ╘════════════════════════╧════════════╛ ║
+╚═════════════════════════════════════════╝
+DALIA initialized.
+Allocated an extra 0.03 GB for BTA_mapping caching (total: 1.01)
+Allocated an extra 0.03 GB for BT_mapping caching (total: 1.04)
+  CuPy forward: f=1953918.9523736238 (2.46s)
+  Computing FD gradient (9 evaluations, eps=0.001) ...
+  FD gradient done (2.40s)
+
+----------------------------------------------------------------------
+1. FORWARD PASS COMPARISON (JAX AD vs CuPy/serinv)
+----------------------------------------------------------------------
+  f (JAX AD):      1.953918952371925e+06
+  f (CuPy/serinv): 1.953918952373624e+06
+  Absolute error:  1.698732e-06
+  Relative error:  8.693976e-13
+  [PASS] Forward values match (rtol 8.69e-13 < 1e-06)
+
+  Internal check: |f_grad - f_fwd| = 0.000000e+00
+
+----------------------------------------------------------------------
+2. GRADIENT COMPARISON (JAX AD vs Finite Differences)
+----------------------------------------------------------------------
+  Component        AD gradient     FD gradient      Abs err      Rel err
+  theta[0]       2.620494e+06    2.620495e+06    1.001e+00    3.820e-07
+  theta[1]      -7.739119e+05   -7.739119e+05    2.577e-02    3.330e-08
+  theta[2]      -1.565492e+06   -1.565492e+06    2.171e-01    1.387e-07
+  theta[3]       1.386310e+06    1.386310e+06    1.290e-01    9.303e-08
+
+  Max component-wise relative error: 3.820135e-07
+  Cosine similarity:  1.0000000000
+  Norm ratio ||AD||/||FD||: 1.000000
+  [PASS] Gradients match (max rtol 3.82e-07 < 1e-02, cosine 1.000000 > 0.999)
+
+======================================================================
+OVERALL RESULT: PASS (2/2 checks passed)
+======================================================================
+
+Results saved to /capstor/scratch/cscs/aboudaou/workspace/dalia/artifact/validation/gst_medium/outputs/validation_gst_medium.npz
+Validation for gst_medium finished at Fri 27 Mar 2026 12:59:09 AM CET

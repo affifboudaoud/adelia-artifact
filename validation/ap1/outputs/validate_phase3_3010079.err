@@ -1,0 +1,76 @@
+W0327 16:31:57.085696  234601 cuda_executor.cc:1802] GPU interconnect information not available: INTERNAL: NVML doesn't support extracting fabric info or NVLink is not used by the device.
+W0327 16:31:57.119645  233829 cuda_executor.cc:1802] GPU interconnect information not available: INTERNAL: NVML doesn't support extracting fabric info or NVLink is not used by the device.
+W0327 16:31:57.153071   58568 cuda_executor.cc:1802] GPU interconnect information not available: INTERNAL: NVML doesn't support extracting fabric info or NVLink is not used by the device.
+W0327 16:31:57.189527   57850 cuda_executor.cc:1802] GPU interconnect information not available: INTERNAL: NVML doesn't support extracting fabric info or NVLink is not used by the device.
+W0327 16:31:57.536308  268187 cuda_executor.cc:1802] GPU interconnect information not available: INTERNAL: NVML doesn't support extracting fabric info or NVLink is not used by the device.
+W0327 16:31:57.572353  267466 cuda_executor.cc:1802] GPU interconnect information not available: INTERNAL: NVML doesn't support extracting fabric info or NVLink is not used by the device.
+W0327 16:31:58.097008  156175 cuda_executor.cc:1802] GPU interconnect information not available: INTERNAL: NVML doesn't support extracting fabric info or NVLink is not used by the device.
+W0327 16:31:58.133586  155453 cuda_executor.cc:1802] GPU interconnect information not available: INTERNAL: NVML doesn't support extracting fabric info or NVLink is not used by the device.
+/users/aboudaou/miniconda3/envs/serinv-env/lib/python3.11/site-packages/mpi4jax/_src/decorators.py:60: UserWarning: Not using CUDA-enabled MPI. If you are sure that your MPI library is built with CUDA support, set MPI4JAX_USE_CUDA_MPI=1. To silence this warning, set MPI4JAX_USE_CUDA_MPI=0.
+  warnings.warn(warn_msg)
+/users/aboudaou/miniconda3/envs/serinv-env/lib/python3.11/site-packages/mpi4jax/_src/decorators.py:60: UserWarning: Not using CUDA-enabled MPI. If you are sure that your MPI library is built with CUDA support, set MPI4JAX_USE_CUDA_MPI=1. To silence this warning, set MPI4JAX_USE_CUDA_MPI=0.
+  warnings.warn(warn_msg)
+/users/aboudaou/miniconda3/envs/serinv-env/lib/python3.11/site-packages/mpi4jax/_src/decorators.py:60: UserWarning: Not using CUDA-enabled MPI. If you are sure that your MPI library is built with CUDA support, set MPI4JAX_USE_CUDA_MPI=1. To silence this warning, set MPI4JAX_USE_CUDA_MPI=0.
+  warnings.warn(warn_msg)
+/users/aboudaou/miniconda3/envs/serinv-env/lib/python3.11/site-packages/mpi4jax/_src/decorators.py:60: UserWarning: Not using CUDA-enabled MPI. If you are sure that your MPI library is built with CUDA support, set MPI4JAX_USE_CUDA_MPI=1. To silence this warning, set MPI4JAX_USE_CUDA_MPI=0.
+  warnings.warn(warn_msg)
+E0327 16:35:14.309088   58866 slow_operation_alarm.cc:73] Constant folding an instruction is taking > 1s:
+
+  %reduce_and.42 = pred[862992]{0} reduce(%constant.614, %constant.138), dimensions={1}, to_apply=%region_10.20, metadata={op_name="jit(_grad_quad_fn_jit)/reduce_and" source_file="/capstor/scratch/cscs/aboudaou/workspace/dalia/DALIA/src/dalia/core/autodiff/distributed.py" source_line=457 source_end_line=457 source_column=16 source_end_column=43}
+
+This isn't necessarily a bug; constant-folding is inherently a trade-off between compilation time and speed at runtime. XLA has some guards that attempt to keep constant folding from taking too long, but fundamentally you'll always be able to come up with an input program that takes a long time.
+
+If you'd like to file a bug, run with envvar XLA_FLAGS=--xla_dump_to=/tmp/foo and attach the results.
+E0327 16:35:14.319208  156475 slow_operation_alarm.cc:73] Constant folding an instruction is taking > 1s:
+
+  %reduce_and.42 = pred[862992]{0} reduce(%constant.614, %constant.138), dimensions={1}, to_apply=%region_10.20, metadata={op_name="jit(_grad_quad_fn_jit)/reduce_and" source_file="/capstor/scratch/cscs/aboudaou/workspace/dalia/DALIA/src/dalia/core/autodiff/distributed.py" source_line=457 source_end_line=457 source_column=16 source_end_column=43}
+
+This isn't necessarily a bug; constant-folding is inherently a trade-off between compilation time and speed at runtime. XLA has some guards that attempt to keep constant folding from taking too long, but fundamentally you'll always be able to come up with an input program that takes a long time.
+
+If you'd like to file a bug, run with envvar XLA_FLAGS=--xla_dump_to=/tmp/foo and attach the results.
+E0327 16:35:14.322881  268483 slow_operation_alarm.cc:73] Constant folding an instruction is taking > 1s:
+
+  %reduce_and.42 = pred[862992]{0} reduce(%constant.610, %constant.136), dimensions={1}, to_apply=%region_10.20, metadata={op_name="jit(_grad_quad_fn_jit)/reduce_and" source_file="/capstor/scratch/cscs/aboudaou/workspace/dalia/DALIA/src/dalia/core/autodiff/distributed.py" source_line=457 source_end_line=457 source_column=16 source_end_column=43}
+
+This isn't necessarily a bug; constant-folding is inherently a trade-off between compilation time and speed at runtime. XLA has some guards that attempt to keep constant folding from taking too long, but fundamentally you'll always be able to come up with an input program that takes a long time.
+
+If you'd like to file a bug, run with envvar XLA_FLAGS=--xla_dump_to=/tmp/foo and attach the results.
+E0327 16:35:14.336919  234896 slow_operation_alarm.cc:73] Constant folding an instruction is taking > 1s:
+
+  %reduce_and.42 = pred[862992]{0} reduce(%constant.614, %constant.138), dimensions={1}, to_apply=%region_10.20, metadata={op_name="jit(_grad_quad_fn_jit)/reduce_and" source_file="/capstor/scratch/cscs/aboudaou/workspace/dalia/DALIA/src/dalia/core/autodiff/distributed.py" source_line=457 source_end_line=457 source_column=16 source_end_column=43}
+
+This isn't necessarily a bug; constant-folding is inherently a trade-off between compilation time and speed at runtime. XLA has some guards that attempt to keep constant folding from taking too long, but fundamentally you'll always be able to come up with an input program that takes a long time.
+
+If you'd like to file a bug, run with envvar XLA_FLAGS=--xla_dump_to=/tmp/foo and attach the results.
+E0327 16:35:14.654351  267466 slow_operation_alarm.cc:140] The operation took 1.331577072s
+Constant folding an instruction is taking > 1s:
+
+  %reduce_and.42 = pred[862992]{0} reduce(%constant.610, %constant.136), dimensions={1}, to_apply=%region_10.20, metadata={op_name="jit(_grad_quad_fn_jit)/reduce_and" source_file="/capstor/scratch/cscs/aboudaou/workspace/dalia/DALIA/src/dalia/core/autodiff/distributed.py" source_line=457 source_end_line=457 source_column=16 source_end_column=43}
+
+This isn't necessarily a bug; constant-folding is inherently a trade-off between compilation time and speed at runtime. XLA has some guards that attempt to keep constant folding from taking too long, but fundamentally you'll always be able to come up with an input program that takes a long time.
+
+If you'd like to file a bug, run with envvar XLA_FLAGS=--xla_dump_to=/tmp/foo and attach the results.
+E0327 16:35:14.702794  155453 slow_operation_alarm.cc:140] The operation took 1.38368853s
+Constant folding an instruction is taking > 1s:
+
+  %reduce_and.42 = pred[862992]{0} reduce(%constant.614, %constant.138), dimensions={1}, to_apply=%region_10.20, metadata={op_name="jit(_grad_quad_fn_jit)/reduce_and" source_file="/capstor/scratch/cscs/aboudaou/workspace/dalia/DALIA/src/dalia/core/autodiff/distributed.py" source_line=457 source_end_line=457 source_column=16 source_end_column=43}
+
+This isn't necessarily a bug; constant-folding is inherently a trade-off between compilation time and speed at runtime. XLA has some guards that attempt to keep constant folding from taking too long, but fundamentally you'll always be able to come up with an input program that takes a long time.
+
+If you'd like to file a bug, run with envvar XLA_FLAGS=--xla_dump_to=/tmp/foo and attach the results.
+E0327 16:35:14.769510   57850 slow_operation_alarm.cc:140] The operation took 1.460484694s
+Constant folding an instruction is taking > 1s:
+
+  %reduce_and.42 = pred[862992]{0} reduce(%constant.614, %constant.138), dimensions={1}, to_apply=%region_10.20, metadata={op_name="jit(_grad_quad_fn_jit)/reduce_and" source_file="/capstor/scratch/cscs/aboudaou/workspace/dalia/DALIA/src/dalia/core/autodiff/distributed.py" source_line=457 source_end_line=457 source_column=16 source_end_column=43}
+
+This isn't necessarily a bug; constant-folding is inherently a trade-off between compilation time and speed at runtime. XLA has some guards that attempt to keep constant folding from taking too long, but fundamentally you'll always be able to come up with an input program that takes a long time.
+
+If you'd like to file a bug, run with envvar XLA_FLAGS=--xla_dump_to=/tmp/foo and attach the results.
+E0327 16:35:14.850327  233829 slow_operation_alarm.cc:140] The operation took 1.513523092s
+Constant folding an instruction is taking > 1s:
+
+  %reduce_and.42 = pred[862992]{0} reduce(%constant.614, %constant.138), dimensions={1}, to_apply=%region_10.20, metadata={op_name="jit(_grad_quad_fn_jit)/reduce_and" source_file="/capstor/scratch/cscs/aboudaou/workspace/dalia/DALIA/src/dalia/core/autodiff/distributed.py" source_line=457 source_end_line=457 source_column=16 source_end_column=43}
+
+This isn't necessarily a bug; constant-folding is inherently a trade-off between compilation time and speed at runtime. XLA has some guards that attempt to keep constant folding from taking too long, but fundamentally you'll always be able to come up with an input program that takes a long time.
+
+If you'd like to file a bug, run with envvar XLA_FLAGS=--xla_dump_to=/tmp/foo and attach the results.

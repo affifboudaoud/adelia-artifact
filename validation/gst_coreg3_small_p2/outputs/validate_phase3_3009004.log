@@ -1,0 +1,132 @@
+======================================================================
+NUMERICAL VALIDATION: gst_coreg3_small_p2 (phase 3)
+======================================================================
+
+Phase 2: JAX AD forward + gradient
+rank 0 initializing NCCL communicator.
+Using distributed JAX autodiff (two-phase) with 2 ranks (CoregionalModel, 3 variates)
+Two-phase (per-block, RS=scan, grad_prior=two-phase): JIT compiling all stages...
+  compiling Cholesky + forward sub...
+  compiling merged bwd+SI...
+  compiling prior logdet + gradient...
+  compiling quad gradient...
+  compiling scalar gradient...
+  all stages compiled in 19.6s.
+
+___________________________________ 
+___  __ \__    |__  /____  _/__    |
+__  / / /_  /| |_  /  __  / __  /| |
+_  /_/ /_  ___ |  /____/ /  _  ___ |
+/_____/ /_/  |_/_____/___/  /_/  |_|
+
+╔═══════════════════════════════════════════════════════╗
+║               Parallelization strategies              ║
+║ ╒═══════════════════════════════════════════╤═══════╕ ║
+║ │ Participating Processes / Total Processes │ 2 / 2 │ ║
+║ ├───────────────────────────────────────────┼───────┤ ║
+║ │ Parallelization through F()               │   1   │ ║
+║ ├───────────────────────────────────────────┼───────┤ ║
+║ │ Parallelization through Q()               │   1   │ ║
+║ ├───────────────────────────────────────────┼───────┤ ║
+║ │ Parallelization through S()               │   2   │ ║
+║ ╘═══════════════════════════════════════════╧═══════╛ ║
+╚═══════════════════════════════════════════════════════╝
+╔══════════════════════════════╗
+║ Enabled Performance modules  ║
+║ ╒═══════════════════╤══════╕ ║
+║ │ Array module      │ cupy │ ║
+║ ├───────────────────┼──────┤ ║
+║ │ MPI available     │ True │ ║
+║ ├───────────────────┼──────┤ ║
+║ │ Is MPI CUDA aware │ True │ ║
+║ ├───────────────────┼──────┤ ║
+║ │ Is NCCL available │ True │ ║
+║ ╘═══════════════════╧══════╛ ║
+╚══════════════════════════════╝
+╔═══════════════════════════════════════╗
+║             Memory Report             ║
+║ ╒════════════════════════╤══════════╕ ║
+║ │ Solver memory          │  0.00 B  │ ║
+║ ├────────────────────────┼──────────┤ ║
+║ │ Total memory used      │ 33.04 MB │ ║
+║ ├────────────────────────┼──────────┤ ║
+║ │ Total memory available │ 39.65 MB │ ║
+║ ╘════════════════════════╧══════════╛ ║
+╚═══════════════════════════════════════╝
+DALIA initialized.
+  precision: float64
+  JAX forward: f=-68907.9250102043 (3.00s)
+  JAX forward+grad: f=-68907.9250173569 (1.56s)
+
+  Computing JAX-based FD gradient (30 evaluations, eps=1e-05) ...
+  JAX FD gradient done (23.68s)
+
+----------------------------------------------------------------------
+1. FORWARD PASS COMPARISON (JAX AD vs JAX fwd)
+----------------------------------------------------------------------
+  f (JAX AD):      -6.890792501735687e+04
+  f (     JAX fwd): -6.890792501020432e+04
+  Absolute error:  7.152557e-06
+  Relative error:  1.037988e-10
+  [PASS] Forward values match (rtol 1.04e-10 < 1e-06)
+
+  Internal check: |f_grad - f_fwd| = 7.152557e-06
+
+----------------------------------------------------------------------
+2. GRADIENT COMPARISON (JAX AD vs Finite Differences)
+----------------------------------------------------------------------
+  Component        AD gradient     FD gradient      Abs err      Rel err
+  theta[0]       2.129636e+03    2.128792e+03    8.441e-01    3.964e-04
+  theta[1]      -5.593438e+02   -5.598783e+02    5.346e-01    9.548e-04
+  theta[2]       9.532375e+02    9.523869e+02    8.506e-01    8.924e-04
+  theta[3]       9.493180e+02    9.494305e+02    1.125e-01    1.184e-04
+  theta[4]      -1.982124e+02   -1.980305e+02    1.819e-01    9.177e-04
+  theta[5]      -3.136588e+02   -3.134727e+02    1.860e-01    5.930e-04
+  theta[6]       2.269114e+03    2.269053e+03    6.064e-02    2.672e-05
+  theta[7]      -6.284351e+02   -6.287813e+02    3.462e-01    5.506e-04
+  theta[8]       7.347465e+02    7.347345e+02    1.198e-02    1.631e-05
+  theta[9]      -1.115978e+03   -1.116419e+03    4.406e-01    3.947e-04
+  theta[10]      -1.338470e+03   -1.339555e+03    1.085e+00    8.096e-04
+  theta[11]      -1.308340e+03   -1.308846e+03    5.065e-01    3.870e-04
+  theta[12]       1.665968e-01    5.006790e-01    3.341e-01    6.673e-01
+  theta[13]      -2.218317e+04   -2.218204e+04    1.137e+00    5.124e-05
+  theta[14]       1.141150e+02    1.137018e+02    4.132e-01    3.621e-03
+
+  Max component-wise relative error: 6.672584e-01
+  Cosine similarity:  0.9999999962
+  Norm ratio ||AD||/||FD||: 1.000049
+  [FAIL] Gradients differ (max rtol 6.67e-01, cosine 1.000000)
+
+======================================================================
+OVERALL RESULT: FAIL (1/2 checks passed)
+======================================================================
+
+Results saved to /capstor/scratch/cscs/aboudaou/workspace/dalia/artifact/validation/gst_coreg3_small_p2/outputs/validation_gst_coreg3_small_p2.npz
+
+----------------------------------------------------------------------
+COMPARISON: P=2 distributed AD vs P=1 native AD (verified reference)
+----------------------------------------------------------------------
+  f (P=1 native): -6.890792501783371e+04
+  f (P=2 dist):   -6.890792501735687e+04
+  f relative err: 6.919918e-12
+
+  i           P=1 native        P=2 dist      abs err      rel err
+  0         2.129636e+03    2.129636e+03    2.118e-07    9.946e-11
+  1        -5.593438e+02   -5.593438e+02    7.569e-08    1.353e-10
+  2         9.532375e+02    9.532375e+02    3.517e-06    3.689e-09
+  3         9.493180e+02    9.493180e+02    3.162e-06    3.331e-09
+  4        -1.982124e+02   -1.982124e+02    5.940e-07    2.997e-09
+  5        -3.136587e+02   -3.136588e+02    5.484e-06    1.748e-08
+  6         2.269114e+03    2.269114e+03    1.601e-07    7.057e-11
+  7        -6.284351e+02   -6.284351e+02    6.466e-08    1.029e-10
+  8         7.347465e+02    7.347465e+02    2.909e-05    3.959e-08
+  9        -1.115978e+03   -1.115978e+03    2.407e-07    2.157e-10
+  10       -1.338470e+03   -1.338470e+03    3.613e-06    2.699e-09
+  11       -1.308340e+03   -1.308340e+03    1.696e-07    1.296e-10
+  12        1.665956e-01    1.665968e-01    1.129e-06    6.776e-06
+  13       -2.218317e+04   -2.218317e+04    3.556e-06    1.603e-10
+  14        1.141150e+02    1.141150e+02    1.272e-06    1.115e-08
+
+  Cosine:     1.000000000000
+  Norm ratio: 1.000000
+  Max rtol:   6.775556e-06

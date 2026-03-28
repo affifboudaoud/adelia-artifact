@@ -27,15 +27,15 @@ PAPER_FIG_DIR = os.path.join(SCRIPT_DIR, "..", "figures")
 CSV_FILE = "resource_efficiency_all_updated.csv"
 
 MODELS = {
-    "sa1":  (r"SA1 [AD@1]",  "-",  "s", "#D4A843"),
-    "ap1":  (r"AP1 [AD@4]",  "-",  "D", "#6B7B8D"),
-    "wa1":  (r"WA1 [AD@4]",  "-",  "^", "#2B2D42"),
-    "wa2":  (r"WA2 [AD@4]",  "-",  "v", "#4A5568"),
+    "sa1":  (r"SA1",  "-",  "s", "#D4A843"),
+    "ap1":  (r"AP1",  "-",  "D", "#6B7B8D"),
+    "wa1":  (r"WA1",  "-",  "^", "#2B2D42"),
+    "wa2":  (r"WA2",  "-",  "v", "#4A5568"),
 }
 
-FIGSIZE = (7.16, 3.8)
+FIGSIZE = (7.16, 2.2)
 DPI = 300
-MARKER_SIZE = 6
+MARKER_SIZE = 5
 LINE_WIDTH = 1.5
 
 
@@ -72,7 +72,7 @@ def plot_dual_panel(df):
     figure_style.apply()
 
     fig, (ax_wall, ax_energy) = plt.subplots(
-        1, 2, figsize=FIGSIZE, sharey=False
+        1, 2, figsize=FIGSIZE, sharey=False, sharex=True
     )
 
     for model, (label, lstyle, marker, color) in MODELS.items():
@@ -151,7 +151,6 @@ def plot_dual_panel(df):
     ylims_wall = ax_wall.get_ylim()
     ax_wall.axhspan(0, 1.0, alpha=0.10, color="#DDE1E6", zorder=0)
     ax_wall.axhspan(1.0, ylims_wall[1], alpha=0.10, color="#F5DDE2", zorder=0)
-    ax_wall.set_xlabel("Number of FD nodes")
     ax_wall.set_ylabel("Finite diff. time / Autodiff time")
     ax_wall.set_title(r"$\bf{(a)}$ Per-gradient time ratio")
     ax_wall.grid(True, alpha=0.3, which="both", zorder=0)
@@ -169,11 +168,10 @@ def plot_dual_panel(df):
     ax_energy.xaxis.set_major_formatter(mticker.FuncFormatter(lambda x, _: f"{int(x)}"))
     ax_energy.xaxis.set_minor_formatter(mticker.NullFormatter())
 
-    ax_energy.set_ylim(bottom=-1.0)
+    ax_energy.set_ylim(bottom=0)
     ylims_energy = ax_energy.get_ylim()
     ax_energy.axhspan(ylims_energy[0], 1.0, alpha=0.10, color="#DDE1E6", zorder=0)
     ax_energy.axhspan(1.0, ylims_energy[1], alpha=0.10, color="#F5DDE2", zorder=0)
-    ax_energy.set_xlabel("Number of FD nodes")
     ax_energy.set_ylabel("Finite diff. energy / Autodiff energy")
     ax_energy.set_title(r"$\bf{(b)}$ Measured energy ratio")
     ax_energy.grid(True, alpha=0.3, which="both", zorder=0)
@@ -184,19 +182,39 @@ def plot_dual_panel(df):
                    fontsize=8, alpha=0.7, color="#E8899A", va="top",
                    fontweight="bold")
 
-    # Shared legend below
-    handles, labels = ax_wall.get_legend_handles_labels()
-    fig.legend(
-        handles, labels,
-        loc="lower center",
-        ncol=4,
-        frameon=True,
-        framealpha=0.9,
-        bbox_to_anchor=(0.5, -0.02),
-        columnspacing=1.5,
-    )
+    fig.tight_layout(pad=0.3, w_pad=1.5)
+    fig.subplots_adjust(bottom=0.18)
 
-    fig.tight_layout(rect=[0, 0.05, 1, 1])
+    # Shared x-label centered, legend split: 2 left + label + 2 right
+    handles, labels = ax_wall.get_legend_handles_labels()
+    label_y = 0.02
+
+    # Left legend (SA1, AP1)
+    fig.legend(
+        handles[:2], labels[:2],
+        loc="center",
+        ncol=2,
+        frameon=True,
+        edgecolor="#AAAAAA",
+        fancybox=False,
+        bbox_to_anchor=(0.18, label_y),
+        columnspacing=1.0,
+    ).get_frame().set_linewidth(0.6)
+
+    # Center x-label
+    fig.text(0.5, label_y, "Number of FD nodes", ha="center", va="center")
+
+    # Right legend (WA1, WA2)
+    fig.legend(
+        handles[2:], labels[2:],
+        loc="center",
+        ncol=2,
+        frameon=True,
+        edgecolor="#AAAAAA",
+        fancybox=False,
+        bbox_to_anchor=(0.82, label_y),
+        columnspacing=1.0,
+    ).get_frame().set_linewidth(0.6)
     return fig
 
 

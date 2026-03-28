@@ -33,7 +33,7 @@ ARTIFACT_DIR = os.environ.get(
     "ARTIFACT_DIR",
     os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..", "..")),
 )
-DATA_DIR = os.path.join(ARTIFACT_DIR, "data", "sa1")
+DATA_DIR = os.path.join(os.environ.get("ZENODO_DATA_DIR", os.path.join(ARTIFACT_DIR, "data")), "SA_1")
 
 NV = 3
 NS = 1673

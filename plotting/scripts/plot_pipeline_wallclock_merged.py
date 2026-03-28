@@ -30,10 +30,10 @@ OUTPUT_FILENAME = "pipeline_wallclock_merged.pdf"
 
 MODEL_ORDER = [
     "GST-S", "GST-C2", "GST-M", "GST-C3",
-    "GST-L", "WA1", "AP1", "WA2", "SA1",
+    "GST-T", "GST-L", "WA1", "AP1", "WA2", "SA1",
 ]
 FAST_MODELS = ["GST-S", "GST-C2", "GST-M", "GST-C3"]
-LARGE_MODELS = ["GST-L", "WA1", "AP1", "WA2", "SA1"]
+LARGE_MODELS = ["GST-T", "GST-L", "WA1", "AP1", "WA2", "SA1"]
 
 COLORS = {
     "fd_optim": "#6B7B8D",

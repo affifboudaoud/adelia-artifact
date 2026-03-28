@@ -1,0 +1,96 @@
+W0328 02:32:19.035141  143418 cuda_executor.cc:1802] GPU interconnect information not available: INTERNAL: NVML doesn't support extracting fabric info or NVLink is not used by the device.
+W0328 02:32:19.072812  142671 cuda_executor.cc:1802] GPU interconnect information not available: INTERNAL: NVML doesn't support extracting fabric info or NVLink is not used by the device.
+W0328 02:32:19.340361   26789 cuda_executor.cc:1802] GPU interconnect information not available: INTERNAL: NVML doesn't support extracting fabric info or NVLink is not used by the device.
+W0328 02:32:19.374291   26077 cuda_executor.cc:1802] GPU interconnect information not available: INTERNAL: NVML doesn't support extracting fabric info or NVLink is not used by the device.
+W0328 02:32:20.897482  138545 cuda_executor.cc:1802] GPU interconnect information not available: INTERNAL: NVML doesn't support extracting fabric info or NVLink is not used by the device.
+W0328 02:32:20.933089  137816 cuda_executor.cc:1802] GPU interconnect information not available: INTERNAL: NVML doesn't support extracting fabric info or NVLink is not used by the device.
+W0328 02:32:21.053032  184431 cuda_executor.cc:1802] GPU interconnect information not available: INTERNAL: NVML doesn't support extracting fabric info or NVLink is not used by the device.
+W0328 02:32:21.086136  183700 cuda_executor.cc:1802] GPU interconnect information not available: INTERNAL: NVML doesn't support extracting fabric info or NVLink is not used by the device.
+/users/aboudaou/miniconda3/envs/serinv-env/lib/python3.11/site-packages/mpi4jax/_src/decorators.py:60: UserWarning: Not using CUDA-enabled MPI. If you are sure that your MPI library is built with CUDA support, set MPI4JAX_USE_CUDA_MPI=1. To silence this warning, set MPI4JAX_USE_CUDA_MPI=0.
+  warnings.warn(warn_msg)
+/users/aboudaou/miniconda3/envs/serinv-env/lib/python3.11/site-packages/mpi4jax/_src/decorators.py:60: UserWarning: Not using CUDA-enabled MPI. If you are sure that your MPI library is built with CUDA support, set MPI4JAX_USE_CUDA_MPI=1. To silence this warning, set MPI4JAX_USE_CUDA_MPI=0.
+  warnings.warn(warn_msg)
+/users/aboudaou/miniconda3/envs/serinv-env/lib/python3.11/site-packages/mpi4jax/_src/decorators.py:60: UserWarning: Not using CUDA-enabled MPI. If you are sure that your MPI library is built with CUDA support, set MPI4JAX_USE_CUDA_MPI=1. To silence this warning, set MPI4JAX_USE_CUDA_MPI=0.
+  warnings.warn(warn_msg)
+/users/aboudaou/miniconda3/envs/serinv-env/lib/python3.11/site-packages/mpi4jax/_src/decorators.py:60: UserWarning: Not using CUDA-enabled MPI. If you are sure that your MPI library is built with CUDA support, set MPI4JAX_USE_CUDA_MPI=1. To silence this warning, set MPI4JAX_USE_CUDA_MPI=0.
+  warnings.warn(warn_msg)
+Exception ignored in atexit callback: <function flush at 0x40095bed3420>
+Traceback (most recent call last):
+  File "/users/aboudaou/miniconda3/envs/serinv-env/lib/python3.11/site-packages/mpi4jax/_src/__init__.py", line 21, in flush
+    jax.effects_barrier()
+  File "/users/aboudaou/miniconda3/envs/serinv-env/lib/python3.11/site-packages/jax/_src/api.py", line 3206, in effects_barrier
+    dispatch.runtime_tokens.block_until_ready()
+  File "/users/aboudaou/miniconda3/envs/serinv-env/lib/python3.11/site-packages/jax/_src/dispatch.py", line 173, in block_until_ready
+    token.block_until_ready()
+  File "/users/aboudaou/miniconda3/envs/serinv-env/lib/python3.11/site-packages/jax/_src/core.py", line 2791, in block_until_ready
+Exception ignored in atexit callback: <function flush at 0x4009a7ecf420>
+Traceback (most recent call last):
+  File "/users/aboudaou/miniconda3/envs/serinv-env/lib/python3.11/site-packages/mpi4jax/_src/__init__.py", line 21, in flush
+    self._buf.block_until_ready()
+jax.errors.JaxRuntimeError: INVALID_ARGUMENT: BlockHostUntilReady() called on deleted or donated buffer
+Exception ignored in atexit callback: <function flush at 0x40097fecf420>
+Traceback (most recent call last):
+  File "/users/aboudaou/miniconda3/envs/serinv-env/lib/python3.11/site-packages/mpi4jax/_src/__init__.py", line 21, in flush
+    jax.effects_barrier()
+  File "/users/aboudaou/miniconda3/envs/serinv-env/lib/python3.11/site-packages/jax/_src/api.py", line 3206, in effects_barrier
+Exception ignored in atexit callback: <function flush at 0x40098fecf420>
+Traceback (most recent call last):
+  File "/users/aboudaou/miniconda3/envs/serinv-env/lib/python3.11/site-packages/mpi4jax/_src/__init__.py", line 21, in flush
+    jax.effects_barrier()
+  File "/users/aboudaou/miniconda3/envs/serinv-env/lib/python3.11/site-packages/jax/_src/api.py", line 3206, in effects_barrier
+    jax.effects_barrier()
+  File "/users/aboudaou/miniconda3/envs/serinv-env/lib/python3.11/site-packages/jax/_src/api.py", line 3206, in effects_barrier
+    dispatch.runtime_tokens.block_until_ready()
+  File "/users/aboudaou/miniconda3/envs/serinv-env/lib/python3.11/site-packages/jax/_src/dispatch.py", line 173, in block_until_ready
+    token.block_until_ready()
+  File "/users/aboudaou/miniconda3/envs/serinv-env/lib/python3.11/site-packages/jax/_src/core.py", line 2791, in block_until_ready
+    dispatch.runtime_tokens.block_until_ready()
+    dispatch.runtime_tokens.block_until_ready()
+  File "/users/aboudaou/miniconda3/envs/serinv-env/lib/python3.11/site-packages/jax/_src/dispatch.py", line 173, in block_until_ready
+  File "/users/aboudaou/miniconda3/envs/serinv-env/lib/python3.11/site-packages/jax/_src/dispatch.py", line 173, in block_until_ready
+    token.block_until_ready()
+  File "/users/aboudaou/miniconda3/envs/serinv-env/lib/python3.11/site-packages/jax/_src/core.py", line 2791, in block_until_ready
+    token.block_until_ready()
+  File "/users/aboudaou/miniconda3/envs/serinv-env/lib/python3.11/site-packages/jax/_src/core.py", line 2791, in block_until_ready
+    self._buf.block_until_ready()
+jax.errors.JaxRuntimeError: INVALID_ARGUMENT: BlockHostUntilReady() called on deleted or donated buffer
+    self._buf.block_until_ready()
+jax.errors.JaxRuntimeError: INVALID_ARGUMENT: BlockHostUntilReady() called on deleted or donated buffer
+    self._buf.block_until_ready()
+jax.errors.JaxRuntimeError: INVALID_ARGUMENT: BlockHostUntilReady() called on deleted or donated buffer
+Exception ignored in atexit callback: <function wait_for_tokens at 0x400129f222a0>
+Traceback (most recent call last):
+  File "/users/aboudaou/miniconda3/envs/serinv-env/lib/python3.11/site-packages/jax/_src/dispatch.py", line 182, in wait_for_tokens
+    runtime_tokens.block_until_ready()
+  File "/users/aboudaou/miniconda3/envs/serinv-env/lib/python3.11/site-packages/jax/_src/dispatch.py", line 173, in block_until_ready
+    token.block_until_ready()
+  File "/users/aboudaou/miniconda3/envs/serinv-env/lib/python3.11/site-packages/jax/_src/core.py", line 2791, in block_until_ready
+    self._buf.block_until_ready()
+jax.errors.JaxRuntimeError: INVALID_ARGUMENT: BlockHostUntilReady() called on deleted or donated buffer
+Exception ignored in atexit callback: <function wait_for_tokens at 0x400150ad22a0>
+Traceback (most recent call last):
+  File "/users/aboudaou/miniconda3/envs/serinv-env/lib/python3.11/site-packages/jax/_src/dispatch.py", line 182, in wait_for_tokens
+Exception ignored in atexit callback: <function wait_for_tokens at 0x40014fc0e2a0>
+Traceback (most recent call last):
+  File "/users/aboudaou/miniconda3/envs/serinv-env/lib/python3.11/site-packages/jax/_src/dispatch.py", line 182, in wait_for_tokens
+    runtime_tokens.block_until_ready()
+  File "/users/aboudaou/miniconda3/envs/serinv-env/lib/python3.11/site-packages/jax/_src/dispatch.py", line 173, in block_until_ready
+    runtime_tokens.block_until_ready()
+  File "/users/aboudaou/miniconda3/envs/serinv-env/lib/python3.11/site-packages/jax/_src/dispatch.py", line 173, in block_until_ready
+    token.block_until_ready()
+  File "/users/aboudaou/miniconda3/envs/serinv-env/lib/python3.11/site-packages/jax/_src/core.py", line 2791, in block_until_ready
+    token.block_until_ready()
+  File "/users/aboudaou/miniconda3/envs/serinv-env/lib/python3.11/site-packages/jax/_src/core.py", line 2791, in block_until_ready
+    self._buf.block_until_ready()
+    self._buf.block_until_ready()
+jax.errors.JaxRuntimeError: INVALID_ARGUMENT: BlockHostUntilReady() called on deleted or donated buffer
+jax.errors.JaxRuntimeError: INVALID_ARGUMENT: BlockHostUntilReady() called on deleted or donated buffer
+Exception ignored in atexit callback: <function wait_for_tokens at 0x4001367822a0>
+Traceback (most recent call last):
+  File "/users/aboudaou/miniconda3/envs/serinv-env/lib/python3.11/site-packages/jax/_src/dispatch.py", line 182, in wait_for_tokens
+    runtime_tokens.block_until_ready()
+  File "/users/aboudaou/miniconda3/envs/serinv-env/lib/python3.11/site-packages/jax/_src/dispatch.py", line 173, in block_until_ready
+    token.block_until_ready()
+  File "/users/aboudaou/miniconda3/envs/serinv-env/lib/python3.11/site-packages/jax/_src/core.py", line 2791, in block_until_ready
+    self._buf.block_until_ready()
+jax.errors.JaxRuntimeError: INVALID_ARGUMENT: BlockHostUntilReady() called on deleted or donated buffer

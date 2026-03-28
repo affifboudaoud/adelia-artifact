@@ -1,0 +1,136 @@
+======================================================================
+NUMERICAL VALIDATION: gst_large
+======================================================================
+
+Phase 1: CuPy/serinv forward + FD gradient (reference)
+
+___________________________________ 
+___  __ \__    |__  /____  _/__    |
+__  / / /_  /| |_  /  __  / __  /| |
+_  /_/ /_  ___ |  /____/ /  _  ___ |
+/_____/ /_/  |_/_____/___/  /_/  |_|
+
+╔═══════════════════════════════════════════════════════╗
+║               Parallelization strategies              ║
+║ ╒═══════════════════════════════════════════╤═══════╕ ║
+║ │ Participating Processes / Total Processes │ 1 / 1 │ ║
+║ ├───────────────────────────────────────────┼───────┤ ║
+║ │ Parallelization through F()               │   1   │ ║
+║ ├───────────────────────────────────────────┼───────┤ ║
+║ │ Parallelization through Q()               │   1   │ ║
+║ ├───────────────────────────────────────────┼───────┤ ║
+║ │ Parallelization through S()               │   1   │ ║
+║ ╘═══════════════════════════════════════════╧═══════╛ ║
+╚═══════════════════════════════════════════════════════╝
+╔═══════════════════════════════╗
+║  Enabled Performance modules  ║
+║ ╒═══════════════════╤═══════╕ ║
+║ │ Array module      │ cupy  │ ║
+║ ├───────────────────┼───────┤ ║
+║ │ MPI available     │ True  │ ║
+║ ├───────────────────┼───────┤ ║
+║ │ Is MPI CUDA aware │ False │ ║
+║ ├───────────────────┼───────┤ ║
+║ │ Is NCCL available │ False │ ║
+║ ╘═══════════════════╧═══════╛ ║
+╚═══════════════════════════════╝
+╔═══════════════════════════════════════╗
+║             Memory Report             ║
+║ ╒════════════════════════╤══════════╕ ║
+║ │ Solver memory          │ 59.59 GB │ ║
+║ ├────────────────────────┼──────────┤ ║
+║ │ Total memory used      │ 60.27 GB │ ║
+║ ├────────────────────────┼──────────┤ ║
+║ │ Total memory available │ 60.33 GB │ ║
+║ ╘════════════════════════╧══════════╛ ║
+╚═══════════════════════════════════════╝
+DALIA initialized.
+  n_hyperparameters: 4
+  theta: [-0.96027923 -0.30685282 -2.11208571  4.        ]
+Allocated an extra 0.37 GB for BTA_mapping caching (total: 59.96)
+Allocated an extra 0.33 GB for BT_mapping caching (total: 60.29)
+  CuPy forward: f=39782865.5313801765 (47.55s)
+  Computing FD gradient (9 evaluations, eps=0.001) ...
+  FD gradient done (50.02s)
+
+Phase 2: JAX AD forward + gradient
+Using JAX automatic differentiation with JIT compilation (Gaussian likelihood)
+JIT compiling objective + gradient...
+JIT compilation done in 39.5s.
+
+___________________________________ 
+___  __ \__    |__  /____  _/__    |
+__  / / /_  /| |_  /  __  / __  /| |
+_  /_/ /_  ___ |  /____/ /  _  ___ |
+/_____/ /_/  |_/_____/___/  /_/  |_|
+
+╔═══════════════════════════════════════════════════════╗
+║               Parallelization strategies              ║
+║ ╒═══════════════════════════════════════════╤═══════╕ ║
+║ │ Participating Processes / Total Processes │ 1 / 1 │ ║
+║ ├───────────────────────────────────────────┼───────┤ ║
+║ │ Parallelization through F()               │   1   │ ║
+║ ├───────────────────────────────────────────┼───────┤ ║
+║ │ Parallelization through Q()               │   1   │ ║
+║ ├───────────────────────────────────────────┼───────┤ ║
+║ │ Parallelization through S()               │   1   │ ║
+║ ╘═══════════════════════════════════════════╧═══════╛ ║
+╚═══════════════════════════════════════════════════════╝
+╔═══════════════════════════════╗
+║  Enabled Performance modules  ║
+║ ╒═══════════════════╤═══════╕ ║
+║ │ Array module      │ cupy  │ ║
+║ ├───────────────────┼───────┤ ║
+║ │ MPI available     │ True  │ ║
+║ ├───────────────────┼───────┤ ║
+║ │ Is MPI CUDA aware │ False │ ║
+║ ├───────────────────┼───────┤ ║
+║ │ Is NCCL available │ False │ ║
+║ ╘═══════════════════╧═══════╛ ║
+╚═══════════════════════════════╝
+╔════════════════════════════════════════╗
+║             Memory Report              ║
+║ ╒════════════════════════╤═══════════╕ ║
+║ │ Solver memory          │  0.00 B   │ ║
+║ ├────────────────────────┼───────────┤ ║
+║ │ Total memory used      │ 693.82 MB │ ║
+║ ├────────────────────────┼───────────┤ ║
+║ │ Total memory available │  1.02 GB  │ ║
+║ ╘════════════════════════╧═══════════╛ ║
+╚════════════════════════════════════════╝
+DALIA initialized.
+  precision: float64
+  JAX forward: f=39782865.5313308239 (16.30s)
+  JAX forward+grad: f=39782865.5313334465 (23.69s)
+
+----------------------------------------------------------------------
+1. FORWARD PASS COMPARISON (JAX AD vs CuPy/serinv)
+----------------------------------------------------------------------
+  f (JAX AD):      3.978286553133345e+07
+  f ( CuPy/serinv): 3.978286553138018e+07
+  Absolute error:  4.673004e-05
+  Relative error:  1.174627e-12
+  [PASS] Forward values match (rtol 1.17e-12 < 1e-06)
+
+  Internal check: |f_grad - f_fwd| = 2.622604e-06
+
+----------------------------------------------------------------------
+2. GRADIENT COMPARISON (JAX AD vs Finite Differences)
+----------------------------------------------------------------------
+  Component        AD gradient     FD gradient      Abs err      Rel err
+  theta[0]       3.980148e+06    3.980148e+06    4.005e-02    1.006e-08
+  theta[1]      -2.152240e+07   -2.152240e+07    1.826e+00    8.486e-08
+  theta[2]      -4.772604e+07   -4.772606e+07    1.717e+01    3.598e-07
+  theta[3]       1.886298e+07    1.886299e+07    2.188e+00    1.160e-07
+
+  Max component-wise relative error: 3.598222e-07
+  Cosine similarity:  1.0000000000
+  Norm ratio ||AD||/||FD||: 1.000000
+  [PASS] Gradients match (max rtol 3.60e-07 < 1e-02, cosine 1.000000 > 0.999)
+
+======================================================================
+OVERALL RESULT: PASS (2/2 checks passed)
+======================================================================
+
+Results saved to /capstor/scratch/cscs/aboudaou/workspace/dalia/artifact/validation/gst_large/outputs/validation_gst_large.npz
+Validation for gst_large finished at Fri 27 Mar 2026 04:57:29 PM CET

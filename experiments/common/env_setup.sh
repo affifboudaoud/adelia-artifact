@@ -30,3 +30,6 @@ done
 # Set artifact root (override with ARTIFACT_DIR if needed)
 export ARTIFACT_DIR="${ARTIFACT_DIR:-$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)}"
 export PYTHONPATH="$ARTIFACT_DIR/source/dalia:$ARTIFACT_DIR/source/serinv:$PYTHONPATH"
+
+# Data directory for production models (SA_1, WA_1, WA_2)
+export ZENODO_DATA_DIR="${ZENODO_DATA_DIR:-$ARTIFACT_DIR/data}"

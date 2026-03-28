@@ -1,0 +1,238 @@
+Parsed parameters:
+  max_iter: 250
+  solver_min_p: 1
+  profile: False
+  precision: float64
+  benchmark_mode: True
+  n_benchmark_runs: 20
+  benchmark_method: both
+  output_csv: None
+Parsed parameters:
+  max_iter: 250
+  solver_min_p: 1
+  profile: False
+  precision: float64
+  benchmark_mode: True
+  n_benchmark_runs: 20
+  benchmark_method: both
+  output_csv: None
+--- Table 2: GST-T (gst_temperature) only ---
+Model: GST-T (365 \times 2865)
+  FD... 
+___________________________________ 
+___  __ \__    |__  /____  _/__    |
+__  / / /_  /| |_  /  __  / __  /| |
+_  /_/ /_  ___ |  /____/ /  _  ___ |
+/_____/ /_/  |_/_____/___/  /_/  |_|
+
+╔═══════════════════════════════════════════════════════╗
+║               Parallelization strategies              ║
+║ ╒═══════════════════════════════════════════╤═══════╕ ║
+║ │ Participating Processes / Total Processes │ 1 / 1 │ ║
+║ ├───────────────────────────────────────────┼───────┤ ║
+║ │ Parallelization through F()               │   1   │ ║
+║ ├───────────────────────────────────────────┼───────┤ ║
+║ │ Parallelization through Q()               │   1   │ ║
+║ ├───────────────────────────────────────────┼───────┤ ║
+║ │ Parallelization through S()               │   1   │ ║
+║ ╘═══════════════════════════════════════════╧═══════╛ ║
+╚═══════════════════════════════════════════════════════╝
+╔═══════════════════════════════╗
+║  Enabled Performance modules  ║
+║ ╒═══════════════════╤═══════╕ ║
+║ │ Array module      │ cupy  │ ║
+║ ├───────────────────┼───────┤ ║
+║ │ MPI available     │ True  │ ║
+║ ├───────────────────┼───────┤ ║
+║ │ Is MPI CUDA aware │ False │ ║
+║ ├───────────────────┼───────┤ ║
+║ │ Is NCCL available │ False │ ║
+║ ╘═══════════════════╧═══════╛ ║
+╚═══════════════════════════════╝
+╔═══════════════════════════════════════╗
+║             Memory Report             ║
+║ ╒════════════════════════╤══════════╕ ║
+║ │ Solver memory          │ 44.61 GB │ ║
+║ ├────────────────────────┼──────────┤ ║
+║ │ Total memory used      │ 45.31 GB │ ║
+║ ├────────────────────────┼──────────┤ ║
+║ │ Total memory available │ 45.34 GB │ ║
+║ ╘════════════════════════╧══════════╛ ║
+╚═══════════════════════════════════════╝
+DALIA initialized.
+Allocated an extra 0.38 GB for BTA_mapping caching (total: 44.99)
+Allocated an extra 0.36 GB for BT_mapping caching (total: 45.35)
+rank 0 | iter 1 | objfunc_time: 45.418845 | solver_time: 40.553481 | construction_time: 3.572140
+rank 0 | iter 2 | objfunc_time: 45.522212 | solver_time: 40.534430 | construction_time: 3.587495
+rank 0 | iter 3 | objfunc_time: 45.459013 | solver_time: 40.549142 | construction_time: 3.581114
+rank 0 | iter 4 | objfunc_time: 45.564754 | solver_time: 40.553281 | construction_time: 3.594255
+rank 0 | iter 5 | objfunc_time: 45.522587 | solver_time: 40.557505 | construction_time: 3.588904
+rank 0 | iter 6 | objfunc_time: 45.492983 | solver_time: 40.561676 | construction_time: 3.577356
+rank 0 | iter 7 | objfunc_time: 45.492319 | solver_time: 40.562066 | construction_time: 3.579178
+rank 0 | iter 8 | objfunc_time: 45.423271 | solver_time: 40.548425 | construction_time: 3.580523
+rank 0 | iter 9 | objfunc_time: 45.474125 | solver_time: 40.547827 | construction_time: 3.572382
+rank 0 | iter 10 | objfunc_time: 45.501654 | solver_time: 40.537010 | construction_time: 3.585383
+rank 0 | iter 11 | objfunc_time: 45.491651 | solver_time: 40.540359 | construction_time: 3.585754
+rank 0 | iter 12 | objfunc_time: 45.479723 | solver_time: 40.540472 | construction_time: 3.583428
+rank 0 | iter 13 | objfunc_time: 45.476530 | solver_time: 40.539893 | construction_time: 3.585302
+rank 0 | iter 14 | objfunc_time: 45.467911 | solver_time: 40.536318 | construction_time: 3.578890
+rank 0 | iter 15 | objfunc_time: 45.462091 | solver_time: 40.536965 | construction_time: 3.575811
+rank 0 | iter 16 | objfunc_time: 45.457203 | solver_time: 40.537750 | construction_time: 3.574253
+rank 0 | iter 17 | objfunc_time: 45.467508 | solver_time: 40.549322 | construction_time: 3.574036
+rank 0 | iter 18 | objfunc_time: 45.458107 | solver_time: 40.546031 | construction_time: 3.572065
+rank 0 | iter 19 | objfunc_time: 45.470575 | solver_time: 40.559401 | construction_time: 3.572810
+rank 0 | iter 20 | objfunc_time: 45.474344 | solver_time: 40.566373 | construction_time: 3.569704
+rank 0 | iter 21 | objfunc_time: 45.483623 | solver_time: 40.572330 | construction_time: 3.572316
+45.4822s (+/- 0.0292), 61.2 GiB
+  AD-Dense... OOM
+  AD-Loop... Using JAX automatic differentiation with JIT compilation (Gaussian likelihood)
+JIT compiling objective + gradient...
+JIT compilation done in 29.7s.
+
+___________________________________ 
+___  __ \__    |__  /____  _/__    |
+__  / / /_  /| |_  /  __  / __  /| |
+_  /_/ /_  ___ |  /____/ /  _  ___ |
+/_____/ /_/  |_/_____/___/  /_/  |_|
+
+╔═══════════════════════════════════════════════════════╗
+║               Parallelization strategies              ║
+║ ╒═══════════════════════════════════════════╤═══════╕ ║
+║ │ Participating Processes / Total Processes │ 1 / 1 │ ║
+║ ├───────────────────────────────────────────┼───────┤ ║
+║ │ Parallelization through F()               │   1   │ ║
+║ ├───────────────────────────────────────────┼───────┤ ║
+║ │ Parallelization through Q()               │   1   │ ║
+║ ├───────────────────────────────────────────┼───────┤ ║
+║ │ Parallelization through S()               │   1   │ ║
+║ ╘═══════════════════════════════════════════╧═══════╛ ║
+╚═══════════════════════════════════════════════════════╝
+╔═══════════════════════════════╗
+║  Enabled Performance modules  ║
+║ ╒═══════════════════╤═══════╕ ║
+║ │ Array module      │ cupy  │ ║
+║ ├───────────────────┼───────┤ ║
+║ │ MPI available     │ True  │ ║
+║ ├───────────────────┼───────┤ ║
+║ │ Is MPI CUDA aware │ False │ ║
+║ ├───────────────────┼───────┤ ║
+║ │ Is NCCL available │ False │ ║
+║ ╘═══════════════════╧═══════╛ ║
+╚═══════════════════════════════╝
+╔════════════════════════════════════════╗
+║             Memory Report              ║
+║ ╒════════════════════════╤═══════════╕ ║
+║ │ Solver memory          │  0.00 B   │ ║
+║ ├────────────────────────┼───────────┤ ║
+║ │ Total memory used      │ 717.22 MB │ ║
+║ ├────────────────────────┼───────────┤ ║
+║ │ Total memory available │ 864.25 MB │ ║
+║ ╘════════════════════════╧═══════════╛ ║
+╚════════════════════════════════════════╝
+DALIA initialized.
+JIT compiling objective + gradient...
+OOM
+  AD-Loop-Ckpt... Using JAX automatic differentiation with JIT compilation (Gaussian likelihood)
+JIT compiling objective + gradient...
+JIT compilation done in 29.4s.
+
+___________________________________ 
+___  __ \__    |__  /____  _/__    |
+__  / / /_  /| |_  /  __  / __  /| |
+_  /_/ /_  ___ |  /____/ /  _  ___ |
+/_____/ /_/  |_/_____/___/  /_/  |_|
+
+╔═══════════════════════════════════════════════════════╗
+║               Parallelization strategies              ║
+║ ╒═══════════════════════════════════════════╤═══════╕ ║
+║ │ Participating Processes / Total Processes │ 1 / 1 │ ║
+║ ├───────────────────────────────────────────┼───────┤ ║
+║ │ Parallelization through F()               │   1   │ ║
+║ ├───────────────────────────────────────────┼───────┤ ║
+║ │ Parallelization through Q()               │   1   │ ║
+║ ├───────────────────────────────────────────┼───────┤ ║
+║ │ Parallelization through S()               │   1   │ ║
+║ ╘═══════════════════════════════════════════╧═══════╛ ║
+╚═══════════════════════════════════════════════════════╝
+╔═══════════════════════════════╗
+║  Enabled Performance modules  ║
+║ ╒═══════════════════╤═══════╕ ║
+║ │ Array module      │ cupy  │ ║
+║ ├───────────────────┼───────┤ ║
+║ │ MPI available     │ True  │ ║
+║ ├───────────────────┼───────┤ ║
+║ │ Is MPI CUDA aware │ False │ ║
+║ ├───────────────────┼───────┤ ║
+║ │ Is NCCL available │ False │ ║
+║ ╘═══════════════════╧═══════╛ ║
+╚═══════════════════════════════╝
+╔════════════════════════════════════════╗
+║             Memory Report              ║
+║ ╒════════════════════════╤═══════════╕ ║
+║ │ Solver memory          │  0.00 B   │ ║
+║ ├────────────────────────┼───────────┤ ║
+║ │ Total memory used      │ 717.22 MB │ ║
+║ ├────────────────────────┼───────────┤ ║
+║ │ Total memory available │ 864.25 MB │ ║
+║ ╘════════════════════════╧═══════════╛ ║
+╚════════════════════════════════════════╝
+DALIA initialized.
+JIT compiling objective + gradient...
+OOM
+  AD-BTA... Using JAX automatic differentiation with JIT compilation (Gaussian likelihood)
+JIT compiling objective + gradient...
+JIT compilation done in 29.8s.
+
+___________________________________ 
+___  __ \__    |__  /____  _/__    |
+__  / / /_  /| |_  /  __  / __  /| |
+_  /_/ /_  ___ |  /____/ /  _  ___ |
+/_____/ /_/  |_/_____/___/  /_/  |_|
+
+╔═══════════════════════════════════════════════════════╗
+║               Parallelization strategies              ║
+║ ╒═══════════════════════════════════════════╤═══════╕ ║
+║ │ Participating Processes / Total Processes │ 1 / 1 │ ║
+║ ├───────────────────────────────────────────┼───────┤ ║
+║ │ Parallelization through F()               │   1   │ ║
+║ ├───────────────────────────────────────────┼───────┤ ║
+║ │ Parallelization through Q()               │   1   │ ║
+║ ├───────────────────────────────────────────┼───────┤ ║
+║ │ Parallelization through S()               │   1   │ ║
+║ ╘═══════════════════════════════════════════╧═══════╛ ║
+╚═══════════════════════════════════════════════════════╝
+╔═══════════════════════════════╗
+║  Enabled Performance modules  ║
+║ ╒═══════════════════╤═══════╕ ║
+║ │ Array module      │ cupy  │ ║
+║ ├───────────────────┼───────┤ ║
+║ │ MPI available     │ True  │ ║
+║ ├───────────────────┼───────┤ ║
+║ │ Is MPI CUDA aware │ False │ ║
+║ ├───────────────────┼───────┤ ║
+║ │ Is NCCL available │ False │ ║
+║ ╘═══════════════════╧═══════╛ ║
+╚═══════════════════════════════╝
+╔════════════════════════════════════════╗
+║             Memory Report              ║
+║ ╒════════════════════════╤═══════════╕ ║
+║ │ Solver memory          │  0.00 B   │ ║
+║ ├────────────────────────┼───────────┤ ║
+║ │ Total memory used      │ 717.22 MB │ ║
+║ ├────────────────────────┼───────────┤ ║
+║ │ Total memory available │ 864.25 MB │ ║
+║ ╘════════════════════════╧═══════════╛ ║
+╚════════════════════════════════════════╝
+DALIA initialized.
+17.0775s (+/- 0.0113), 46.5 GiB
+
+====================================================================================================
+Table 2: Per-gradient time (s) and peak GPU memory (GiB)
+====================================================================================================
+Model    n x b                    FD t         FD mem     AD-Dense t   AD-Dense mem      AD-Loop t    AD-Loop mem AD-Loop-Ckpt t AD-Loop-Ckpt mem       AD-BTA t     AD-BTA mem
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+GST-T    365x2865               45.482           61.2            OOM            OOM            OOM            OOM            OOM            OOM         17.077           46.5
+====================================================================================================
+Results written to: /capstor/scratch/cscs/aboudaou/workspace/dalia/artifact/experiments/tab2_structure_comparison/tab2_results_gst_t.csv
+--- Finished ---
+Job finished at Wed 25 Mar 2026 02:22:40 AM CET

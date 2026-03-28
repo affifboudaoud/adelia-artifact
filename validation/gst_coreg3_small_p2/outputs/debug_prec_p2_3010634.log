@@ -1,0 +1,97 @@
+rank 0 initializing NCCL communicator.
+Using distributed JAX autodiff (two-phase) with 2 ranks (CoregionalModel, 3 variates)
+Two-phase (per-block, RS=scan, grad_prior=two-phase): JIT compiling all stages...
+  compiling Cholesky + forward sub...
+  compiling merged bwd+SI...
+  compiling prior logdet + gradient...
+  compiling quad gradient...
+  compiling scalar gradient...
+  all stages compiled in 17.4s.
+
+___________________________________ 
+___  __ \__    |__  /____  _/__    |
+__  / / /_  /| |_  /  __  / __  /| |
+_  /_/ /_  ___ |  /____/ /  _  ___ |
+/_____/ /_/  |_/_____/___/  /_/  |_|
+
+╔═══════════════════════════════════════════════════════╗
+║               Parallelization strategies              ║
+║ ╒═══════════════════════════════════════════╤═══════╕ ║
+║ │ Participating Processes / Total Processes │ 2 / 2 │ ║
+║ ├───────────────────────────────────────────┼───────┤ ║
+║ │ Parallelization through F()               │   1   │ ║
+║ ├───────────────────────────────────────────┼───────┤ ║
+║ │ Parallelization through Q()               │   1   │ ║
+║ ├───────────────────────────────────────────┼───────┤ ║
+║ │ Parallelization through S()               │   2   │ ║
+║ ╘═══════════════════════════════════════════╧═══════╛ ║
+╚═══════════════════════════════════════════════════════╝
+╔══════════════════════════════╗
+║ Enabled Performance modules  ║
+║ ╒═══════════════════╤══════╕ ║
+║ │ Array module      │ cupy │ ║
+║ ├───────────────────┼──────┤ ║
+║ │ MPI available     │ True │ ║
+║ ├───────────────────┼──────┤ ║
+║ │ Is MPI CUDA aware │ True │ ║
+║ ├───────────────────┼──────┤ ║
+║ │ Is NCCL available │ True │ ║
+║ ╘═══════════════════╧══════╛ ║
+╚══════════════════════════════╝
+╔═══════════════════════════════════════╗
+║             Memory Report             ║
+║ ╒════════════════════════╤══════════╕ ║
+║ │ Solver memory          │  0.00 B  │ ║
+║ ├────────────────────────┼──────────┤ ║
+║ │ Total memory used      │ 33.04 MB │ ║
+║ ├────────────────────────┼──────────┤ ║
+║ │ Total memory available │ 36.32 MB │ ║
+║ ╘════════════════════════╧══════════╛ ║
+╚═══════════════════════════════════════╝
+DALIA initialized.
+
+======================================================================
+P=2 DISTRIBUTED GRADIENT DECOMPOSITION
+======================================================================
+f = -6.890792500448227e+04
+
+Model 0: prec_idx=2
+  grad_cond_lik[0] =   1.796933659498e+03
+  grad_quad_lik[0] =   3.008386653292e+08
+  grad_scalar[2]  =   1.504193874352e+08
+  combined           =   9.532374793887e+02
+  grad_val[2]       =   9.532374793887e+02
+
+Model 1: prec_idx=5
+  grad_cond_lik[1] =   1.872088173033e+03
+  grad_quad_lik[1] =   2.421569983323e+09
+  grad_scalar[5]  =   1.210783741959e+09
+  combined           =  -3.136587183475e+02
+  grad_val[5]       =  -3.136587183475e+02
+
+Model 2: prec_idx=8
+  grad_cond_lik[2] =   2.028345638833e+03
+  grad_quad_lik[2] =   4.382447141085e+09
+  grad_scalar[8]  =   2.191223291116e+09
+  combined           =   7.347465095520e+02
+  grad_val[8]       =   7.347465095520e+02
+
+Computing dense reference on rank 0...
+
+======================================================================
+COMPARISON: P=2 distributed vs Dense reference
+======================================================================
+Component           m                  P=2                Dense      abs err      rel err
+----------------------------------------------------------------------------------------
+grad_cond_lik       0   1.796933659498e+03   1.796933659498e+03    2.840e-10    1.580e-13
+grad_cond_lik       1   1.872088173033e+03   1.872088173034e+03    1.106e-09    5.906e-13
+grad_cond_lik       2   2.028345638833e+03   2.028345638830e+03    2.027e-09    9.991e-13
+grad_quad_lik       0   3.008386653292e+08   3.008386653292e+08    7.153e-07    2.378e-15
+grad_quad_lik       1   2.421569983323e+09   2.421569983323e+09    5.722e-06    2.363e-15
+grad_quad_lik       2   4.382447141085e+09   4.382447141085e+09    3.338e-05    7.616e-15
+
+Per-model prec gradient error breakdown:
+ m   cond_lik err   quad_lik err      total err    total rel
+ 0   1.419949e-10  -3.576279e-07  -3.574859e-07    3.750e-10
+ 1  -5.528591e-10   2.861023e-06   2.860470e-06    9.120e-09
+ 2   1.013291e-09   1.668930e-05   1.669031e-05    2.272e-08

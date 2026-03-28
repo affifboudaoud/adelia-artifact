@@ -1,0 +1,119 @@
+======================================================================
+NUMERICAL VALIDATION: ap1 (phase 3)
+======================================================================
+
+Phase 2: JAX AD forward + gradient
+rank 0 initializing NCCL communicator.
+Using distributed JAX autodiff (two-phase) with 4 ranks (CoregionalModel, 3 variates)
+Two-phase (per-block, RS=per-block, grad_prior=pipeline): JIT compiling all stages...
+  compiling Cholesky + forward sub...
+  compiling merged bwd+SI...
+  compiling prior logdet + gradient...
+  compiling quad gradient...
+  compiling scalar gradient...
+  all stages compiled in 178.3s.
+
+___________________________________ 
+___  __ \__    |__  /____  _/__    |
+__  / / /_  /| |_  /  __  / __  /| |
+_  /_/ /_  ___ |  /____/ /  _  ___ |
+/_____/ /_/  |_/_____/___/  /_/  |_|
+
+╔═══════════════════════════════════════════════════════╗
+║               Parallelization strategies              ║
+║ ╒═══════════════════════════════════════════╤═══════╕ ║
+║ │ Participating Processes / Total Processes │ 4 / 4 │ ║
+║ ├───────────────────────────────────────────┼───────┤ ║
+║ │ Parallelization through F()               │   1   │ ║
+║ ├───────────────────────────────────────────┼───────┤ ║
+║ │ Parallelization through Q()               │   1   │ ║
+║ ├───────────────────────────────────────────┼───────┤ ║
+║ │ Parallelization through S()               │   4   │ ║
+║ ╘═══════════════════════════════════════════╧═══════╛ ║
+╚═══════════════════════════════════════════════════════╝
+╔══════════════════════════════╗
+║ Enabled Performance modules  ║
+║ ╒═══════════════════╤══════╕ ║
+║ │ Array module      │ cupy │ ║
+║ ├───────────────────┼──────┤ ║
+║ │ MPI available     │ True │ ║
+║ ├───────────────────┼──────┤ ║
+║ │ Is MPI CUDA aware │ True │ ║
+║ ├───────────────────┼──────┤ ║
+║ │ Is NCCL available │ True │ ║
+║ ╘═══════════════════╧══════╛ ║
+╚══════════════════════════════╝
+╔══════════════════════════════════════╗
+║            Memory Report             ║
+║ ╒════════════════════════╤═════════╕ ║
+║ │ Solver memory          │ 0.00 B  │ ║
+║ ├────────────────────────┼─────────┤ ║
+║ │ Total memory used      │ 2.13 GB │ ║
+║ ├────────────────────────┼─────────┤ ║
+║ │ Total memory available │ 2.46 GB │ ║
+║ ╘════════════════════════╧═════════╛ ║
+╚══════════════════════════════════════╝
+DALIA initialized.
+  precision: float64
+  JAX forward: f=145984.9246854782 (150.73s)
+  JAX forward+grad: f=145984.9246964455 (128.83s)
+
+  Computing JAX-based FD gradient (30 evaluations, eps=0.001) ...
+    FD [1/15] grad=-6.453860e+03 (273.4s)
+    FD [2/15] grad=-8.461263e+02 (549.4s)
+    FD [3/15] grad=1.620283e+03 (827.1s)
+    FD [4/15] grad=2.363820e+03 (1105.3s)
+    FD [5/15] grad=-9.418604e+02 (1382.8s)
+    FD [6/15] grad=1.106915e+03 (1659.3s)
+    FD [7/15] grad=-3.765624e+03 (1932.1s)
+    FD [8/15] grad=1.880262e+02 (2207.8s)
+    FD [9/15] grad=-1.084328e+01 (2484.4s)
+    FD [10/15] grad=3.276019e+03 (2761.3s)
+    FD [11/15] grad=-9.025950e+02 (3038.3s)
+    FD [12/15] grad=-2.574930e+02 (3316.1s)
+    FD [13/15] grad=1.336900e+03 (3596.1s)
+    FD [14/15] grad=-8.538311e+02 (3872.7s)
+    FD [15/15] grad=-4.783597e+02 (4157.4s)
+  JAX FD gradient done (4157.37s)
+
+----------------------------------------------------------------------
+1. FORWARD PASS COMPARISON (JAX AD vs JAX fwd)
+----------------------------------------------------------------------
+  f (JAX AD):      1.459849246964455e+05
+  f (     JAX fwd): 1.459849246854782e+05
+  Absolute error:  1.096725e-05
+  Relative error:  7.512594e-11
+  [PASS] Forward values match (rtol 7.51e-11 < 1e-06)
+
+  Internal check: |f_grad - f_fwd| = 1.096725e-05
+
+----------------------------------------------------------------------
+2. GRADIENT COMPARISON (JAX AD vs Finite Differences)
+----------------------------------------------------------------------
+  Component        AD gradient     FD gradient      Abs err      Rel err
+  theta[0]      -6.454006e+03   -6.453860e+03    1.465e-01    2.270e-05
+  theta[1]      -8.461153e+02   -8.461263e+02    1.100e-02    1.300e-05
+  theta[2]       1.620284e+03    1.620283e+03    4.671e-04    2.883e-07
+  theta[3]       2.363820e+03    2.363820e+03    3.615e-04    1.529e-07
+  theta[4]      -9.418637e+02   -9.418604e+02    3.217e-03    3.416e-06
+  theta[5]       1.106919e+03    1.106915e+03    4.115e-03    3.718e-06
+  theta[6]      -3.765748e+03   -3.765624e+03    1.237e-01    3.285e-05
+  theta[7]       1.880210e+02    1.880262e+02    5.171e-03    2.750e-05
+  theta[8]      -1.084832e+01   -1.084328e+01    5.043e-03    4.649e-04
+  theta[9]       3.276061e+03    3.276019e+03    4.169e-02    1.273e-05
+  theta[10]      -9.026045e+02   -9.025950e+02    9.469e-03    1.049e-05
+  theta[11]      -2.574518e+02   -2.574930e+02    4.119e-02    1.600e-04
+  theta[12]       1.336976e+03    1.336900e+03    7.623e-02    5.702e-05
+  theta[13]      -8.538352e+02   -8.538311e+02    4.185e-03    4.902e-06
+  theta[14]      -4.783535e+02   -4.783597e+02    6.239e-03    1.304e-05
+
+  Max component-wise relative error: 4.648674e-04
+  Cosine similarity:  0.9999999999
+  Norm ratio ||AD||/||FD||: 1.000020
+  [PASS] Gradients match (max rtol 4.65e-04 < 1e-02, cosine 1.000000 > 0.999)
+
+======================================================================
+OVERALL RESULT: PASS (2/2 checks passed)
+======================================================================
+
+Results saved to /capstor/scratch/cscs/aboudaou/workspace/dalia/artifact/validation/ap1/outputs/validation_ap1.npz

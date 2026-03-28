@@ -1,0 +1,18 @@
+W0327 17:04:25.091438  177095 cuda_executor.cc:1802] GPU interconnect information not available: INTERNAL: NVML doesn't support extracting fabric info or NVLink is not used by the device.
+W0327 17:04:25.126512  176373 cuda_executor.cc:1802] GPU interconnect information not available: INTERNAL: NVML doesn't support extracting fabric info or NVLink is not used by the device.
+E0327 17:04:51.917540  177390 slow_operation_alarm.cc:73] Constant folding an instruction is taking > 1s:
+
+  %gather.177 = s32[2,20236608,1]{2,1,0} gather(%constant.674, %constant.607), offset_dims={1,2}, collapsed_slice_dims={}, start_index_map={1}, index_vector_dim=1, slice_sizes={20236608,1}, metadata={op_name="jit(objective_pure_jax)/jvp()/gather" source_file="/capstor/scratch/cscs/aboudaou/workspace/dalia/DALIA/src/dalia/core/autodiff/objectives_coregional.py" source_line=769 source_end_line=769 source_column=14 source_end_column=46}
+
+This isn't necessarily a bug; constant-folding is inherently a trade-off between compilation time and speed at runtime. XLA has some guards that attempt to keep constant folding from taking too long, but fundamentally you'll always be able to come up with an input program that takes a long time.
+
+If you'd like to file a bug, run with envvar XLA_FLAGS=--xla_dump_to=/tmp/foo and attach the results.
+E0327 17:04:52.118725  176373 slow_operation_alarm.cc:140] The operation took 1.201269387s
+Constant folding an instruction is taking > 1s:
+
+  %gather.177 = s32[2,20236608,1]{2,1,0} gather(%constant.674, %constant.607), offset_dims={1,2}, collapsed_slice_dims={}, start_index_map={1}, index_vector_dim=1, slice_sizes={20236608,1}, metadata={op_name="jit(objective_pure_jax)/jvp()/gather" source_file="/capstor/scratch/cscs/aboudaou/workspace/dalia/DALIA/src/dalia/core/autodiff/objectives_coregional.py" source_line=769 source_end_line=769 source_column=14 source_end_column=46}
+
+This isn't necessarily a bug; constant-folding is inherently a trade-off between compilation time and speed at runtime. XLA has some guards that attempt to keep constant folding from taking too long, but fundamentally you'll always be able to come up with an input program that takes a long time.
+
+If you'd like to file a bug, run with envvar XLA_FLAGS=--xla_dump_to=/tmp/foo and attach the results.
+W0327 17:05:03.775837  176373 hlo_rematerialization.cc:3204] Can't reduce memory use below 71.82GiB (77116523153 bytes) by rematerialization; only reduced to 76.02GiB (81627116726 bytes), down from 76.03GiB (81632610702 bytes) originally

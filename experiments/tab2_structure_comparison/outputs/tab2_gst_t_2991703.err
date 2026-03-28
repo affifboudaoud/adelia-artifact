@@ -1,0 +1,6 @@
+W0325 01:55:13.060939  178316 cuda_executor.cc:1802] GPU interconnect information not available: INTERNAL: NVML doesn't support extracting fabric info or NVLink is not used by the device.
+W0325 01:55:13.095430  177515 cuda_executor.cc:1802] GPU interconnect information not available: INTERNAL: NVML doesn't support extracting fabric info or NVLink is not used by the device.
+W0325 02:14:30.502636  177515 hlo_rematerialization.cc:3204] Can't reduce memory use below 71.82GiB (77116556063 bytes) by rematerialization; only reduced to 380.50GiB (408561696602 bytes), down from 380.50GiB (408561696874 bytes) originally
+E0325 02:14:35.560546  177515 pjrt_stream_executor_client.cc:2085] Execution of replica 0 failed: RESOURCE_EXHAUSTED: Failed to allocate request for 380.33GiB (408381495408B) on device ordinal 0
+W0325 02:15:15.214714  177515 hlo_rematerialization.cc:3204] Can't reduce memory use below 71.82GiB (77116556063 bytes) by rematerialization; only reduced to 290.71GiB (312147762221 bytes), down from 290.77GiB (312213428301 bytes) originally
+E0325 02:15:20.004524  177515 pjrt_stream_executor_client.cc:2085] Execution of replica 0 failed: RESOURCE_EXHAUSTED: Failed to allocate request for 290.54GiB (311966274824B) on device ordinal 0
