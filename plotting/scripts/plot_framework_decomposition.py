@@ -221,7 +221,7 @@ def plot_framework_decomposition(df):
     for y_start, y_end, key in regime_spans:
         y_mid = (y_start + y_end) / 2
         if key == "cupy":
-            y_mid = y_start + 0.5  # shift up to avoid legend overlap
+            y_mid = (y_start + y_end) / 2 - 0.5  # shift down slightly
         ax.text(
             xlim_right, y_mid, regime_labels[key],
             ha="right", va="center", fontsize=7,
@@ -291,7 +291,7 @@ def plot_framework_decomposition(df):
     ax.set_title("Observed vs. algorithmic speedup", fontweight="bold")
 
     # Legend for dots only
-    ax.legend(loc="lower right", framealpha=0.9)
+    ax.legend(loc="center right", framealpha=0.9, bbox_to_anchor=(0.85, 0.5))
 
     ax.xaxis.grid(True, linestyle="--", alpha=0.3)
     ax.set_axisbelow(True)
