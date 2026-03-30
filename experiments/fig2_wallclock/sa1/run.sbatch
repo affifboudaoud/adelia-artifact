@@ -3,7 +3,7 @@
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=1
 #SBATCH --gpus-per-task=1
-#SBATCH --time=04:00:00
+#SBATCH --time=05:00:00
 #SBATCH --account=lp16
 #SBATCH --output=outputs/sa1_%j.log
 #SBATCH --error=outputs/sa1_%j.err

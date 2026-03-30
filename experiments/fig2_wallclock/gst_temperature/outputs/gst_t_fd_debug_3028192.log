@@ -1,0 +1,388 @@
+Parsed parameters:
+  max_iter: 250
+  solver_min_p: 1
+  profile: False
+  precision: float64
+--- gst_temperature FD: Gaussian Spatio-Temporal Model ---
+
+___________________________________ 
+___  __ \__    |__  /____  _/__    |
+__  / / /_  /| |_  /  __  / __  /| |
+_  /_/ /_  ___ |  /____/ /  _  ___ |
+/_____/ /_/  |_/_____/___/  /_/  |_|
+
+╔═══════════════════════════════════════════════════════╗
+║               Parallelization strategies              ║
+║ ╒═══════════════════════════════════════════╤═══════╕ ║
+║ │ Participating Processes / Total Processes │ 8 / 8 │ ║
+║ ├───────────────────────────────────────────┼───────┤ ║
+║ │ Parallelization through F()               │   8   │ ║
+║ ├───────────────────────────────────────────┼───────┤ ║
+║ │ Parallelization through Q()               │   1   │ ║
+║ ├───────────────────────────────────────────┼───────┤ ║
+║ │ Parallelization through S()               │   1   │ ║
+║ ╘═══════════════════════════════════════════╧═══════╛ ║
+╚═══════════════════════════════════════════════════════╝
+╔═══════════════════════════════╗
+║  Enabled Performance modules  ║
+║ ╒═══════════════════╤═══════╕ ║
+║ │ Array module      │ cupy  │ ║
+║ ├───────────────────┼───────┤ ║
+║ │ MPI available     │ True  │ ║
+║ ├───────────────────┼───────┤ ║
+║ │ Is MPI CUDA aware │ False │ ║
+║ ├───────────────────┼───────┤ ║
+║ │ Is NCCL available │ False │ ║
+║ ╘═══════════════════╧═══════╛ ║
+╚═══════════════════════════════╝
+╔═══════════════════════════════════════╗
+║             Memory Report             ║
+║ ╒════════════════════════╤══════════╕ ║
+║ │ Solver memory          │ 44.61 GB │ ║
+║ ├────────────────────────┼──────────┤ ║
+║ │ Total memory used      │ 45.31 GB │ ║
+║ ├────────────────────────┼──────────┤ ║
+║ │ Total memory available │ 45.34 GB │ ║
+║ ╘════════════════════════╧══════════╛ ║
+╚═══════════════════════════════════════╝
+DALIA initialized.
+Starting optimization.
+Using finite differences (eps=0.001)
+Allocated an extra 0.38 GB for BTA_mapping caching (total: 44.99)
+Allocated an extra 0.36 GB for BT_mapping caching (total: 45.35)
+rank 0 | iter 1 | objfunc_time: 10.567797 | solver_time: 9.506137 | construction_time: 0.789800
+Parsed parameters:
+  max_iter: 250
+  solver_min_p: 1
+  profile: False
+  precision: float64
+rank 1 | iter 1 | objfunc_time: 10.567792 | solver_time: 4.734290 | construction_time: 0.394184
+Parsed parameters:
+  max_iter: 250
+  solver_min_p: 1
+  profile: False
+  precision: float64
+rank 2 | iter 1 | objfunc_time: 10.567794 | solver_time: 4.754659 | construction_time: 0.398322
+Parsed parameters:
+  max_iter: 250
+  solver_min_p: 1
+  profile: False
+  precision: float64
+rank 4 | iter 1 | objfunc_time: 10.567795 | solver_time: 4.738378 | construction_time: 0.398563
+Parsed parameters:
+  max_iter: 250
+  solver_min_p: 1
+  profile: False
+  precision: float64
+rank 7 | iter 1 | objfunc_time: 10.567790 | solver_time: 4.736700 | construction_time: 0.395474
+Parsed parameters:
+  max_iter: 250
+  solver_min_p: 1
+  profile: False
+  precision: float64
+rank 3 | iter 1 | objfunc_time: 10.567793 | solver_time: 5.626790 | construction_time: 0.436661
+Parsed parameters:
+  max_iter: 250
+  solver_min_p: 1
+  profile: False
+  precision: float64
+rank 6 | iter 1 | objfunc_time: 10.567795 | solver_time: 4.744205 | construction_time: 0.399649
+Parsed parameters:
+  max_iter: 250
+  solver_min_p: 1
+  profile: False
+  precision: float64
+rank 5 | iter 1 | objfunc_time: 10.567794 | solver_time: 4.757651 | construction_time: 0.394244
+comm_rank: 5 | Iteration:  1 (took: 10.57) | Theta: [-0.960001, -0.306721, -2.111807,  3.000000] | Function Value:  988514785.162408 | Gradient: [-101713.764191, -48335.406780, -101710.603237,  990936604.029179] |  Norm(Grad): [ 990936615.648009]
+comm_rank: 2 | Iteration:  1 (took: 10.57) | Theta: [-0.960001, -0.306721, -2.111807,  3.000000] | Function Value:  988514785.162408 | Gradient: [-101713.764191, -48335.406780, -101710.603237,  990936604.029179] |  Norm(Grad): [ 990936615.648009]
+comm_rank: 1 | Iteration:  1 (took: 10.57) | Theta: [-0.960001, -0.306721, -2.111807,  3.000000] | Function Value:  988514785.162408 | Gradient: [-101713.764191, -48335.406780, -101710.603237,  990936604.029179] |  Norm(Grad): [ 990936615.648009]
+comm_rank: 7 | Iteration:  1 (took: 10.57) | Theta: [-0.960001, -0.306721, -2.111807,  3.000000] | Function Value:  988514785.162408 | Gradient: [-101713.764191, -48335.406780, -101710.603237,  990936604.029179] |  Norm(Grad): [ 990936615.648009]
+comm_rank: 6 | Iteration:  1 (took: 10.57) | Theta: [-0.960001, -0.306721, -2.111807,  3.000000] | Function Value:  988514785.162408 | Gradient: [-101713.764191, -48335.406780, -101710.603237,  990936604.029179] |  Norm(Grad): [ 990936615.648009]
+comm_rank: 0 | Iteration:  1 (took: 10.57) | Theta: [-0.960001, -0.306721, -2.111807,  3.000000] | Function Value:  988514785.162408 | Gradient: [-101713.764191, -48335.406780, -101710.603237,  990936604.029179] |  Norm(Grad): [ 990936615.648009]
+comm_rank: 4 | Iteration:  1 (took: 10.57) | Theta: [-0.960001, -0.306721, -2.111807,  3.000000] | Function Value:  988514785.162408 | Gradient: [-101713.764191, -48335.406780, -101710.603237,  990936604.029179] |  Norm(Grad): [ 990936615.648009]
+comm_rank: 3 | Iteration:  1 (took: 10.57) | Theta: [-0.960001, -0.306721, -2.111807,  3.000000] | Function Value:  988514785.162408 | Gradient: [-101713.764191, -48335.406780, -101710.603237,  990936604.029179] |  Norm(Grad): [ 990936615.648009]
+rank 6 | iter 2 | objfunc_time: 10.573362 | solver_time: 4.741892 | construction_time: 0.397182
+rank 1 | iter 2 | objfunc_time: 10.573357 | solver_time: 4.725591 | construction_time: 0.392396
+rank 5 | iter 2 | objfunc_time: 10.573360 | solver_time: 4.755255 | construction_time: 0.394394
+rank 0 | iter 2 | objfunc_time: 10.573356 | solver_time: 9.511348 | construction_time: 0.789541
+rank 3 | iter 2 | objfunc_time: 10.573362 | solver_time: 5.625016 | construction_time: 0.435126
+rank 2 | iter 2 | objfunc_time: 10.573353 | solver_time: 4.755325 | construction_time: 0.396622
+rank 4 | iter 2 | objfunc_time: 10.573360 | solver_time: 4.734701 | construction_time: 0.397521
+comm_rank: 0 | Iteration:  2 (took: 10.57) | Theta: [-0.960001, -0.306720, -2.111807,  2.418587] | Function Value:  551782306.456050 | Gradient: [-31798.305511, -15113.536358, -31794.450760,  553520224.034309] |  Norm(Grad): [ 553520226.067151]
+rank 7 | iter 2 | objfunc_time: 10.573357 | solver_time: 4.738490 | construction_time: 0.394871
+comm_rank: 1 | Iteration:  2 (took: 10.57) | Theta: [-0.960001, -0.306720, -2.111807,  2.418587] | Function Value:  551782306.456050 | Gradient: [-31798.305511, -15113.536358, -31794.450760,  553520224.034309] |  Norm(Grad): [ 553520226.067151]
+comm_rank: 5 | Iteration:  2 (took: 10.57) | Theta: [-0.960001, -0.306720, -2.111807,  2.418587] | Function Value:  551782306.456050 | Gradient: [-31798.305511, -15113.536358, -31794.450760,  553520224.034309] |  Norm(Grad): [ 553520226.067151]
+comm_rank: 3 | Iteration:  2 (took: 10.57) | Theta: [-0.960001, -0.306720, -2.111807,  2.418587] | Function Value:  551782306.456050 | Gradient: [-31798.305511, -15113.536358, -31794.450760,  553520224.034309] |  Norm(Grad): [ 553520226.067151]
+comm_rank: 2 | Iteration:  2 (took: 10.57) | Theta: [-0.960001, -0.306720, -2.111807,  2.418587] | Function Value:  551782306.456050 | Gradient: [-31798.305511, -15113.536358, -31794.450760,  553520224.034309] |  Norm(Grad): [ 553520226.067151]
+comm_rank: 4 | Iteration:  2 (took: 10.57) | Theta: [-0.960001, -0.306720, -2.111807,  2.418587] | Function Value:  551782306.456050 | Gradient: [-31798.305511, -15113.536358, -31794.450760,  553520224.034309] |  Norm(Grad): [ 553520226.067151]
+comm_rank: 6 | Iteration:  2 (took: 10.57) | Theta: [-0.960001, -0.306720, -2.111807,  2.418587] | Function Value:  551782306.456050 | Gradient: [-31798.305511, -15113.536358, -31794.450760,  553520224.034309] |  Norm(Grad): [ 553520226.067151]
+comm_rank: 7 | Iteration:  2 (took: 10.57) | Theta: [-0.960001, -0.306720, -2.111807,  2.418587] | Function Value:  551782306.456050 | Gradient: [-31798.305511, -15113.536358, -31794.450760,  553520224.034309] |  Norm(Grad): [ 553520226.067151]
+rank 0 | iter 3 | objfunc_time: 10.576980 | solver_time: 9.517554 | construction_time: 0.789423
+rank 1 | iter 3 | objfunc_time: 10.576979 | solver_time: 4.731515 | construction_time: 0.393538
+rank 5 | iter 3 | objfunc_time: 10.576978 | solver_time: 4.761970 | construction_time: 0.395624
+rank 3 | iter 3 | objfunc_time: 10.576978 | solver_time: 5.631871 | construction_time: 0.434355
+rank 6 | iter 3 | objfunc_time: 10.576980 | solver_time: 4.744556 | construction_time: 0.397114
+rank 2 | iter 3 | objfunc_time: 10.576976 | solver_time: 4.760060 | construction_time: 0.395581
+rank 4 | iter 3 | objfunc_time: 10.576972 | solver_time: 4.739921 | construction_time: 0.396129
+rank 7 | iter 3 | objfunc_time: 10.576977 | solver_time: 4.737438 | construction_time: 0.400326
+comm_rank: 5 | Iteration:  3 (took: 10.58) | Theta: [-0.960076, -0.306756, -2.111882,  1.682848] | Function Value:  263743543.120591 | Gradient: [-7300.442815, -3472.517014, -7296.311021,  264584085.137606] |  Norm(Grad): [ 264584085.361714]
+comm_rank: 0 | Iteration:  3 (took: 10.58) | Theta: [-0.960076, -0.306756, -2.111882,  1.682848] | Function Value:  263743543.120591 | Gradient: [-7300.442815, -3472.517014, -7296.311021,  264584085.137606] |  Norm(Grad): [ 264584085.361714]
+comm_rank: 1 | Iteration:  3 (took: 10.58) | Theta: [-0.960076, -0.306756, -2.111882,  1.682848] | Function Value:  263743543.120591 | Gradient: [-7300.442815, -3472.517014, -7296.311021,  264584085.137606] |  Norm(Grad): [ 264584085.361714]
+comm_rank: 3 | Iteration:  3 (took: 10.58) | Theta: [-0.960076, -0.306756, -2.111882,  1.682848] | Function Value:  263743543.120591 | Gradient: [-7300.442815, -3472.517014, -7296.311021,  264584085.137606] |  Norm(Grad): [ 264584085.361714]
+comm_rank: 2 | Iteration:  3 (took: 10.58) | Theta: [-0.960076, -0.306756, -2.111882,  1.682848] | Function Value:  263743543.120591 | Gradient: [-7300.442815, -3472.517014, -7296.311021,  264584085.137606] |  Norm(Grad): [ 264584085.361714]
+comm_rank: 4 | Iteration:  3 (took: 10.58) | Theta: [-0.960076, -0.306756, -2.111882,  1.682848] | Function Value:  263743543.120591 | Gradient: [-7300.442815, -3472.517014, -7296.311021,  264584085.137606] |  Norm(Grad): [ 264584085.361714]
+comm_rank: 6 | Iteration:  3 (took: 10.58) | Theta: [-0.960076, -0.306756, -2.111882,  1.682848] | Function Value:  263743543.120591 | Gradient: [-7300.442815, -3472.517014, -7296.311021,  264584085.137606] |  Norm(Grad): [ 264584085.361714]
+comm_rank: 7 | Iteration:  3 (took: 10.58) | Theta: [-0.960076, -0.306756, -2.111882,  1.682848] | Function Value:  263743543.120591 | Gradient: [-7300.442815, -3472.517014, -7296.311021,  264584085.137606] |  Norm(Grad): [ 264584085.361714]
+rank 0 | iter 4 | objfunc_time: 10.569400 | solver_time: 9.507307 | construction_time: 0.790838
+rank 1 | iter 4 | objfunc_time: 10.569401 | solver_time: 4.738192 | construction_time: 0.392509
+rank 2 | iter 4 | objfunc_time: 10.569396 | solver_time: 4.758842 | construction_time: 0.395016
+rank 7 | iter 4 | objfunc_time: 10.569399 | solver_time: 4.739818 | construction_time: 0.399575
+rank 3 | iter 4 | objfunc_time: 10.569404 | solver_time: 5.626888 | construction_time: 0.434603
+rank 6 | iter 4 | objfunc_time: 10.569392 | solver_time: 4.744746 | construction_time: 0.397299
+rank 4 | iter 4 | objfunc_time: 10.569394 | solver_time: 4.739761 | construction_time: 0.395594
+rank 5 | iter 4 | objfunc_time: 10.569398 | solver_time: 4.762221 | construction_time: 0.394079
+comm_rank: 1 | Iteration:  4 (took: 10.57) | Theta: [-0.960183, -0.306807, -2.111989,  1.009119] | Function Value:  134271509.999042 | Gradient: [-1899.387002, -905.892432, -1895.200789,  134281814.285457] |  Norm(Grad): [ 134281814.315320]
+comm_rank: 0 | Iteration:  4 (took: 10.57) | Theta: [-0.960183, -0.306807, -2.111989,  1.009119] | Function Value:  134271509.999042 | Gradient: [-1899.387002, -905.892432, -1895.200789,  134281814.285457] |  Norm(Grad): [ 134281814.315320]
+comm_rank: 3 | Iteration:  4 (took: 10.57) | Theta: [-0.960183, -0.306807, -2.111989,  1.009119] | Function Value:  134271509.999042 | Gradient: [-1899.387002, -905.892432, -1895.200789,  134281814.285457] |  Norm(Grad): [ 134281814.315320]
+comm_rank: 5 | Iteration:  4 (took: 10.57) | Theta: [-0.960183, -0.306807, -2.111989,  1.009119] | Function Value:  134271509.999042 | Gradient: [-1899.387002, -905.892432, -1895.200789,  134281814.285457] |  Norm(Grad): [ 134281814.315320]
+comm_rank: 2 | Iteration:  4 (took: 10.57) | Theta: [-0.960183, -0.306807, -2.111989,  1.009119] | Function Value:  134271509.999042 | Gradient: [-1899.387002, -905.892432, -1895.200789,  134281814.285457] |  Norm(Grad): [ 134281814.315320]
+comm_rank: 4 | Iteration:  4 (took: 10.57) | Theta: [-0.960183, -0.306807, -2.111989,  1.009119] | Function Value:  134271509.999042 | Gradient: [-1899.387002, -905.892432, -1895.200789,  134281814.285457] |  Norm(Grad): [ 134281814.315320]
+comm_rank: 7 | Iteration:  4 (took: 10.57) | Theta: [-0.960183, -0.306807, -2.111989,  1.009119] | Function Value:  134271509.999042 | Gradient: [-1899.387002, -905.892432, -1895.200789,  134281814.285457] |  Norm(Grad): [ 134281814.315320]
+comm_rank: 6 | Iteration:  4 (took: 10.57) | Theta: [-0.960183, -0.306807, -2.111989,  1.009119] | Function Value:  134271509.999042 | Gradient: [-1899.387002, -905.892432, -1895.200789,  134281814.285457] |  Norm(Grad): [ 134281814.315320]
+rank 0 | iter 5 | objfunc_time: 10.572197 | solver_time: 9.510669 | construction_time: 0.790777
+rank 6 | iter 5 | objfunc_time: 10.572195 | solver_time: 4.739180 | construction_time: 0.396683
+rank 1 | iter 5 | objfunc_time: 10.572202 | solver_time: 4.729202 | construction_time: 0.393727
+rank 2 | iter 5 | objfunc_time: 10.572200 | solver_time: 4.755968 | construction_time: 0.395634
+rank 5 | iter 5 | objfunc_time: 10.572201 | solver_time: 4.752612 | construction_time: 0.394221
+rank 3 | iter 5 | objfunc_time: 10.572201 | solver_time: 5.622008 | construction_time: 0.434276
+rank 4 | iter 5 | objfunc_time: 10.572192 | solver_time: 4.737695 | construction_time: 0.395373
+rank 7 | iter 5 | objfunc_time: 10.572191 | solver_time: 4.734630 | construction_time: 0.400362
+comm_rank: 0 | Iteration:  5 (took: 10.57) | Theta: [-0.960312, -0.306868, -2.112119,  0.314814] | Function Value:  67292162.440167 | Gradient: [-476.815701, -229.817957, -472.613633,  66444811.686456] |  Norm(Grad): [ 66444811.690245]
+comm_rank: 5 | Iteration:  5 (took: 10.57) | Theta: [-0.960312, -0.306868, -2.112119,  0.314814] | Function Value:  67292162.440167 | Gradient: [-476.815701, -229.817957, -472.613633,  66444811.686456] |  Norm(Grad): [ 66444811.690245]
+comm_rank: 1 | Iteration:  5 (took: 10.57) | Theta: [-0.960312, -0.306868, -2.112119,  0.314814] | Function Value:  67292162.440167 | Gradient: [-476.815701, -229.817957, -472.613633,  66444811.686456] |  Norm(Grad): [ 66444811.690245]
+comm_rank: 3 | Iteration:  5 (took: 10.57) | Theta: [-0.960312, -0.306868, -2.112119,  0.314814] | Function Value:  67292162.440167 | Gradient: [-476.815701, -229.817957, -472.613633,  66444811.686456] |  Norm(Grad): [ 66444811.690245]
+comm_rank: 2 | Iteration:  5 (took: 10.57) | Theta: [-0.960312, -0.306868, -2.112119,  0.314814] | Function Value:  67292162.440167 | Gradient: [-476.815701, -229.817957, -472.613633,  66444811.686456] |  Norm(Grad): [ 66444811.690245]
+comm_rank: 4 | Iteration:  5 (took: 10.57) | Theta: [-0.960312, -0.306868, -2.112119,  0.314814] | Function Value:  67292162.440167 | Gradient: [-476.815701, -229.817957, -472.613633,  66444811.686456] |  Norm(Grad): [ 66444811.690245]
+comm_rank: 6 | Iteration:  5 (took: 10.57) | Theta: [-0.960312, -0.306868, -2.112119,  0.314814] | Function Value:  67292162.440167 | Gradient: [-476.815701, -229.817957, -472.613633,  66444811.686456] |  Norm(Grad): [ 66444811.690245]
+comm_rank: 7 | Iteration:  5 (took: 10.57) | Theta: [-0.960312, -0.306868, -2.112119,  0.314814] | Function Value:  67292162.440167 | Gradient: [-476.815701, -229.817957, -472.613633,  66444811.686456] |  Norm(Grad): [ 66444811.690245]
+rank 0 | iter 6 | objfunc_time: 10.574062 | solver_time: 9.514398 | construction_time: 0.790080
+rank 6 | iter 6 | objfunc_time: 10.574056 | solver_time: 4.739539 | construction_time: 0.395799
+rank 1 | iter 6 | objfunc_time: 10.574056 | solver_time: 4.731133 | construction_time: 0.393872
+rank 2 | iter 6 | objfunc_time: 10.574059 | solver_time: 4.750431 | construction_time: 0.396387
+rank 5 | iter 6 | objfunc_time: 10.574060 | solver_time: 4.754430 | construction_time: 0.394182
+rank 7 | iter 6 | objfunc_time: 10.574057 | solver_time: 4.734161 | construction_time: 0.399712
+rank 3 | iter 6 | objfunc_time: 10.574065 | solver_time: 5.627248 | construction_time: 0.434093
+rank 4 | iter 6 | objfunc_time: 10.574057 | solver_time: 4.740647 | construction_time: 0.396477
+comm_rank: 0 | Iteration:  6 (took: 10.57) | Theta: [-0.960448, -0.306933, -2.112255, -0.365242] | Function Value:  34738216.277630 | Gradient: [-125.807911, -62.962994, -121.606186,  33050295.895651] |  Norm(Grad): [ 33050295.896174]
+comm_rank: 5 | Iteration:  6 (took: 10.57) | Theta: [-0.960448, -0.306933, -2.112255, -0.365242] | Function Value:  34738216.277630 | Gradient: [-125.807911, -62.962994, -121.606186,  33050295.895651] |  Norm(Grad): [ 33050295.896174]
+comm_rank: 1 | Iteration:  6 (took: 10.57) | Theta: [-0.960448, -0.306933, -2.112255, -0.365242] | Function Value:  34738216.277630 | Gradient: [-125.807911, -62.962994, -121.606186,  33050295.895651] |  Norm(Grad): [ 33050295.896174]
+comm_rank: 3 | Iteration:  6 (took: 10.57) | Theta: [-0.960448, -0.306933, -2.112255, -0.365242] | Function Value:  34738216.277630 | Gradient: [-125.807911, -62.962994, -121.606186,  33050295.895651] |  Norm(Grad): [ 33050295.896174]
+comm_rank: 2 | Iteration:  6 (took: 10.57) | Theta: [-0.960448, -0.306933, -2.112255, -0.365242] | Function Value:  34738216.277630 | Gradient: [-125.807911, -62.962994, -121.606186,  33050295.895651] |  Norm(Grad): [ 33050295.896174]
+comm_rank: 4 | Iteration:  6 (took: 10.57) | Theta: [-0.960448, -0.306933, -2.112255, -0.365242] | Function Value:  34738216.277630 | Gradient: [-125.807911, -62.962994, -121.606186,  33050295.895651] |  Norm(Grad): [ 33050295.896174]
+comm_rank: 7 | Iteration:  6 (took: 10.57) | Theta: [-0.960448, -0.306933, -2.112255, -0.365242] | Function Value:  34738216.277630 | Gradient: [-125.807911, -62.962994, -121.606186,  33050295.895651] |  Norm(Grad): [ 33050295.896174]
+comm_rank: 6 | Iteration:  6 (took: 10.57) | Theta: [-0.960448, -0.306933, -2.112255, -0.365242] | Function Value:  34738216.277630 | Gradient: [-125.807911, -62.962994, -121.606186,  33050295.895651] |  Norm(Grad): [ 33050295.896174]
+rank 0 | iter 7 | objfunc_time: 10.563232 | solver_time: 9.502699 | construction_time: 0.789531
+rank 1 | iter 7 | objfunc_time: 10.563228 | solver_time: 4.726793 | construction_time: 0.394132
+rank 7 | iter 7 | objfunc_time: 10.563229 | solver_time: 4.735505 | construction_time: 0.400118
+rank 3 | iter 7 | objfunc_time: 10.563227 | solver_time: 5.623747 | construction_time: 0.434120
+rank 6 | iter 7 | objfunc_time: 10.563233 | solver_time: 4.739119 | construction_time: 0.396071
+rank 2 | iter 7 | objfunc_time: 10.563229 | solver_time: 4.751458 | construction_time: 0.396622
+rank 4 | iter 7 | objfunc_time: 10.563226 | solver_time: 4.739643 | construction_time: 0.396205
+rank 5 | iter 7 | objfunc_time: 10.563233 | solver_time: 4.753439 | construction_time: 0.395024
+comm_rank: 1 | Iteration:  7 (took: 10.56) | Theta: [-0.960588, -0.306999, -2.112395, -1.038289] | Function Value:  18775067.204654 | Gradient: [-36.324546, -20.414121, -32.122813,  16255115.160570] |  Norm(Grad): [ 16255115.160655]
+comm_rank: 5 | Iteration:  7 (took: 10.56) | Theta: [-0.960588, -0.306999, -2.112395, -1.038289] | Function Value:  18775067.204654 | Gradient: [-36.324546, -20.414121, -32.122813,  16255115.160570] |  Norm(Grad): [ 16255115.160655]
+comm_rank: 0 | Iteration:  7 (took: 10.56) | Theta: [-0.960588, -0.306999, -2.112395, -1.038289] | Function Value:  18775067.204654 | Gradient: [-36.324546, -20.414121, -32.122813,  16255115.160570] |  Norm(Grad): [ 16255115.160655]
+comm_rank: 3 | Iteration:  7 (took: 10.56) | Theta: [-0.960588, -0.306999, -2.112395, -1.038289] | Function Value:  18775067.204654 | Gradient: [-36.324546, -20.414121, -32.122813,  16255115.160570] |  Norm(Grad): [ 16255115.160655]
+comm_rank: 2 | Iteration:  7 (took: 10.56) | Theta: [-0.960588, -0.306999, -2.112395, -1.038289] | Function Value:  18775067.204654 | Gradient: [-36.324546, -20.414121, -32.122813,  16255115.160570] |  Norm(Grad): [ 16255115.160655]
+comm_rank: 4 | Iteration:  7 (took: 10.56) | Theta: [-0.960588, -0.306999, -2.112395, -1.038289] | Function Value:  18775067.204654 | Gradient: [-36.324546, -20.414121, -32.122813,  16255115.160570] |  Norm(Grad): [ 16255115.160655]
+comm_rank: 6 | Iteration:  7 (took: 10.56) | Theta: [-0.960588, -0.306999, -2.112395, -1.038289] | Function Value:  18775067.204654 | Gradient: [-36.324546, -20.414121, -32.122813,  16255115.160570] |  Norm(Grad): [ 16255115.160655]
+comm_rank: 7 | Iteration:  7 (took: 10.56) | Theta: [-0.960588, -0.306999, -2.112395, -1.038289] | Function Value:  18775067.204654 | Gradient: [-36.324546, -20.414121, -32.122813,  16255115.160570] |  Norm(Grad): [ 16255115.160655]
+rank 0 | iter 8 | objfunc_time: 10.565648 | solver_time: 9.504836 | construction_time: 0.790609
+rank 4 | iter 8 | objfunc_time: 10.565638 | solver_time: 4.735055 | construction_time: 0.396066
+rank 5 | iter 8 | objfunc_time: 10.565643 | solver_time: 4.757189 | construction_time: 0.394458
+rank 7 | iter 8 | objfunc_time: 10.565635 | solver_time: 4.737858 | construction_time: 0.398615
+rank 3 | iter 8 | objfunc_time: 10.565637 | solver_time: 5.625862 | construction_time: 0.434641
+rank 6 | iter 8 | objfunc_time: 10.565638 | solver_time: 4.743057 | construction_time: 0.395800
+rank 1 | iter 8 | objfunc_time: 10.565638 | solver_time: 4.725129 | construction_time: 0.393259
+rank 2 | iter 8 | objfunc_time: 10.565637 | solver_time: 4.755464 | construction_time: 0.395022
+comm_rank: 0 | Iteration:  8 (took: 10.57) | Theta: [-0.960725, -0.307064, -2.112532, -1.689693] | Function Value:  11207484.135868 | Gradient: [-13.465870, -9.535149, -9.262376,  7882224.618219] |  Norm(Grad): [ 7882224.618242]
+comm_rank: 1 | Iteration:  8 (took: 10.57) | Theta: [-0.960725, -0.307064, -2.112532, -1.689693] | Function Value:  11207484.135868 | Gradient: [-13.465870, -9.535149, -9.262376,  7882224.618219] |  Norm(Grad): [ 7882224.618242]
+comm_rank: 5 | Iteration:  8 (took: 10.57) | Theta: [-0.960725, -0.307064, -2.112532, -1.689693] | Function Value:  11207484.135868 | Gradient: [-13.465870, -9.535149, -9.262376,  7882224.618219] |  Norm(Grad): [ 7882224.618242]
+comm_rank: 3 | Iteration:  8 (took: 10.57) | Theta: [-0.960725, -0.307064, -2.112532, -1.689693] | Function Value:  11207484.135868 | Gradient: [-13.465870, -9.535149, -9.262376,  7882224.618219] |  Norm(Grad): [ 7882224.618242]
+comm_rank: 4 | Iteration:  8 (took: 10.57) | Theta: [-0.960725, -0.307064, -2.112532, -1.689693] | Function Value:  11207484.135868 | Gradient: [-13.465870, -9.535149, -9.262376,  7882224.618219] |  Norm(Grad): [ 7882224.618242]
+comm_rank: 2 | Iteration:  8 (took: 10.57) | Theta: [-0.960725, -0.307064, -2.112532, -1.689693] | Function Value:  11207484.135868 | Gradient: [-13.465870, -9.535149, -9.262376,  7882224.618219] |  Norm(Grad): [ 7882224.618242]
+comm_rank: 7 | Iteration:  8 (took: 10.57) | Theta: [-0.960725, -0.307064, -2.112532, -1.689693] | Function Value:  11207484.135868 | Gradient: [-13.465870, -9.535149, -9.262376,  7882224.618219] |  Norm(Grad): [ 7882224.618242]
+comm_rank: 6 | Iteration:  8 (took: 10.57) | Theta: [-0.960725, -0.307064, -2.112532, -1.689693] | Function Value:  11207484.135868 | Gradient: [-13.465870, -9.535149, -9.262376,  7882224.618219] |  Norm(Grad): [ 7882224.618242]
+rank 6 | iter 9 | objfunc_time: 10.579590 | solver_time: 4.745381 | construction_time: 0.395924
+rank 1 | iter 9 | objfunc_time: 10.579585 | solver_time: 4.730245 | construction_time: 0.393264
+rank 2 | iter 9 | objfunc_time: 10.579586 | solver_time: 4.760561 | construction_time: 0.396984
+rank 4 | iter 9 | objfunc_time: 10.579583 | solver_time: 4.740751 | construction_time: 0.395758
+rank 5 | iter 9 | objfunc_time: 10.579587 | solver_time: 4.762424 | construction_time: 0.393802
+rank 0 | iter 9 | objfunc_time: 10.579588 | solver_time: 9.509603 | construction_time: 0.791251
+rank 7 | iter 9 | objfunc_time: 10.579584 | solver_time: 4.738013 | construction_time: 0.397315
+rank 3 | iter 9 | objfunc_time: 10.579587 | solver_time: 5.626607 | construction_time: 0.434914
+comm_rank: 1 | Iteration:  9 (took: 10.58) | Theta: [-0.960854, -0.307125, -2.112662, -2.302924] | Function Value:  7785670.636290 | Gradient: [-7.466640, -6.676011, -3.262028,  3702288.893409] |  Norm(Grad): [ 3702288.893424]
+comm_rank: 3 | Iteration:  9 (took: 10.58) | Theta: [-0.960854, -0.307125, -2.112662, -2.302924] | Function Value:  7785670.636290 | Gradient: [-7.466640, -6.676011, -3.262028,  3702288.893409] |  Norm(Grad): [ 3702288.893424]
+comm_rank: 5 | Iteration:  9 (took: 10.58) | Theta: [-0.960854, -0.307125, -2.112662, -2.302924] | Function Value:  7785670.636290 | Gradient: [-7.466640, -6.676011, -3.262028,  3702288.893409] |  Norm(Grad): [ 3702288.893424]
+comm_rank: 2 | Iteration:  9 (took: 10.58) | Theta: [-0.960854, -0.307125, -2.112662, -2.302924] | Function Value:  7785670.636290 | Gradient: [-7.466640, -6.676011, -3.262028,  3702288.893409] |  Norm(Grad): [ 3702288.893424]
+comm_rank: 4 | Iteration:  9 (took: 10.58) | Theta: [-0.960854, -0.307125, -2.112662, -2.302924] | Function Value:  7785670.636290 | Gradient: [-7.466640, -6.676011, -3.262028,  3702288.893409] |  Norm(Grad): [ 3702288.893424]
+comm_rank: 7 | Iteration:  9 (took: 10.58) | Theta: [-0.960854, -0.307125, -2.112662, -2.302924] | Function Value:  7785670.636290 | Gradient: [-7.466640, -6.676011, -3.262028,  3702288.893409] |  Norm(Grad): [ 3702288.893424]
+comm_rank: 6 | Iteration:  9 (took: 10.58) | Theta: [-0.960854, -0.307125, -2.112662, -2.302924] | Function Value:  7785670.636290 | Gradient: [-7.466640, -6.676011, -3.262028,  3702288.893409] |  Norm(Grad): [ 3702288.893424]
+comm_rank: 0 | Iteration:  9 (took: 10.58) | Theta: [-0.960854, -0.307125, -2.112662, -2.302924] | Function Value:  7785670.636290 | Gradient: [-7.466640, -6.676011, -3.262028,  3702288.893409] |  Norm(Grad): [ 3702288.893424]
+rank 1 | iter 10 | objfunc_time: 10.596409 | solver_time: 4.729351 | construction_time: 0.393275
+rank 2 | iter 10 | objfunc_time: 10.596407 | solver_time: 4.759524 | construction_time: 0.396668
+rank 5 | iter 10 | objfunc_time: 10.596403 | solver_time: 4.763331 | construction_time: 0.393812
+rank 0 | iter 10 | objfunc_time: 10.596409 | solver_time: 9.499943 | construction_time: 0.797677
+rank 7 | iter 10 | objfunc_time: 10.596405 | solver_time: 4.740420 | construction_time: 0.398189
+rank 3 | iter 10 | objfunc_time: 10.596410 | solver_time: 5.626888 | construction_time: 0.434330
+rank 6 | iter 10 | objfunc_time: 10.596411 | solver_time: 4.746521 | construction_time: 0.396240
+rank 4 | iter 10 | objfunc_time: 10.596403 | solver_time: 4.740516 | construction_time: 0.396296
+comm_rank: 1 | Iteration: 10 (took: 10.60) | Theta: [-0.960968, -0.307178, -2.112777, -2.846080] | Function Value:  6387468.600472 | Gradient: [-5.829898, -5.894046, -1.624883,  1632594.692925] |  Norm(Grad): [ 1632594.692946]
+comm_rank: 5 | Iteration: 10 (took: 10.60) | Theta: [-0.960968, -0.307178, -2.112777, -2.846080] | Function Value:  6387468.600472 | Gradient: [-5.829898, -5.894046, -1.624883,  1632594.692925] |  Norm(Grad): [ 1632594.692946]
+comm_rank: 3 | Iteration: 10 (took: 10.60) | Theta: [-0.960968, -0.307178, -2.112777, -2.846080] | Function Value:  6387468.600472 | Gradient: [-5.829898, -5.894046, -1.624883,  1632594.692925] |  Norm(Grad): [ 1632594.692946]
+comm_rank: 0 | Iteration: 10 (took: 10.60) | Theta: [-0.960968, -0.307178, -2.112777, -2.846080] | Function Value:  6387468.600472 | Gradient: [-5.829898, -5.894046, -1.624883,  1632594.692925] |  Norm(Grad): [ 1632594.692946]
+comm_rank: 2 | Iteration: 10 (took: 10.60) | Theta: [-0.960968, -0.307178, -2.112777, -2.846080] | Function Value:  6387468.600472 | Gradient: [-5.829898, -5.894046, -1.624883,  1632594.692925] |  Norm(Grad): [ 1632594.692946]
+comm_rank: 4 | Iteration: 10 (took: 10.60) | Theta: [-0.960968, -0.307178, -2.112777, -2.846080] | Function Value:  6387468.600472 | Gradient: [-5.829898, -5.894046, -1.624883,  1632594.692925] |  Norm(Grad): [ 1632594.692946]
+comm_rank: 7 | Iteration: 10 (took: 10.60) | Theta: [-0.960968, -0.307178, -2.112777, -2.846080] | Function Value:  6387468.600472 | Gradient: [-5.829898, -5.894046, -1.624883,  1632594.692925] |  Norm(Grad): [ 1632594.692946]
+comm_rank: 6 | Iteration: 10 (took: 10.60) | Theta: [-0.960968, -0.307178, -2.112777, -2.846080] | Function Value:  6387468.600472 | Gradient: [-5.829898, -5.894046, -1.624883,  1632594.692925] |  Norm(Grad): [ 1632594.692946]
+rank 0 | iter 11 | objfunc_time: 10.600140 | solver_time: 9.505195 | construction_time: 0.796851
+rank 3 | iter 11 | objfunc_time: 10.600142 | solver_time: 5.624017 | construction_time: 0.434755
+rank 6 | iter 11 | objfunc_time: 10.600149 | solver_time: 4.739082 | construction_time: 0.395134
+rank 1 | iter 11 | objfunc_time: 10.600143 | solver_time: 4.726978 | construction_time: 0.392519
+rank 7 | iter 11 | objfunc_time: 10.600144 | solver_time: 4.734472 | construction_time: 0.398626
+rank 2 | iter 11 | objfunc_time: 10.600141 | solver_time: 4.756416 | construction_time: 0.396939
+rank 4 | iter 11 | objfunc_time: 10.600136 | solver_time: 4.739207 | construction_time: 0.396507
+rank 5 | iter 11 | objfunc_time: 10.600137 | solver_time: 4.752969 | construction_time: 0.393706
+comm_rank: 1 | Iteration: 11 (took: 10.60) | Theta: [-0.961057, -0.307219, -2.112868, -3.274527] | Function Value:  5917404.221139 | Gradient: [-5.355642, -5.666506, -1.149971,  632850.529323] |  Norm(Grad): [ 632850.529372]
+comm_rank: 3 | Iteration: 11 (took: 10.60) | Theta: [-0.961057, -0.307219, -2.112868, -3.274527] | Function Value:  5917404.221139 | Gradient: [-5.355642, -5.666506, -1.149971,  632850.529323] |  Norm(Grad): [ 632850.529372]
+comm_rank: 0 | Iteration: 11 (took: 10.60) | Theta: [-0.961057, -0.307219, -2.112868, -3.274527] | Function Value:  5917404.221139 | Gradient: [-5.355642, -5.666506, -1.149971,  632850.529323] |  Norm(Grad): [ 632850.529372]
+comm_rank: 4 | Iteration: 11 (took: 10.60) | Theta: [-0.961057, -0.307219, -2.112868, -3.274527] | Function Value:  5917404.221139 | Gradient: [-5.355642, -5.666506, -1.149971,  632850.529323] |  Norm(Grad): [ 632850.529372]
+comm_rank: 2 | Iteration: 11 (took: 10.60) | Theta: [-0.961057, -0.307219, -2.112868, -3.274527] | Function Value:  5917404.221139 | Gradient: [-5.355642, -5.666506, -1.149971,  632850.529323] |  Norm(Grad): [ 632850.529372]
+comm_rank: 5 | Iteration: 11 (took: 10.60) | Theta: [-0.961057, -0.307219, -2.112868, -3.274527] | Function Value:  5917404.221139 | Gradient: [-5.355642, -5.666506, -1.149971,  632850.529323] |  Norm(Grad): [ 632850.529372]
+comm_rank: 7 | Iteration: 11 (took: 10.60) | Theta: [-0.961057, -0.307219, -2.112868, -3.274527] | Function Value:  5917404.221139 | Gradient: [-5.355642, -5.666506, -1.149971,  632850.529323] |  Norm(Grad): [ 632850.529372]
+comm_rank: 6 | Iteration: 11 (took: 10.60) | Theta: [-0.961057, -0.307219, -2.112868, -3.274527] | Function Value:  5917404.221139 | Gradient: [-5.355642, -5.666506, -1.149971,  632850.529323] |  Norm(Grad): [ 632850.529372]
+rank 0 | iter 12 | objfunc_time: 10.597885 | solver_time: 9.511019 | construction_time: 0.796758
+rank 1 | iter 12 | objfunc_time: 10.597880 | solver_time: 4.736314 | construction_time: 0.393295
+rank 2 | iter 12 | objfunc_time: 10.597885 | solver_time: 4.751267 | construction_time: 0.396474
+rank 5 | iter 12 | objfunc_time: 10.597876 | solver_time: 4.754101 | construction_time: 0.394267
+rank 7 | iter 12 | objfunc_time: 10.597878 | solver_time: 4.734569 | construction_time: 0.397307
+rank 3 | iter 12 | objfunc_time: 10.597885 | solver_time: 5.624506 | construction_time: 0.434454
+rank 6 | iter 12 | objfunc_time: 10.597895 | solver_time: 4.738776 | construction_time: 0.396141
+rank 4 | iter 12 | objfunc_time: 10.597881 | solver_time: 4.741529 | construction_time: 0.396487
+comm_rank: 1 | Iteration: 12 (took: 10.60) | Theta: [-0.961111, -0.307243, -2.112926, -3.545739] | Function Value:  5808695.308264 | Gradient: [-5.211124, -5.597026, -1.005251,  188847.657468] |  Norm(Grad): [ 188847.657625]
+comm_rank: 5 | Iteration: 12 (took: 10.60) | Theta: [-0.961111, -0.307243, -2.112926, -3.545739] | Function Value:  5808695.308264 | Gradient: [-5.211124, -5.597026, -1.005251,  188847.657468] |  Norm(Grad): [ 188847.657625]
+comm_rank: 3 | Iteration: 12 (took: 10.60) | Theta: [-0.961111, -0.307243, -2.112926, -3.545739] | Function Value:  5808695.308264 | Gradient: [-5.211124, -5.597026, -1.005251,  188847.657468] |  Norm(Grad): [ 188847.657625]
+comm_rank: 2 | Iteration: 12 (took: 10.60) | Theta: [-0.961111, -0.307243, -2.112926, -3.545739] | Function Value:  5808695.308264 | Gradient: [-5.211124, -5.597026, -1.005251,  188847.657468] |  Norm(Grad): [ 188847.657625]
+comm_rank: 0 | Iteration: 12 (took: 10.60) | Theta: [-0.961111, -0.307243, -2.112926, -3.545739] | Function Value:  5808695.308264 | Gradient: [-5.211124, -5.597026, -1.005251,  188847.657468] |  Norm(Grad): [ 188847.657625]
+comm_rank: 7 | Iteration: 12 (took: 10.60) | Theta: [-0.961111, -0.307243, -2.112926, -3.545739] | Function Value:  5808695.308264 | Gradient: [-5.211124, -5.597026, -1.005251,  188847.657468] |  Norm(Grad): [ 188847.657625]
+comm_rank: 4 | Iteration: 12 (took: 10.60) | Theta: [-0.961111, -0.307243, -2.112926, -3.545739] | Function Value:  5808695.308264 | Gradient: [-5.211124, -5.597026, -1.005251,  188847.657468] |  Norm(Grad): [ 188847.657625]
+comm_rank: 6 | Iteration: 12 (took: 10.60) | Theta: [-0.961111, -0.307243, -2.112926, -3.545739] | Function Value:  5808695.308264 | Gradient: [-5.211124, -5.597026, -1.005251,  188847.657468] |  Norm(Grad): [ 188847.657625]
+rank 6 | iter 13 | objfunc_time: 10.574617 | solver_time: 4.740801 | construction_time: 0.395836
+rank 1 | iter 13 | objfunc_time: 10.574605 | solver_time: 4.724514 | construction_time: 0.392484
+rank 2 | iter 13 | objfunc_time: 10.574589 | solver_time: 4.752884 | construction_time: 0.395683
+rank 5 | iter 13 | objfunc_time: 10.574602 | solver_time: 4.753892 | construction_time: 0.393787
+rank 0 | iter 13 | objfunc_time: 10.574609 | solver_time: 9.499772 | construction_time: 0.795800
+rank 7 | iter 13 | objfunc_time: 10.574602 | solver_time: 4.735958 | construction_time: 0.397468
+rank 3 | iter 13 | objfunc_time: 10.574602 | solver_time: 5.626565 | construction_time: 0.434220
+rank 4 | iter 13 | objfunc_time: 10.574607 | solver_time: 4.739501 | construction_time: 0.396187
+comm_rank: 1 | Iteration: 13 (took: 10.57) | Theta: [-0.961131, -0.307249, -2.112949, -3.661093] | Function Value:  5796038.429959 | Gradient: [-5.170055, -5.577310, -0.964088,  33580.259572] |  Norm(Grad): [ 33580.260447]
+comm_rank: 5 | Iteration: 13 (took: 10.57) | Theta: [-0.961131, -0.307249, -2.112949, -3.661093] | Function Value:  5796038.429959 | Gradient: [-5.170055, -5.577310, -0.964088,  33580.259572] |  Norm(Grad): [ 33580.260447]
+comm_rank: 0 | Iteration: 13 (took: 10.57) | Theta: [-0.961131, -0.307249, -2.112949, -3.661093] | Function Value:  5796038.429959 | Gradient: [-5.170055, -5.577310, -0.964088,  33580.259572] |  Norm(Grad): [ 33580.260447]
+comm_rank: 2 | Iteration: 13 (took: 10.57) | Theta: [-0.961131, -0.307249, -2.112949, -3.661093] | Function Value:  5796038.429959 | Gradient: [-5.170055, -5.577310, -0.964088,  33580.259572] |  Norm(Grad): [ 33580.260447]
+comm_rank: 3 | Iteration: 13 (took: 10.57) | Theta: [-0.961131, -0.307249, -2.112949, -3.661093] | Function Value:  5796038.429959 | Gradient: [-5.170055, -5.577310, -0.964088,  33580.259572] |  Norm(Grad): [ 33580.260447]
+comm_rank: 7 | Iteration: 13 (took: 10.57) | Theta: [-0.961131, -0.307249, -2.112949, -3.661093] | Function Value:  5796038.429959 | Gradient: [-5.170055, -5.577310, -0.964088,  33580.259572] |  Norm(Grad): [ 33580.260447]
+comm_rank: 6 | Iteration: 13 (took: 10.57) | Theta: [-0.961131, -0.307249, -2.112949, -3.661093] | Function Value:  5796038.429959 | Gradient: [-5.170055, -5.577310, -0.964088,  33580.259572] |  Norm(Grad): [ 33580.260447]
+comm_rank: 4 | Iteration: 13 (took: 10.57) | Theta: [-0.961131, -0.307249, -2.112949, -3.661093] | Function Value:  5796038.429959 | Gradient: [-5.170055, -5.577310, -0.964088,  33580.259572] |  Norm(Grad): [ 33580.260447]
+rank 1 | iter 14 | objfunc_time: 10.574727 | solver_time: 4.723935 | construction_time: 0.394322
+rank 5 | iter 14 | objfunc_time: 10.574727 | solver_time: 4.756811 | construction_time: 0.394304
+rank 0 | iter 14 | objfunc_time: 10.574737 | solver_time: 9.504353 | construction_time: 0.793387
+rank 6 | iter 14 | objfunc_time: 10.574737 | solver_time: 4.741373 | construction_time: 0.395577
+rank 2 | iter 14 | objfunc_time: 10.574707 | solver_time: 4.756234 | construction_time: 0.395774
+rank 7 | iter 14 | objfunc_time: 10.574722 | solver_time: 4.738590 | construction_time: 0.396980
+rank 3 | iter 14 | objfunc_time: 10.574724 | solver_time: 5.629113 | construction_time: 0.434458
+rank 4 | iter 14 | objfunc_time: 10.574734 | solver_time: 4.734217 | construction_time: 0.395234
+comm_rank: 1 | Iteration: 14 (took: 10.57) | Theta: [-0.961132, -0.307246, -2.112954, -3.686041] | Function Value:  5795592.590554 | Gradient: [-5.162464, -5.573540, -0.956414,  2291.511890] |  Norm(Grad): [ 2291.524683]
+comm_rank: 5 | Iteration: 14 (took: 10.57) | Theta: [-0.961132, -0.307246, -2.112954, -3.686041] | Function Value:  5795592.590554 | Gradient: [-5.162464, -5.573540, -0.956414,  2291.511890] |  Norm(Grad): [ 2291.524683]
+comm_rank: 0 | Iteration: 14 (took: 10.57) | Theta: [-0.961132, -0.307246, -2.112954, -3.686041] | Function Value:  5795592.590554 | Gradient: [-5.162464, -5.573540, -0.956414,  2291.511890] |  Norm(Grad): [ 2291.524683]
+comm_rank: 2 | Iteration: 14 (took: 10.57) | Theta: [-0.961132, -0.307246, -2.112954, -3.686041] | Function Value:  5795592.590554 | Gradient: [-5.162464, -5.573540, -0.956414,  2291.511890] |  Norm(Grad): [ 2291.524683]
+comm_rank: 7 | Iteration: 14 (took: 10.57) | Theta: [-0.961132, -0.307246, -2.112954, -3.686041] | Function Value:  5795592.590554 | Gradient: [-5.162464, -5.573540, -0.956414,  2291.511890] |  Norm(Grad): [ 2291.524683]
+comm_rank: 6 | Iteration: 14 (took: 10.57) | Theta: [-0.961132, -0.307246, -2.112954, -3.686041] | Function Value:  5795592.590554 | Gradient: [-5.162464, -5.573540, -0.956414,  2291.511890] |  Norm(Grad): [ 2291.524683]
+comm_rank: 3 | Iteration: 14 (took: 10.57) | Theta: [-0.961132, -0.307246, -2.112954, -3.686041] | Function Value:  5795592.590554 | Gradient: [-5.162464, -5.573540, -0.956414,  2291.511890] |  Norm(Grad): [ 2291.524683]
+comm_rank: 4 | Iteration: 14 (took: 10.57) | Theta: [-0.961132, -0.307246, -2.112954, -3.686041] | Function Value:  5795592.590554 | Gradient: [-5.162464, -5.573540, -0.956414,  2291.511890] |  Norm(Grad): [ 2291.524683]
+rank 0 | iter 15 | objfunc_time: 10.579579 | solver_time: 9.509235 | construction_time: 0.793512
+rank 1 | iter 15 | objfunc_time: 10.579590 | solver_time: 4.730358 | construction_time: 0.394411
+rank 5 | iter 15 | objfunc_time: 10.579590 | solver_time: 4.762992 | construction_time: 0.395078
+rank 7 | iter 15 | objfunc_time: 10.579581 | solver_time: 4.738610 | construction_time: 0.395993
+rank 3 | iter 15 | objfunc_time: 10.579578 | solver_time: 5.628555 | construction_time: 0.440830
+rank 6 | iter 15 | objfunc_time: 10.579582 | solver_time: 4.744777 | construction_time: 0.395263
+rank 2 | iter 15 | objfunc_time: 10.579566 | solver_time: 4.760548 | construction_time: 0.395426
+rank 4 | iter 15 | objfunc_time: 10.579572 | solver_time: 4.741195 | construction_time: 0.398814
+comm_rank: 5 | Iteration: 15 (took: 10.58) | Theta: [-0.961128, -0.307242, -2.112953, -3.687869] | Function Value:  5795590.470159 | Gradient: [-5.161851, -5.573258, -0.955914,  30.531578] |  Norm(Grad): [ 31.476927]
+comm_rank: 1 | Iteration: 15 (took: 10.58) | Theta: [-0.961128, -0.307242, -2.112953, -3.687869] | Function Value:  5795590.470159 | Gradient: [-5.161851, -5.573258, -0.955914,  30.531578] |  Norm(Grad): [ 31.476927]
+comm_rank: 0 | Iteration: 15 (took: 10.58) | Theta: [-0.961128, -0.307242, -2.112953, -3.687869] | Function Value:  5795590.470159 | Gradient: [-5.161851, -5.573258, -0.955914,  30.531578] |  Norm(Grad): [ 31.476927]
+comm_rank: 2 | Iteration: 15 (took: 10.58) | Theta: [-0.961128, -0.307242, -2.112953, -3.687869] | Function Value:  5795590.470159 | Gradient: [-5.161851, -5.573258, -0.955914,  30.531578] |  Norm(Grad): [ 31.476927]
+comm_rank: 6 | Iteration: 15 (took: 10.58) | Theta: [-0.961128, -0.307242, -2.112953, -3.687869] | Function Value:  5795590.470159 | Gradient: [-5.161851, -5.573258, -0.955914,  30.531578] |  Norm(Grad): [ 31.476927]
+comm_rank: 7 | Iteration: 15 (took: 10.58) | Theta: [-0.961128, -0.307242, -2.112953, -3.687869] | Function Value:  5795590.470159 | Gradient: [-5.161851, -5.573258, -0.955914,  30.531578] |  Norm(Grad): [ 31.476927]
+comm_rank: 3 | Iteration: 15 (took: 10.58) | Theta: [-0.961128, -0.307242, -2.112953, -3.687869] | Function Value:  5795590.470159 | Gradient: [-5.161851, -5.573258, -0.955914,  30.531578] |  Norm(Grad): [ 31.476927]
+comm_rank: 4 | Iteration: 15 (took: 10.58) | Theta: [-0.961128, -0.307242, -2.112953, -3.687869] | Function Value:  5795590.470159 | Gradient: [-5.161851, -5.573258, -0.955914,  30.531578] |  Norm(Grad): [ 31.476927]
+rank 0 | iter 16 | objfunc_time: 10.568751 | solver_time: 9.498784 | construction_time: 0.793979
+rank 2 | iter 16 | objfunc_time: 10.568748 | solver_time: 4.758729 | construction_time: 0.395025
+rank 5 | iter 16 | objfunc_time: 10.568751 | solver_time: 4.763841 | construction_time: 0.394345
+rank 7 | iter 16 | objfunc_time: 10.568761 | solver_time: 4.739724 | construction_time: 0.397280
+rank 6 | iter 16 | objfunc_time: 10.568744 | solver_time: 4.746519 | construction_time: 0.395673
+rank 1 | iter 16 | objfunc_time: 10.568768 | solver_time: 4.729054 | construction_time: 0.393407
+rank 4 | iter 16 | objfunc_time: 10.568753 | solver_time: 4.740656 | construction_time: 0.398755
+comm_rank: 0 | Iteration: 16 (took: 10.57) | Theta: [-0.961123, -0.307237, -2.112953, -3.687893] | Function Value:  5795590.469739 | Gradient: [-5.161813, -5.573178, -0.955883,  0.002318] |  Norm(Grad): [ 7.656262]
+comm_rank: 7 | Iteration: 16 (took: 10.57) | Theta: [-0.961123, -0.307237, -2.112953, -3.687893] | Function Value:  5795590.469739 | Gradient: [-5.161813, -5.573178, -0.955883,  0.002318] |  Norm(Grad): [ 7.656262]
+rank 3 | iter 16 | objfunc_time: 10.568760 | solver_time: 5.628979 | construction_time: 0.437922
+comm_rank: 6 | Iteration: 16 (took: 10.57) | Theta: [-0.961123, -0.307237, -2.112953, -3.687893] | Function Value:  5795590.469739 | Gradient: [-5.161813, -5.573178, -0.955883,  0.002318] |  Norm(Grad): [ 7.656262]
+comm_rank: 1 | Iteration: 16 (took: 10.57) | Theta: [-0.961123, -0.307237, -2.112953, -3.687893] | Function Value:  5795590.469739 | Gradient: [-5.161813, -5.573178, -0.955883,  0.002318] |  Norm(Grad): [ 7.656262]
+comm_rank: 2 | Iteration: 16 (took: 10.57) | Theta: [-0.961123, -0.307237, -2.112953, -3.687893] | Function Value:  5795590.469739 | Gradient: [-5.161813, -5.573178, -0.955883,  0.002318] |  Norm(Grad): [ 7.656262]
+comm_rank: 4 | Iteration: 16 (took: 10.57) | Theta: [-0.961123, -0.307237, -2.112953, -3.687893] | Function Value:  5795590.469739 | Gradient: [-5.161813, -5.573178, -0.955883,  0.002318] |  Norm(Grad): [ 7.656262]
+comm_rank: 5 | Iteration: 16 (took: 10.57) | Theta: [-0.961123, -0.307237, -2.112953, -3.687893] | Function Value:  5795590.469739 | Gradient: [-5.161813, -5.573178, -0.955883,  0.002318] |  Norm(Grad): [ 7.656262]
+comm_rank: 3 | Iteration: 16 (took: 10.57) | Theta: [-0.961123, -0.307237, -2.112953, -3.687893] | Function Value:  5795590.469739 | Gradient: [-5.161813, -5.573178, -0.955883,  0.002318] |  Norm(Grad): [ 7.656262]
+rank 1 | iter 17 | objfunc_time: 10.572604 | solver_time: 4.727713 | construction_time: 0.392634
+rank 5 | iter 17 | objfunc_time: 10.572587 | solver_time: 4.753632 | construction_time: 0.393695
+rank 0 | iter 17 | objfunc_time: 10.572579 | solver_time: 9.504286 | construction_time: 0.793088
+rank 6 | iter 17 | objfunc_time: 10.572572 | solver_time: 4.739463 | construction_time: 0.395034
+rank 2 | iter 17 | objfunc_time: 10.572606 | solver_time: 4.752548 | construction_time: 0.396175
+rank 4 | iter 17 | objfunc_time: 10.572581 | solver_time: 4.738189 | construction_time: 0.398292
+rank 7 | iter 17 | objfunc_time: 10.572598 | solver_time: 4.733492 | construction_time: 0.395460
+rank 3 | iter 17 | objfunc_time: 10.572596 | solver_time: 5.622690 | construction_time: 0.439139
+rank 6 | iter 18 | objfunc_time: 10.581866 | solver_time: 4.739578 | construction_time: 0.395588
+rank 1 | iter 18 | objfunc_time: 10.581863 | solver_time: 4.730063 | construction_time: 0.394160
+rank 2 | iter 18 | objfunc_time: 10.581902 | solver_time: 4.751445 | construction_time: 0.396148
+rank 4 | iter 18 | objfunc_time: 10.581874 | solver_time: 4.740976 | construction_time: 0.397562
+rank 5 | iter 18 | objfunc_time: 10.581871 | solver_time: 4.755239 | construction_time: 0.395635
+rank 0 | iter 18 | objfunc_time: 10.581878 | solver_time: 9.509802 | construction_time: 0.794679
+rank 7 | iter 18 | objfunc_time: 10.581885 | solver_time: 4.734144 | construction_time: 0.397537
+rank 3 | iter 18 | objfunc_time: 10.581886 | solver_time: 5.623392 | construction_time: 0.438200
+comm_rank: 1 | Iteration: 17 (took: 10.58) | Theta: [-0.961100, -0.307212, -2.112948, -3.687901] | Function Value:  5795590.469512 | Gradient: [-5.161759, -5.573164, -0.955974, -9.730305] |  Norm(Grad): [ 12.381301]
+comm_rank: 5 | Iteration: 17 (took: 10.58) | Theta: [-0.961100, -0.307212, -2.112948, -3.687901] | Function Value:  5795590.469512 | Gradient: [-5.161759, -5.573164, -0.955974, -9.730305] |  Norm(Grad): [ 12.381301]
+comm_rank: 0 | Iteration: 17 (took: 10.58) | Theta: [-0.961100, -0.307212, -2.112948, -3.687901] | Function Value:  5795590.469512 | Gradient: [-5.161759, -5.573164, -0.955974, -9.730305] |  Norm(Grad): [ 12.381301]
+comm_rank: 2 | Iteration: 17 (took: 10.58) | Theta: [-0.961100, -0.307212, -2.112948, -3.687901] | Function Value:  5795590.469512 | Gradient: [-5.161759, -5.573164, -0.955974, -9.730305] |  Norm(Grad): [ 12.381301]
+comm_rank: 7 | Iteration: 17 (took: 10.58) | Theta: [-0.961100, -0.307212, -2.112948, -3.687901] | Function Value:  5795590.469512 | Gradient: [-5.161759, -5.573164, -0.955974, -9.730305] |  Norm(Grad): [ 12.381301]
+comm_rank: 3 | Iteration: 17 (took: 10.58) | Theta: [-0.961100, -0.307212, -2.112948, -3.687901] | Function Value:  5795590.469512 | Gradient: [-5.161759, -5.573164, -0.955974, -9.730305] |  Norm(Grad): [ 12.381301]
+comm_rank: 6 | Iteration: 17 (took: 10.58) | Theta: [-0.961100, -0.307212, -2.112948, -3.687901] | Function Value:  5795590.469512 | Gradient: [-5.161759, -5.573164, -0.955974, -9.730305] |  Norm(Grad): [ 12.381301]
+comm_rank: 4 | Iteration: 17 (took: 10.58) | Theta: [-0.961100, -0.307212, -2.112948, -3.687901] | Function Value:  5795590.469512 | Gradient: [-5.161759, -5.573164, -0.955974, -9.730305] |  Norm(Grad): [ 12.381301]
+Optimization converged!  || theta(14) - theta(17) || = 0.000052 < 0.0001. Function value: 5795590.469512
+
+rank 5 | optimization summary: n_iters=18 | objfunc_time: mean=10.577155 std=0.010511 min=10.563233 max=10.600137
+rank 2 | optimization summary: n_iters=18 | objfunc_time: mean=10.577155 std=0.010514 min=10.563229 max=10.600141
+rank 6 | optimization summary: n_iters=18 | objfunc_time: mean=10.577156 std=0.010516 min=10.563233 max=10.600149
+rank 3 | optimization summary: n_iters=18 | objfunc_time: mean=10.577158 std=0.010514 min=10.563227 max=10.600142
+rank 4 | optimization summary: n_iters=18 | objfunc_time: mean=10.577153 std=0.010512 min=10.563226 max=10.600136
+rank 1 | optimization summary: n_iters=18 | objfunc_time: mean=10.577157 std=0.010512 min=10.563228 max=10.600143
+rank 0 | optimization summary: n_iters=18 | objfunc_time: mean=10.577157 std=0.010513 min=10.563232 max=10.600140
+Optimization completed in 294.96s (18 iterations, 10.58s/grad, f=5795590.469512)
+Starting Hessian computation...
+rank 7 | optimization summary: n_iters=18 | objfunc_time: mean=10.577155 std=0.010513 min=10.563229 max=10.600144
+Negative eigenvalues detected: [  -8816.0102653    -5399.55102644    8425.85932045 1241289.48736476]
+Hessian computed in 26.50s
+Computing marginal variances...
+Marginal variances computed in 6.39s
+Total wall-clock: 327.85s (optimization: 294.96s, hessian: 26.50s, marginals: 6.39s)
+FD optimization: 327.85s, f=5795590.469512
+  theta=[-0.96109996 -0.30721182 -2.11294818 -3.68790108]
+--- Finished ---
+Job finished at Sun 29 Mar 2026 06:46:27 PM CEST

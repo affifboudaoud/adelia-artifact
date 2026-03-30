@@ -270,15 +270,15 @@ def plot_pipeline(df):
     )
 
     patches = [
-        mpatches.Patch(color=COLORS["ad_optim"], label="Optimization (AD)"),
+        mpatches.Patch(color=COLORS["ad_optim"], label="Optimization (ADELIA)"),
         mpatches.Patch(
             facecolor=COLORS["ad_hessian"], edgecolor="#8B2040",
-            linewidth=0, hatch=HATCH_HESSIAN, label="Hessian (AD)",
+            linewidth=0, hatch=HATCH_HESSIAN, label="Hessian (ADELIA)",
         ),
-        mpatches.Patch(color=COLORS["fd_optim"], label="Optimization (FD)"),
+        mpatches.Patch(color=COLORS["fd_optim"], label="Optimization (DALIA)"),
         mpatches.Patch(
             facecolor=COLORS["fd_hessian"], edgecolor="#2B2D42",
-            linewidth=0, hatch=HATCH_HESSIAN, label="Hessian (FD)",
+            linewidth=0, hatch=HATCH_HESSIAN, label="Hessian (DALIA)",
         ),
     ]
     ax_fast.legend(
@@ -307,11 +307,11 @@ if __name__ == "__main__":
     fig = plot_pipeline(df)
 
     output_path = os.path.join(args.output_dir, OUTPUT_FILENAME)
-    fig.savefig(output_path, bbox_inches="tight", dpi=300)
+    fig.savefig(output_path, bbox_inches="tight", pad_inches=0, dpi=300)
     print(f"Saved: {output_path}")
 
     output_png = output_path.replace(".pdf", ".png")
-    fig.savefig(output_png, bbox_inches="tight", dpi=300)
+    fig.savefig(output_png, bbox_inches="tight", pad_inches=0, dpi=300)
     print(f"Saved: {output_png}")
 
     plt.close(fig)

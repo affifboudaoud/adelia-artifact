@@ -3,8 +3,9 @@
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=1
 #SBATCH --gpus-per-task=1
-#SBATCH --time=02:00:00
-#SBATCH --account=lp16
+#SBATCH --time=00:30:00
+#SBATCH --account=g34
+#SBATCH --partition=debug
 #SBATCH --output=outputs/sa1_fd_%j.log
 #SBATCH --error=outputs/sa1_fd_%j.err
 

@@ -1,0 +1,12 @@
+W0329 23:33:04.140691  127895 cuda_executor.cc:1802] GPU interconnect information not available: INTERNAL: NVML doesn't support extracting fabric info or NVLink is not used by the device.
+W0329 23:33:04.175085  127195 cuda_executor.cc:1802] GPU interconnect information not available: INTERNAL: NVML doesn't support extracting fabric info or NVLink is not used by the device.
+W0329 23:33:38.464323  127195 hlo_rematerialization.cc:3204] Can't reduce memory use below 71.82GiB (77116523153 bytes) by rematerialization; only reduced to 75.92GiB (81519144846 bytes), down from 75.92GiB (81524638822 bytes) originally
+W0329 23:34:43.498153  127195 hlo_rematerialization.cc:3204] Can't reduce memory use below 71.82GiB (77116523153 bytes) by rematerialization; only reduced to 75.92GiB (81519144846 bytes), down from 75.92GiB (81524638822 bytes) originally
+Traceback (most recent call last):
+  File "/capstor/scratch/cscs/aboudaou/workspace/dalia/artifact/validation/sa1/converge.py", line 83, in <module>
+    grad_final = np.asarray(results.get("grad_f", np.zeros(n_hp)), dtype=np.float64)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "cupy/_core/core.pyx", line 1581, in cupy._core.core._ndarray_base.__array__
+TypeError: Implicit conversion to a NumPy array is not allowed. Please use `.get()` to construct a NumPy array explicitly.
+srun: error: nid005783: task 0: Exited with exit code 1
+srun: Terminating StepId=3032789.0

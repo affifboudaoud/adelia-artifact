@@ -151,13 +151,13 @@ def plot_dual_panel(df):
     ylims_wall = ax_wall.get_ylim()
     ax_wall.axhspan(0, 1.0, alpha=0.10, color="#DDE1E6", zorder=0)
     ax_wall.axhspan(1.0, ylims_wall[1], alpha=0.10, color="#F5DDE2", zorder=0)
-    ax_wall.set_ylabel("Finite diff. time / Autodiff time")
+    ax_wall.set_ylabel("DALIA time / ADELIA time")
     ax_wall.set_title(r"$\bf{(a)}$ Per-gradient time ratio")
     ax_wall.grid(True, alpha=0.3, which="both", zorder=0)
-    ax_wall.text(0.02, 0.02, "FD faster", transform=ax_wall.transAxes,
+    ax_wall.text(0.02, 0.02, "DALIA faster", transform=ax_wall.transAxes,
                  fontsize=8, alpha=0.7, color="#6B7B8D", va="bottom",
                  fontweight="bold")
-    ax_wall.text(0.98, 0.98, "AD faster", transform=ax_wall.transAxes,
+    ax_wall.text(0.98, 0.98, "ADELIA faster", transform=ax_wall.transAxes,
                  fontsize=8, alpha=0.7, color="#E8899A", va="top", ha="right",
                  fontweight="bold")
 
@@ -172,13 +172,13 @@ def plot_dual_panel(df):
     ylims_energy = ax_energy.get_ylim()
     ax_energy.axhspan(ylims_energy[0], 1.0, alpha=0.10, color="#DDE1E6", zorder=0)
     ax_energy.axhspan(1.0, ylims_energy[1], alpha=0.10, color="#F5DDE2", zorder=0)
-    ax_energy.set_ylabel("Finite diff. energy / Autodiff energy")
+    ax_energy.set_ylabel("DALIA energy / ADELIA energy")
     ax_energy.set_title(r"$\bf{(b)}$ Measured energy ratio")
     ax_energy.grid(True, alpha=0.3, which="both", zorder=0)
-    ax_energy.text(0.02, 0.02, "FD cheaper", transform=ax_energy.transAxes,
+    ax_energy.text(0.02, 0.02, "DALIA cheaper", transform=ax_energy.transAxes,
                    fontsize=8, alpha=0.7, color="#6B7B8D", va="bottom",
                    fontweight="bold")
-    ax_energy.text(0.02, 0.98, "AD cheaper", transform=ax_energy.transAxes,
+    ax_energy.text(0.02, 0.98, "ADELIA cheaper", transform=ax_energy.transAxes,
                    fontsize=8, alpha=0.7, color="#E8899A", va="top",
                    fontweight="bold")
 
@@ -202,7 +202,7 @@ def plot_dual_panel(df):
     ).get_frame().set_linewidth(0.6)
 
     # Center x-label
-    fig.text(0.5, label_y, "Number of FD nodes", ha="center", va="center")
+    fig.text(0.5, label_y, "Number of DALIA nodes", ha="center", va="center")
 
     # Right legend (WA1, WA2)
     fig.legend(
@@ -229,11 +229,11 @@ if __name__ == "__main__":
     fig = plot_dual_panel(data)
 
     output_path = os.path.join(args.output_dir, "resource_energy_efficiency.pdf")
-    fig.savefig(output_path, dpi=DPI, bbox_inches="tight")
+    fig.savefig(output_path, dpi=DPI, bbox_inches="tight", pad_inches=0)
     print(f"Saved: {output_path}")
 
     output_png = output_path.replace(".pdf", ".png")
-    fig.savefig(output_png, dpi=DPI, bbox_inches="tight")
+    fig.savefig(output_png, dpi=DPI, bbox_inches="tight", pad_inches=0)
     print(f"Saved: {output_png}")
 
     plt.close(fig)

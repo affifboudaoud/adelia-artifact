@@ -68,8 +68,6 @@ if __name__ == "__main__":
                 "max_iter": args.max_iter, "gtol": 1e-3,
                 "disp": True, "maxcor": len(model_fd.theta),
             },
-            "f_reduction_tol": 1e-3,
-            "theta_reduction_tol": 1e-4,
             "inner_iteration_max_iter": 50,
             "eps_inner_iteration": 1e-3,
             "eps_gradient_f": 1e-3,

@@ -8,13 +8,13 @@ from parser_utils import parse_args
 
 args = parse_args()
 
-import jax
-import jax.numpy as jnp
-if jax.default_backend() == "gpu":
-    jnp.linalg.cholesky(jnp.eye(2, dtype=jnp.float32)).block_until_ready()
-
-from dalia.core.jax_autodiff import configure_jax_precision
-configure_jax_precision(args.precision)
+if not args.skip_jax:
+    import jax
+    import jax.numpy as jnp
+    if jax.default_backend() == "gpu":
+        jnp.linalg.cholesky(jnp.eye(2, dtype=jnp.float32)).block_until_ready()
+    from dalia.core.jax_autodiff import configure_jax_precision
+    configure_jax_precision(args.precision)
 
 import numpy as np
 
@@ -25,7 +25,6 @@ from dalia.core.dalia import DALIA
 from dalia.models import CoregionalModel
 from dalia.submodels import RegressionSubModel, SpatioTemporalSubModel
 from dalia.utils import print_msg
-from jax_utils import get_first_forward_and_gradient
 from benchmark_utils import run_benchmark, write_optimization_result
 from energy_monitor import EnergyMonitor
 
@@ -175,10 +174,10 @@ def run_with_method(model, gradient_method, max_iter, verbose=True):
         "f_reduction_tol": 1e-3,
         "f_reduction_lag": 10,
         "theta_reduction_lag": 10,
-        "theta_reduction_tol": 1e-4,
         "inner_iteration_max_iter": 50,
         "eps_inner_iteration": 1e-3,
         "eps_gradient_f": 1e-3,
+        "eps_hessian_f": 5e-3,
         "simulation_dir": ".",
     }
     dalia = DALIA(
@@ -192,8 +191,6 @@ def run_with_method(model, gradient_method, max_iter, verbose=True):
 
 if __name__ == "__main__":
     print_msg("--- sa1: Coregional (3-variate) Spatio-Temporal Model (distributed) ---")
-
-    model = create_model()
 
     if args.benchmark_mode:
         dalia_fd = dalia_jax = None
@@ -217,6 +214,8 @@ if __name__ == "__main__":
     n_nodes = int(os.environ.get("SLURM_NNODES", 1))
 
     if not args.skip_jax:
+        from jax_utils import get_first_forward_and_gradient
+
         model_jax = create_model()
         dalia_jax = run_with_method(model_jax, "jax_autodiff", args.max_iter, verbose=False)
         n_hp = model_jax.n_hyperparameters
@@ -243,10 +242,6 @@ if __name__ == "__main__":
     if not args.skip_fd:
         model_fd = create_model()
         dalia_fd = run_with_method(model_fd, "finite_diff", args.max_iter, verbose=False)
-
-        t0 = time.perf_counter()
-        f_fd, grad_fd = get_first_forward_and_gradient(dalia_fd)
-        t_first_fd = time.perf_counter() - t0
 
         t0 = time.perf_counter()
         results_fd = dalia_fd.run()

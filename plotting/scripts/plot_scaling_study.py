@@ -90,10 +90,10 @@ def plot_scaling(df):
 
     ax1.bar(x1 - w / 2, wa1_ad, w, yerr=wa1_ad_ci, capsize=5,
             color=COLOR_AD, edgecolor="black", linewidth=0.5,
-            error_kw={"linewidth": 1.5, "capthick": 1.5, "zorder": 5}, label="AD (ours)", zorder=3)
+            error_kw={"linewidth": 1.5, "capthick": 1.5, "zorder": 5}, label="ADELIA", zorder=3)
     ax1.bar(x1 + w / 2, wa1_fd, w, yerr=wa1_fd_ci, capsize=5,
             color=COLOR_FD, edgecolor="black", linewidth=0.5,
-            error_kw={"linewidth": 1.5, "capthick": 1.5, "zorder": 5}, label="FD", zorder=3)
+            error_kw={"linewidth": 1.5, "capthick": 1.5, "zorder": 5}, label="DALIA", zorder=3)
 
     for i, spd in enumerate(wa1_spd):
         if not np.isnan(spd):
@@ -130,10 +130,10 @@ def plot_scaling(df):
 
     ax2.bar(x2 - w / 2, wa2_ad, w, yerr=wa2_ad_ci, capsize=5,
             color=COLOR_AD, edgecolor="black", linewidth=0.5,
-            error_kw={"linewidth": 1.5, "capthick": 1.5, "zorder": 5}, label="AD (ours)", zorder=3)
+            error_kw={"linewidth": 1.5, "capthick": 1.5, "zorder": 5}, label="ADELIA", zorder=3)
     ax2.bar(x2 + w / 2, wa2_fd, w, yerr=wa2_fd_ci, capsize=5,
             color=COLOR_FD, edgecolor="black", linewidth=0.5,
-            error_kw={"linewidth": 1.5, "capthick": 1.5, "zorder": 5}, label="FD", zorder=3)
+            error_kw={"linewidth": 1.5, "capthick": 1.5, "zorder": 5}, label="DALIA", zorder=3)
 
     for i, spd in enumerate(wa2_spd):
         if not np.isnan(spd):
@@ -181,11 +181,11 @@ if __name__ == "__main__":
     fig = plot_scaling(df)
 
     output_path = os.path.join(args.output_dir, OUTPUT_FILENAME)
-    fig.savefig(output_path, bbox_inches="tight", dpi=300)
+    fig.savefig(output_path, bbox_inches="tight", pad_inches=0, dpi=300)
     print(f"Saved: {output_path}")
 
     output_png = output_path.replace(".pdf", ".png")
-    fig.savefig(output_png, bbox_inches="tight", dpi=300)
+    fig.savefig(output_png, bbox_inches="tight", pad_inches=0, dpi=300)
     print(f"Saved: {output_png}")
 
     plt.close(fig)
