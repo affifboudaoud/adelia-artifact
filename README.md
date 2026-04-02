@@ -38,8 +38,13 @@ pip install gdown
 
 ```bash
 # 1. Install (see INSTALL.md for detailed instructions)
-cd artifact/dalia && pip install -e .
-cd artifact/serinv && pip install -e .
+# Option A: via submodules (requires git-lfs)
+git submodule update --init
+# Option B: clone directly (if git-lfs is unavailable)
+git clone -b cleaning https://github.com/affifboudaoud/DALIA.git
+git clone -b serinv_jax https://github.com/affifboudaoud/serinv.git
+# Then install both
+pip install -e DALIA/ -e serinv/
 
 # 2. Validate (1 GH200 node, ~2 min)
 cd artifact/validation
@@ -63,7 +68,8 @@ artifact/
 ├── plotting/               # Figure generation from CSVs
 ├── data/                   # Input datasets (see below)
 ├── scripts/                # Utility scripts
-└── source/                 # DALIA and Serinv source snapshots
+├── DALIA/                  # DALIA framework (git submodule)
+└── serinv/                 # Serinv structured sparse solver (git submodule)
 ```
 
 Each experiment directory contains its own **README.md** with goals,

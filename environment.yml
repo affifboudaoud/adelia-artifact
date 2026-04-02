@@ -22,8 +22,8 @@ dependencies:
   - cuda-cudart
   - pip:
     - pydantic
-    - cupy-cuda12x==13.2.0
-    - jax[cuda12]==0.4.38
-    - jaxlib==0.4.38
+    - cupy-cuda12x==13.6.0
+    - jax[cuda12]==0.8.1
+    - jaxlib==0.8.1
     - mpi4py
     - gdown
