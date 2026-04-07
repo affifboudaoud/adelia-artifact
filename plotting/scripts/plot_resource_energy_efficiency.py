@@ -33,7 +33,7 @@ MODELS = {
     "wa2":  (r"WA2",  "-",  "v", "#4A5568"),
 }
 
-FIGSIZE = (7.16, 2.2)
+FIGSIZE = (7.16, 1.9)
 DPI = 300
 MARKER_SIZE = 5
 LINE_WIDTH = 1.5
@@ -202,7 +202,7 @@ def plot_dual_panel(df):
     ).get_frame().set_linewidth(0.6)
 
     # Center x-label
-    fig.text(0.5, label_y, "Number of DALIA nodes", ha="center", va="center")
+    fig.text(0.5, label_y, "Number of DALIA GPUs", ha="center", va="center")
 
     # Right legend (WA1, WA2)
     fig.legend(

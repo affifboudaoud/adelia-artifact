@@ -181,16 +181,11 @@ def plot_panel(ax, df_panel, ylim_top, panel_title, time_unit="s"):
         badge_w_pts = 27
         badge_h_pts = 14
 
-        # Total wallclock speedup (bottom, half-solid / half-hatched)
+        # Total wallclock speedup (bottom, solid blue)
         da_total = DrawingArea(badge_w_pts, badge_h_pts, 0, 0)
         da_total.add_artist(mpatches.Rectangle(
-            (0, 0), badge_w_pts / 2, badge_h_pts,
-            facecolor="#E8899A", alpha=0.35, edgecolor="none",
-        ))
-        da_total.add_artist(mpatches.Rectangle(
-            (badge_w_pts / 2, 0), badge_w_pts / 2, badge_h_pts,
-            facecolor="#E8899A", alpha=0.35, edgecolor="#8B2040",
-            linewidth=0, hatch="///",
+            (0, 0), badge_w_pts, badge_h_pts,
+            facecolor="#89B8D4", alpha=0.35, edgecolor="none",
         ))
         da_total.add_artist(matplotlib.text.Text(
             badge_w_pts / 2, badge_h_pts / 2,
@@ -279,6 +274,14 @@ def plot_pipeline(df):
         mpatches.Patch(
             facecolor=COLORS["fd_hessian"], edgecolor="#2B2D42",
             linewidth=0, hatch=HATCH_HESSIAN, label="Hessian (DALIA)",
+        ),
+        mpatches.Patch(
+            facecolor="#E8899A", alpha=0.35, edgecolor="none",
+            label="Per-gradient speedup",
+        ),
+        mpatches.Patch(
+            facecolor="#89B8D4", alpha=0.35, edgecolor="none",
+            label="End-to-end speedup",
         ),
     ]
     ax_fast.legend(

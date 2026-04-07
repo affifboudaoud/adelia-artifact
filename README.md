@@ -14,8 +14,8 @@ This artifact accompanies the paper *"ADELIA: Automatic Differentiation for Effi
 
 | Artifact | Description | Location |
 |---|---|---|
-| **A1** | ADELIA/DALIA framework with JAX AD | `source/dalia/` |
-| **A2** | Serinv structured sparse solver | `source/serinv/` |
+| **A1** | ADELIA/DALIA framework with JAX AD | `DALIA/` |
+| **A2** | Serinv structured sparse solver | `serinv/` |
 | **A3** | Benchmark suite (this artifact) | `experiments/`, `data/`, `plotting/` |
 
 ### Hardware Requirements
@@ -46,9 +46,9 @@ git clone -b serinv_jax https://github.com/affifboudaoud/serinv.git
 # Then install both
 pip install -e DALIA/ -e serinv/
 
-# 2. Validate (1 GH200 node, ~2 min)
-cd artifact/validation
-sbatch validate_quick.sbatch
+# 2. Quick validate (1 GH200 node, ~5 min)
+cd validation/gst_small
+sbatch validate.sbatch
 ```
 
 ### Directory Layout
@@ -94,10 +94,16 @@ Reference CSV data from the paper is provided in `plotting/data/` so figures
 can be regenerated without re-running experiments:
 
 ```bash
-cd plotting
-bash generate_all_figures.sh
+cd plotting/scripts
+python plot_pipeline_wallclock_merged.py   # Figure 2
+python plot_framework_decomposition.py     # Figure 4
+python plot_scaling_study.py               # Figure 5
+python plot_resource_energy_efficiency.py   # Figure 6
+python plot_performance_analysis.py        # Figure 7
 ```
 
+Each plotting script reads reference CSVs from `plotting/data/` and writes
+PDFs to `plotting/figures/`.
 See [`plotting/README.md`](plotting/README.md) for the full data-flow map
 from experiments to CSVs to figures.
 

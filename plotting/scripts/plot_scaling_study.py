@@ -41,7 +41,7 @@ COLOR_AD = "#E8899A"
 COLOR_FD = "#6B7B8D"
 
 FIGURE_WIDTH = 7.16
-FIGURE_HEIGHT = 2.3
+FIGURE_HEIGHT = 1.9
 
 
 def load_data(csv_path=None):
