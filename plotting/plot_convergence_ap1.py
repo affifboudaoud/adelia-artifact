@@ -21,10 +21,10 @@ PAPER_FIG_DIR = os.path.join(SCRIPT_DIR, "figures")
 os.makedirs(PAPER_FIG_DIR, exist_ok=True)
 
 AD_LOG = os.path.join(
-    SCRIPT_DIR, "..", "experiments", "fig2_wallclock", "ap1",
+    SCRIPT_DIR, "..", "experiments", "fig4_wallclock", "ap1",
     "outputs", "ap1_ad_3011462.log")
 FD_LOG = os.path.join(
-    SCRIPT_DIR, "..", "experiments", "fig2_wallclock", "ap1",
+    SCRIPT_DIR, "..", "experiments", "fig4_wallclock", "ap1",
     "outputs", "ap1_fd_3011696.log")
 
 OUTPUT_FILENAME = "convergence_ap1.pdf"

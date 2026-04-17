@@ -13,7 +13,7 @@ figure_style.apply()
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 PAPER_FIG_DIR = os.path.join(SCRIPT_DIR, "figures")
-BASE_EXP = os.path.join(SCRIPT_DIR, "..", "experiments", "fig2_wallclock")
+BASE_EXP = os.path.join(SCRIPT_DIR, "..", "experiments", "fig4_wallclock")
 BASE_VAL = os.path.join(SCRIPT_DIR, "..", "validation")
 
 OUTPUT_FILENAME = "convergence_ap1.pdf"

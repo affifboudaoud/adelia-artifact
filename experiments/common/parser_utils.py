@@ -128,7 +128,7 @@ def parse_args():
         type=str,
         default=os.path.join(
             os.path.dirname(os.path.abspath(__file__)),
-            "..", "fig2_wallclock", "results", "benchmark_results.csv",
+            "..", "fig4_wallclock", "results", "benchmark_results.csv",
         ),
         help="Path to shared CSV for benchmark results (all models append here).",
     )

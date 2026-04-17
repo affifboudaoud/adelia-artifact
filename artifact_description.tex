@@ -105,15 +105,15 @@ the single reproduction repository at\\
 \item[$A_5$] L-BFGS convergence benchmark
   (AP1 + GST-T runs driven by \texttt{converge.sbatch}).
 \item[$A_6$] End-to-end wall-clock benchmark
-  (\path{experiments/fig2_wallclock/}).
+  (\path{experiments/fig4_wallclock/}).
 \item[$A_7$] Problem-size scaling benchmark
   (\path{experiments/fig5_scaling_study/}).
 \item[$A_8$] Framework-decomposition benchmark
-  (\path{experiments/fig4_framework_decomposition/}).
+  (\path{experiments/fig6_framework_decomposition/}).
 \item[$A_9$] Resource and energy efficiency benchmark
-  (\path{experiments/fig6_resource_efficiency/}).
+  (\path{experiments/fig7_resource_efficiency/}).
 \item[$A_{10}$] Per-stage distributed performance-analysis benchmark
-  (\path{experiments/fig7_performance_analysis/}).
+  (\path{experiments/fig8_performance_analysis/}).
 \end{description}
 
 \begin{center}
@@ -463,7 +463,7 @@ produces Figure~3.
 \artrel
 
 $A_6$ is the end-to-end wall-clock benchmark
-(\path{experiments/fig2_wallclock/}). It produces Figure~4 by
+(\path{experiments/fig4_wallclock/}). It produces Figure~4 by
 (1)~running each of the ten models to convergence under ADELIA
 on $P_{\min}$ GPUs and recording both the per-iteration
 wall-clock and the number of L-BFGS iterations to convergence,
@@ -587,7 +587,7 @@ Per-variant timing rows in \path{scaling_breakdown.csv}.
 \artrel
 
 $A_8$ is the framework-decomposition benchmark
-(\path{experiments/fig4_framework_decomposition/}). It
+(\path{experiments/fig6_framework_decomposition/}). It
 disentangles algorithmic gains from framework overhead by timing
 both ADELIA and an FD baseline under matched framework conditions
 on all ten benchmark models, supporting contribution $C_4$ and
@@ -643,7 +643,7 @@ Per-model ratios and timings in
 \artrel
 
 $A_9$ is the resource and energy efficiency benchmark
-(\path{experiments/fig6_resource_efficiency/}). It measures
+(\path{experiments/fig7_resource_efficiency/}). It measures
 how many GPUs FD must use (and how much energy it must draw) to
 match ADELIA's 4-GPU per-gradient wall-clock on the four
 production-scale multivariate models, supporting contributions
@@ -715,7 +715,7 @@ Figure~7.
 
 $A_{10}$ is the per-stage distributed performance-analysis
 benchmark
-(\path{experiments/fig7_performance_analysis/}). It breaks
+(\path{experiments/fig8_performance_analysis/}). It breaks
 down the per-gradient wall-clock of the distributed two-phase
 path into forward, solve, reduced-system, and gradient-prior
 stages on WA1, AP1, and WA2. It supports $C_3$ and $C_4$ and

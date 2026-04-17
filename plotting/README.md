@@ -13,9 +13,9 @@ Output PDFs are written to `figures/`.
 
 ## Individual Plot Scripts
 
-Paper figure numbers reflect the current `writing/` source (Figures 1--2
-are the overview teaser and the two-phase method diagram, so the
-evaluation plots start at Figure 3).
+Figure numbers match the paper (Figures 1--2 are the overview teaser
+and the two-phase method diagram, so the evaluation plots start at
+Figure 3).
 
 | Script | Paper Element | Input CSVs |
 |--------|--------------|------------|
@@ -29,22 +29,18 @@ evaluation plots start at Figure 3).
 
 ## Data Flow
 
-Experiment directory names (e.g. `fig2_wallclock/`) are historical and
-do **not** reflect current paper figure numbers; use the table above as
-the source of truth.
-
 | CSV | Produced by | Consumed by |
 |-----|-------------|-------------|
 | `structure_comparison.csv` | `tab2_structure_comparison/` | Table 2 |
-| `pipeline_wallclock.csv` | `fig2_wallclock/` | Figure 4 |
-| `pipeline_wallclock_merged.csv` | `fig2_wallclock/` | Figure 4 |
+| `pipeline_wallclock.csv` | `fig4_wallclock/` | Figure 4 |
+| `pipeline_wallclock_merged.csv` | `fig4_wallclock/` | Figure 4 |
 | `scaling_breakdown.csv` | `fig5_scaling_study/` | Figure 5 |
-| `single_eval_comparison.csv` | `fig4_framework_decomposition/` | Figure 6 |
-| `distributed_single_eval.csv` | `fig4_framework_decomposition/` | Figure 6 |
-| `memory_breakdown.csv` | `fig4_framework_decomposition/` | Figure 6 |
-| `minimum_resources_comparison.csv` | `fig6_resource_efficiency/` | Figures 4, 6, 7 |
-| `resource_efficiency_all.csv` | `fig6_resource_efficiency/` | Figure 7 |
-| `distributed_breakdown.csv` | `fig7_performance_analysis/` | Figure 8 |
+| `single_eval_comparison.csv` | `fig6_framework_decomposition/` | Figure 6 |
+| `distributed_single_eval.csv` | `fig6_framework_decomposition/` | Figure 6 |
+| `memory_breakdown.csv` | `fig6_framework_decomposition/` | Figure 6 |
+| `minimum_resources_comparison.csv` | `fig7_resource_efficiency/` | Figures 4, 6, 7 |
+| `resource_efficiency_all.csv` | `fig7_resource_efficiency/` | Figure 7 |
+| `distributed_breakdown.csv` | `fig8_performance_analysis/` | Figure 8 |
 
 ## Regenerating from Experiment Outputs
 
