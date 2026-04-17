@@ -1,0 +1,206 @@
+% Artifact Evaluation (AE) appendix — draft, NOT for initial paper submission.
+% Per SC26 guidelines (inherited from SC25), the AE appendix is submitted
+% only after paper acceptance when requesting reproducibility badges.
+% To assemble the full AD+AE document, paste the body of this file
+% (everything between \appendixAE and \end{document}) at the end of
+% artifact_description.tex, immediately before its \end{document}.
+
+\documentclass[nonacm,sigconf]{acmart}
+
+\usepackage{cite}
+\usepackage{amsmath,amsfonts}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{booktabs}
+\usepackage{tagging}
+\usepackage{url}
+\usepackage{listings}
+
+\lstset{
+  basicstyle=\footnotesize\ttfamily,
+  breaklines=true,
+  frame=single,
+  columns=fullflexible,
+}
+
+\usepackage{sc26repro}
+\pagenumbering{gobble}
+
+\begin{document}
+
+\twocolumn[%
+{\begin{center}
+\Huge
+Appendix: Artifact Evaluation (draft)
+\end{center}}
+]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  AE Appendix
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\appendixAE
+
+% ---- A1: DALIA/ADELIA ----
+\arteval{1}
+
+\artin
+
+$A_1$ (the ADELIA framework) is installed as part of the
+benchmark suite ($A_3$) via a single command on CSCS Alps:
+
+\begin{lstlisting}[language=bash]
+git clone <artifact-repo> adelia-artifact
+cd adelia-artifact
+salloc -N1 --gpus-per-task=1 -A <account> -t 30 -p debug
+uenv run --view=modules prgenv-gnu/24.11:v1 -- \
+    bash scripts/install_alps.sh
+\end{lstlisting}
+
+\noindent
+\texttt{install\_alps.sh} creates the \texttt{adelia-env} conda
+environment, installs JAX 0.8.1 + CUDA plugin, CuPy 13.6, builds
+\texttt{mpi4py} and \texttt{mpi4jax} from source against Cray MPICH
+with CUDA, and installs $A_1$ and $A_2$ as editable packages.
+See \texttt{INSTALL.md} for the manual step-by-step path and
+\texttt{INSTALL.md\#Troubleshooting} for common pitfalls
+(cuSolver/CuPy import order, \texttt{libdevice.10.bc}, MPI linking).
+
+\artcomp
+
+ADELIA exposes its gradient routines through the \texttt{DALIA}
+Python API:
+\begin{lstlisting}[language=bash]
+conda activate adelia-env
+python -c "
+import jax, jax.numpy as jnp
+jnp.linalg.cholesky(jnp.eye(2)).block_until_ready()  # GPU warmup
+import os; os.environ['ARRAY_MODULE'] = 'cupy'
+from dalia.core.jax_autodiff import \
+    create_pure_jax_objective_distributed_coregional_splitjit
+print('ADELIA AD entry point imported OK')
+"
+\end{lstlisting}
+
+\noindent
+The JAX-first, CuPy-second import order is mandatory (see $A_3$
+execution for the full evaluation workflow).
+
+\artout
+
+The framework has no standalone outputs; its correctness and
+performance are evaluated through $A_2$'s test suite and $A_3$'s
+benchmark and validation jobs. See \texttt{DALIA/tests/README.md}
+for framework-level unit tests.
+
+
+% ---- A2: Serinv ----
+\arteval{2}
+
+\artin
+
+Installed as part of $A_1$. Manual install:
+\begin{lstlisting}[language=bash]
+conda activate adelia-env
+cd serinv && pip install -e .
+\end{lstlisting}
+
+\artcomp
+
+Run the sequential and distributed test suites:
+\begin{lstlisting}[language=bash]
+cd serinv
+pytest tests_algs/ tests_wrappers/
+mpirun -n 4 pytest --with-mpi tests_wrappers/
+\end{lstlisting}
+
+\noindent
+The sequential suite exercises factorization, solve, and selected
+inversion against dense reference implementations. The distributed
+suite verifies that nested-dissection partitioned results match
+sequential execution on block-tridiagonal and BTA matrices.
+
+\artout
+
+All tests should pass ($\sim$10~min sequential, $\sim$5~min
+distributed). A passing test run substantiates $C_1$ (structured
+BTA algorithms producing numerically identical results to dense
+solvers) and $C_3$ (distributed two-phase correctness).
+
+
+% ---- A3: Benchmark suite ----
+\arteval{3}
+
+\artin
+
+Included in the artifact repository. After completing the $A_1$
+install step above:
+
+\begin{lstlisting}[language=bash]
+cd adelia-artifact
+./scripts/download_data.sh            # ~1.5 GB into data/
+# Edit two values in experiments/common/env_setup.sh:
+#   SBATCH_ACCOUNT=<your CSCS account>
+#   CONDA_ENV=adelia-env
+\end{lstlisting}
+
+\artcomp
+
+The benchmark suite has three task groups. Reviewers with a
+strict 8-hour budget should run only the \textbf{reviewer path}
+below, which exercises every code path on a 1-GPU subset and
+regenerates every paper figure from the reference CSVs shipped
+in \texttt{plotting/data/}:
+
+\begin{lstlisting}[language=bash]
+# (1) Correctness: ~10 min, 1 GPU
+sbatch validation/gst_small/validate.sbatch
+sbatch validation/gst_coreg3_small/validate.sbatch
+
+# (2) Functional: ~30 min, 1 GPU
+sbatch experiments/fig2_wallclock/gst_small/run.sbatch
+sbatch experiments/fig2_wallclock/gst_coreg3_small/run.sbatch
+
+# (3) Figure regeneration: ~5 min, no GPU
+cd plotting && bash generate_all_figures.sh
+\end{lstlisting}
+
+\noindent
+Full reproduction ($\sim$28 GPU-hours, required for the Reproduced
+badge) is documented per-experiment in the \texttt{README.md} files
+under \texttt{experiments/tab2\_structure\_comparison/},
+\texttt{fig2\_wallclock/}, \texttt{fig4\_framework\_decomposition/},
+\texttt{fig5\_scaling\_study/}, \texttt{fig6\_resource\_efficiency/},
+and \texttt{fig7\_performance\_analysis/}.
+Task dependencies: $T_1$ (validation) is independent; $T_2$
+(experiments) directories are independent of one another; $T_3$
+(plotting) consumes either fresh $T_2$ CSVs or the reference CSVs
+in \texttt{plotting/data/}.
+
+\artout
+
+Reviewer path outputs:
+\begin{itemize}
+  \item Each \texttt{validate.sbatch} writes a PASS/FAIL summary to
+    \texttt{validation/<model>/outputs/*.out}. Pass criteria are
+    documented in \texttt{validation/README.md}.
+  \item \texttt{fig2\_wallclock/<model>/run.sbatch} writes
+    per-gradient timing CSVs into each model's \texttt{outputs/}
+    directory.
+  \item \texttt{plotting/generate\_all\_figures.sh} writes the
+    paper's PDF figures into \texttt{plotting/figures/}: Table~2,
+    Figures~3 (convergence), 4 (wall-clock), 5 (scaling),
+    6 (framework decomposition), 7 (resource/energy),
+    8 (performance analysis).
+\end{itemize}
+
+\noindent
+Expected correlations to contributions:
+the validation PASS confirms $C_1$--$C_3$ numerically;
+the wall-clock CSVs (and the regenerated Figure~4) demonstrate
+$2.4$--$50.9\times$ per-gradient speedups over FD ($C_1$--$C_3$);
+the regenerated Figures~5--7 substantiate $C_4$ (scaling,
+framework decomposition, energy savings).
+
+\end{document}

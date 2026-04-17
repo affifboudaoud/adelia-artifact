@@ -1,57 +1,76 @@
-# ADELIA: Automatic Differentiation for Efficient Latent Inference Approximation
+# ADELIA: Automatic Differentiation for Efficient Laplace Inference Approximations
 
-## Artifact for SC26 Paper
+Reproduction artifact for the ADELIA paper. It bundles the framework
+(DALIA + Serinv as pinned submodules), the per-experiment SLURM
+scripts, the input datasets, and the plotting scripts that regenerate
+every figure and table in the paper.
 
-This artifact accompanies the paper *"ADELIA: Automatic Differentiation for Efficient Latent Inference Approximation"* submitted to SC 2026.
+## Reproducing the paper
 
-### Contributions and Artifacts
+- **Artifact description:** [`artifact_description.pdf`](artifact_description.pdf)
+  (LaTeX source: [`artifact_description.tex`](artifact_description.tex);
+  rebuild with `make` or `tectonic artifact_description.tex`).
+- **Full reproduction** is ~28 GPU-hours on NVIDIA GH200. For a
+  smaller end-to-end check that exercises every code path on a single
+  GH200, the four steps below suffice; each is documented in more
+  detail in the linked README:
 
-| Contribution | Description | Artifacts |
-|---|---|---|
-| **C1** | Structure-preserving backward pass for BTA Cholesky | A1, A2 |
-| **C2** | Extension to multivariate coregional models | A1 |
-| **C3** | Multi-GPU distributed automatic differentiation | A1, A2 |
+  1. **Install the conda environment and build `mpi4py`/`mpi4jax`**
+     via [`scripts/install_alps.sh`](scripts/install_alps.sh) on a GPU
+     node; see [`INSTALL.md`](INSTALL.md) for the step-by-step
+     walkthrough and troubleshooting.
+  2. **Gradient correctness** on a small univariate and a small
+     multivariate model (`gst_small`, `gst_coreg3_small`); see
+     [`validation/README.md`](validation/README.md).
+  3. **One end-to-end wall-clock run** on the same two small models
+     (`experiments/fig2_wallclock/gst_small`,
+     `experiments/fig2_wallclock/gst_coreg3_small`); see
+     [`experiments/fig2_wallclock/README.md`](experiments/fig2_wallclock/README.md).
+  4. **Regenerate all paper figures** from the reference CSVs shipped
+     in [`plotting/data/`](plotting/data/) by running
+     `cd plotting && bash generate_all_figures.sh`; see
+     [`plotting/README.md`](plotting/README.md).
 
-| Artifact | Description | Location |
-|---|---|---|
-| **A1** | ADELIA/DALIA framework with JAX AD | `DALIA/` |
-| **A2** | Serinv structured sparse solver | `serinv/` |
-| **A3** | Benchmark suite (this artifact) | `experiments/`, `data/`, `plotting/` |
+- **Configuration:** before submitting any job, set your CSCS
+  allocation and conda env name in
+  [`experiments/common/env_setup.sh`](experiments/common/env_setup.sh)
+  (`SBATCH_ACCOUNT`, `CONDA_ENV`).
+- **Submodule pins:** `DALIA/` at `9bdf6e6` (branch `cleaning`);
+  `serinv/` at `5fa19bc` (branch `serinv_jax`).
 
-### Hardware Requirements
+## Hardware
 
-All experiments were conducted on CSCS Alps (Switzerland) using NVIDIA GH200 Grace Hopper Superchip nodes:
-- **GPU**: NVIDIA H100 96 GB HBM3
-- **CPU**: NVIDIA Grace (ARM Neoverse V2), 72 cores, 128 GB LPDDR5X
-- **Interconnect**: HPE Slingshot-11, 200 Gb/s per direction
+All runs target CSCS Alps NVIDIA GH200 Grace Hopper nodes (four Hopper
+GPUs, 96 GiB HBM3 each; 72-core ARM Neoverse V2 Grace CPU with 480 GiB
+LPDDR5X; NVLink-C2C between CPU and GPUs; HPE Slingshot-11 between
+nodes). Experiments use 1–128 GPUs depending on the figure.
 
-### Data Download
+## Data
 
-Input datasets (~1.5 GB) are hosted externally. Download them before running experiments:
+Input datasets (~1.5 GB) are hosted externally. Download them before
+running experiments:
 
 ```bash
 pip install gdown
 ./scripts/download_data.sh
 ```
 
-### Quick Start
+## Quick start
 
 ```bash
-# 1. Install (see INSTALL.md for detailed instructions)
-# Option A: via submodules (requires git-lfs)
+# 1. Install (see INSTALL.md for the full walkthrough)
+#    Option A: via submodules (requires git-lfs)
 git submodule update --init
-# Option B: clone directly (if git-lfs is unavailable)
+#    Option B: clone directly (if git-lfs is unavailable)
 git clone -b cleaning https://github.com/affifboudaoud/DALIA.git
 git clone -b serinv_jax https://github.com/affifboudaoud/serinv.git
-# Then install both
 pip install -e DALIA/ -e serinv/
 
-# 2. Quick validate (1 GH200 node, ~5 min)
-cd validation/gst_small
-sbatch validate.sbatch
+# 2. Quick validate (one GH200 node, ~5 min)
+cd validation/gst_small && sbatch validate.sbatch
 ```
 
-### Directory Layout
+## Directory layout
 
 ```
 artifact/
@@ -59,12 +78,12 @@ artifact/
 ├── validation/             # Gradient correctness checks
 ├── experiments/
 │   ├── common/             # Shared utilities and environment setup
-│   ├── tab2_structure_comparison/   # Table 2
-│   ├── fig2_wallclock/              # Figure 2
-│   ├── fig4_framework_decomposition/# Figure 4
-│   ├── fig5_scaling_study/          # Figure 5
-│   ├── fig6_resource_efficiency/    # Figure 6
-│   └── fig7_performance_analysis/   # Figure 7
+│   ├── tab2_structure_comparison/
+│   ├── fig2_wallclock/
+│   ├── fig4_framework_decomposition/
+│   ├── fig5_scaling_study/
+│   ├── fig6_resource_efficiency/
+│   └── fig7_performance_analysis/
 ├── plotting/               # Figure generation from CSVs
 ├── data/                   # Input datasets (see below)
 ├── scripts/                # Utility scripts
@@ -72,42 +91,40 @@ artifact/
 └── serinv/                 # Serinv structured sparse solver (git submodule)
 ```
 
-Each experiment directory contains its own **README.md** with goals,
-resource requirements, reproduction steps, and output descriptions.
+Experiment subdirectories are named after older figure numbers; see
+[`plotting/README.md`](plotting/README.md) for the mapping to the paper's
+current figures. Each experiment directory contains its own `README.md`
+with goals, resource requirements, reproduction steps, and output
+descriptions.
 
-### Experiments Overview
+## Experiments overview
 
-| Paper Element | Directory | Nodes | Est. Runtime |
+| Paper element | Directory | Nodes | Est. runtime |
 |---|---|---|---|
-| Gradient validation (Sec. V) | [`validation/`](validation/README.md) | 1 | ~1 h |
-| Table 2: Strategy comparison | [`experiments/tab2_structure_comparison/`](experiments/tab2_structure_comparison/README.md) | 1 | ~2 h |
-| Figure 2: Wallclock timing | [`experiments/fig2_wallclock/`](experiments/fig2_wallclock/README.md) | 1--4 | ~8 h total |
-| Figure 4: Framework decomposition | [`experiments/fig4_framework_decomposition/`](experiments/fig4_framework_decomposition/README.md) | 1--4 | ~3 h |
-| Figure 5: Scaling study | [`experiments/fig5_scaling_study/`](experiments/fig5_scaling_study/README.md) | 4 | ~6 h |
-| Figure 6: Resource efficiency | [`experiments/fig6_resource_efficiency/`](experiments/fig6_resource_efficiency/README.md) | 4--128 | ~12 h |
-| Figure 7: Performance analysis | [`experiments/fig7_performance_analysis/`](experiments/fig7_performance_analysis/README.md) | 4 | ~1 h |
+| Gradient validation | [`validation/`](validation/README.md) | 1 | ~1 h |
+| Table 2 – Strategy comparison | [`experiments/tab2_structure_comparison/`](experiments/tab2_structure_comparison/README.md) | 1 | ~2 h |
+| Figure 4 – End-to-end wall-clock | [`experiments/fig2_wallclock/`](experiments/fig2_wallclock/README.md) | 1–4 | ~8 h |
+| Figure 5 – Problem-size scaling | [`experiments/fig5_scaling_study/`](experiments/fig5_scaling_study/README.md) | 1 | ~6 h |
+| Figure 6 – Framework decomposition | [`experiments/fig4_framework_decomposition/`](experiments/fig4_framework_decomposition/README.md) | 1–4 | ~3 h |
+| Figure 7 – Resource & energy efficiency | [`experiments/fig6_resource_efficiency/`](experiments/fig6_resource_efficiency/README.md) | 4–128 | ~12 h |
+| Figure 8 – Per-stage performance analysis | [`experiments/fig7_performance_analysis/`](experiments/fig7_performance_analysis/README.md) | 4 | ~1 h |
 
+## Plotting
 
-### Plotting
-
-Reference CSV data from the paper is provided in `plotting/data/` so figures
-can be regenerated without re-running experiments:
+Reference CSVs from the paper are shipped under
+[`plotting/data/`](plotting/data/) so every figure can be regenerated
+without re-running the experiments:
 
 ```bash
-cd plotting/scripts
-python plot_pipeline_wallclock_merged.py   # Figure 2
-python plot_framework_decomposition.py     # Figure 4
-python plot_scaling_study.py               # Figure 5
-python plot_resource_energy_efficiency.py   # Figure 6
-python plot_performance_analysis.py        # Figure 7
+cd plotting && bash generate_all_figures.sh
 ```
 
-Each plotting script reads reference CSVs from `plotting/data/` and writes
-PDFs to `plotting/figures/`.
-See [`plotting/README.md`](plotting/README.md) for the full data-flow map
-from experiments to CSVs to figures.
+Each plotting script reads reference CSVs from `plotting/data/` and
+writes PDFs to `plotting/figures/`. See
+[`plotting/README.md`](plotting/README.md) for the full script ↔ figure
+map.
 
-### Data Provenance
+## Data provenance
 
 | Dataset | Description | Source |
 |---|---|---|
@@ -116,9 +133,8 @@ from experiments to CSVs to figures.
 | gst_large | Synthetic Gaussian ST, ns=4002, nt=250 | Generated via SPDE |
 | gst_coreg2_small | Synthetic 2-variate, ns=354, nt=12 | Generated via SPDE |
 | gst_coreg3_small | Synthetic 3-variate, ns=354, nt=8 | Generated via SPDE |
-| gst_temperature | Temperature dataset, ns=945, nt=365 | Generated via SPDE |
+| gst_temperature | Temperature dataset, ns=945, nt=365 | INLADIST paper |
 | SA_1 | Benchmark 3-variate, ns=1673, nt=192 | DALIA Zenodo |
 | AP1 | Air pollution (Italy), ns=4210, nt=48 | DALIA Zenodo |
 | WA_1 | Benchmark 3-variate, ns=1247, nt=512 | DALIA Zenodo |
 | WA_2 | Benchmark 3-variate, ns=4485, nt=48 | DALIA Zenodo |
-

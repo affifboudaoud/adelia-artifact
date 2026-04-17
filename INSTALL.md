@@ -173,8 +173,23 @@ SBATCH scripts use `uenv` for module loading:
 uenv run --view=modules prgenv-gnu/24.11:v1 -- bash run_inner.sh
 ```
 
-Edit `experiments/common/env_setup.sh` to set your conda environment name and
-SLURM account.
+**Before submitting any job**, edit [`experiments/common/env_setup.sh`](experiments/common/env_setup.sh)
+and set:
+
+- `SBATCH_ACCOUNT` — your CSCS allocation (e.g. `g34`).
+- `CONDA_ENV` — the conda environment created by `install_alps.sh`
+  (default: `adelia-env`).
+
+Both values are consumed by every experiment's `run_inner.sh` wrapper.
+
+### Rebuilding the artifact description PDF
+
+From the artifact root:
+```bash
+make                             # pdflatex (reviewer default)
+# or, if pdflatex is unavailable:
+tectonic artifact_description.tex
+```
 
 ## Environment Export
 

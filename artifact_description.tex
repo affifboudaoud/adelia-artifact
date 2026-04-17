@@ -1,24 +1,35 @@
-\documentclass[conference]{IEEEtran}
+\documentclass[nonacm,sigconf]{acmart}
 
 \usepackage{cite}
-\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{amsmath,amsfonts}
 \usepackage{algorithmic}
 \usepackage{graphicx}
 \usepackage{textcomp}
 \usepackage{xcolor}
 \usepackage{booktabs}
 \usepackage{tagging}
-\usepackage{url}
+\usepackage{xurl}  % aggressive line-breaking for long \url{...} links
+\usepackage{enumitem}
 \usepackage{listings}
+\usepackage{microtype}  % character protrusion / expansion for narrow columns
 
 \lstset{
   basicstyle=\footnotesize\ttfamily,
   breaklines=true,
-  frame=single,
-  columns=fullflexible,
+  breakatwhitespace=false,
+  columns=flexible,
+  frame=none,
+  xleftmargin=0pt,
+  xrightmargin=0pt,
+  linewidth=\columnwidth,
+  aboveskip=4pt,
+  belowskip=4pt,
 }
 
 \usepackage{sc26repro}
+\pagenumbering{gobble}
+% Allow slightly looser word spacing
+\emergencystretch=2em
 
 % Comment out both lines before final submission.
 %\usetag{explanation}
@@ -26,16 +37,16 @@
 
 \begin{document}
 
+% Suppress acmart's running header (which references \shorttitle)
+% since this appendix has no title block.
+\pagestyle{empty}
+
 \twocolumn[%
 {\begin{center}
 \Huge
-Appendix: Artifact Description/Artifact Evaluation
+Appendix: Artifact Description
 \end{center}}
 ]
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%  AD Appendix
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \appendixAD
 
@@ -43,23 +54,66 @@ Appendix: Artifact Description/Artifact Evaluation
 
 \subsection{Paper's Main Contributions}
 
-\begin{description}
-\item[$C_1$] Structure-exploiting gradient computation for INLA:
-a custom differentiation rule for the full objective function covering factorization, solve, and selected inversion of BTA precision matrices, computing exact gradients while exploiting block sparsity. Fusing stages of the forward computation reduces stored intermediates, cutting memory by approximately $2\times$.
-\item[$C_2$] Extension to multivariate models:
-gradient computation for jointly modeling $k$ correlated variables by exploiting the factored structure of the multivariate precision matrix blocks, separating per-variable and cross-variable hyperparameter contributions (benchmarked up to $k{=}3$, $d{=}15$).
-\item[$C_3$] Multi-GPU distributed AD:
-distributing the backward pass across GPUs via temporal-domain decomposition with nested dissection reordering, synchronizing boundary intermediates via MPI allgather and staging intermediates on CPU memory, enabling AD on models up to 1.9M latent variables.
-\item[$C_4$] Comprehensive evaluation on up to 128 GH200 GPUs:
-a practitioner-oriented analysis disentangling algorithmic gains from framework effects, evaluating when FD can match AD via scaling, and characterizing where time and memory concentrate in the gradient pipeline.
+\begin{description}[leftmargin=1.8em,labelindent=0pt,itemsep=3pt,topsep=3pt]
+\item[$C_1$] \textbf{Structure-exploiting gradient computation for INLA.}
+A custom differentiation rule for the full objective function,
+covering factorization, and solve of BTA
+precision matrices, that computes exact gradients while exploiting
+block sparsity. By fusing stages of the forward computation, only
+compact intermediate matrices need to be stored, reducing memory
+by approximately $2\times$.
+\item[$C_2$] \textbf{Extension to multivariate models.}
+An extension of the gradient computation to jointly model $k$
+correlated variables by exploiting the block structure of the
+multivariate precision matrix, separating per-variable and
+cross-variable hyperparameter contributions to reduce per-step
+work (benchmarked up to $k{=}3$, $d{=}15$).
+\item[$C_3$] \textbf{Multi-GPU distributed AD.}
+For models whose stored intermediates exceed single-GPU memory,
+we distribute the backward pass across multiple GPUs via
+temporal-domain decomposition with nested dissection reordering.
+We synchronize boundary intermediates via MPI allgather and stage
+intermediates on CPU memory, enabling AD on models up to
+1.9M latent variables that otherwise cannot run on a single GPU.
+\item[$C_4$] \textbf{Comprehensive evaluation on up to 128 GH200 GPUs.}
+Beyond reporting performance results, we provide a
+practitioner-oriented analysis that disentangles algorithmic
+gains from framework effects, evaluates when FD can match AD
+via scaling, and characterizes where time and memory concentrate
+in the gradient pipeline.
 \end{description}
 
 \subsection{Computational Artifacts}
 
-\begin{description}
-\item[$A_1$] \url{https://github.com/affifboudaoud/DALIA} (BSD-3-Clause)
-\item[$A_2$] \url{https://github.com/affifboudaoud/serinv} (BSD-3-Clause)
-\item[$A_3$] Benchmark suite (DOI to be assigned upon acceptance)
+Frameworks ($A_1$--$A_2$) are provided as Git repositories; every
+per-figure benchmark ($A_3$--$A_{10}$) lives as a subdirectory inside
+the single reproduction repository at\\
+\url{https://github.com/affifboudaoud/adelia-artifact}\\
+(commit \texttt{f2db10b}; Zenodo DOI to be assigned upon acceptance).
+
+\begin{description}[leftmargin=2.5em,labelindent=0pt,itemsep=3pt,topsep=3pt]
+\item[$A_1$] Serinv structured sparse solver:
+  \url{https://github.com/affifboudaoud/serinv}
+  (branch \texttt{serinv\_jax}, commit \texttt{5fa19bc}).
+\item[$A_2$] DALIA/ADELIA framework:
+  \url{https://github.com/affifboudaoud/DALIA}
+  (branch \texttt{cleaning}, commit \texttt{9bdf6e6}).
+\item[$A_3$] Gradient correctness suite
+  (\texttt{validation/} subtree).
+\item[$A_4$] Structure-preserving differentiation benchmark
+  (\path{experiments/tab2_structure_comparison/}).
+\item[$A_5$] L-BFGS convergence benchmark
+  (AP1 + GST-T runs driven by \texttt{converge.sbatch}).
+\item[$A_6$] End-to-end wall-clock benchmark
+  (\path{experiments/fig2_wallclock/}).
+\item[$A_7$] Problem-size scaling benchmark
+  (\path{experiments/fig5_scaling_study/}).
+\item[$A_8$] Framework-decomposition benchmark
+  (\path{experiments/fig4_framework_decomposition/}).
+\item[$A_9$] Resource and energy efficiency benchmark
+  (\path{experiments/fig6_resource_efficiency/}).
+\item[$A_{10}$] Per-stage distributed performance-analysis benchmark
+  (\path{experiments/fig7_performance_analysis/}).
 \end{description}
 
 \begin{center}
@@ -68,14 +122,17 @@ a practitioner-oriented analysis disentangling algorithmic gains from framework 
 Artifact ID  &  Contributions &  Related \\
              &  Supported     &  Paper Elements \\
 \midrule
-$A_1$   &  $C_1$, $C_2$, $C_3$ & Tables 1--2 \\
-        &                       & Figures 1--8\\
+$A_1$   &  $C_1$         & --- (dependency) \\
+$A_2$   &  $C_1$--$C_3$  & --- (framework) \\
 \midrule
-$A_2$   &  $C_1$, $C_2$ & Tables 1--2 \\
-        &                & Figures 4--8\\
-\midrule
-$A_3$   &  $C_1$--$C_4$ & Tables 1--2 \\
-        &                & Figures 3--8\\
+$A_3$   &  $C_1$--$C_3$  & correctness validation \\
+$A_4$   &  $C_1$         & Table~2 \\
+$A_5$   &  $C_1$--$C_3$  & Figure~3 \\
+$A_6$   &  $C_1$--$C_3$  & Figure~4 \\
+$A_7$   &  $C_1$, $C_4$  & Figure~5 \\
+$A_8$   &  $C_4$         & Figure~6 \\
+$A_9$   &  $C_3$, $C_4$  & Figure~7 \\
+$A_{10}$ &  $C_3$, $C_4$ & Figure~8 \\
 \bottomrule
 \end{tabular}
 \end{center}
@@ -85,183 +142,97 @@ $A_3$   &  $C_1$--$C_4$ & Tables 1--2 \\
 \section{Artifact Identification}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-% ---- A1: DALIA/ADELIA ----
 \newartifact
 
 \artrel
 
-$A_1$ is the ADELIA framework (extending DALIA) implementing INLA-based
-Bayesian spatio-temporal inference with JAX automatic differentiation.
-It directly implements $C_1$ (custom backward pass for BTA systems),
-$C_2$ (multivariate coregional extension), and $C_3$ (distributed AD
-via temporal-domain decomposition and mpi4jax).
+$A_1$ is the Serinv structured sparse solver library. It provides
+the block-tridiagonal (BT) and block-tridiagonal arrowhead (BTA) Cholesky factorization, triangular solve, and selected-inversion
+algorithms on top of which the ADELIA custom backward pass is
+implemented, relating to contributions $C_1, C_2, C_3$. $A_2$ depends on
+$A_1$ for its solver infrastructure for the forward pass and for the finite-difference
+baseline used throughout the evaluation.
 
 \artexp
 
-ADELIA's AD gradients should match JAX's built-in reverse-mode AD
-(AD-Loop) to within $1.2 \times 10^{-7}$ relative error on models
-that fit in memory, and match finite-difference gradients to within
-FD truncation error ($O(h^2)$, $h{=}10^{-3}$) on all models.
-The distributed two-phase implementation should match the AD-Loop
-reference on GST-C3 with $P{=}2$ to within $6.8 \times 10^{-6}$.
-Per-gradient speedups of $2.4$--$50.9\times$ over finite differences
-are expected across the ten benchmark models.
-On the four production-scale multivariate models, ADELIA should
-converge to valid stationary points where FD stalls.
+Working through this artifact results in the correct installation
+of Serinv at the pinned commit and a successful import, so the downstream framework ($A_2$) and benchmark artifacts can load its algorithms. Serinv's own correctness is validated upstream; end-to-end numerical correctness of ADELIA's usage of Serinv is the subject of $A_3$.
 
 \arttime
 
-Artifact setup: $\sim$30~min (conda environment, pip installs,
-mpi4jax compilation, data download).
-Gradient validation: $\sim$60~min on 1 GPU.
-Full experiment reproduction: $\sim$28 GPU-hours.
-Figure generation from reference CSVs: $<$5~min.
+Setup and import check: $<$5~min.
 
 \artin
 
 \artinpart{Hardware}
 
-CSCS Alps supercomputer with NVIDIA GH200 Grace Hopper Superchip
-nodes. Each GPU is a Hopper-based H100 with 96\,GiB HBM3,
-paired with a 72-core ARM Neoverse V2 CPU (Grace) with
-480\,GiB LPDDR5X memory via NVLink-C2C.
-Inter-GPU communication uses HPE Slingshot-11 interconnect
-(200\,Gb/s per direction).
-Experiments use 1--128 GPUs.
+CSCS Alps supercomputer, using NVIDIA GH200 Grace Hopper nodes.
+Each node has four Hopper-based GPUs (96\,GiB HBM3 each) and a
+72-core ARM Neoverse V2 (Grace) CPU with 480\,GiB LPDDR5X
+memory, connected via NVLink-C2C. Multi-node runs communicate
+over an HPE Slingshot-11 interconnect. A single GPU is
+sufficient for this artifact.
 
 \artinpart{Software}
 
-\begin{tabular}{@{}ll@{}}
-\toprule
-\textbf{Package} & \textbf{Version} \\
-\midrule
-Python & 3.11 \\
-JAX / JAXlib & 0.8.1 \\
-CuPy & 13.6.0 \\
-NumPy & $\geq$ 1.23 \\
-SciPy & $\geq$ 1.10 \\
-mpi4jax & 0.5.2+ (built from source) \\
-Cray MPICH & 8.1.x \\
-CUDA & 12.x \\
-Pydantic & $\geq$ 2.0 \\
-\bottomrule
-\end{tabular}
-
-\smallskip\noindent
-A conda \texttt{environment.yml} is provided.
-\texttt{mpi4jax} must be compiled against the system MPI
-(Cray MPICH with CPU-staged transfers, no CUDA-aware MPI or NCCL);
-see \texttt{INSTALL.md}.
+Python~3.11, NumPy, SciPy, CuPy~13.6.0, CUDA~12. All
+dependencies are pinned in the conda \texttt{environment.yml}
+shipped with $A_2$.
 
 \artinpart{Datasets / Inputs}
 
-Input data for 10 benchmark models ($\sim$1.5\,GB total) are
-downloadable via \texttt{scripts/download\_data.sh}.
-Models span univariate synthetic (GST-S/M/L), real-world temperature
-(GST-T), multivariate synthetic (GST-C2/C3), and production-scale
-multivariate (SA1, AP1, WA1, WA2) with up to 1.9M latent variables
-and $d{=}15$ hyperparameters.
-Scaling studies use temporal variants of WA1
-($n_t \in \{2, 32, 64, 128, 256\}$, $n_s{=}1{,}247$)
-and spatial variants of WA2
-($n_s \in \{72, 282, 1{,}119\}$, $n_t{=}48$).
+None.
 
 \artinpart{Installation and Deployment}
-
+To install the artifact (Serinv) and validate its correct installation, please execute the following:
 \begin{lstlisting}[language=bash]
-conda env create -f environment.yml
-conda activate adelia-env
-pip install -e DALIA/ -e serinv/
-# Build mpi4jax against system MPI
-export MPI4JAX_BUILD_MPICC=$(which mpicc)
-pip install mpi4jax
+cd adelia-artifact
+git submodule update --init serinv
+pip install -e serinv/
+python -c "import serinv; print(serinv.__file__)"
 \end{lstlisting}
-
-\noindent
-Due to a cuSolver/CuPy conflict, JAX must be initialized
-before importing DALIA. All experiment scripts handle this
-automatically. See \texttt{INSTALL.md} for cluster-specific
-module loads and \texttt{LD\_LIBRARY\_PATH} configuration.
 
 \artcomp
 
-The workflow consists of three tasks:
-
-\noindent
-$T_1$~\textbf{Gradient validation} validates correctness by comparing
-AD gradients against finite-difference and AD-Loop references.
-Run per-model scripts in \texttt{validation/<model>/validate.sbatch}
-or all models via \texttt{validation/validate\_all.sbatch}
-(1 GPU, $\sim$60~min).
-Checks: forward-value relative error $< 10^{-6}$,
-gradient cosine similarity $> 0.999$,
-max component-wise relative error $< 10^{-2}$ vs.\ FD.
-
-\noindent
-$T_2$~\textbf{Performance experiments} measure per-gradient wall-clock
-time, scaling behavior, framework decomposition, and energy consumption.
-Each experiment directory (\texttt{experiments/tab2\_*}, \texttt{fig2\_*},
-\texttt{fig4\_*}, \texttt{fig5\_*}, \texttt{fig6\_*}, \texttt{fig7\_*})
-contains its own \texttt{run.sbatch} and \texttt{README.md} with
-resource requirements and submission instructions.
-Each experiment runs at least 10 timed gradient evaluations
-after 2 warmup iterations and reports mean $\pm$ 95\%
-confidence intervals.
-
-\noindent
-$T_3$~\textbf{Figure generation} produces paper figures from experiment
-output CSVs using plotting scripts in \texttt{plotting/scripts/}.
-Reference CSVs are provided in \texttt{plotting/data/} so that figures
-can be regenerated without re-running $T_2$.
-
-\noindent
-Dependencies: $T_1$ is independent.
-$T_2$ experiments are independent of each other.
-$T_3$ depends on $T_2$ (or uses pre-computed reference CSVs).
+$T_1$: install the pinned Serinv package as an editable
+dependency of $A_2$ (submodule of the reproduction repository).
+$T_2$: verify the package imports cleanly.
+Dependencies: $T_1 \rightarrow T_2$. No experimental parameters
+or statistical repetition; the check is a deterministic
+load-time verification.
 
 \artout
 
-$T_1$ outputs per-model validation reports confirming gradient
-correctness. When AD-Loop fits in memory (GST-S, GST-C2, GST-C3,
-GST-M), ADELIA matches it to $< 10^{-7}$.
-On large models, AD--FD agreement is within $5 \times 10^{-4}$
-to $6 \times 10^{-3}$, consistent with FD truncation error.
-
-$T_2$ outputs CSV files with per-gradient timing, peak GPU memory,
-energy consumption, and scaling metrics.
-
-$T_3$ outputs PDF figures corresponding to the paper:
-Table~2 (strategy comparison),
-Figure~4 (wall-clock breakdown),
-Figure~5 (scaling study),
-Figure~6 (framework decomposition),
-Figure~7 (resource/energy efficiency),
-Figure~8 (performance analysis).
+The installed package loads without error, confirming that the
+pinned Serinv commit is available to every downstream
+benchmark artifact.
 
 
-% ---- A2: Serinv ----
+% ---- A2: DALIA/ADELIA framework ----
 \newartifact
 
 \artrel
 
-$A_2$ is the Serinv structured sparse solver library providing
-the BTA factorization and selected inversion algorithms central
-to $C_1$ and $C_2$.
-ADELIA ($A_1$) depends on Serinv for its CuPy-based forward-pass
-computations and the FD baseline.
+$A_2$ is the DALIA/ADELIA framework. It wraps $A_1$ and implements
+the JAX-based custom backward pass for the INLA objective, the
+multivariate coregional extension, and the multi-GPU two-phase
+distributed backward pass. It directly supports contributions
+$C_1$, $C_2$, and $C_3$.
 
 \artexp
 
-Serinv's sequential and distributed BTA algorithms should produce
-numerically identical results to dense reference solvers on small
-problems. On large problems, the structured algorithms enable
-$\mathcal{O}(n \cdot b^3)$ complexity vs.\ $\mathcal{O}(N^3)$
-for dense solvers ($N = n \cdot b$).
+Working through this artifact results in the correct installation
+of ADELIA, verified by running the single-model gst\_small
+gradient check from $A_3$ on one GPU. A successful run confirms
+that the framework's AD entry points load correctly and produce
+gradients matching the dense AD-Loop reference, which is the
+precondition for all downstream benchmark artifacts
+$A_4$--$A_{10}$.
 
 \arttime
 
-Installation: $<$5~min (included in $A_1$ setup).
-Serinv's unit tests: $\sim$10~min.
+Installation: $\sim$20~min on CSCS Alps (including \texttt{mpi4jax}
+compilation). Smoke test: $<$1~min.
 
 \artin
 
@@ -271,119 +242,525 @@ Same as $A_1$.
 
 \artinpart{Software}
 
-Serinv requires Python~$\geq$~3.9, NumPy, SciPy, and optionally
-CuPy (GPU) and mpi4py (distributed).
-All dependencies are included in $A_1$'s conda environment.
+In addition to the software listed for $A_1$:
+JAX / JAXlib 0.8.1, \texttt{mpi4jax} 0.5.2+ (built from source
+against Cray MPICH with CUDA, no CUDA-aware MPI or NCCL),
+Pydantic $\geq$~2.0. Full version list and installation
+walkthrough in \texttt{INSTALL.md}.
 
 \artinpart{Datasets / Inputs}
 
-Serinv's test suite generates random BTA matrices internally.
-No external data is needed.
+None; functional verification uses synthetic inputs.
 
 \artinpart{Installation and Deployment}
 
-Installed as part of $A_1$: \texttt{pip install -e serinv/}.
-
-\artcomp
-
-Run the test suite:
-
 \begin{lstlisting}[language=bash]
-cd serinv && pytest tests/
+conda env create -f environment.yml
+conda activate adelia-env
+pip install -e serinv/ -e DALIA/
+export MPI4JAX_BUILD_MPICC=$(which mpicc)
+pip install --no-binary mpi4jax "mpi4jax==0.8.1.post2"
 \end{lstlisting}
 
 \noindent
-For distributed tests:
+Due to a cuSolver/CuPy initialization conflict, JAX must be
+initialized (including a GPU warmup) before any \texttt{from dalia
+\ldots} imports happen. All experiment scripts handle this automatically.
 
-\begin{lstlisting}[language=bash]
-mpirun -n 4 pytest --with-mpi tests_wrappers/
-\end{lstlisting}
+\artcomp
+
+$T_1$: install ADELIA and its runtime dependencies
+(JAX/JAXlib, CuPy, mpi4jax).
+$T_2$: run the smallest end-to-end gradient correctness check
+from $A_3$ (on GST-S) to verify that ADELIA's AD entry points
+load and produce gradients matching a dense reverse-mode JAX
+reference.
+Dependencies: $T_1 \rightarrow T_2$; $A_1 \rightarrow T_1$.
+$T_2$ uses a single gradient evaluation (no statistical
+repetition) because correctness is deterministic under fixed
+random seeds.
 
 \artout
 
-All tests should pass. Sequential tests verify factorization and
-selected inversion against dense reference implementations.
-Distributed tests verify that partitioned results match sequential
-execution.
+A successful $T_2$ confirms that ADELIA is correctly installed
+and that downstream benchmark artifacts $A_4$--$A_{10}$ can
+proceed.  The framework has no quantitative outputs of its
+own; its performance is evaluated through $A_4$--$A_{10}$.
 
 
-% ---- A3: Benchmark suite ----
+% ---- A3: Gradient correctness suite ----
 \newartifact
 
 \artrel
 
-$A_3$ is the benchmark suite that produces all quantitative results
-in the paper ($C_4$), exercising $A_1$ and $A_2$ across 10 models
-and up to 128 GPUs to validate $C_1$, $C_2$, and $C_3$.
+$A_3$ is the gradient correctness suite (\texttt{validation/}). It
+validates the exactness of ADELIA's custom backward pass by
+comparing its gradients against finite differences (FD) and
+against a dense reverse-mode JAX reference (AD-Loop) on all ten
+benchmark models, covering contributions $C_1$, $C_2$, $C_3$.
 
 \artexp
 
-The benchmark suite should reproduce:
-(1) Table~2 showing that only ADELIA scales to million-variable models
-while generic AD strategies (AD-Dense, AD-Loop, AD-Ckpt) OOM;
-(2) $2.4$--$50.9\times$ per-gradient speedups (Fig.~4);
-(3) $8$--$25\times$ AD speedups across temporal and spatial scaling (Fig.~5);
-(4) $5$--$8\times$ energy savings even when FD is scaled to 128 GPUs (Fig.~7).
-Exact numerical values may vary with hardware and software versions,
-but relative rankings and order-of-magnitude results should be
-consistent.
+ADELIA's AD gradients should match AD-Loop within
+$1.2 \times 10^{-7}$ relative error on models that fit in memory
+(GST-S/M, GST-C2/C3) and match FD up to the FD truncation error
+($O(h^2)$, $h{=}10^{-3}$) on all models. The distributed two-phase
+path should match AD-Loop on GST-C3 with $P{=}2$ to within
+$6.8 \times 10^{-6}$.
 
 \arttime
 
-Table~2: $\sim$2~h (1 GPU).
-Figure~4: $\sim$8~h (1--4 GPUs).
-Figure~5: $\sim$6~h (1 GPU).
-Figure~6: $\sim$3~h (1--4 GPUs).
-Figure~7: $\sim$12~h (4--128 GPUs).
-Figure~8: $\sim$1~h (4 GPUs).
-Total: $\sim$28 GPU-hours.
+Full sweep: $\sim$60~min on 1 GPU.
+Quick single-model check (GST-S): $<$5~min.
+
+\artin
+
+\artinpart{Hardware, Software, Installation}
+
+Same as $A_2$.
+
+\artinpart{Datasets / Inputs}
+
+Input matrices for the ten benchmark models are downloaded via
+\path{scripts/download_data.sh} ($\sim$1.5\,GB total). Models
+span univariate synthetic (GST-S/M/L), real-world temperature
+(GST-T), multivariate synthetic (GST-C2/C3), and production-scale
+multivariate (SA1, AP1, WA1, WA2) up to 1.9M latent variables
+and $d{=}15$ hyperparameters.
+
+\artcomp
+
+The workflow runs once per model on all ten benchmark models.
+$T_1$: load the model inputs and compute ADELIA's AD gradient
+at a fixed hyperparameter point.
+$T_2$: compute a reference gradient on the same point from
+(a)~a dense reverse-mode JAX implementation (AD-Loop, where the
+backward pass fits in GPU memory) and (b)~central finite
+differences with step $h{=}10^{-3}$ on all models.
+$T_3$: compare ADELIA against each available reference and
+report forward-value relative error, gradient cosine similarity,
+and max component-wise relative error.
+Dependencies: $T_1, T_2 \rightarrow T_3$. No statistical
+repetition: every check is deterministic under fixed seeds.
+
+\artout
+
+Per-model PASS/FAIL reports confirming gradient correctness.
+Pass criteria are a forward-value relative error $< 10^{-6}$,
+a gradient cosine similarity $> 0.999$, and a max
+component-wise relative error $< 10^{-2}$ versus FD.
+See \texttt{validation/README.md} for the full criteria list.
+
+
+% ---- A4: Structure-preserving differentiation benchmark ----
+\newartifact
+
+\artrel
+
+$A_4$ is the structure-preserving differentiation benchmark
+(\path{experiments/tab2_structure_comparison/}). It times
+five differentiation strategies (FD, AD-Dense, AD-Loop,
+AD-Loop-Ckpt, AD-BTA) on five models of increasing size,
+supporting contribution $C_1$ and producing Table~2.
+
+\artexp
+
+Only ADELIA's structure-preserving AD-BTA strategy should fit
+all five models; AD-Dense, AD-Loop, and AD-Loop-Ckpt should
+OOM on the larger models. AD-BTA should deliver the lowest
+per-gradient time among AD strategies.
+
+\arttime
+
+$\sim$2~hours on a single GPU.
+
+\artin
+
+\artinpart{Hardware, Software, Installation, Inputs}
+
+Same as $A_3$. Uses the GST-S, GST-C2, GST-C3, GST-M, GST-L
+inputs already downloaded for $A_3$.
+
+\artcomp
+
+Five differentiation strategies (FD, AD-Dense, AD-Loop,
+AD-Loop-Ckpt, AD-BTA) are exercised on five models of
+increasing size (GST-S, GST-C2, GST-C3, GST-M, GST-L).
+$T_1$: for each $(\text{model}, \text{strategy})$ pair, time
+one gradient evaluation and record peak GPU memory;
+$T_2$: aggregate per-pair results into Table~2, reporting
+out-of-memory failures as OOM.
+Dependencies: $T_1 \rightarrow T_2$. Each timed measurement
+uses 2 warmup evaluations followed by 10 timed evaluations,
+reporting the mean with 95\% confidence intervals. OOM
+failures do not contribute to timing statistics.
+
+\artout
+
+Table~2 entries in the paper: per-model, per-strategy
+per-gradient wall-clock time and peak GPU memory.  Aggregated
+results live in \path{tab2_results.csv}; the plotting script
+\path{plotting/scripts/plot_structure_comparison.py}
+regenerates Table~2.
+
+
+% ---- A5: L-BFGS convergence benchmark ----
+\newartifact
+
+\artrel
+
+$A_5$ is the optimizer-convergence benchmark producing
+Figure~3. It runs L-BFGS on the AP1 and GST-T models from the
+same initialization using either ADELIA's exact gradients or
+FD, and compares the objective and gradient-norm trajectories.
+It supports contributions $C_1$--$C_3$ by showing that exact
+gradients resolve FD stalling on real-world models.
+
+\artexp
+
+With exact gradients, L-BFGS should converge to a well-conditioned
+minimum with gradient norm several orders of magnitude below the
+FD baseline, which stalls.
+
+\arttime
+
+$\sim$8~hours combined across the two convergence runs
+(AP1 on 4~GPUs, GST-T on 1~GPU).
+
+\artin
+
+\artinpart{Hardware, Software, Installation, Inputs}
+
+Same as $A_3$. Uses the AP1 and GST-T datasets.
+
+\artcomp
+
+The workflow runs independently on AP1 and GST-T.
+$T_1$: run L-BFGS from a fixed initial hyperparameter configuration
+using ADELIA's exact gradients, logging the objective value
+and gradient norm at every iteration.
+$T_2$: repeat $T_1$ from the same initial point using the FD
+gradient, on identical hardware.
+$T_3$: align the $T_1$ and $T_2$ trajectories and produce the
+convergence plot.
+Dependencies: $T_1, T_2 \rightarrow T_3$. No statistical
+repetition: L-BFGS is deterministic given the initial point.
+Each run terminates on whichever comes first: the gradient-norm
+tolerance, the maximum iteration count, or detection of an FD
+stall.
+
+\artout
+
+Per-run L-BFGS logs with $f$ and $\|\nabla f\|$ per iteration
+for each (model, method) pair. The plotting script
+\path{plotting/plot_convergence_all.py} reads these logs and
+produces Figure~3.
+
+
+% ---- A6: End-to-end wall-clock benchmark ----
+\newartifact
+
+\artrel
+
+$A_6$ is the end-to-end wall-clock benchmark
+(\path{experiments/fig2_wallclock/}). It produces Figure~4 by
+(1)~running each of the ten models to convergence under ADELIA
+on $P_{\min}$ GPUs and recording both the per-iteration
+wall-clock and the number of L-BFGS iterations to convergence,
+and (2)~measuring the FD baseline's per-gradient wall-clock on
+the same hardware. Figure~4 then reports each method's
+end-to-end cost (optimization + Hessian) adjusted to the same
+iteration count using ADELIA as the reference, isolating
+computational cost from convergence differences. It supports
+contributions $C_1$--$C_3$.
+
+\artexp
+
+When normalized to the same iteration count, ADELIA's
+end-to-end wall-clock should be substantially lower than FD's
+on every model, with $2.4$--$50.9\times$ per-gradient speedups
+driving the gap, reproducing Figure~4.
+
+\arttime
+
+$\sim$8~hours total on 1--4 GPUs (small models together,
+large models in separate jobs).
+
+\artin
+
+\artinpart{Hardware, Software, Installation, Inputs}
+
+Same as $A_3$. Distributed models (SA1, AP1, WA1, WA2) run on
+4 GPUs.
+
+\artcomp
+
+The workflow runs on all ten benchmark models at $P_{\min}$.
+$T_1$: run ADELIA's L-BFGS optimizer to convergence on each
+model, recording the per-iteration wall-clock and the number
+of iterations $n_{\mathrm{iter}}$.
+$T_2$: measure the FD baseline's per-gradient wall-clock on
+each model using 2 warmup plus 10 timed evaluations with
+95\% confidence intervals.
+$T_3$: compute the Hessian cost for both methods (AD as two
+backward passes per column; FD as $O(d^2)$ forward evaluations).
+$T_4$: project both methods onto the same iteration count
+$n_{\mathrm{iter}}$ and produce Figure~4, isolating
+computational cost from convergence differences.
+Dependencies: $T_1, T_2 \rightarrow T_3 \rightarrow T_4$.
+
+\artout
+
+Per-model timing logs aggregated into
+\path{pipeline_wallclock.csv}. The plotting script
+\path{plotting/scripts/plot_pipeline_wallclock_merged.py}
+regenerates Figure~4.
+
+
+% ---- A7: Scaling study ----
+\newartifact
+
+\artrel
+
+$A_7$ is the problem-size scaling benchmark
+(\path{experiments/fig5_scaling_study/}). It measures per-gradient
+speedup of ADELIA over FD as a function of problem size on
+single-GPU temporal variants of WA1 and spatial variants of WA2.
+It supports $C_1$ (structured AD efficiency) and $C_4$ (scaling
+characterization), producing Figure~5.
+
+\artexp
+
+Along both the temporal axis (WA1) and the spatial axis (WA2),
+the AD-to-forward cost ratio $c_{\mathrm{AD}}$ should rise from
+roughly $1.2$--$1.4$ at the smallest sizes to an asymptote near
+$3.5$--$3.7$ as $\mathcal{O}(b^3)$ compute dominates
+kernel-launch overhead, with per-gradient speedups over FD
+correspondingly decreasing from about $25\times$ down to about
+$8\times$ across the tested range, reproducing Figure~5.
+
+\arttime
+
+$\sim$6~hours on a single GPU (five temporal + three spatial
+variants).
+
+\artin
+
+\artinpart{Hardware, Software, Installation}
+
+Same as $A_3$.
+
+\artinpart{Datasets / Inputs}
+
+Temporal variants of WA1 at $n_s{=}1{,}247$
+with $n_t \in \{2,\,32,\,64,\,128,\,256\}$,
+and spatial variants of WA2 at $n_t{=}48$
+with $n_s \in \{72,\,282,\,1{,}119\}$,
+are pre-generated under \path{data/scaling_wa1_temporal/}
+and \path{data/scaling_wa2_spatial/}.
+
+\artcomp
+
+The workflow runs independently on each problem-size variant
+(five temporal variants of WA1, three spatial variants of WA2),
+all on a single GPU so that distribution overhead does not
+confound the scaling trend.
+$T_1$: time one ADELIA forward pass, one ADELIA gradient, and
+one FD evaluation on each variant using 2 warmup plus 10 timed
+evaluations with 95\% confidence intervals.
+$T_2$: compute the AD cost ratio
+$c_{\mathrm{AD}} = t_{\mathrm{AD}} / t_{\mathrm{fwd}}$, the
+backward-to-forward ratio $\beta$, and the per-gradient speedup
+over FD for every variant.
+$T_3$: plot both panels of Figure~5.
+Dependencies: $T_1 \rightarrow T_2 \rightarrow T_3$.
+
+\artout
+
+Per-variant timing rows in \path{scaling_breakdown.csv}.
+\path{plot_scaling_study.py} regenerates Figure~5.
+
+
+% ---- A8: Framework decomposition ----
+\newartifact
+
+\artrel
+
+$A_8$ is the framework-decomposition benchmark
+(\path{experiments/fig4_framework_decomposition/}). It
+disentangles algorithmic gains from framework overhead by timing
+both ADELIA and an FD baseline under matched framework conditions
+on all ten benchmark models, supporting contribution $C_4$ and
+producing Figure~6.
+
+\artexp
+
+The observed per-gradient speedup should decompose into an
+algorithmic component (reduced work from the structure-exploiting
+backward pass) and a framework component (JAX/XLA vs the CuPy-based
+FD baseline), with the algorithmic component accounting for a
+sizeable fraction of the total.
+
+\arttime
+
+$\sim$3~hours on 1--4 GPUs across the ten models.
+
+\artin
+
+\artinpart{Hardware, Software, Installation, Inputs}
+
+Same as $A_6$. Uses the same 10-model dataset as $A_3$ and $A_6$.
+
+\artcomp
+
+The workflow runs on all ten benchmark models at $P_{\min}$.
+$T_1$: measure ADELIA's per-gradient wall-clock using its
+default JAX/XLA backend (2 warmup + 10 timed evaluations).
+$T_2$: measure the CuPy/Serinv FD baseline's per-forward-pass
+wall-clock on the same hardware (2 warmup + 10 timed
+evaluations).
+$T_3$: compute the framework ratio
+$r = t_{\mathrm{Serinv}}/t_{\mathrm{JAX}}$ and the
+algorithmic speedup at parity $(2d{+}1)/(1+\beta)$,
+where $\beta$ is the backward-to-forward ratio measured in
+$T_1$.
+$T_4$: decompose the observed per-gradient speedup into
+algorithmic and framework contributions for Figure~6.
+Dependencies: $T_1, T_2 \rightarrow T_3 \rightarrow T_4$.
+
+\artout
+
+Per-model ratios and timings in
+\path{single_eval_comparison.csv},
+\path{distributed_single_eval.csv}, and
+\path{memory_breakdown.csv}.
+\path{plot_framework_decomposition.py} regenerates Figure~6.
+
+
+% ---- A9: Resource / energy efficiency ----
+\newartifact
+
+\artrel
+
+$A_9$ is the resource and energy efficiency benchmark
+(\path{experiments/fig6_resource_efficiency/}). It measures
+how many GPUs FD must use (and how much energy it must draw) to
+match ADELIA's 4-GPU per-gradient wall-clock on the four
+production-scale multivariate models, supporting contributions
+$C_3$ and $C_4$ and producing Figure~7.
+
+\artexp
+
+As FD is scaled up, per-gradient time ratios should decrease
+while energy ratios stay flat or grow, reproducing
+Figure~7. The best case for FD in the paper is WA1 at
+128~GPUs, where FD is $\sim 4.2\times$ faster than ADELIA's
+4-GPU run but still consumes $7.3\times$ more energy.
+
+\arttime
+
+$\sim$12~hours on 4--128 GPUs (ADELIA baseline at fixed 4 GPUs,
+FD scaled through 4, 8, 16, 32, 64, 128 GPUs).
 
 \artin
 
 \artinpart{Hardware}
 
-Same as $A_1$. Figure~7 (resource efficiency) requires up to
-128 GPUs for the FD scaling baseline.
+Same as $A_3$. The FD scaling baseline requires up to 128 GPUs
+for the largest runs.
 
-\artinpart{Software}
+\artinpart{Software, Installation}
 
-Same as $A_1$, plus matplotlib for figure generation.
+Same as $A_3$, additionally using the Cray Power Management
+counters exposed through
+\path{experiments/common/energy_monitor.py} to record energy
+per gradient.
 
 \artinpart{Datasets / Inputs}
 
-Downloaded via \texttt{scripts/download\_data.sh} ($\sim$1.5\,GB).
-See the benchmark model table in $A_1$.
-
-\artinpart{Installation and Deployment}
-
-Included in the artifact repository.
-Experiment scripts source \texttt{experiments/common/env\_setup.sh}
-for environment configuration.
+Uses the four production-scale multivariate models SA1, WA1,
+WA2, AP1 already downloaded for $A_6$.
 
 \artcomp
 
-Each experiment directory contains \texttt{run.sbatch},
-\texttt{run\_inner.sh} (environment + srun wrapper), and either
-a \texttt{run.py} or per-model subdirectories with their own scripts.
-Each directory's \texttt{README.md} documents parameters and
-resource requirements.
-
-Plotting scripts in \texttt{plotting/scripts/} read CSV outputs
-and produce PDF figures. Reference CSVs from the paper are
-provided in \texttt{plotting/data/}.
+The workflow runs on the four production-scale models (SA1,
+WA1, AP1, WA2), all at $d{=}15$ ($2d{+}1{=}31$ FD evaluations).
+$T_1$: measure ADELIA's per-gradient wall-clock and energy at
+the minimum GPU count $P_{\min}$ that fits each model
+(2 warmup + 10 timed evaluations).
+$T_2$: for each $P \in \{4, 8, 16, 32, 64, 128\}$, run FD's
+$2d{+}1$ evaluations in parallel as
+$\lfloor P/P_{\min} \rfloor$ concurrent groups of $P_{\min}$
+GPUs, and measure both wall-clock and total node-level energy.
+$T_3$: compute the time and energy ratios of FD over ADELIA
+across the scaling curve and produce both panels of Figure~7.
+Dependencies: $T_1, T_2 \rightarrow T_3$.
+Energy is measured via Cray PM hardware counters at the node
+power-supply level (10\,Hz, covering GPU, CPU, memory, and
+interconnect), with MPI barriers delimiting the measurement
+window so it includes the full allocated time.
 
 \artout
 
-Each experiment writes timing CSVs and console output.
-Plotting scripts produce PDF figures matching the paper:
-\begin{itemize}
-  \item \texttt{plot\_convergence\_ap1.py} $\rightarrow$ Figure~3
-  \item \texttt{plot\_structure\_comparison.py} $\rightarrow$ Table~2
-  \item \texttt{plot\_pipeline\_wallclock\_merged.py} $\rightarrow$ Figure~4
-  \item \texttt{plot\_scaling\_study.py} $\rightarrow$ Figure~5
-  \item \texttt{plot\_framework\_decomposition.py} $\rightarrow$ Figure~6
-  \item \texttt{plot\_resource\_energy\_efficiency.py} $\rightarrow$ Figure~7
-  \item \texttt{plot\_performance\_analysis.py} $\rightarrow$ Figure~8
-\end{itemize}
+Time and energy ratio rows in
+\path{resource_efficiency_all.csv}.
+\path{plot_resource_energy_efficiency.py} regenerates
+Figure~7.
+
+
+% ---- A10: Per-stage distributed performance analysis ----
+\newartifact
+
+\artrel
+
+$A_{10}$ is the per-stage distributed performance-analysis
+benchmark
+(\path{experiments/fig7_performance_analysis/}). It breaks
+down the per-gradient wall-clock of the distributed two-phase
+path into forward, solve, reduced-system, and gradient-prior
+stages on WA1, AP1, and WA2. It supports $C_3$ and $C_4$ and
+produces Figure~8.
+
+\artexp
+
+Per-stage breakdowns should show the relative cost of the
+forward, backward solve, reduced-system aggregation, and
+gradient-prior stages on the three distributed models,
+reproducing Figure~8.
+
+\arttime
+
+$\sim$1~hour on 4 GPUs (three models).
+
+\artin
+
+\artinpart{Hardware, Software, Installation}
+
+Same as $A_3$.
+
+\artinpart{Datasets / Inputs}
+
+WA1, AP1, WA2 inputs already downloaded for $A_6$.
+
+\artcomp
+
+The workflow runs on the three distributed models (WA1, AP1,
+WA2) on 4 GPUs.
+$T_1$: run one ADELIA gradient evaluation per model with the
+distributed two-phase path instrumented to record per-stage
+wall-clock for the forward pass, the backward solve, the
+reduced-system aggregation, and the gradient-prior stage
+(2 warmup + 10 timed evaluations, 95\% CI).
+$T_2$: aggregate the per-stage contributions into the stacked
+bar chart of Figure~8.
+Dependencies: $T_1 \rightarrow T_2$.
+Per-stage timings use synchronous CUDA event timestamps so
+pipelined work is not double-counted.
+
+\artout
+
+Per-stage per-model rows in
+\path{distributed_breakdown.csv}.
+\path{plot_performance_analysis.py} regenerates Figure~8.
 
 \end{document}
